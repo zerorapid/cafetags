@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@import "tailwindcss";
+
+@theme {
+  --color-warm-beige: #FAF7F2;
+  --color-charcoal-ink: #24211E;
+  --color-tactile-divider: #E6DFD3;
+  --color-stone-gray: #544D46;
+  --font-serif: "Instrument Serif", "Georgia", "Times New Roman", serif;
+  --font-sans: "Noto Sans", sans-serif;
+
+  /* Cozy, organic, luxuriously rounded corner scale (reduced 50%) */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.1875rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.3375rem;
+  --radius-xl: 0.4625rem;
+  --radius-2xl: 0.625rem;
+  --radius-3xl: 1rem;
+}
+
+.material-icon, .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', 'Material Icons', sans-serif !important;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+}
+
+@utility smooth-transition {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  /* Scale overall font sizes up by 20% (16px * 1.2 = 19.2px) */
+  font-size: 19.2px;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #24211E;
+  font-family: "Noto Sans", sans-serif;
+  min-height: 100vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* --- High UX Cafe Card Styles --- */
+.cafe-ux-card {
+  display: block;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  border: 1px solid #E6E1DA;
+  border-radius: 16px;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.cafe-ux-card:hover {
+  border-color: #A88957;
+  box-shadow: 0 8px 24px rgba(44, 27, 16, 0.04);
+}
+
+.card-main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.card-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.premium-tag {
+  background: linear-gradient(135deg, #1A1816 0%, #3B2F2F 100%);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-body-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.brand-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 280px;
+}
+
+.avatar-frame {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #FAF9F6;
+  flex-shrink: 0;
+  border: 1px solid #E6E1DA;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cafe-ux-card:hover .avatar-img {
+  transform: scale(1.06);
+}
+
+.brand-text h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #1C1917;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.brand-text .location-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8C867E;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.editorial-content-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 48px;
+  flex-grow: 1;
+}
+
+.quote-snippet {
+  font-family: 'Instrument Serif', serif;
+  font-size: 23px;
+  font-style: italic;
+  color: #4A453F;
+  margin: 0;
+  line-height: 1.3;
+  max-width: 440px;
+}
+
+.action-cta-button {
+  background-color: transparent;
+  color: #A88957;
+  border: 1px solid #A88957;
+  padding: 12px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cafe-ux-card:hover .action-cta-button {
+  background-color: #A88957;
+  color: #FFFFFF;
+}
+
+@media (max-width: 900px) {
+  .card-body-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+  }
+  .editorial-content-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      width: 100%;
+  }
+  .quote-snippet {
+      max-width: 100%;
+  }
+  .action-cta-button {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+  }
+}

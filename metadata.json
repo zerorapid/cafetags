@@ -1,0 +1,6 @@
+{
+  "name": "CafeTags",
+  "description": "An elegant, high-end architectural directory of iconic cafes in Hyderabad, India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
