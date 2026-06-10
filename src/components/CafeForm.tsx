@@ -194,9 +194,6 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
           </button>
         </nav>
 
-        <div className="sidebar-footer">
-          <button type="button" onClick={onCancel} className="btn-discard-sm">Discard All Changes</button>
-        </div>
       </aside>
 
       {/* ══════════ MAIN CONTENT ═══════════ */}
@@ -506,15 +503,14 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
           </section>
 
         </form>
+        {/* ═══════════ FLOATING ACTION BAR ═══════════ */}
+        <div className="action-bar">
+          <button type="submit" form="cafe_catalog_form" className="btn-action primary">
+            {editingCafe ? "Update Lookbook Listing" : "Save Lookbook Catalog Listing"}
+          </button>
+          <button type="button" onClick={onCancel} className="btn-action secondary" style={{ marginLeft: '12px' }}>Discard Changes</button>
+        </div>
       </main>
-
-      {/* ═══════════ FLOATING ACTION BAR ═══════════ */}
-      <div className="action-bar">
-        <button type="button" onClick={onCancel} className="btn-action secondary">Discard Changes</button>
-        <button type="submit" form="cafe_catalog_form" className="btn-action primary">
-          {editingCafe ? "Update Lookbook Listing" : "Save Lookbook Catalog Listing"}
-        </button>
-      </div>
     </div>
   );
 }
