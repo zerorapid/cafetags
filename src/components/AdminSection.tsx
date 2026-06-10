@@ -305,7 +305,7 @@ export function AdminSection({
       )}
 
       {/* Adding/Editing Cafe Form */}
-      {(isAddingCafe || editingCafe) && (
+      {activeTab === 'listings' && (isAddingCafe || editingCafe) && (
         <CafeForm
           editingCafe={editingCafe}
           onSave={async (cafe: any) => {
@@ -377,8 +377,8 @@ export function AdminSection({
         </div>
       )}
 
-      {/* Write/Edit Blog Form */}
-      {(isAddingBlog || editingBlog) && (
+      {/* Add/Edit Blog Form */}
+      {activeTab === 'blogs' && (isAddingBlog || editingBlog) && (
         <form onSubmit={handleSaveBlog} className="bg-white border border-stone-200 rounded-lg p-6 md:p-8 space-y-5 shadow-sm">
           <div className="flex justify-between items-center border-b border-stone-200 pb-4">
             <h3 className="font-serif text-xl font-bold text-stone-950">
