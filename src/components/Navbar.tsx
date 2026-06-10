@@ -26,47 +26,37 @@ export function Navbar({ onResetCafeSelection }: NavbarProps) {
 
       {/* Structured top-level navigation links */}
       <div id="navigation_menu" className="flex items-center gap-2 sm:gap-6 text-[#786F64] font-serif">
-        <Link
-          id="nav_link_directory"
-          to="/"
-          onClick={() => { onResetCafeSelection(); }}
-          className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
-            pathname === '/'
-              ? 'bg-stone-900 text-white border-stone-900 shadow-2xs'
-              : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
-          }`}
-        >
-          <MaterialIcon name="home" className="text-[24px]" />
-          <span>Home</span>
-        </Link>
+        {pathname !== '/admin' && (
+          <>
+            <Link
+              id="nav_link_directory"
+              to="/"
+              onClick={() => { onResetCafeSelection(); }}
+              className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
+                pathname === '/'
+                  ? 'bg-stone-900 text-white border-stone-900 shadow-2xs'
+                  : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
+              }`}
+            >
+              <MaterialIcon name="home" className="text-[24px]" />
+              <span>Home</span>
+            </Link>
 
-        <Link
-          id="nav_link_blog"
-          to="/journal"
-          onClick={() => { onResetCafeSelection(); }}
-          className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
-            pathname === '/journal'
-              ? 'bg-stone-900 text-white border-stone-900 shadow-2xs'
-              : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
-          }`}
-        >
-          <MaterialIcon name="menu_book" className="text-[24px]" />
-          <span>Journal</span>
-        </Link>
-
-        <Link
-          id="nav_link_admin"
-          to="/admin"
-          onClick={() => { onResetCafeSelection(); }}
-          className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
-            pathname === '/admin'
-              ? 'bg-amber-600 text-white border-amber-600 shadow-2xs'
-              : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
-          }`}
-        >
-          <MaterialIcon name="admin_panel_settings" className="text-[24px]" />
-          <span>Owner</span>
-        </Link>
+            <Link
+              id="nav_link_blog"
+              to="/journal"
+              onClick={() => { onResetCafeSelection(); }}
+              className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
+                pathname === '/journal'
+                  ? 'bg-stone-900 text-white border-stone-900 shadow-2xs'
+                  : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
+              }`}
+            >
+              <MaterialIcon name="menu_book" className="text-[24px]" />
+              <span>Journal</span>
+            </Link>
+          </>
+        )}
       </div>
       
       <div id="nav_actions" className="hidden lg:flex items-center gap-4">
