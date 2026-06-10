@@ -19,123 +19,72 @@ import { Footer } from './components/Footer';
 import { MaterialIcon } from './components/MaterialIcon';
 import { BlogSection } from './components/BlogSection';
 import { AdminSection } from './components/AdminSection';
-
+import { LoginScreen } from './components/LoginScreen';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { db } from './firebase';
+import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
 export default function App() {
-  // Navigation State
-  const [currentPage, setCurrentPage] = useState<'directory' | 'blog' | 'admin'>('directory');
+  // Authentication State
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [adminUsername] = useState(() => {
+    return import.meta.env.VITE_ADMIN_USERNAME || "admin";
+  });
+  const [adminPassword] = useState(() => {
+    return import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
+  });
 
   // --- STATE LAYER ---
-  const [cafes, setCafes] = useState<Cafe[]>(() => {
-    const saved = localStorage.getItem('hyd_cafes_lookbook');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved) as Cafe[];
-        const tagMap: { [key: string]: string } = {
-          "Historic Irani": "Irani Chai",
-          "Heritage Venue": "Heritage",
-          "Minimalist Design": "Minimalist",
-          "Specialty Coffee": "Specialty Coffee",
-          "Courtyard": "Courtyard",
-          "Quiet Workspace": "Quiet Workspace",
-          "Late Night Brews": "Late Night",
-          "High Ceilings": "Spacious",
-          "Heritage Bungalow": "Vintage Cafe",
-          "Cascading Gardens": "Garden",
-          "Artisan Patisserie": "Bakery",
-          "Architectural Vaults": "Aesthetic"
-        };
-        return parsed.map(c => {
-          const initial = INITIAL_CAFES.find(init => init.id === c.id);
-          const mappedTags = (c.tags || []).map(t => tagMap[t] || t);
-          return {
-            address: "123 Cafe Street, Gachibowli, Hyderabad",
-            phone: "+91 99999 88888",
-            email: "hello@coffeetags.in",
-            website: "https://buymeacoffee.com",
-            timings: "8:00 AM - 10:00 PM Everyday",
-            aestheticType: "Aesthetic Space, Cozy Nooks",
-            crowd: "Friendly Locals & Remote Creators",
-            discounts: "10% off for active students",
-            facilities: ["Free High-speed Wi-Fi", "Comfortable Couch Seating", "Power Outlets Available"],
-            dineIn: true,
-            takeaway: true,
-            onlineOrder: true,
-            selfDelivery: false,
-            celebrities: [],
-            bookingUrl: "https://www.swiggy.com/dineout/hyderabad",
-            featuredMenu: [
-              { name: "Classic Pour Over", price: "₹180", category: "Brews", isSpecial: true },
-              { name: "House Cold Malted Brew", price: "₹210", category: "Brews" },
-              { name: "Crusty Butter Croissant", price: "₹150", category: "Patisserie", isSpecial: true }
-            ],
-            userReviews: [
-              { author: "Aaditya", rating: 5, text: "Truly charming space with exceptionally helpful baristas.", date: "Jun 10, 2026", role: "Coffee Enthusiast" }
-            ],
-            ...initial,
-            ...c,
-            tags: mappedTags
-          };
-        });
-      } catch (e) {
-        console.error("Error restoring initial state from localStorage:", e);
-      }
-    }
-    return INITIAL_CAFES;
+  const [cafes, setCafes] = useState<Cafe[]>([]);
+  const [blogs, setBlogs] = useState<BlogArticle[]>([]);
+  const [feedbacks, setFeedbacks] = useState<UserFeedback[]>([]);
+  const [seoSettings, setSeoSettings] = useState<SeoSettings>({
+    websiteTitle: "CafeTags Hyderabad — Curated Specialty Coffee & Heritage Chai Lookbook",
+    websiteDescription: "Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.",
+    favicon: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=128&auto=format&fit=crop&q=80",
+    socialImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop",
+    googleAnalyticsId: "",
+    googleSearchConsoleToken: ""
   });
 
-  // Editorial Blogs State
-  const [blogs, setBlogs] = useState<BlogArticle[]>(() => {
-    const saved = localStorage.getItem('hyd_cafe_blogs');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        console.error("Error restoring blogs:", e);
-      }
+  // Fetch real-time data from Firestore
+  useEffect(() => {
+    // If Firebase isn't configured, fallback to INITIAL_CAFES
+    if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+      setCafes(INITIAL_CAFES);
+      setBlogs(INITIAL_BLOG_ARTICLES);
+      return;
     }
-    return INITIAL_BLOG_ARTICLES;
-  });
 
-  // Community Feedbacks State
-  const [feedbacks, setFeedbacks] = useState<UserFeedback[]>(() => {
-    const saved = localStorage.getItem('hyd_cafe_feedbacks');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        console.error("Error restoring feedbacks:", e);
-      }
-    }
-    return [];
-  });
+    const unsubCafes = onSnapshot(collection(db, "cafes"), (snapshot) => {
+      const data = snapshot.docs.map(d => ({ id: Number(d.id), ...d.data() } as Cafe));
+      if (data.length === 0) setCafes(INITIAL_CAFES);
+      else setCafes(data);
+    });
 
-  // SEO & Analytics Settings State
-  const [seoSettings, setSeoSettings] = useState<SeoSettings>(() => {
-    const saved = localStorage.getItem('hyd_cafe_seo_settings');
-    if (saved) {
-      try {
-        return {
-          websiteTitle: "CafeTags Hyderabad — Curated Specialty Coffee & Heritage Chai Lookbook",
-          websiteDescription: "Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.",
-          favicon: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=128&auto=format&fit=crop&q=80",
-          socialImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop",
-          googleAnalyticsId: "",
-          googleSearchConsoleToken: "",
-          ...JSON.parse(saved)
-        };
-      } catch (e) {
-        console.error("Error restoring SEO settings:", e);
+    const unsubBlogs = onSnapshot(collection(db, "blogs"), (snapshot) => {
+      const data = snapshot.docs.map(d => ({ id: Number(d.id), ...d.data() } as BlogArticle));
+      if (data.length === 0) setBlogs(INITIAL_BLOG_ARTICLES);
+      else setBlogs(data);
+    });
+
+    const unsubFeedbacks = onSnapshot(collection(db, "feedbacks"), (snapshot) => {
+      const data = snapshot.docs.map(d => ({ id: Number(d.id), ...d.data() } as UserFeedback));
+      setFeedbacks(data);
+    });
+
+    const unsubSeo = onSnapshot(doc(db, "settings", "seo"), (docSnap) => {
+      if (docSnap.exists()) {
+        setSeoSettings(prev => ({ ...prev, ...(docSnap.data() as SeoSettings) }));
       }
-    }
-    return {
-      websiteTitle: "CafeTags Hyderabad — Curated Specialty Coffee & Heritage Chai Lookbook",
-      websiteDescription: "Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.",
-      favicon: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=128&auto=format&fit=crop&q=80",
-      socialImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop",
-      googleAnalyticsId: "",
-      googleSearchConsoleToken: ""
+    });
+
+    return () => {
+      unsubCafes();
+      unsubBlogs();
+      unsubFeedbacks();
+      unsubSeo();
     };
-  });
+  }, []);
 
   // Apply SEO, Favicon and Tracker elements dynamically
   useEffect(() => {
@@ -257,20 +206,8 @@ export default function App() {
 
   // --- PERSISTENCE SYNCS ---
   useEffect(() => {
-    localStorage.setItem('hyd_cafes_lookbook', JSON.stringify(cafes));
-  }, [cafes]);
-
-  useEffect(() => {
     localStorage.setItem('hyd_cafe_journal_logs', JSON.stringify(journalLogs));
   }, [journalLogs]);
-
-  useEffect(() => {
-    localStorage.setItem('hyd_cafe_blogs', JSON.stringify(blogs));
-  }, [blogs]);
-
-  useEffect(() => {
-    localStorage.setItem('hyd_cafe_feedbacks', JSON.stringify(feedbacks));
-  }, [feedbacks]);
 
   // --- AUTO-ROTATING BANNERS EFFECT ---
   useEffect(() => {
@@ -351,12 +288,14 @@ export default function App() {
   }, [cafes, selectedTag, selectedLocation, selectedBudget, selectedAesthetic, searchQuery, sortBy]);
 
   // --- CONTROLLER CLICKS ---
-  const handleAddNewCafe = (newFieldData: Omit<Cafe, 'id'>) => {
-    const createdSpot: Cafe = {
-      id: Date.now(),
-      ...newFieldData
-    };
-    setCafes(prev => [createdSpot, ...prev]);
+  const handleAddNewCafe = async (newFieldData: Omit<Cafe, 'id'>) => {
+    const id = Date.now();
+    const createdSpot: Cafe = { id, ...newFieldData };
+    if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+      setCafes(prev => [createdSpot, ...prev]);
+      return;
+    }
+    await setDoc(doc(db, "cafes", id.toString()), createdSpot);
   };
 
   const handleSaveNotesOnCafe = (id: number, text: string) => {
@@ -367,17 +306,22 @@ export default function App() {
     }, 1200);
   };
 
-  const handleDeleteCafe = (id: number) => {
+  const handleDeleteCafe = async (id: number) => {
     if (confirm("Are you sure you would like to remove this curated spot from your personal lookup cabinet?")) {
-      setCafes(prev => prev.filter(c => c.id !== id));
       setSelectedCafe(null);
+      if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+        setCafes(prev => prev.filter(c => c.id !== id));
+        return;
+      }
+      await deleteDoc(doc(db, "cafes", id.toString()));
     }
   };
 
-  const handleAddUserFeedback = (cafeId: number, author: string, rating: number, text: string, email: string) => {
+  const handleAddUserFeedback = async (cafeId: number, author: string, rating: number, text: string, email: string) => {
     const targetCafe = cafes.find(c => c.id === cafeId);
+    const id = Date.now();
     const newFeedback: UserFeedback = {
-      id: Date.now(),
+      id,
       cafeId,
       cafeName: targetCafe ? targetCafe.name : "Hyderabad Spot",
       author,
@@ -387,7 +331,11 @@ export default function App() {
       date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
       status: 'pending'
     };
-    setFeedbacks(prev => [newFeedback, ...prev]);
+    if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+      setFeedbacks(prev => [newFeedback, ...prev]);
+      return;
+    }
+    await setDoc(doc(db, "feedbacks", id.toString()), newFeedback);
   };
 
   return (
@@ -397,8 +345,6 @@ export default function App() {
         <div>
           {/* REFRACTION NAVIGATION BAR */}
           <Navbar
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
             onResetCafeSelection={() => setSelectedCafe(null)}
           />
 
@@ -415,38 +361,59 @@ export default function App() {
                 allCafes={cafes}
                 onSelectCafe={setSelectedCafe}
                 onSubmitFeedback={handleAddUserFeedback}
-                isAdmin={currentPage === 'admin'}
+                isAdmin={isAuthenticated}
               />
-            ) : currentPage === 'blog' ? (
-              /* BLOG JOURNAL STREAM */
-              <motion.div
-                key="blog_panel"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <BlogSection articles={blogs} />
-              </motion.div>
-            ) : currentPage === 'admin' ? (
-              /* ADMIN PRIVILEGED CONTROL WORKSPACE */
-              <motion.div
-                key="admin_panel"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <AdminSection
-                  cafes={cafes}
-                  setCafes={setCafes}
-                  blogs={blogs}
-                  setBlogs={setBlogs}
-                  feedbacks={feedbacks}
-                  setFeedbacks={setFeedbacks}
-                  seoSettings={seoSettings}
-                  setSeoSettings={setSeoSettings}
-                />
-              </motion.div>
             ) : (
+              <Routes>
+                <Route path="/journal" element={
+                  <motion.div
+                    key="blog_panel"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <BlogSection articles={blogs} />
+                  </motion.div>
+                } />
+
+                <Route path="/admin" element={
+                  !isAuthenticated ? (
+                    <motion.div
+                      key="login_panel"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      <LoginScreen onLogin={(user, pwd) => {
+                        if (user === adminUsername && pwd === adminPassword) {
+                          setIsAuthenticated(true);
+                          return true;
+                        }
+                        return false;
+                      }} />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="admin_panel"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      <AdminSection
+                        cafes={cafes}
+                        setCafes={setCafes}
+                        blogs={blogs}
+                        setBlogs={setBlogs}
+                        feedbacks={feedbacks}
+                        setFeedbacks={setFeedbacks}
+                        seoSettings={seoSettings}
+                        setSeoSettings={setSeoSettings}
+                      />
+                    </motion.div>
+                  )
+                } />
+
+                <Route path="/" element={
               /* LOOKBOOK LANDING ARCHIVE */
               <motion.div
                 key="lookbook_stream"
@@ -537,6 +504,8 @@ export default function App() {
                   )}
                 </main>
               </motion.div>
+                } />
+              </Routes>
             )}
           </AnimatePresence>
         </div>
