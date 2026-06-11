@@ -54,6 +54,8 @@ export function AdminSection({
     readTime: '5 min read'
   });
 
+  const [seoForm, setSeoForm] = useState<SeoSettings>(seoSettings);
+
   // Action: Save Cafe (Handled by CafeForm now)
 
   const handleCafeCsvUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
