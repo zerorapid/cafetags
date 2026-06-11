@@ -20,10 +20,54 @@ import { MaterialIcon } from './components/MaterialIcon';
 import { BlogSection } from './components/BlogSection';
 import { AdminSection } from './components/AdminSection';
 import { LoginScreen } from './components/LoginScreen';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
 import { db } from './firebase';
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
+
+function CafeDetailWrapper({ cafes, journalLogs, onSaveNote, onDeleteCafe, noteSavingState, onSubmitFeedback, isAdmin }: any) {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const cafe = cafes.find((c: Cafe) => c.id.toString() === id);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
+
+  if (cafes.length === 0) {
+    return <div className="min-h-[80vh] flex items-center justify-center text-stone-500 font-medium">Loading space details...</div>;
+  }
+
+  if (!cafe) {
+    return (
+      <div className="min-h-[80vh] flex flex-col items-center justify-center">
+        <p className="text-2xl font-serif text-stone-900 mb-4">Space not found.</p>
+        <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-stone-900 hover:bg-stone-800 transition-colors text-white rounded-md text-xs font-bold uppercase tracking-widest shadow-sm cursor-pointer">Return Home</button>
+      </div>
+    );
+  }
+
+  return (
+    <DetailView
+      cafe={cafe}
+      onBack={() => navigate('/')}
+      journalLogs={journalLogs}
+      onSaveNote={onSaveNote}
+      onDeleteCafe={(cid: number) => {
+        onDeleteCafe(cid);
+        navigate('/');
+      }}
+      noteSavingState={noteSavingState}
+      allCafes={cafes}
+      onSelectCafe={(c: Cafe) => navigate(`/cafe/${c.id}`)}
+      onSubmitFeedback={onSubmitFeedback}
+      isAdmin={isAdmin}
+    />
+  );
+}
+
 export default function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [adminUsername] = useState(() => {
@@ -185,7 +229,6 @@ export default function App() {
   const [selectedBudget, setSelectedBudget] = useState("All");
   const [selectedAesthetic, setSelectedAesthetic] = useState("All");
   const [layout, setLayout] = useState<'grid' | 'list'>('grid');
-  const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null);
   const [sortBy, setSortBy] = useState<"founded-asc" | "founded-desc" | "name-az" | "area-az">("founded-asc");
   const [carouselIndex, setCarouselIndex] = useState(0);
 
@@ -211,12 +254,12 @@ export default function App() {
 
   // --- AUTO-ROTATING BANNERS EFFECT ---
   useEffect(() => {
-    if (selectedCafe) return;
+    if (location.pathname !== '/') return;
     const interval = setInterval(() => {
       setCarouselIndex((prev) => (prev + 1) % Math.min(cafes.length, 4));
     }, 7000);
     return () => clearInterval(interval);
-  }, [cafes.length, selectedCafe]);
+  }, [cafes.length, location.pathname]);
 
   // --- DYNAMIC FILTERS & CHIPS EXTRACTION ---
   const allTags = useMemo(() => {
@@ -308,7 +351,6 @@ export default function App() {
 
   const handleDeleteCafe = async (id: number) => {
     if (confirm("Are you sure you would like to remove this curated spot from your personal lookup cabinet?")) {
-      setSelectedCafe(null);
       if (!import.meta.env.VITE_FIREBASE_API_KEY) {
         setCafes(prev => prev.filter(c => c.id !== id));
         return;
@@ -345,26 +387,30 @@ export default function App() {
         <div>
           {/* REFRACTION NAVIGATION BAR */}
           <Navbar
-            onResetCafeSelection={() => setSelectedCafe(null)}
+            onResetCafeSelection={() => navigate('/')}
           />
 
           <AnimatePresence mode="wait">
-            {selectedCafe ? (
-              /* DETAILED STUDY VIEW */
-              <DetailView
-                cafe={selectedCafe}
-                onBack={() => setSelectedCafe(null)}
-                journalLogs={journalLogs}
-                onSaveNote={handleSaveNotesOnCafe}
-                onDeleteCafe={handleDeleteCafe}
-                noteSavingState={noteSavingState}
-                allCafes={cafes}
-                onSelectCafe={setSelectedCafe}
-                onSubmitFeedback={handleAddUserFeedback}
-                isAdmin={isAuthenticated}
-              />
-            ) : (
-              <Routes>
+              <Routes location={location} key={location.pathname}>
+                <Route path="/cafe/:id" element={
+                  <motion.div
+                    key="cafe_detail"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <CafeDetailWrapper 
+                      cafes={cafes}
+                      journalLogs={journalLogs}
+                      onSaveNote={handleSaveNotesOnCafe}
+                      onDeleteCafe={handleDeleteCafe}
+                      noteSavingState={noteSavingState}
+                      onSubmitFeedback={handleAddUserFeedback}
+                      isAdmin={isAuthenticated}
+                    />
+                  </motion.div>
+                } />
+
                 <Route path="/journal" element={
                   <motion.div
                     key="blog_panel"
@@ -426,13 +472,13 @@ export default function App() {
                   cafes={cafes}
                   carouselIndex={carouselIndex}
                   setCarouselIndex={setCarouselIndex}
-                  onSelectCafe={setSelectedCafe}
+                  onSelectCafe={(c) => navigate(`/cafe/${c.id}`)}
                 />
 
                 {/* NEWLY LAUNCHED AUTOMATIC SLIDER */}
                 <NewlyLaunchedSection
                   cafes={cafes}
-                  onSelectCafe={setSelectedCafe}
+                  onSelectCafe={(c) => navigate(`/cafe/${c.id}`)}
                 />
 
                 {/* SEARCH FILTERS MATRIX */}
@@ -485,7 +531,7 @@ export default function App() {
                           cafe={cafe}
                           index={index}
                           layout="grid"
-                          onSelect={() => setSelectedCafe(cafe)}
+                          onSelect={() => navigate(`/cafe/${cafe.id}`)}
                         />
                       ))}
                     </div>
@@ -497,7 +543,7 @@ export default function App() {
                           cafe={cafe}
                           index={index}
                           layout="list"
-                          onSelect={() => setSelectedCafe(cafe)}
+                          onSelect={() => navigate(`/cafe/${cafe.id}`)}
                         />
                       ))}
                     </div>
@@ -506,7 +552,6 @@ export default function App() {
               </motion.div>
                 } />
               </Routes>
-            )}
           </AnimatePresence>
         </div>
 
