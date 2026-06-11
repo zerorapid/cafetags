@@ -143,8 +143,8 @@ export function DetailView({
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover saturate-[0.9] hover:saturate-100 transition-all duration-700 ease-out group-hover:scale-[1.02]"
             />
-            {/* Soft gradient bottom overlay for title readability */}
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
+            {/* Premium gradient bottom overlay for title readability */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
             
             {/* Floating Tag Type */}
             <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-stone-900 text-[11px] font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 border border-stone-100">
@@ -270,13 +270,13 @@ export function DetailView({
           </div>
         </div>
 
-        {/* Quick Action Outline Pillar Buttons */}
-        <div className="flex flex-wrap items-center gap-2.5 self-start lg:self-auto pt-1">
+        {/* Premium Quick Action Buttons */}
+        <div className="flex flex-wrap items-center gap-3 self-start lg:self-auto pt-1">
           <a
             href={cafe.mapLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 bg-white border border-stone-200 hover:border-stone-400 text-stone-700 hover:text-stone-900 px-4 py-2.5 rounded-md text-xs font-semibold transition-all min-h-[40px] shadow-3xs cursor-pointer"
+            className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px] cursor-pointer"
           >
             <MaterialIcon name="directions" className="text-base text-stone-500" />
             <span>Directions</span>
@@ -284,7 +284,7 @@ export function DetailView({
 
           <a
             href={`tel:${(cafe.phone || "").replace(/\s+/g,'')}`}
-            className="inline-flex items-center gap-1.5 bg-white border border-stone-200 hover:border-stone-400 text-stone-700 hover:text-stone-900 px-4 py-2.5 rounded-md text-xs font-semibold transition-all min-h-[40px] shadow-3xs"
+            className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px]"
           >
             <MaterialIcon name="phone" className="text-base text-stone-500" />
             <span>Call</span>
@@ -295,7 +295,7 @@ export function DetailView({
               href={cafe.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-white border border-stone-200 hover:border-stone-400 text-stone-700 hover:text-stone-900 px-4 py-2.5 rounded-md text-xs font-semibold transition-all min-h-[40px] shadow-3xs"
+              className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px]"
             >
               <MaterialIcon name="language" className="text-base text-stone-500" />
               <span>Website</span>
@@ -308,7 +308,7 @@ export function DetailView({
               setCopiedAddress(true);
               setTimeout(() => setCopiedAddress(false), 2000);
             }}
-            className="inline-flex items-center gap-1.5 bg-white border border-stone-200 hover:border-stone-400 text-stone-700 hover:text-stone-900 px-4 py-2.5 rounded-md text-xs font-semibold transition-all min-h-[40px] shadow-3xs cursor-pointer"
+            className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px] cursor-pointer"
           >
             <MaterialIcon name={copiedAddress ? "check" : "share"} className={`text-base ${copiedAddress ? 'text-emerald-600' : 'text-stone-500'}`} />
             <span>{copiedAddress ? "Copied Link!" : "Share"}</span>
@@ -325,7 +325,7 @@ export function DetailView({
           {/* Highlight feature tiles (Grid of 3 cards side by side) */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
-            <div className="bg-white border border-stone-200/80 rounded-lg p-4.5 space-y-2 select-none hover:shadow-2xs transition-all">
+            <div className="bg-gradient-to-b from-white to-[#FAF9F6] border border-stone-200/60 rounded-lg p-4.5 space-y-2 select-none hover:shadow-md hover:-translate-y-0.5 hover:border-stone-300 transition-all duration-300">
               <div className="flex items-center gap-1.5 text-stone-400">
                 <MaterialIcon name="spa" className="text-lg text-emerald-600" />
                 <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider">About the place</span>
@@ -335,7 +335,7 @@ export function DetailView({
               </p>
             </div>
 
-            <div className="bg-white border border-stone-200/80 rounded-lg p-4.5 space-y-2 select-none hover:shadow-2xs transition-all">
+            <div className="bg-gradient-to-b from-white to-[#FAF9F6] border border-stone-200/60 rounded-lg p-4.5 space-y-2 select-none hover:shadow-md hover:-translate-y-0.5 hover:border-stone-300 transition-all duration-300">
               <div className="flex items-center gap-1.5 text-stone-400">
                 <MaterialIcon name="local_cafe" className="text-lg text-amber-600" />
                 <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider">Must try brew</span>
@@ -348,7 +348,7 @@ export function DetailView({
               </p>
             </div>
 
-            <div className="bg-white border border-stone-200/80 rounded-lg p-4.5 space-y-2 select-none hover:shadow-2xs transition-all">
+            <div className="bg-gradient-to-b from-white to-[#FAF9F6] border border-stone-200/60 rounded-lg p-4.5 space-y-2 select-none hover:shadow-md hover:-translate-y-0.5 hover:border-stone-300 transition-all duration-300">
               <div className="flex items-center gap-1.5 text-stone-400">
                 <MaterialIcon name="groups" className="text-lg text-blue-600" />
                 <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider">Crowd culture</span>
@@ -787,75 +787,8 @@ export function DetailView({
 
         </div>
 
-        {/* RIGHT FLOATING DESIGN COLUMN (Spans 4 variables on layout for "Book a table") */}
-        <div className="lg:col-span-4 space-y-6">
-          
-          {/* Bento element: "Book a table" floating card mockup */}
-          <div className="bg-white border border-stone-200/80 p-6 rounded-lg shadow-2xs space-y-5">
-            
-            <div className="space-y-1">
-              <h3 className="font-serif text-xl font-normal text-stone-900">Book a table</h3>
-              <p className="text-xs text-stone-400 font-medium">Free table reservation powered by Swiggy Dineout.</p>
-            </div>
-
-            {/* Dropdown 1: Date */}
-            <div className="space-y-1.5">
-              <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-wider pl-0.5">Date</label>
-              <div className="relative">
-                <select 
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full appearance-none bg-[#FAF9F6] border border-stone-200/80 hover:border-stone-400 px-3 py-2.5 rounded-md text-xs text-stone-800 font-medium focus:outline-none focus:ring-1 focus:ring-stone-900 transition-colors cursor-pointer"
-                >
-                  <option value="Today, 11 Jun">Today, 11 Jun</option>
-                  <option value="Tomorrow, 12 Jun">Tomorrow, 12 Jun</option>
-                  <option value="Friday, 13 Jun">Friday, 13 Jun</option>
-                  <option value="Saturday, 14 Jun">Saturday, 14 Jun</option>
-                  <option value="Sunday, 15 Jun">Sunday, 15 Jun</option>
-                </select>
-                <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 flex items-center">
-                  <MaterialIcon name="keyboard_arrow_down" className="text-base" />
-                </div>
-              </div>
-            </div>
-
-            {/* Dropdown 2: Guests count */}
-            <div className="space-y-1.5">
-              <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-wider pl-0.5">Number of Guests</label>
-              <div className="relative">
-                <select 
-                  value={selectedGuests}
-                  onChange={(e) => setSelectedGuests(e.target.value)}
-                  className="w-full appearance-none bg-[#FAF9F6] border border-stone-200/80 hover:border-stone-400 px-3 py-2.5 rounded-md text-xs text-stone-800 font-medium focus:outline-none focus:ring-1 focus:ring-stone-900 transition-colors cursor-pointer"
-                >
-                  <option value="1 guest">1 guest</option>
-                  <option value="2 guests">2 guests</option>
-                  <option value="3 guests">3 guests</option>
-                  <option value="4 guests">4 guests</option>
-                  <option value="5+ guests">5+ guests (Group reservation)</option>
-                </select>
-                <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 flex items-center">
-                  <MaterialIcon name="keyboard_arrow_down" className="text-base" />
-                </div>
-              </div>
-            </div>
-
-            {/* Big booking CTA action button */}
-            <a 
-              href={cafe.bookingUrl || "https://www.swiggy.com/dineout/hyderabad"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white py-3 px-4 rounded-md font-bold text-xs transition-all tracking-wide text-center min-h-[44px] cursor-pointer"
-            >
-              <MaterialIcon name="event_seat" className="text-sm" />
-              <span>Book table ({selectedGuests})</span>
-            </a>
-
-            <div className="pt-3 border-t border-stone-100 flex items-center justify-center gap-1.5 text-[9px] text-[#A87B43] tracking-wide select-none font-bold uppercase">
-              <span className="w-1 h-1 rounded-full bg-amber-600" />
-              <span>Instant Confirmation • No reservation charges</span>
-            </div>
-          </div>
+          {/* RIGHT FLOATING DESIGN COLUMN */}
+          <div className="lg:col-span-4 space-y-6">
 
           {/* Operational Checklist Services */}
           <div className="bg-white border border-stone-200/80 p-5 rounded-lg space-y-4">
