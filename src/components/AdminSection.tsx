@@ -44,6 +44,28 @@ export function AdminSection({
   // Tag Input Helpers removed (handled by CafeForm)
 
   // New Blog Template
+  const [blogTagInput, setBlogTagInput] = useState('');
+
+  const handleAddBlogTag = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (blogTagInput.trim()) {
+      if (editingBlog) {
+        setEditingBlog({ ...editingBlog, tags: [...(editingBlog.tags || []), blogTagInput.trim()] });
+      } else {
+        setBlogForm({ ...blogForm, tags: [...(blogForm.tags || []), blogTagInput.trim()] });
+      }
+      setBlogTagInput('');
+    }
+  };
+
+  const removeBlogTag = (indexToRemove: number) => {
+    if (editingBlog) {
+      setEditingBlog({ ...editingBlog, tags: (editingBlog.tags || []).filter((_, i) => i !== indexToRemove) });
+    } else {
+      setBlogForm({ ...blogForm, tags: (blogForm.tags || []).filter((_, i) => i !== indexToRemove) });
+    }
+  };
+
   const [blogForm, setBlogForm] = useState<Omit<BlogArticle, 'id'>>({
     title: '',
     excerpt: '',
@@ -51,7 +73,12 @@ export function AdminSection({
     image: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1200&auto=format&fit=crop',
     author: 'Rohan Shastry',
     date: 'June 10, 2026',
-    readTime: '5 min read'
+    readTime: '5 min read',
+    status: 'draft',
+    tags: [],
+    isFeatured: false,
+    seoTitle: '',
+    seoDescription: ''
   });
 
   const [seoForm, setSeoForm] = useState<SeoSettings>(seoSettings);
@@ -95,6 +122,11 @@ export function AdminSection({
             selfDelivery: row.selfDelivery === 'TRUE',
             celebrities: row.celebrities ? row.celebrities.split(',').map((t: string) => t.trim()) : [],
             bookingUrl: row.bookingUrl || '',
+            curatorNote: row.curatorNote || '',
+            socialLink: row.socialLink || '',
+            videoUrl: row.videoUrl || '',
+            directionsTip: row.directionsTip || '',
+            bannerCatchyLine: row.bannerCatchyLine || '',
             featuredMenu: [],
             userReviews: []
           };
@@ -130,7 +162,12 @@ export function AdminSection({
             image: row.image || 'https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80',
             author: row.author || 'Admin',
             date: row.date || new Date().toLocaleDateString(),
-            readTime: row.readTime || '5 min read'
+            readTime: row.readTime || '5 min read',
+            status: row.status === 'published' ? 'published' : 'draft',
+            tags: row.tags ? row.tags.split(',').map((t: string) => t.trim()) : [],
+            isFeatured: row.isFeatured === 'TRUE',
+            seoTitle: row.seoTitle || '',
+            seoDescription: row.seoDescription || ''
           };
           newBlogs.push(newBlog);
           if (import.meta.env.VITE_FIREBASE_API_KEY) {
@@ -186,7 +223,12 @@ export function AdminSection({
         image: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1200&auto=format&fit=crop',
         author: 'Rohan Shastry',
         date: 'June 10, 2026',
-        readTime: '5 min read'
+        readTime: '5 min read',
+        status: 'draft',
+        tags: [],
+        isFeatured: false,
+        seoTitle: '',
+        seoDescription: ''
       });
       alert("New blog article successfully published on the journal forum!");
     }
@@ -563,6 +605,84 @@ export function AdminSection({
                   onChange={e => editingBlog ? setEditingBlog({ ...editingBlog, image: e.target.value }) : setBlogForm({ ...blogForm, image: e.target.value })}
                   className="w-full bg-[#FAF9F6] border border-stone-200 p-3 rounded-md focus:outline-none font-mono"
                 />
+              </div>
+            </div>
+
+            {/* Advanced Options Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-[#F5F5F3] border border-stone-200 rounded-lg">
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[11px]">Publish Status</label>
+                    <p className="text-[10px] text-stone-500">Drafts are hidden from public view</p>
+                  </div>
+                  <select 
+                    value={editingBlog ? editingBlog.status || 'draft' : blogForm.status || 'draft'} 
+                    onChange={e => editingBlog ? setEditingBlog({...editingBlog, status: e.target.value as any}) : setBlogForm({...blogForm, status: e.target.value as any})}
+                    className="bg-white border border-stone-200 p-2 rounded focus:outline-none text-xs font-bold"
+                  >
+                    <option value="draft">Draft (Hidden)</option>
+                    <option value="published">Published (Live)</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div>
+                    <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[11px]">Featured Hero Article</label>
+                    <p className="text-[10px] text-stone-500">Pin to the top of the journal</p>
+                  </div>
+                  <div 
+                    onClick={() => editingBlog ? setEditingBlog({...editingBlog, isFeatured: !editingBlog.isFeatured}) : setBlogForm({...blogForm, isFeatured: !blogForm.isFeatured})}
+                    className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${ (editingBlog ? editingBlog.isFeatured : blogForm.isFeatured) ? 'bg-amber-600' : 'bg-stone-300' }`}
+                  >
+                    <div className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${ (editingBlog ? editingBlog.isFeatured : blogForm.isFeatured) ? 'translate-x-6' : 'translate-x-0' }`} />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[11px] mb-1">Article Categories / Tags</label>
+                  <div className="flex gap-2 mb-2">
+                    <input 
+                      type="text" 
+                      placeholder="e.g. Reviews" 
+                      value={blogTagInput} 
+                      onChange={e => setBlogTagInput(e.target.value)} 
+                      onKeyDown={e => { if(e.key==='Enter') handleAddBlogTag(e as any) }}
+                      className="flex-1 bg-white border border-stone-200 p-2 rounded-md focus:outline-none text-xs" 
+                    />
+                    <button type="button" onClick={handleAddBlogTag} className="bg-stone-200 hover:bg-stone-300 px-3 py-2 rounded-md text-xs font-bold transition-colors">ADD</button>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {(editingBlog ? editingBlog.tags || [] : blogForm.tags || []).map((t, i) => (
+                      <span key={i} className="bg-stone-900 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm flex items-center gap-1">
+                        {t} <span className="cursor-pointer text-stone-400 hover:text-white" onClick={() => removeBlogTag(i)}>×</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-[#786F64] font-bold mb-1 uppercase tracking-wider text-[11px]">SEO Meta Title Override</label>
+                  <input
+                    type="text"
+                    value={editingBlog ? editingBlog.seoTitle || '' : blogForm.seoTitle || ''}
+                    onChange={e => editingBlog ? setEditingBlog({ ...editingBlog, seoTitle: e.target.value }) : setBlogForm({ ...blogForm, seoTitle: e.target.value })}
+                    className="w-full bg-white border border-stone-200 p-2 rounded-md focus:outline-none text-xs"
+                    placeholder="Leave blank to use main title"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[#786F64] font-bold mb-1 uppercase tracking-wider text-[11px]">SEO Meta Description</label>
+                  <textarea
+                    rows={4}
+                    value={editingBlog ? editingBlog.seoDescription || '' : blogForm.seoDescription || ''}
+                    onChange={e => editingBlog ? setEditingBlog({ ...editingBlog, seoDescription: e.target.value }) : setBlogForm({ ...blogForm, seoDescription: e.target.value })}
+                    className="w-full bg-white border border-stone-200 p-2 rounded-md focus:outline-none text-xs"
+                    placeholder="Optimal for search engines (120-160 chars)"
+                  />
+                </div>
               </div>
             </div>
 

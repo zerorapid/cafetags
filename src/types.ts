@@ -76,6 +76,11 @@ export interface BlogArticle {
   author: string;
   date: string;
   readTime: string;
+  status?: 'draft' | 'published';
+  tags?: string[];
+  isFeatured?: boolean;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface UserFeedback {
