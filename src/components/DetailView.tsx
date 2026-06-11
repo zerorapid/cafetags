@@ -44,6 +44,8 @@ export function DetailView({
   const [fbRating, setFbRating] = useState(5);
   const [fbText, setFbText] = useState('');
   const [fbSuccess, setFbSuccess] = useState(false);
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
+  const [showSuggForm, setShowSuggForm] = useState(false);
 
   // Sync active image with selected cafe when it changes
   useEffect(() => {
@@ -99,14 +101,15 @@ export function DetailView({
   return (
     <motion.div
       key="individual_study_page"
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="max-w-7xl mx-auto px-6 md:px-12 py-6 bg-[#FAF9F6] min-h-screen font-sans"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="bg-white min-h-screen font-sans w-full pb-24"
     >
       {/* Sub-header Breadcrumbs / Navigation Path */}
-      <div id="study_breadcrumb" className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-stone-200/60">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 pb-2">
+        <div id="study_breadcrumb" className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 border-b border-stone-200/60 pb-4">
         <div className="flex items-center gap-1.5 text-xs text-stone-500 font-medium">
           <span className="hover:text-stone-900 cursor-pointer" onClick={onBack}>Hyderabad</span>
           <span>/</span>
@@ -127,87 +130,56 @@ export function DetailView({
           <span>Back to lookup</span>
         </button>
       </div>
+      </div>
 
-      {/* 2. Stunning Photo Collage Mosaic (District style) */}
-      <div className="relative mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-[250px] md:h-[400px] rounded-lg overflow-hidden border border-stone-200/50 shadow-xs bg-stone-100">
-          
-          {/* Main Display Frame */}
-          <div 
-            onClick={() => setShowAllPhotos(true)}
-            className="md:col-span-2 relative h-full w-full overflow-hidden cursor-pointer group bg-stone-100"
-          >
-            <img
-              src={activeImage}
-              alt={cafe.name}
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover saturate-[0.9] hover:saturate-100 transition-all duration-700 ease-out group-hover:scale-[1.02]"
-            />
-            {/* Premium gradient bottom overlay for title readability */}
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
-            
-            {/* Floating Tag Type */}
-            <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-stone-900 text-[11px] font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 border border-stone-100">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>{cafe.aestheticType || "Aesthetic Corner"}</span>
-            </div>
+      {/* Cinematic Full Bleed Hero */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+        className="w-full h-[50vh] md:h-[65vh] relative bg-stone-900 group cursor-pointer overflow-hidden"
+        onClick={() => setShowAllPhotos(true)}
+      >
+        <motion.img
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          src={activeImage}
+          alt={cafe.name}
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover saturate-[0.85] group-hover:saturate-100 transition-all duration-700 ease-out"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+        
+        {/* Floating Tag Type */}
+        <div className="absolute top-6 left-6 md:left-12 bg-white/10 backdrop-blur-md text-white text-[11px] font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-white/20">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>{cafe.aestheticType || "Aesthetic Corner"}</span>
+        </div>
 
-            {/* Quick float card content inside main picture */}
-            <div className="absolute bottom-5 left-5 right-5 text-white flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 pointer-events-none">
-              <div>
-                <p className="text-stone-200 text-xs font-semibold flex items-center gap-1">
-                  <MaterialIcon name="pin_drop" className="text-sm text-stone-100" />
-                  {cafe.area}, Hyderabad
-                </p>
-                <h1 className="font-serif text-2xl sm:text-4xl font-light tracking-tight text-white mt-0.5">
-                  {cafe.name}
-                </h1>
-              </div>
-            </div>
+        {/* Cinematic Title Inside Hero */}
+        <div className="absolute bottom-8 left-6 md:left-12 right-6 md:right-12 text-white flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 pointer-events-none">
+          <div className="space-y-2">
+            <p className="text-stone-300 text-xs font-bold uppercase tracking-widest flex items-center gap-1.5">
+              <MaterialIcon name="pin_drop" className="text-base text-emerald-400" />
+              {cafe.area}, Hyderabad
+            </p>
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white leading-tight">
+              {cafe.name}
+            </h1>
           </div>
-
-          {/* Right side supporting image grids (Stacked vertically, only on md/lg desktop) */}
-          <div className="hidden md:flex flex-col gap-3 h-full">
-            <div 
-              onClick={() => {
-                const nextImg = allPhotos[1 % allPhotos.length];
-                setActiveImage(nextImg);
-              }}
-              className="h-1/2 overflow-hidden relative cursor-pointer group bg-stone-100"
-            >
-              <img 
-                src={allPhotos[1 % allPhotos.length]} 
-                alt={`${cafe.name} view 2`} 
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover saturate-[0.85] group-hover:saturate-100 transition-all duration-500 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            
-            <div 
-              onClick={() => {
-                const nextImg = allPhotos[2 % allPhotos.length];
-                setActiveImage(nextImg);
-              }}
-              className="h-1/2 overflow-hidden relative cursor-pointer group bg-stone-100"
-            >
-              <img 
-                src={allPhotos[2 % allPhotos.length]} 
-                alt={`${cafe.name} view 3`} 
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover saturate-[0.85] group-hover:saturate-100 transition-all duration-500 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              {/* Show all photos button overlay inside last image */}
-              <div className="absolute bottom-4 right-4 bg-black/60 hover:bg-black/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-sm transition-colors flex items-center gap-1.5">
-                <MaterialIcon name="collections" className="text-sm" />
-                <span>Show all {allPhotos.length} photos</span>
-              </div>
-            </div>
+          <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 flex items-center gap-2 pointer-events-auto cursor-pointer hover:bg-white/20 transition-all">
+            <MaterialIcon name="collections" className="text-sm" />
+            <span className="text-xs font-bold">View Gallery ({allPhotos.length})</span>
           </div>
         </div>
-      </div>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        className="max-w-7xl mx-auto px-6 md:px-12 py-8"
+      >
 
       {/* Gallery Carousel Thumbnail Strip underneath */}
       {allPhotos.length > 1 && (
@@ -231,88 +203,38 @@ export function DetailView({
         </div>
       )}
 
-      {/* Primary Info Sheet with Headline, Rating Star Badge, and Quick Action Pills */}
-      <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-6 pb-6 mb-8 border-b border-stone-200/50">
-        <div className="space-y-2.5">
-          <div className="flex flex-wrap items-center gap-3">
-            <h1 className="font-serif text-3xl sm:text-4.5xl text-stone-900 font-light tracking-tight">
-              {cafe.name}
-            </h1>
-            <div className="inline-flex items-center gap-1 bg-[#1C3B2B] text-white px-2.5 py-1 rounded-sm text-xs font-bold font-mono">
-              <span>{(4.4 + (cafe.id % 6) * 0.1).toFixed(1)}</span>
-              <MaterialIcon name="star" className="text-[11px] text-[#FFDD00]" />
-            </div>
+      {/* 3. At a Glance Strip */}
+      <div className="flex flex-col gap-4 pb-6 mb-8 border-b border-stone-100 pt-2">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          {/* Status */}
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="text-xs font-bold text-emerald-800">{cafe.timings || "Open today, 9 AM - 11 PM"}</span>
           </div>
           
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-stone-500 font-medium">
-            <span className="flex items-center gap-1">
-              <MaterialIcon name="restaurant" className="text-sm text-stone-400" />
-              <span>{cafe.aestheticType || "Curated space"}</span>
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              <MaterialIcon name="payments" className="text-sm text-stone-400" />
-              <span>₹400 for two (approx.)</span>
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              <MaterialIcon name="schedule" className="text-sm text-stone-400" />
-              <span className="text-emerald-700 font-semibold">{cafe.timings || "Open today, 9 AM - 11 PM"}</span>
-            </span>
+          <span className="text-stone-300 hidden sm:block">|</span>
+
+          {/* Area */}
+          <div className="flex items-center gap-1.5 text-stone-600">
+            <MaterialIcon name="place" className="text-sm" />
+            <span className="text-xs font-semibold">{cafe.area}</span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 pt-2">
-            {cafe.tags.map(tag => (
-              <span key={tag} className="bg-stone-100 text-stone-600 text-[11px] font-semibold px-2.5 py-1 rounded-sm">
-                #{tag}
-              </span>
-            ))}
+          <span className="text-stone-300 hidden sm:block">|</span>
+
+          {/* Price */}
+          <div className="flex items-center gap-1.5 text-stone-600">
+            <MaterialIcon name="payments" className="text-sm" />
+            <span className="text-xs font-semibold">₹₹ Moderate</span>
           </div>
-        </div>
 
-        {/* Premium Quick Action Buttons */}
-        <div className="flex flex-wrap items-center gap-3 self-start lg:self-auto pt-1">
-          <a
-            href={cafe.mapLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px] cursor-pointer"
-          >
-            <MaterialIcon name="directions" className="text-base text-stone-500" />
-            <span>Directions</span>
-          </a>
+          <span className="text-stone-300 hidden sm:block">|</span>
 
-          <a
-            href={`tel:${(cafe.phone || "").replace(/\s+/g,'')}`}
-            className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px]"
-          >
-            <MaterialIcon name="phone" className="text-base text-stone-500" />
-            <span>Call</span>
-          </a>
-
-          {cafe.website && (
-            <a
-              href={cafe.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px]"
-            >
-              <MaterialIcon name="language" className="text-base text-stone-500" />
-              <span>Website</span>
-            </a>
-          )}
-
-          <button
-            onClick={() => {
-              navigator.clipboard.writeText(window.location.href);
-              setCopiedAddress(true);
-              setTimeout(() => setCopiedAddress(false), 2000);
-            }}
-            className="inline-flex items-center gap-1.5 bg-[#FAF9F6] border border-stone-200/80 hover:bg-white hover:border-stone-300 hover:shadow-sm text-stone-800 px-4.5 py-2.5 rounded-full text-xs font-bold transition-all min-h-[40px] cursor-pointer"
-          >
-            <MaterialIcon name={copiedAddress ? "check" : "share"} className={`text-base ${copiedAddress ? 'text-emerald-600' : 'text-stone-500'}`} />
-            <span>{copiedAddress ? "Copied Link!" : "Share"}</span>
-          </button>
+          {/* Vibe */}
+          <div className="flex items-center gap-1.5 text-stone-600">
+            <MaterialIcon name="mood" className="text-sm" />
+            <span className="text-xs font-semibold">{cafe.aestheticType || "Curated space"}</span>
+          </div>
         </div>
       </div>
 
@@ -325,38 +247,38 @@ export function DetailView({
           {/* Highlight feature tiles (Grid of 3 cards side by side) */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
-            <div className="bg-gradient-to-b from-white to-[#FAF9F6] border border-stone-200/60 rounded-lg p-4.5 space-y-2 select-none hover:shadow-md hover:-translate-y-0.5 hover:border-stone-300 transition-all duration-300">
-              <div className="flex items-center gap-1.5 text-stone-400">
-                <MaterialIcon name="spa" className="text-lg text-emerald-600" />
-                <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider">About the place</span>
+            <div className="bg-stone-50 rounded-lg p-5 space-y-2 select-none hover:bg-stone-100 transition-all duration-300">
+              <div className="flex items-center gap-1.5 text-stone-500">
+                <MaterialIcon name="spa" className="text-base" />
+                <span className="text-[10px] font-bold uppercase tracking-wider">About the place</span>
               </div>
-              <p className="text-xs text-stone-600 leading-relaxed font-sans font-medium line-clamp-3" title={cafe.vibe}>
+              <p className="text-xs text-stone-700 leading-relaxed font-medium line-clamp-3" title={cafe.vibe}>
                 {cafe.vibe}
               </p>
             </div>
 
-            <div className="bg-gradient-to-b from-white to-[#FAF9F6] border border-stone-200/60 rounded-lg p-4.5 space-y-2 select-none hover:shadow-md hover:-translate-y-0.5 hover:border-stone-300 transition-all duration-300">
-              <div className="flex items-center gap-1.5 text-stone-400">
-                <MaterialIcon name="local_cafe" className="text-lg text-amber-600" />
-                <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider">Must try brew</span>
+            <div className="bg-stone-50 rounded-lg p-5 space-y-2 select-none hover:bg-stone-100 transition-all duration-300">
+              <div className="flex items-center gap-1.5 text-stone-500">
+                <MaterialIcon name="local_cafe" className="text-base" />
+                <span className="text-[10px] font-bold uppercase tracking-wider">Must try brew</span>
               </div>
-              <p className="text-xs text-stone-900 font-semibold leading-relaxed font-sans">
+              <p className="text-xs text-stone-900 font-bold leading-relaxed">
                 {cafe.signature}
               </p>
-              <p className="text-[10px] text-stone-400 font-medium font-sans">
+              <p className="text-[10px] text-stone-400 font-medium leading-relaxed">
                 Independently chosen signature coffee profile recommended by local baristas.
               </p>
             </div>
 
-            <div className="bg-gradient-to-b from-white to-[#FAF9F6] border border-stone-200/60 rounded-lg p-4.5 space-y-2 select-none hover:shadow-md hover:-translate-y-0.5 hover:border-stone-300 transition-all duration-300">
-              <div className="flex items-center gap-1.5 text-stone-400">
-                <MaterialIcon name="groups" className="text-lg text-blue-600" />
-                <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider">Crowd culture</span>
+            <div className="bg-stone-50 rounded-lg p-5 space-y-2 select-none hover:bg-stone-100 transition-all duration-300">
+              <div className="flex items-center gap-1.5 text-stone-500">
+                <MaterialIcon name="groups" className="text-base" />
+                <span className="text-[10px] font-bold uppercase tracking-wider">Crowd culture</span>
               </div>
-              <p className="text-xs text-stone-600 leading-relaxed font-sans font-medium">
-                Particularly loved by <span className="font-semibold text-stone-800">{cafe.crowd.toLowerCase()}</span>.
+              <p className="text-xs text-stone-700 leading-relaxed font-medium">
+                Particularly loved by <span className="font-bold text-stone-900">{cafe.crowd.toLowerCase()}</span>.
               </p>
-              <p className="text-[10px] text-stone-400 font-medium font-sans">
+              <p className="text-[10px] text-stone-400 font-medium">
                 Best during daytime hours for work or casual meetups.
               </p>
             </div>
@@ -381,55 +303,15 @@ export function DetailView({
             </span>
           </div>
 
-          {/* Interactive tabs block: Menu vs Reviews vs Facilities */}
-          <div className="bg-white border border-stone-200/80 rounded-lg p-6 space-y-5">
-            <div className="flex border-b border-stone-200 text-sm font-sans">
-              <button
-                onClick={() => setActiveTab('menu')}
-                className={`flex-1 pb-3 text-center font-bold tracking-wide cursor-pointer transition-all relative flex items-center justify-center gap-1.5 ${
-                  activeTab === 'menu' ? 'text-stone-900' : 'text-stone-400 hover:text-stone-600'
-                }`}
-              >
-                <MaterialIcon name="restaurant_menu" className="text-base" />
-                <span>Menu</span>
-                {activeTab === 'menu' && (
-                  <motion.div layoutId="detail_active_tab_line" className="absolute bottom-0 inset-x-0 h-0.5 bg-stone-900" />
-                )}
-              </button>
-              
-              <button
-                onClick={() => setActiveTab('reviews')}
-                className={`flex-1 pb-3 text-center font-bold tracking-wide cursor-pointer transition-all relative flex items-center justify-center gap-1.5 ${
-                  activeTab === 'reviews' ? 'text-stone-900' : 'text-stone-400 hover:text-stone-600'
-                }`}
-              >
-                <MaterialIcon name="chat_bubble_outline" className="text-base" />
-                <span>Reviews ({cafe.userReviews ? cafe.userReviews.length : 0})</span>
-                {activeTab === 'reviews' && (
-                  <motion.div layoutId="detail_active_tab_line" className="absolute bottom-0 inset-x-0 h-0.5 bg-stone-900" />
-                )}
-              </button>
-              
-              <button
-                onClick={() => setActiveTab('facilities')}
-                className={`flex-1 pb-3 text-center font-bold tracking-wide cursor-pointer transition-all relative flex items-center justify-center gap-1.5 ${
-                  activeTab === 'facilities' ? 'text-stone-900' : 'text-stone-400 hover:text-stone-600'
-                }`}
-              >
-                <MaterialIcon name="room_service" className="text-base" />
-                <span>Amenities</span>
-                {activeTab === 'facilities' && (
-                  <motion.div layoutId="detail_active_tab_line" className="absolute bottom-0 inset-x-0 h-0.5 bg-stone-900" />
-                )}
-              </button>
-            </div>
-
-            {/* Tab content wrapper */}
-            <div className="pt-2">
-              
-              {/* Tab 1: Menu List */}
-              {activeTab === 'menu' && (
-                <div className="space-y-5">
+          {/* Continuous Scroll Content (Menu, Reviews, Amenities) */}
+          <div className="bg-white border border-stone-200/80 rounded-lg p-6 sm:p-8 space-y-12">
+            
+            {/* Menu Section */}
+            <div className="space-y-6">
+              <h3 className="font-serif text-2xl font-medium text-stone-900 flex items-center gap-2">
+                <MaterialIcon name="restaurant_menu" className="text-xl text-stone-400" />
+                Curated Menu
+              </h3>
                   <div className="flex justify-between items-center bg-[#FAF9F6] p-3.5 px-4.5 rounded-md border border-dashed border-stone-200">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xl">🌟</span>
@@ -441,42 +323,31 @@ export function DetailView({
                     <span className="text-[10px] bg-stone-900 text-white font-bold px-2.5 py-1 rounded-sm">Creator Select</span>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 pt-1">
+                  <div className="grid grid-cols-1 gap-y-3 pt-1">
                     {(cafe.featuredMenu || []).map((item) => (
-                      <div key={item.name} className="flex justify-between items-center text-xs border-b border-stone-100 pb-3 hover:border-stone-200 transition-colors gap-3">
-                        <div className="flex items-center gap-2.5">
-                          {item.image && (
-                            <div className="w-10 h-10 rounded-xs overflow-hidden border border-stone-200 bg-[#EBE7E0] flex-shrink-0">
-                              <img 
-                                src={item.image} 
-                                alt={item.name} 
-                                referrerPolicy="no-referrer"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          )}
-                          <div>
-                            <div className="flex items-center gap-1.5 flex-wrap">
-                              <span className="text-stone-900 font-bold">{item.name}</span>
-                              {item.isSpecial && (
-                                <span className="bg-amber-100 text-amber-800 text-[8px] px-1.5 py-0.5 rounded-sm font-bold uppercase tracking-wide">
-                                  Popular
-                                </span>
-                              )}
-                            </div>
-                            <span className="text-stone-400 text-[10px] font-semibold block mt-0.5">{item.category}</span>
+                      <div key={item.name} className="flex items-end justify-between text-xs pb-1 border-b border-dashed border-stone-200">
+                        <div className="flex flex-col">
+                          <div className="flex items-center gap-2">
+                            <span className="text-stone-900 font-bold">{item.name}</span>
+                            {item.isSpecial && (
+                              <span className="text-amber-600 text-[9px] font-bold uppercase tracking-wider">★ Popular</span>
+                            )}
                           </div>
+                          <span className="text-stone-400 text-[10px] mt-0.5 font-medium">{item.category}</span>
                         </div>
-                        <span className="text-stone-900 font-bold tracking-tight font-mono">{item.price}</span>
+                        <span className="text-stone-900 font-bold tracking-tight mb-0.5 pl-4">{item.price}</span>
                       </div>
                     ))}
                   </div>
-                </div>
-              )}
+            </div>
 
-              {/* Tab 2: User Reviews */}
-              {activeTab === 'reviews' && (
-                <div className="space-y-6">
+            {/* Reviews Section */}
+            <div className="space-y-6 pt-8 border-t border-stone-100">
+              <h3 className="font-serif text-2xl font-medium text-stone-900 flex items-center gap-2">
+                <MaterialIcon name="chat_bubble_outline" className="text-xl text-stone-400" />
+                Guestbook & Reviews ({cafe.userReviews ? cafe.userReviews.length : 0})
+              </h3>
+              <div className="space-y-6">
                   {/* Gatekeeper Audit Notice */}
                   <div className="bg-[#FAF9F6] border border-dashed border-stone-250 p-4 rounded-md text-center space-y-1">
                     <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold text-amber-700 bg-amber-500/10 px-2.5 py-0.5 rounded-sm uppercase tracking-wider font-mono">
@@ -532,15 +403,30 @@ export function DetailView({
                     })}
                   </div>
 
-                  {/* Public Recommendation Form */}
-                  <div className="bg-white border border-stone-200 p-5 rounded-lg space-y-4">
-                    <div className="border-b border-stone-100 pb-3">
-                      <span className="text-[9px] font-extrabold text-[#786F64] uppercase tracking-widest block font-mono">SUBMIT SPOT GUESTBOOK VERIFICATION</span>
-                      <h5 className="font-serif text-base font-bold text-stone-950 italic mt-0.5">Submit Community Feedback</h5>
+                  {/* Public Recommendation Form (Hidden by default) */}
+                  <div className="pt-2">
+                    {!showFeedbackForm && !fbSuccess ? (
+                      <button 
+                        onClick={() => setShowFeedbackForm(true)}
+                        className="w-full bg-stone-50 hover:bg-stone-100 border border-stone-200 text-stone-800 py-3.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        <MaterialIcon name="add_comment" className="text-base text-stone-500" />
+                        <span>Share Your Experience</span>
+                      </button>
+                    ) : (
+                      <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="bg-white border border-stone-200 p-5 rounded-lg space-y-4 shadow-sm">
+                        <div className="flex justify-between items-start border-b border-stone-100 pb-3">
+                          <div>
+                            <span className="text-[9px] font-extrabold text-[#786F64] uppercase tracking-widest block font-mono">SUBMIT SPOT GUESTBOOK VERIFICATION</span>
+                            <h5 className="font-serif text-base font-bold text-stone-950 italic mt-0.5">Submit Community Feedback</h5>
+                          </div>
+                          <button onClick={() => setShowFeedbackForm(false)} className="text-stone-400 hover:text-stone-700 p-1 cursor-pointer">
+                            <MaterialIcon name="close" className="text-lg" />
+                          </button>
+                        </div>
                       <p className="text-[11px] text-stone-500 mt-0.5 font-sans leading-relaxed">
                         Are we missing key signatures? Have timings changed? Recommend edits or report issues directly to the curator board. Let us know here!
                       </p>
-                    </div>
 
                     {fbSuccess ? (
                       <div className="bg-green-50 border border-green-200 rounded-md p-4 text-center space-y-1.5">
@@ -644,36 +530,53 @@ export function DetailView({
                         </div>
                       </form>
                     )}
-                  </div>
+                    </motion.div>
+                  )}
                 </div>
-              )}
+              </div>
+            </div>
 
-              {/* Tab 3: Amenities Badges Grid */}
-              {activeTab === 'facilities' && (
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {/* Amenities Section */}
+            <div className="space-y-6 pt-8 border-t border-stone-100">
+              <h3 className="font-serif text-2xl font-medium text-stone-900 flex items-center gap-2">
+                <MaterialIcon name="room_service" className="text-xl text-stone-400" />
+                Amenities
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {(cafe.facilities || []).map((fac) => (
                     <div key={fac} className="flex items-center gap-2 bg-[#FAF9F6] border border-stone-200/60 p-3 rounded-md hover:bg-white hover:border-stone-400 transition-all">
                       <span className="text-xs text-stone-400">✦</span>
                       <span className="text-xs font-semibold text-stone-700">{fac}</span>
                     </div>
                   ))}
-                </div>
-              )}
-
+              </div>
             </div>
           </div>
 
-          {/* Interactive Suggestions & Curation Edits Form (Direct Connection to Owner/Admin) */}
-          <div id="study_reflections_pad" className="bg-[#FAF8F2] border border-[#DECFBE] p-6 rounded-lg space-y-4">
-            <div className="flex justify-between items-center border-b border-[#DECFBE]/60 pb-3">
-              <h4 className="text-xs text-stone-700 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                <MaterialIcon name="chat_bubble_outline" className="text-lg text-[#5C4D3C]" />
-                <span>Add Your Suggestion/Feedback</span>
-              </h4>
-              <span className="text-[10px] text-[#5C4D3C] font-semibold uppercase tracking-widest bg-[#EFE8DD] border border-[#DDD0BF] px-2 py-0.5 rounded-sm font-sans">
-                Connect to Owner
-              </span>
-            </div>
+          {/* Interactive Suggestions & Curation Edits Form */}
+          <div id="study_reflections_pad">
+            {!showSuggForm && !suggSuccess ? (
+              <button 
+                onClick={() => setShowSuggForm(true)}
+                className="w-full bg-[#FAF8F2] hover:bg-[#F3EFE7] border border-[#DECFBE] text-[#5C4D3C] py-4 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+              >
+                <MaterialIcon name="edit_note" className="text-lg" />
+                <span>Suggest an Edit to the Owner</span>
+              </button>
+            ) : (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-[#FAF8F2] border border-[#DECFBE] p-6 rounded-lg space-y-4 shadow-sm relative">
+                <button onClick={() => setShowSuggForm(false)} className="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">
+                  <MaterialIcon name="close" className="text-lg" />
+                </button>
+                <div className="flex items-center gap-3 border-b border-[#DECFBE]/60 pb-3 pr-8">
+                  <h4 className="text-xs text-stone-700 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <MaterialIcon name="chat_bubble_outline" className="text-lg text-[#5C4D3C]" />
+                    <span>Add Your Suggestion/Feedback</span>
+                  </h4>
+                  <span className="text-[9px] text-[#5C4D3C] font-bold uppercase tracking-widest bg-[#EFE8DD] border border-[#DDD0BF] px-2 py-0.5 rounded-sm font-sans">
+                    Connect to Owner
+                  </span>
+                </div>
 
             <p className="text-[#7C6C58] text-xs leading-relaxed font-sans mt-0.5">
               Have a menu correction, Wi-Fi speed update, socket count change, or landmark study workspace feedback? Let the curator know directly.
@@ -727,6 +630,8 @@ export function DetailView({
                   </button>
                 </div>
               </form>
+            )}
+              </motion.div>
             )}
           </div>
 
@@ -788,10 +693,61 @@ export function DetailView({
         </div>
 
           {/* RIGHT FLOATING DESIGN COLUMN */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-8 self-start">
+
+            {/* Primary Action Button */}
+            <a
+              href={cafe.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-stone-900 hover:bg-stone-800 text-white py-3.5 rounded-lg text-sm font-bold transition-all shadow-md"
+            >
+              <MaterialIcon name="directions" className="text-lg" />
+              <span>Get Directions</span>
+            </a>
+
+            {/* Secondary Action Buttons Group */}
+            <div className="grid grid-cols-3 gap-2">
+              <a
+                href={`tel:${(cafe.phone || "").replace(/\s+/g,'')}`}
+                className="flex flex-col items-center justify-center gap-1 bg-stone-50 hover:bg-stone-100 text-stone-700 py-2.5 rounded-lg text-[10px] font-bold transition-all border border-transparent hover:border-stone-200"
+              >
+                <MaterialIcon name="phone" className="text-base" />
+                <span>Call</span>
+              </a>
+
+              {cafe.website ? (
+                <a
+                  href={cafe.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center gap-1 bg-stone-50 hover:bg-stone-100 text-stone-700 py-2.5 rounded-lg text-[10px] font-bold transition-all border border-transparent hover:border-stone-200"
+                >
+                  <MaterialIcon name="language" className="text-base" />
+                  <span>Website</span>
+                </a>
+              ) : (
+                <div className="flex flex-col items-center justify-center gap-1 bg-stone-50/50 text-stone-400 py-2.5 rounded-lg text-[10px] font-bold">
+                  <MaterialIcon name="language" className="text-base" />
+                  <span>Website</span>
+                </div>
+              )}
+
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                  setCopiedAddress(true);
+                  setTimeout(() => setCopiedAddress(false), 2000);
+                }}
+                className="flex flex-col items-center justify-center gap-1 bg-stone-50 hover:bg-stone-100 text-stone-700 py-2.5 rounded-lg text-[10px] font-bold transition-all border border-transparent hover:border-stone-200 cursor-pointer"
+              >
+                <MaterialIcon name={copiedAddress ? "check" : "share"} className={`text-base ${copiedAddress ? 'text-emerald-600' : ''}`} />
+                <span className={copiedAddress ? 'text-emerald-600' : ''}>{copiedAddress ? "Copied!" : "Share"}</span>
+              </button>
+            </div>
 
           {/* Operational Checklist Services */}
-          <div className="bg-white border border-stone-200/80 p-5 rounded-lg space-y-4">
+          <div className="bg-stone-50 p-5 rounded-lg space-y-4">
             <span className="block text-xs font-bold text-stone-900 flex items-center gap-1.5 pl-0.5">
               <MaterialIcon name="playlist_add_check" className="text-lg text-stone-600" />
               <span>Services provided</span>
@@ -833,7 +789,7 @@ export function DetailView({
           </div>
 
           {/* Address with Tip Box */}
-          <div className="bg-white border border-stone-200/80 p-5 rounded-lg space-y-3.5">
+          <div className="bg-stone-50 p-5 rounded-lg space-y-3.5">
             <span className="block text-xs font-bold text-stone-900 flex items-center gap-1.5 pl-0.5">
               <MaterialIcon name="place" className="text-lg text-stone-600" />
               <span>Location address</span>
@@ -853,7 +809,7 @@ export function DetailView({
 
           {/* Embedded Video Walkthrough (If available) */}
           {cafe.videoUrl && (
-            <div className="bg-white border border-stone-200/80 p-4.5 rounded-lg space-y-3">
+            <div className="bg-stone-50 p-4.5 rounded-lg space-y-3">
               <div className="flex items-center gap-2 font-bold text-xs text-stone-600 pl-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse" />
                 <span>Video Walk guide</span>
@@ -871,7 +827,7 @@ export function DetailView({
           )}
 
           {/* Social media connections card */}
-          <div className="bg-white border border-stone-200/80 p-5 rounded-lg space-y-4">
+          <div className="bg-stone-50 p-5 rounded-lg space-y-4">
             <span className="block text-xs font-bold text-stone-900 flex items-center gap-1.5 pl-0.5">
               <MaterialIcon name="share" className="text-lg text-stone-600" />
               <span>Connect on Social Media</span>
@@ -1038,6 +994,7 @@ export function DetailView({
           </div>
         </div>
       )}
+      </motion.div>
     </motion.div>
   );
 }
