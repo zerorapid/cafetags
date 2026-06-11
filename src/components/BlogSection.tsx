@@ -9,6 +9,28 @@ interface BlogSectionProps {
 
 export function BlogSection({ articles }: BlogSectionProps) {
   const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+  // Extract up to 7 unique tags for filtering (addressing the '07' request)
+  const allTags = Array.from(new Set(articles.flatMap(a => a.tags || []))).filter(Boolean).slice(0, 7);
+
+  const filteredArticles = articles.filter(article => {
+    // Hide drafts
+    if (article.status === 'draft') return false;
+
+    // Filter by search
+    if (searchQuery && !article.title.toLowerCase().includes(searchQuery.toLowerCase()) && !article.excerpt.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false;
+    }
+
+    // Filter by tag
+    if (selectedTag && (!article.tags || !article.tags.includes(selectedTag))) {
+      return false;
+    }
+
+    return true;
+  });
 
   if (selectedArticle) {
     return (
@@ -104,15 +126,51 @@ export function BlogSection({ articles }: BlogSectionProps) {
         </p>
       </div>
 
-      {articles.length === 0 ? (
+      {/* Search and Tags Filtering */}
+      <div className="mb-12 space-y-6 max-w-3xl mx-auto">
+        {/* Search Bar */}
+        <div className="relative">
+          <MaterialIcon name="search" className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" />
+          <input 
+            type="text" 
+            placeholder="Search journal columns, guides, and studies..." 
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className="w-full bg-white border border-stone-200 pl-12 pr-4 py-3.5 rounded-full text-sm font-medium focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all shadow-sm text-stone-900"
+          />
+        </div>
+
+        {/* Tags Row */}
+        {allTags.length > 0 && (
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
+            <button 
+              onClick={() => setSelectedTag(null)}
+              className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors cursor-pointer ${!selectedTag ? 'bg-stone-900 text-white' : 'bg-stone-100 text-stone-500 hover:bg-stone-200'}`}
+            >
+              All Columns
+            </button>
+            {allTags.map(tag => (
+              <button 
+                key={tag}
+                onClick={() => setSelectedTag(tag)}
+                className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors cursor-pointer ${selectedTag === tag ? 'bg-amber-600 text-white shadow-sm' : 'bg-stone-100 text-stone-500 hover:bg-stone-200'}`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {filteredArticles.length === 0 ? (
         <div className="text-center py-20 border border-dashed border-stone-200 rounded-xl max-w-xl mx-auto">
           <MaterialIcon name="menu_book" className="text-5xl text-stone-300 mb-2" />
-          <p className="font-serif text-xl text-stone-900 italic">The journal cabinet is closed</p>
-          <p className="text-stone-400 text-xs mt-1">No articles reside in this workspace currently.</p>
+          <p className="font-serif text-xl text-stone-900 italic">No matching columns found</p>
+          <p className="text-stone-400 text-xs mt-1">Try clearing your search filters or selecting another tag.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {articles.map((article, idx) => (
+          {filteredArticles.map((article, idx) => (
             <motion.div
               key={article.id}
               initial={{ opacity: 0, y: 20 }}
