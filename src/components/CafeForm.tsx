@@ -58,6 +58,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [menuPrice, setMenuPrice] = useState('');
   const [menuCategory, setMenuCategory] = useState('Brews');
   const [menuSpecial, setMenuSpecial] = useState(false);
+  const [menuImagesInput, setMenuImagesInput] = useState('');
 
   useEffect(() => {
     if (editingCafe) {
@@ -92,6 +93,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setFacilities(editingCafe.facilities || []);
       setCelebrities(editingCafe.celebrities || []);
       setMenuItems(editingCafe.featuredMenu || []);
+      setMenuImagesInput(editingCafe.menuImages ? editingCafe.menuImages.join(', ') : '');
     }
   }, [editingCafe]);
 
@@ -137,6 +139,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       dineIn, takeaway, onlineOrder, selfDelivery,
       isFeaturedBanner, isNewLaunch,
       tags, facilities, celebrities, featuredMenu: menuItems,
+      menuImages: menuImagesInput.split(',').map(s => s.trim()).filter(Boolean),
       userReviews: editingCafe ? editingCafe.userReviews : []
     };
 
@@ -448,6 +451,13 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
             <div className="menu-grid">
               <div className="menu-form-panel">
+                <h4>Original Menu Cards (Images)</h4>
+                <div className="field">
+                  <label>Menu Image URLs (comma separated)</label>
+                  <input type="text" placeholder="https://img1.jpg, https://img2.jpg" value={menuImagesInput} onChange={e => setMenuImagesInput(e.target.value)} />
+                </div>
+                <div style={{ height: '24px' }}></div>
+                
                 <h4>Draft Gastronomy Brew Item</h4>
 
                 <div className="field">

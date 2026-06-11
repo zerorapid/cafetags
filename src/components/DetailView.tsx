@@ -151,7 +151,7 @@ export function DetailView({
         <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
         
         {/* Floating Tag Type */}
-        <div className="absolute top-6 left-6 md:left-12 bg-white/10 backdrop-blur-md text-white text-[11px] font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-white/20">
+        <div className="absolute top-6 left-6 md:left-12 bg-white/10 backdrop-blur-md text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-white/20">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>{cafe.aestheticType || "Aesthetic Corner"}</span>
         </div>
@@ -244,45 +244,17 @@ export function DetailView({
         {/* LEFT COMPONENT COLUMN (Spans 8 variables on layout) */}
         <div className="lg:col-span-8 space-y-6">
           
-          {/* Highlight feature tiles (Grid of 3 cards side by side) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-            <div className="bg-stone-50 rounded-lg p-5 space-y-2 select-none hover:bg-stone-100 transition-all duration-300">
-              <div className="flex items-center gap-1.5 text-stone-500">
-                <MaterialIcon name="spa" className="text-base" />
-                <span className="text-[10px] font-bold uppercase tracking-wider">About the place</span>
+          {/* Highlight feature tiles */}
+          <div className="grid grid-cols-1 gap-4">
+            <div className="bg-stone-50 rounded-lg p-6 space-y-3 select-none hover:bg-stone-100 transition-all duration-300">
+              <div className="flex items-center gap-2 text-stone-500">
+                <MaterialIcon name="spa" className="text-lg" />
+                <span className="text-sm font-bold uppercase tracking-wider">About the place</span>
               </div>
-              <p className="text-xs text-stone-700 leading-relaxed font-medium line-clamp-3" title={cafe.vibe}>
+              <p className="text-sm text-stone-800 leading-relaxed font-medium" title={cafe.vibe}>
                 {cafe.vibe}
               </p>
             </div>
-
-            <div className="bg-stone-50 rounded-lg p-5 space-y-2 select-none hover:bg-stone-100 transition-all duration-300">
-              <div className="flex items-center gap-1.5 text-stone-500">
-                <MaterialIcon name="local_cafe" className="text-base" />
-                <span className="text-[10px] font-bold uppercase tracking-wider">Must try brew</span>
-              </div>
-              <p className="text-xs text-stone-900 font-bold leading-relaxed">
-                {cafe.signature}
-              </p>
-              <p className="text-[10px] text-stone-400 font-medium leading-relaxed">
-                Independently chosen signature coffee profile recommended by local baristas.
-              </p>
-            </div>
-
-            <div className="bg-stone-50 rounded-lg p-5 space-y-2 select-none hover:bg-stone-100 transition-all duration-300">
-              <div className="flex items-center gap-1.5 text-stone-500">
-                <MaterialIcon name="groups" className="text-base" />
-                <span className="text-[10px] font-bold uppercase tracking-wider">Crowd culture</span>
-              </div>
-              <p className="text-xs text-stone-700 leading-relaxed font-medium">
-                Particularly loved by <span className="font-bold text-stone-900">{cafe.crowd.toLowerCase()}</span>.
-              </p>
-              <p className="text-[10px] text-stone-400 font-medium">
-                Best during daytime hours for work or casual meetups.
-              </p>
-            </div>
-
           </div>
 
           {/* Special Offers Banner */}
@@ -292,13 +264,13 @@ export function DetailView({
                 🎫
               </div>
               <div>
-                <span className="block text-[10px] font-bold text-amber-800 uppercase tracking-wider">Active Promo</span>
+                <span className="block text-xs font-bold text-amber-800 uppercase tracking-wider">Active Promo</span>
                 <p className="text-xs text-stone-800 font-semibold mt-0.5">
                   {cafe.discounts || "Receive a complimentary pastry with any double-espresso order."}
                 </p>
               </div>
             </div>
-            <span className="bg-amber-900/10 text-amber-900 text-[10px] font-bold px-2.5 py-1 rounded-sm border border-amber-950/10">
+            <span className="bg-amber-900/10 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-sm border border-amber-950/10">
               Valid Today
             </span>
           </div>
@@ -316,29 +288,42 @@ export function DetailView({
                     <div className="flex items-center gap-2.5">
                       <span className="text-xl">🌟</span>
                       <div>
-                        <span className="block text-[8px] tracking-wider text-stone-400 font-extrabold uppercase">Signature beverage</span>
+                        <span className="block text-xs tracking-wider text-stone-400 font-extrabold uppercase">Signature beverage</span>
                         <span className="font-serif text-[14px] italic font-bold text-stone-900">{cafe.signature}</span>
                       </div>
                     </div>
-                    <span className="text-[10px] bg-stone-900 text-white font-bold px-2.5 py-1 rounded-sm">Creator Select</span>
+                    <span className="text-xs bg-stone-900 text-white font-bold px-2.5 py-1 rounded-sm">Creator Select</span>
                   </div>
 
                   <div className="grid grid-cols-1 gap-y-3 pt-1">
-                    {(cafe.featuredMenu || []).map((item) => (
+                    {(cafe.featuredMenu || []).slice(0, 3).map((item) => (
                       <div key={item.name} className="flex items-end justify-between text-xs pb-1 border-b border-dashed border-stone-200">
                         <div className="flex flex-col">
                           <div className="flex items-center gap-2">
                             <span className="text-stone-900 font-bold">{item.name}</span>
                             {item.isSpecial && (
-                              <span className="text-amber-600 text-[9px] font-bold uppercase tracking-wider">★ Popular</span>
+                              <span className="text-amber-600 text-xs font-bold uppercase tracking-wider">★ Popular</span>
                             )}
                           </div>
-                          <span className="text-stone-400 text-[10px] mt-0.5 font-medium">{item.category}</span>
+                          <span className="text-stone-400 text-xs mt-0.5 font-medium">{item.category}</span>
                         </div>
                         <span className="text-stone-900 font-bold tracking-tight mb-0.5 pl-4">{item.price}</span>
                       </div>
                     ))}
                   </div>
+                  
+                  {cafe.menuImages && cafe.menuImages.length > 0 && (
+                    <div className="mt-6 space-y-4 pt-4 border-t border-stone-100">
+                      <span className="block text-xs uppercase tracking-widest font-extrabold text-stone-500 mb-2">Original Menu Cards</span>
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {cafe.menuImages.map((imgUrl, i) => (
+                          <div key={i} className="aspect-[3/4] rounded-lg border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <img src={imgUrl.trim()} alt={`Menu page ${i + 1}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" onClick={() => window.open(imgUrl.trim(), '_blank')} />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
             </div>
 
             {/* Reviews Section */}
@@ -350,11 +335,11 @@ export function DetailView({
               <div className="space-y-6">
                   {/* Gatekeeper Audit Notice */}
                   <div className="bg-[#FAF9F6] border border-dashed border-stone-250 p-4 rounded-md text-center space-y-1">
-                    <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold text-amber-700 bg-amber-500/10 px-2.5 py-0.5 rounded-sm uppercase tracking-wider font-mono">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-700 bg-amber-500/10 px-2.5 py-0.5 rounded-sm uppercase tracking-wider font-mono">
                       <MaterialIcon name="verified_user" className="text-xs" />
                       Influencer Vetted Gatekeeper Active
                     </span>
-                    <p className="text-[11px] text-stone-500 font-sans leading-relaxed max-w-xl mx-auto">
+                    <p className="text-sm text-stone-500 font-sans leading-relaxed max-w-xl mx-auto">
                       To prevent robotic fake ratings, listing spam, and artificial boosting, all published reviews are authorized by **vetted Hyderabad cafe influencers**. Public feedback can be submitted below to alert our curators for future upgrades.
                     </p>
                   </div>
@@ -375,16 +360,16 @@ export function DetailView({
                               </div>
                               <div>
                                 <span className="text-stone-900 font-bold text-xs block">{rev.author}</span>
-                                <span className="text-[9px] text-[#A855F7] font-bold block uppercase tracking-wider flex items-center gap-0.5 mt-0.5">
-                                  <MaterialIcon name="stars" className="text-[9px] text-[#A855F7]" />
+                                <span className="text-xs text-[#A855F7] font-bold block uppercase tracking-wider flex items-center gap-0.5 mt-0.5">
+                                  <MaterialIcon name="stars" className="text-xs text-[#A855F7]" />
                                   {rev.role || "Cafe Influencer"}
                                 </span>
                               </div>
                             </div>
                             
                             <div className="flex items-center gap-0.5 bg-white border border-stone-200/50 px-1.5 py-0.5 rounded-sm text-amber-800">
-                              <span className="text-[10px] font-bold font-mono mr-0.5">{(rev.rating || 5).toFixed(1)}</span>
-                              <MaterialIcon name="star" className="text-[11px] text-amber-600" />
+                              <span className="text-xs font-bold font-mono mr-0.5">{(rev.rating || 5).toFixed(1)}</span>
+                              <MaterialIcon name="star" className="text-sm text-amber-600" />
                             </div>
                           </div>
 
@@ -392,7 +377,7 @@ export function DetailView({
                             "{rev.text}"
                           </p>
 
-                          <div className="flex justify-between items-center pt-2 border-t border-stone-100/60 text-[9px] text-stone-400 font-semibold select-none">
+                          <div className="flex justify-between items-center pt-2 border-t border-stone-100/60 text-xs text-stone-400 font-semibold select-none">
                             <span className="flex items-center gap-1 text-emerald-600">
                               <MaterialIcon name="verified" className="text-xs" /> Verified visit
                             </span>
@@ -417,14 +402,14 @@ export function DetailView({
                       <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="bg-white border border-stone-200 p-5 rounded-lg space-y-4 shadow-sm">
                         <div className="flex justify-between items-start border-b border-stone-100 pb-3">
                           <div>
-                            <span className="text-[9px] font-extrabold text-[#786F64] uppercase tracking-widest block font-mono">SUBMIT SPOT GUESTBOOK VERIFICATION</span>
+                            <span className="text-xs font-extrabold text-[#786F64] uppercase tracking-widest block font-mono">SUBMIT SPOT GUESTBOOK VERIFICATION</span>
                             <h5 className="font-serif text-base font-bold text-stone-950 italic mt-0.5">Submit Community Feedback</h5>
                           </div>
                           <button onClick={() => setShowFeedbackForm(false)} className="text-stone-400 hover:text-stone-700 p-1 cursor-pointer">
                             <MaterialIcon name="close" className="text-lg" />
                           </button>
                         </div>
-                      <p className="text-[11px] text-stone-500 mt-0.5 font-sans leading-relaxed">
+                      <p className="text-sm text-stone-500 mt-0.5 font-sans leading-relaxed">
                         Are we missing key signatures? Have timings changed? Recommend edits or report issues directly to the curator board. Let us know here!
                       </p>
 
@@ -432,13 +417,13 @@ export function DetailView({
                       <div className="bg-green-50 border border-green-200 rounded-md p-4 text-center space-y-1.5">
                         <MaterialIcon name="check_circle" className="text-3xl text-green-700" />
                         <h6 className="text-xs font-bold text-green-950">Feedback Successfully Dispatched!</h6>
-                        <p className="text-[11px] text-green-850 font-sans max-w-md mx-auto leading-relaxed">
+                        <p className="text-sm text-green-850 font-sans max-w-md mx-auto leading-relaxed">
                           Thank you for sharing! Your observations have been logged. Vetted Hyderabad cafe influencers will verify these points on their next incognito inspection before publication.
                         </p>
                         <button
                           type="button"
                           onClick={() => setFbSuccess(false)}
-                          className="mt-2 text-stone-500 hover:text-black text-[10px] font-bold underline font-mono cursor-pointer"
+                          className="mt-2 text-stone-500 hover:text-black text-xs font-bold underline font-mono cursor-pointer"
                         >
                           SUBMIT ANOTHER SUGGESTION
                         </button>
@@ -464,7 +449,7 @@ export function DetailView({
                       >
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                           <div className="space-y-1">
-                            <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[9px]">Your Name</label>
+                            <label className="block text-[#786F64] font-bold uppercase tracking-wider text-xs">Your Name</label>
                             <input
                               type="text"
                               required
@@ -475,7 +460,7 @@ export function DetailView({
                             />
                           </div>
                           <div className="space-y-1">
-                            <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[9px]">Your Email Address</label>
+                            <label className="block text-[#786F64] font-bold uppercase tracking-wider text-xs">Your Email Address</label>
                             <input
                               type="email"
                               required
@@ -488,7 +473,7 @@ export function DetailView({
                         </div>
 
                         <div className="space-y-1">
-                          <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[9px]">Your Rating Recommendation</label>
+                          <label className="block text-[#786F64] font-bold uppercase tracking-wider text-xs">Your Rating Recommendation</label>
                           <div className="flex items-center gap-2">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <button
@@ -503,12 +488,12 @@ export function DetailView({
                                 />
                               </button>
                             ))}
-                            <span className="text-stone-500 font-bold ml-1 text-[11px] font-mono">{fbRating}.0 / 5.0</span>
+                            <span className="text-stone-500 font-bold ml-1 text-sm font-mono">{fbRating}.0 / 5.0</span>
                           </div>
                         </div>
 
                         <div className="space-y-1">
-                          <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[9px]">Observations & Feedback Details</label>
+                          <label className="block text-[#786F64] font-bold uppercase tracking-wider text-xs">Observations & Feedback Details</label>
                           <textarea
                             required
                             rows={3}
@@ -522,7 +507,7 @@ export function DetailView({
                         <div className="pt-1 flex justify-end">
                           <button
                             type="submit"
-                            className="bg-amber-600 hover:bg-amber-700 text-white font-bold tracking-wider uppercase px-6 py-2.5 rounded-md shadow-xs cursor-pointer text-[10px] flex items-center gap-1 transition-colors min-h-[36px]"
+                            className="bg-amber-600 hover:bg-amber-700 text-white font-bold tracking-wider uppercase px-6 py-2.5 rounded-md shadow-xs cursor-pointer text-xs flex items-center gap-1 transition-colors min-h-[36px]"
                           >
                             <span className="text-yellow-300">✦</span>
                             <span>DISPATCH FEEDBACK</span>
@@ -551,89 +536,7 @@ export function DetailView({
                   ))}
               </div>
             </div>
-          </div>
-
-          {/* Interactive Suggestions & Curation Edits Form */}
-          <div id="study_reflections_pad">
-            {!showSuggForm && !suggSuccess ? (
-              <button 
-                onClick={() => setShowSuggForm(true)}
-                className="w-full bg-[#FAF8F2] hover:bg-[#F3EFE7] border border-[#DECFBE] text-[#5C4D3C] py-4 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
-              >
-                <MaterialIcon name="edit_note" className="text-lg" />
-                <span>Suggest an Edit to the Owner</span>
-              </button>
-            ) : (
-              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-[#FAF8F2] border border-[#DECFBE] p-6 rounded-lg space-y-4 shadow-sm relative">
-                <button onClick={() => setShowSuggForm(false)} className="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-1 cursor-pointer">
-                  <MaterialIcon name="close" className="text-lg" />
-                </button>
-                <div className="flex items-center gap-3 border-b border-[#DECFBE]/60 pb-3 pr-8">
-                  <h4 className="text-xs text-stone-700 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                    <MaterialIcon name="chat_bubble_outline" className="text-lg text-[#5C4D3C]" />
-                    <span>Add Your Suggestion/Feedback</span>
-                  </h4>
-                  <span className="text-[9px] text-[#5C4D3C] font-bold uppercase tracking-widest bg-[#EFE8DD] border border-[#DDD0BF] px-2 py-0.5 rounded-sm font-sans">
-                    Connect to Owner
-                  </span>
-                </div>
-
-            <p className="text-[#7C6C58] text-xs leading-relaxed font-sans mt-0.5">
-              Have a menu correction, Wi-Fi speed update, socket count change, or landmark study workspace feedback? Let the curator know directly.
-            </p>
-
-            {suggSuccess ? (
-              <div className="bg-green-50 border border-green-200 text-green-800 p-4 rounded-md text-xs font-medium space-y-1 animate-fade-in">
-                <p className="font-bold flex items-center gap-1">
-                  <MaterialIcon name="check_circle" className="text-sm text-green-600" />
-                  Successfully transmitted suggestion to Owner!
-                </p>
-                <p className="text-green-600 text-[11px] leading-relaxed">
-                  Your curated feedback has been successfully appended to the owner's feedback workspace review queue. Thank you for your support!
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSuggSubmit} className="space-y-3.5">
-                <textarea
-                  id="suggestion_area"
-                  required
-                  value={suggText}
-                  onChange={(e) => setSuggText(e.target.value)}
-                  placeholder="e.g. They recently upgraded the Wi-Fi speed to 150 Mbps, and added 3 more plug sockets beneath the long communal table on the second floor!"
-                  className="w-full bg-white border border-[#DDD0BF] p-3.5 rounded-md text-xs text-stone-900 placeholder-[#B0A79E] focus:outline-none focus:ring-1 focus:ring-[#C3B29D] h-24 leading-relaxed resize-none transition-all"
-                />
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input
-                    type="text"
-                    value={suggAuthor}
-                    onChange={(e) => setSuggAuthor(e.target.value)}
-                    placeholder="Your Name (e.g. Amit)"
-                    className="w-full bg-white border border-[#DDD0BF] p-2.5 rounded-md text-xs text-stone-900 focus:outline-[#C3B29D] outline-none font-sans font-medium"
-                  />
-                  <input
-                    type="email"
-                    value={suggEmail}
-                    onChange={(e) => setSuggEmail(e.target.value)}
-                    placeholder="Your Email (e.g. amit@gmail.com)"
-                    className="w-full bg-white border border-[#DDD0BF] p-2.5 rounded-md text-xs text-stone-900 focus:outline-[#C3B29D] outline-none font-sans font-medium"
-                  />
-                </div>
-
-                <div className="flex justify-end pt-1">
-                  <button
-                    type="submit"
-                    className="bg-stone-900 hover:bg-stone-800 text-white font-sans text-[11px] font-bold tracking-wider uppercase px-5 py-2.5 rounded-md shadow-xs flex items-center gap-1.5 cursor-pointer transition-colors border-none"
-                  >
-                    <MaterialIcon name="send" className="text-xs" />
-                    <span>Send to Administration</span>
-                  </button>
-                </div>
-              </form>
-            )}
-              </motion.div>
-            )}
-          </div>
+            {/* Interactive Suggestions & Curation Edits Form Removed */}          </div>
 
           {/* Famous Visitors Spotlight */}
           {cafe.celebrities && cafe.celebrities.length > 0 && (
@@ -646,16 +549,16 @@ export function DetailView({
                     <MaterialIcon name="stars" className="text-xl text-amber-500" />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-extrabold text-amber-800 uppercase tracking-widest leading-none">EXCLUSIVE SPOTLIGHT</span>
+                    <span className="block text-xs font-extrabold text-amber-800 uppercase tracking-widest leading-none">EXCLUSIVE SPOTLIGHT</span>
                     <h4 className="text-xs font-bold text-stone-900 tracking-wide mt-1">Celebrity Spotted Wall</h4>
                   </div>
                 </div>
-                <span className="bg-amber-900 text-[#FFF9E6] text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-widest border border-amber-950/25 shadow-2xs">
+                <span className="bg-amber-900 text-[#FFF9E6] text-xs font-extrabold px-2.5 py-1 rounded-full uppercase tracking-widest border border-amber-950/25 shadow-2xs">
                   ★ VIP GUESTS
                 </span>
               </div>
               
-              <p className="text-stone-500 text-[11px] leading-relaxed mb-4">
+              <p className="text-stone-500 text-sm leading-relaxed mb-4">
                 This space is frequently visited by notable public figures, acclaimed artists, and creators:
               </p>
 
@@ -667,12 +570,12 @@ export function DetailView({
                       key={idx}
                       className="flex items-center gap-2.5 bg-white border border-stone-200/75 hover:border-amber-400 p-2.5 rounded-md transition-all hover:shadow-2xs group/item"
                     >
-                      <div className="w-7 h-7 rounded-sm bg-stone-900 text-white font-bold text-[10px] flex items-center justify-center shadow-3xs group-hover/item:bg-amber-900 group-hover/item:scale-105 duration-300 transition-all">
+                      <div className="w-7 h-7 rounded-sm bg-stone-900 text-white font-bold text-xs flex items-center justify-center shadow-3xs group-hover/item:bg-amber-900 group-hover/item:scale-105 duration-300 transition-all">
                         {initials}
                       </div>
                       <div className="text-left">
                         <span className="block text-xs font-bold text-stone-900 leading-tight group-hover/item:text-amber-900 transition-colors">{celeb}</span>
-                        <span className="block text-[9px] text-amber-600 font-semibold tracking-wide flex items-center gap-0.5 mt-0.5">
+                        <span className="block text-xs text-amber-600 font-semibold tracking-wide flex items-center gap-0.5 mt-0.5">
                           <span className="text-amber-500">★</span> Star Visitor
                         </span>
                       </div>
@@ -681,9 +584,9 @@ export function DetailView({
                 })}
               </div>
 
-              <div className="mt-4 pt-3.5 border-t border-stone-200/50 flex items-center justify-between text-[10px] text-stone-400 font-medium">
+              <div className="mt-4 pt-3.5 border-t border-stone-200/50 flex items-center justify-between text-xs text-stone-400 font-medium">
                 <span className="flex items-center gap-1">
-                  <MaterialIcon name="verified_user" className="text-[11px] text-amber-600" /> Verified Spotting
+                  <MaterialIcon name="verified_user" className="text-sm text-amber-600" /> Verified Spotting
                 </span>
                 <span>CafeTags Directory</span>
               </div>
@@ -707,12 +610,12 @@ export function DetailView({
             </a>
 
             {/* Secondary Action Buttons Group */}
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-3">
               <a
                 href={`tel:${(cafe.phone || "").replace(/\s+/g,'')}`}
-                className="flex flex-col items-center justify-center gap-1 bg-stone-50 hover:bg-stone-100 text-stone-700 py-2.5 rounded-lg text-[10px] font-bold transition-all border border-transparent hover:border-stone-200"
+                className="flex flex-col items-center justify-center gap-2 bg-stone-50 hover:bg-stone-100 text-stone-800 py-4 rounded-lg text-sm font-bold transition-all border border-transparent hover:border-stone-200"
               >
-                <MaterialIcon name="phone" className="text-base" />
+                <MaterialIcon name="phone" className="text-3xl" />
                 <span>Call</span>
               </a>
 
@@ -721,14 +624,14 @@ export function DetailView({
                   href={cafe.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center gap-1 bg-stone-50 hover:bg-stone-100 text-stone-700 py-2.5 rounded-lg text-[10px] font-bold transition-all border border-transparent hover:border-stone-200"
+                  className="flex flex-col items-center justify-center gap-2 bg-stone-50 hover:bg-stone-100 text-stone-800 py-4 rounded-lg text-sm font-bold transition-all border border-transparent hover:border-stone-200"
                 >
-                  <MaterialIcon name="language" className="text-base" />
+                  <MaterialIcon name="language" className="text-3xl" />
                   <span>Website</span>
                 </a>
               ) : (
-                <div className="flex flex-col items-center justify-center gap-1 bg-stone-50/50 text-stone-400 py-2.5 rounded-lg text-[10px] font-bold">
-                  <MaterialIcon name="language" className="text-base" />
+                <div className="flex flex-col items-center justify-center gap-2 bg-stone-50/50 text-stone-400 py-4 rounded-lg text-sm font-bold">
+                  <MaterialIcon name="language" className="text-3xl" />
                   <span>Website</span>
                 </div>
               )}
@@ -739,9 +642,9 @@ export function DetailView({
                   setCopiedAddress(true);
                   setTimeout(() => setCopiedAddress(false), 2000);
                 }}
-                className="flex flex-col items-center justify-center gap-1 bg-stone-50 hover:bg-stone-100 text-stone-700 py-2.5 rounded-lg text-[10px] font-bold transition-all border border-transparent hover:border-stone-200 cursor-pointer"
+                className="flex flex-col items-center justify-center gap-2 bg-stone-50 hover:bg-stone-100 text-stone-800 py-4 rounded-lg text-sm font-bold transition-all border border-transparent hover:border-stone-200 cursor-pointer"
               >
-                <MaterialIcon name={copiedAddress ? "check" : "share"} className={`text-base ${copiedAddress ? 'text-emerald-600' : ''}`} />
+                <MaterialIcon name={copiedAddress ? "check" : "share"} className={`text-3xl ${copiedAddress ? 'text-emerald-600' : ''}`} />
                 <span className={copiedAddress ? 'text-emerald-600' : ''}>{copiedAddress ? "Copied!" : "Share"}</span>
               </button>
             </div>
@@ -759,7 +662,7 @@ export function DetailView({
                   <MaterialIcon name={cafe.dineIn ? "check_circle" : "cancel"} className={`text-base ${cafe.dineIn ? "text-emerald-700" : "text-stone-300"}`} />
                   <span>Dine in</span>
                 </span>
-                <span className="text-[10px] text-stone-400">{cafe.dineIn ? "Available" : "Not offered"}</span>
+                <span className="text-xs text-stone-400">{cafe.dineIn ? "Available" : "Not offered"}</span>
               </div>
 
               <div className="flex items-center justify-between border-b border-stone-100 pb-2.5 font-medium text-stone-700">
@@ -767,7 +670,7 @@ export function DetailView({
                   <MaterialIcon name={cafe.takeaway ? "check_circle" : "cancel"} className={`text-base ${cafe.takeaway ? "text-emerald-700" : "text-stone-300"}`} />
                   <span>Takeaway</span>
                 </span>
-                <span className="text-[10px] text-stone-400">{cafe.takeaway ? "Available" : "Not offered"}</span>
+                <span className="text-xs text-stone-400">{cafe.takeaway ? "Available" : "Not offered"}</span>
               </div>
 
               <div className="flex items-center justify-between border-b border-stone-100 pb-2.5 font-medium text-stone-700">
@@ -775,7 +678,7 @@ export function DetailView({
                   <MaterialIcon name={cafe.onlineOrder ? "check_circle" : "cancel"} className={`text-base ${cafe.onlineOrder ? "text-emerald-700" : "text-stone-300"}`} />
                   <span>Online courier delivery</span>
                 </span>
-                <span className="text-[10px] text-stone-400">{cafe.onlineOrder ? "Available" : "Not offered"}</span>
+                <span className="text-xs text-stone-400">{cafe.onlineOrder ? "Available" : "Not offered"}</span>
               </div>
 
               <div className="flex items-center justify-between pb-1 font-medium text-stone-700">
@@ -783,7 +686,7 @@ export function DetailView({
                   <MaterialIcon name={cafe.selfDelivery ? "check_circle" : "cancel"} className={`text-base ${cafe.selfDelivery ? "text-emerald-700" : "text-stone-300"}`} />
                   <span>Home delivery directly</span>
                 </span>
-                <span className="text-[10px] text-stone-400">{cafe.selfDelivery ? "Available" : "Not offered"}</span>
+                <span className="text-xs text-stone-400">{cafe.selfDelivery ? "Available" : "Not offered"}</span>
               </div>
             </div>
           </div>
@@ -800,31 +703,12 @@ export function DetailView({
             </p>
 
             {cafe.directionsTip && (
-              <p className="text-[11px] text-stone-400 italic leading-relaxed py-0.5 flex items-start gap-1.5 font-medium">
+              <p className="text-sm text-stone-400 italic leading-relaxed py-0.5 flex items-start gap-1.5 font-medium">
                 <MaterialIcon name="info" className="text-xs text-stone-400 flex-shrink-0 mt-0.5" />
                 <span>{cafe.directionsTip}</span>
               </p>
             )}
           </div>
-
-          {/* Embedded Video Walkthrough (If available) */}
-          {cafe.videoUrl && (
-            <div className="bg-stone-50 p-4.5 rounded-lg space-y-3">
-              <div className="flex items-center gap-2 font-bold text-xs text-stone-600 pl-0.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse" />
-                <span>Video Walk guide</span>
-              </div>
-              <div className="overflow-hidden rounded-md border border-stone-200 aspect-video w-full bg-stone-100">
-                <iframe
-                  src={cafe.videoUrl}
-                  title={`${cafe.name} tour guide`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0 saturate-[0.85] hover:saturate-100 transition-all duration-300"
-                />
-              </div>
-            </div>
-          )}
 
           {/* Social media connections card */}
           <div className="bg-stone-50 p-5 rounded-lg space-y-4">
@@ -833,7 +717,7 @@ export function DetailView({
               <span>Connect on Social Media</span>
             </span>
 
-            <p className="text-[11px] text-stone-500 leading-relaxed pl-0.5">
+            <p className="text-sm text-stone-500 leading-relaxed pl-0.5">
               Follow official channels, menu launches, and real-time community updates for {cafe.name}.
             </p>
 
@@ -910,7 +794,7 @@ export function DetailView({
             <div className="pt-2">
               <button 
                 onClick={() => onDeleteCafe(cafe.id)}
-                className="w-full py-2.5 rounded-md border border-dashed border-red-200 hover:bg-red-50 hover:border-red-400 text-red-700 transition-colors text-[11px] font-bold tracking-wide cursor-pointer flex items-center justify-center gap-1 min-h-[40px]"
+                className="w-full py-2.5 rounded-md border border-dashed border-red-200 hover:bg-red-50 hover:border-red-400 text-red-700 transition-colors text-sm font-bold tracking-wide cursor-pointer flex items-center justify-center gap-1 min-h-[40px]"
               >
                 <MaterialIcon name="delete_forever" className="text-base" />
                 <span>Delete Spot from Lookup</span>
@@ -988,7 +872,7 @@ export function DetailView({
                   />
                 </div>
                 <h5 className="font-serif text-[13px] text-stone-900 font-semibold group-hover/related:italic leading-tight truncate px-0.5">{rcafe.name}</h5>
-                <p className="text-[11px] text-stone-400 mt-0.5 px-0.5 truncate">{rcafe.area}</p>
+                <p className="text-sm text-stone-400 mt-0.5 px-0.5 truncate">{rcafe.area}</p>
               </div>
             ))}
           </div>

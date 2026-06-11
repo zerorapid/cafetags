@@ -43,6 +43,10 @@ export const INITIAL_CAFES: Cafe[] = [
       { name: "Khoya Dilkhush", price: "₹60", category: "Heritage Sweets" },
       { name: "Bun Malai (Cardamom infused)", price: "₹45", category: "Savory Mains", isSpecial: true }
     ],
+    menuImages: [
+      "https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop"
+    ],
     userReviews: [
       { author: "Rehan Quadri", rating: 5, text: "Drinking hot chai at 5 AM with Charminar silhouetted in the morning mist is a spiritual awakening. Absolutely peerless.", date: "Jun 02, 2026", role: "Local Historian" },
       { author: "Meera Sen", rating: 5, text: "Best Osmania biscuits on the planet. Fresh out of the coal oven, buttery, sweet and salty.", date: "May 20, 2026", role: "Craft Critic" }

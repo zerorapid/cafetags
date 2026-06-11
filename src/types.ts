@@ -54,6 +54,7 @@ export interface Cafe {
   featuredMenu: CafeMenuItem[];
   userReviews: CafeReview[];
   moreImages?: string[];
+  menuImages?: string[];
   isFeaturedBanner?: boolean;
   bannerCatchyLine?: string;
   isNewLaunch?: boolean;
