@@ -28,6 +28,7 @@ export interface Cafe {
   vibe: string;
   mapLink: string;
   icon: string;
+  logo?: string;
   signature: string;
   founded: string;
   curatorNote?: string;

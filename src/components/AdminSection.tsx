@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Cafe, BlogArticle, UserFeedback, CafeMenuItem, CafeReview, SeoSettings } from '../types';
 import { MaterialIcon } from './MaterialIcon';
 import { db } from '../firebase';
 import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 import { CafeForm } from './CafeForm';
+import Papa from 'papaparse';
 
 interface AdminSectionProps {
   cafes: Cafe[];
@@ -28,6 +29,9 @@ export function AdminSection({
 }: AdminSectionProps) {
   const [activeTab, setActiveTab] = useState<'listings' | 'blogs' | 'feedbacks' | 'seo'>('listings');
   
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const blogFileInputRef = useRef<HTMLInputElement>(null);
+
   // Listing forms state
   const [editingCafe, setEditingCafe] = useState<Cafe | null>(null);
   const [isAddingCafe, setIsAddingCafe] = useState(false);
@@ -51,6 +55,94 @@ export function AdminSection({
   });
 
   // Action: Save Cafe (Handled by CafeForm now)
+
+  const handleCafeCsvUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    Papa.parse(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: async (results) => {
+        const newCafes: Cafe[] = [];
+        for (const row of results.data as any[]) {
+          const newCafe: Cafe = {
+            id: Date.now() + Math.floor(Math.random() * 10000),
+            name: row.name || 'Unknown Cafe',
+            area: row.area || 'Unknown Area',
+            tags: row.tags ? row.tags.split(',').map((t: string) => t.trim()) : [],
+            image: row.image || 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80',
+            vibe: row.vibe || '',
+            mapLink: row.mapLink || '',
+            icon: row.icon || 'local_cafe',
+            logo: row.logo || '',
+            signature: row.signature || '',
+            founded: row.founded || '2026',
+            address: row.address || '',
+            phone: row.phone || '',
+            email: row.email || '',
+            website: row.website || '',
+            timings: row.timings || '8:00 AM - 10:00 PM',
+            aestheticType: row.aestheticType || '',
+            crowd: row.crowd || '',
+            discounts: row.discounts || '',
+            facilities: row.facilities ? row.facilities.split(',').map((t: string) => t.trim()) : [],
+            dineIn: row.dineIn !== 'FALSE',
+            takeaway: row.takeaway !== 'FALSE',
+            onlineOrder: row.onlineOrder !== 'FALSE',
+            selfDelivery: row.selfDelivery === 'TRUE',
+            celebrities: row.celebrities ? row.celebrities.split(',').map((t: string) => t.trim()) : [],
+            bookingUrl: row.bookingUrl || '',
+            featuredMenu: [],
+            userReviews: []
+          };
+          newCafes.push(newCafe);
+          if (import.meta.env.VITE_FIREBASE_API_KEY) {
+            await setDoc(doc(db, "cafes", newCafe.id.toString()), newCafe);
+          }
+        }
+        if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+          setCafes(prev => [...newCafes, ...prev]);
+        }
+        alert(`Successfully imported ${newCafes.length} cafes!`);
+        if (fileInputRef.current) fileInputRef.current.value = '';
+      }
+    });
+  };
+
+  const handleBlogCsvUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    Papa.parse(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: async (results) => {
+        const newBlogs: BlogArticle[] = [];
+        for (const row of results.data as any[]) {
+          const newBlog: BlogArticle = {
+            id: Date.now() + Math.floor(Math.random() * 10000),
+            title: row.title || 'Untitled Blog',
+            excerpt: row.excerpt || '',
+            content: row.content || '',
+            image: row.image || 'https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80',
+            author: row.author || 'Admin',
+            date: row.date || new Date().toLocaleDateString(),
+            readTime: row.readTime || '5 min read'
+          };
+          newBlogs.push(newBlog);
+          if (import.meta.env.VITE_FIREBASE_API_KEY) {
+            await setDoc(doc(db, "blogs", newBlog.id.toString()), newBlog);
+          }
+        }
+        if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+          setBlogs(prev => [...newBlogs, ...prev]);
+        }
+        alert(`Successfully imported ${newBlogs.length} blog columns!`);
+        if (blogFileInputRef.current) blogFileInputRef.current.value = '';
+      }
+    });
+  };
 
   // Action: Delete Cafe
   const handleDeleteCafe = async (id: number) => {
@@ -238,13 +330,23 @@ export function AdminSection({
         <div className="space-y-6">
           <div className="flex justify-between items-center">
             <h3 className="font-serif text-xl font-bold text-stone-950 italic">Home Listings Vault ({cafes.length})</h3>
-            <button
-              onClick={() => setIsAddingCafe(true)}
-              className="bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-md shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
-            >
-              <MaterialIcon name="add" className="text-sm" />
-              <span>CATALOG NEW CAFE</span>
-            </button>
+            <div className="flex gap-3">
+              <input type="file" accept=".csv" ref={fileInputRef} onChange={handleCafeCsvUpload} className="hidden" />
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold tracking-wider uppercase px-4 py-3 rounded-md border border-stone-300 transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <MaterialIcon name="upload_file" className="text-sm" />
+                <span>BULK IMPORT CSV</span>
+              </button>
+              <button
+                onClick={() => setIsAddingCafe(true)}
+                className="bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-md shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <MaterialIcon name="add" className="text-sm" />
+                <span>CATALOG NEW CAFE</span>
+              </button>
+            </div>
           </div>
 
           <div className="bg-white border border-stone-200 rounded-lg overflow-hidden shadow-xs">
@@ -331,13 +433,23 @@ export function AdminSection({
         <div className="space-y-6">
           <div className="flex justify-between items-center">
             <h3 className="font-serif text-xl font-bold text-stone-950 italic">Journal Columns Vault ({blogs.length})</h3>
-            <button
-              onClick={() => setIsAddingBlog(true)}
-              className="bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-md shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
-            >
-              <MaterialIcon name="post_add" className="text-sm" />
-              <span>PUBLISH NEW COLUMN</span>
-            </button>
+            <div className="flex gap-3">
+              <input type="file" accept=".csv" ref={blogFileInputRef} onChange={handleBlogCsvUpload} className="hidden" />
+              <button
+                onClick={() => blogFileInputRef.current?.click()}
+                className="bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold tracking-wider uppercase px-4 py-3 rounded-md border border-stone-300 transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <MaterialIcon name="upload_file" className="text-sm" />
+                <span>BULK IMPORT CSV</span>
+              </button>
+              <button
+                onClick={() => setIsAddingBlog(true)}
+                className="bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-md shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <MaterialIcon name="post_add" className="text-sm" />
+                <span>PUBLISH NEW COLUMN</span>
+              </button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

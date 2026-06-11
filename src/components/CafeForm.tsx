@@ -16,6 +16,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [area, setArea] = useState('');
   const [founded, setFounded] = useState('2026');
   const [icon, setIcon] = useState('local_cafe');
+  const [logo, setLogo] = useState('');
   const [address, setAddress] = useState('');
   const [mapLink, setMapLink] = useState('');
   const [phone, setPhone] = useState('');
@@ -66,6 +67,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setArea(editingCafe.area || '');
       setFounded(editingCafe.founded || '2026');
       setIcon(editingCafe.icon || 'local_cafe');
+      setLogo(editingCafe.logo || '');
       setAddress(editingCafe.address || '');
       setMapLink(editingCafe.mapLink || '');
       setPhone(editingCafe.phone || '');
@@ -134,7 +136,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const cafeData: any = {
-      name, area, founded, icon, address, mapLink, phone, email, website, timings,
+      name, area, founded, icon, logo, address, mapLink, phone, email, website, timings,
       aestheticType, vibe, crowd, discounts, signature, bookingUrl, image,
       dineIn, takeaway, onlineOrder, selfDelivery,
       isFeaturedBanner, isNewLaunch,
@@ -234,6 +236,15 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="field">
                 <label>Brand Icon <span className="req">*</span></label>
                 <input type="text" placeholder="e.g. local_cafe" value={icon} onChange={e => setIcon(e.target.value)} required />
+              </div>
+            </div>
+
+            <div style={{ height: '20px' }}></div>
+
+            <div className="form-grid">
+              <div className="field">
+                <label>Brand Logo URL</label>
+                <input type="text" placeholder="https://..." value={logo} onChange={e => setLogo(e.target.value)} />
               </div>
             </div>
 
