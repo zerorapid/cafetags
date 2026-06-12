@@ -66,7 +66,7 @@ export function Navbar({ onResetCafeSelection }: NavbarProps) {
           href="https://buymeacoffee.com/aryanculture"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center border-[2px] border-[#3B2F2F] text-[#3B2F2F] bg-transparent hover:bg-[#3B2F2F] hover:text-[#F5F5F0] transition-colors duration-300 font-serif font-normal text-[24px] tracking-[0.5px] px-[24px] py-[10px] rounded-[5.5px] cursor-pointer select-none"
+          className="inline-flex items-center text-[#3B2F2F] bg-transparent hover:bg-[#3B2F2F] hover:text-[#F5F5F0] transition-colors duration-300 font-serif font-normal text-[24px] tracking-[0.5px] px-[24px] py-[10px] rounded-[5.5px] cursor-pointer select-none"
         >
           <MaterialIcon name="coffee" className="mr-[12px] text-[18px]" />
           <span>Buy me a coffee</span>

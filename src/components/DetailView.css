@@ -1,0 +1,773 @@
+/* ==========================================================================
+   1. DESIGN TOKENS & CSS VARIABLES
+   ========================================================================== */
+.custom-detail-view {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f7f7f7;
+    --color-bg-tertiary: #ebebeb;
+    --color-bg-overlay: rgba(255, 255, 255, 0.85);
+    
+    --color-text-primary: #222222;
+    --color-text-secondary: #717171;
+    --color-text-tertiary: #a0a0a0;
+    --color-text-inverse: #ffffff;
+    
+    --color-border-light: #dddddd;
+    --color-border-medium: #cccccc;
+    --color-border-dark: #222222;
+    
+    --color-accent: #000000;
+    --color-accent-hover: #333333;
+    
+    --font-heading: 'Instrument Serif', serif;
+    --font-body: 'Google Sans', 'Outfit', 'Product Sans', sans-serif;
+    
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    
+    --container-max: 1120px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+.custom-detail-view *, .custom-detail-view *::before, .custom-detail-view *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.custom-detail-view a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s var(--ease-out-expo);
+}
+
+.custom-detail-view a:hover {
+    color: var(--color-text-primary);
+}
+
+.custom-detail-view ul, .custom-detail-view ol { list-style: none; padding: 0; margin: 0; }
+
+.custom-detail-view button, .custom-detail-view input, .custom-detail-view textarea, .custom-detail-view select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY
+   ========================================================================== */
+.custom-detail-view h1, .custom-detail-view h2, .custom-detail-view h3, .custom-detail-view h4, .custom-detail-view h5, .custom-detail-view h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.custom-detail-view h1 { font-size: var(--text-5xl); }
+.custom-detail-view h2 { font-size: var(--text-4xl); margin-bottom: var(--space-6); }
+.custom-detail-view h3 { font-size: var(--text-2xl); margin-bottom: var(--space-4); }
+.custom-detail-view h4 { 
+    font-size: var(--text-sm); 
+    font-family: var(--font-body);
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.08em; 
+    color: var(--color-text-primary);
+}
+
+.custom-detail-view p {
+    margin-top: 0;
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    max-width: 65ch;
+}
+
+.custom-detail-view p:last-child { margin-bottom: 0; }
+
+.custom-detail-view .text-lead {
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+}
+
+.custom-detail-view .text-small { font-size: var(--text-sm); }
+.custom-detail-view .text-xs { font-size: var(--text-xs); }
+.custom-detail-view .text-muted { color: var(--color-text-tertiary); }
+.custom-detail-view .text-center { text-align: center; }
+.custom-detail-view .font-italic { font-style: italic; }
+
+/* ==========================================================================
+   4. LAYOUT UTILITIES
+   ========================================================================== */
+.custom-detail-view .custom-container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+.custom-detail-view .section {
+    padding: var(--space-16) 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .section:last-of-type { border-bottom: none; }
+
+.custom-detail-view .grid { display: grid; gap: var(--space-6); }
+.custom-detail-view .grid-2 { grid-template-columns: repeat(2, 1fr); }
+.custom-detail-view .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.custom-detail-view .flex { display: flex; }
+.custom-detail-view .flex-col { flex-direction: column; }
+.custom-detail-view .items-center { align-items: center; }
+.custom-detail-view .justify-between { justify-content: space-between; }
+.custom-detail-view .justify-center { justify-content: center; }
+.custom-detail-view .gap-2 { gap: var(--space-2); }
+.custom-detail-view .gap-4 { gap: var(--space-4); }
+.custom-detail-view .gap-6 { gap: var(--space-6); }
+.custom-detail-view .gap-8 { gap: var(--space-8); }
+
+/* ==========================================================================
+   5. COMPONENTS: BUTTONS, BADGES, CARDS
+   ========================================================================== */
+.custom-detail-view .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 0.875rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.custom-detail-view .btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
+}
+
+.custom-detail-view .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.custom-detail-view .btn-secondary {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .btn-secondary:hover {
+    background-color: var(--color-bg-tertiary);
+    border-color: var(--color-border-medium);
+}
+
+.custom-detail-view .btn-ghost {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    padding: 0.75rem;
+}
+
+.custom-detail-view .btn-ghost:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.custom-detail-view .btn-pill {
+    border-radius: var(--radius-full);
+    padding: 0.875rem 1.5rem;
+}
+
+.custom-detail-view .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: 0.375rem 0.75rem;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .badge-dark {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+    border-color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   6. NAVIGATION (Frosted Glass)
+   ========================================================================== */
+.custom-detail-view .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--color-bg-overlay);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--color-border-light);
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.custom-detail-view .nav-inner {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3) 0;
+}
+
+.custom-detail-view .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    flex-wrap: wrap;
+}
+
+.custom-detail-view .breadcrumbs a {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.custom-detail-view .breadcrumbs a:hover {
+    color: var(--color-text-primary);
+    text-decoration: underline;
+}
+
+.custom-detail-view .breadcrumb-separator {
+    color: var(--color-border-medium);
+    font-size: 0.75rem;
+}
+
+.custom-detail-view .nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-2);
+}
+
+.custom-detail-view .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.custom-detail-view .back-link:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+}
+
+.custom-detail-view .logo-mark {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-text-primary);
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   7. HERO GALLERY (Airbnb Style)
+   ========================================================================== */
+.custom-detail-view .hero-gallery {
+    margin-top: 100px;
+    padding-bottom: var(--space-8);
+}
+
+.custom-detail-view .gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: var(--space-2);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+}
+
+.custom-detail-view .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.custom-detail-view .gallery-item:first-child {
+    grid-row: span 2;
+}
+
+.custom-detail-view .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+    filter: grayscale(20%);
+}
+
+.custom-detail-view .gallery-item:hover img {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+}
+
+.custom-detail-view .gallery-overlay {
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    cursor: pointer;
+    color: #222;
+}
+
+.custom-detail-view .gallery-item:hover .gallery-overlay {
+    background-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   8. MAIN CONTENT LAYOUT (Content + Sticky Sidebar)
+   ========================================================================== */
+.custom-detail-view .listing-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: var(--space-16);
+    align-items: start;
+}
+
+.custom-detail-view .listing-header {
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-8);
+}
+
+.custom-detail-view .listing-title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-2);
+    line-height: 1.1;
+}
+
+.custom-detail-view .listing-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    flex-wrap: wrap;
+}
+
+.custom-detail-view .listing-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.custom-detail-view .divider-dot {
+    width: 4px !important;
+    height: 4px !important;
+    background-color: var(--color-text-tertiary);
+    border-radius: 50%;
+}
+
+.custom-detail-view .host-section {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) 0;
+    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-8);
+}
+
+.custom-detail-view .host-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+    border: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .host-info h4 {
+    font-size: var(--text-base);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 2px;
+}
+
+.custom-detail-view .host-info p {
+    font-size: var(--text-sm);
+    margin: 0;
+}
+
+/* ==========================================================================
+   9. STICKY SIDEBAR (Action Card)
+   ========================================================================== */
+.custom-detail-view .sticky-sidebar {
+    position: sticky;
+    top: 120px;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+}
+
+.custom-detail-view .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .sidebar-price {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+}
+
+.custom-detail-view .sidebar-price span {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.custom-detail-view .sidebar-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.custom-detail-view .sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.custom-detail-view .sidebar-info {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .sidebar-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.custom-detail-view .sidebar-info-item i {
+    margin-top: 2px;
+    color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   10. AMENITIES & PROMO
+   ========================================================================== */
+.custom-detail-view .promo-banner {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .promo-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.custom-detail-view .promo-content h4 {
+    font-size: var(--text-base);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.custom-detail-view .promo-content p {
+    font-size: var(--text-sm);
+    margin-bottom: 8px;
+}
+
+.custom-detail-view .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+}
+
+.custom-detail-view .amenity-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    padding: var(--space-3) 0;
+}
+
+.custom-detail-view .amenity-item i {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   11. MENU BENTO CARDS
+   ========================================================================== */
+.custom-detail-view .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.custom-detail-view .menu-card {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out-expo);
+    border: 1px solid transparent;
+}
+
+.custom-detail-view .menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-light);
+}
+
+.custom-detail-view .menu-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.custom-detail-view .menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+    filter: grayscale(30%);
+}
+
+.custom-detail-view .menu-card:hover .menu-card-image img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.custom-detail-view .menu-card-content {
+    padding: var(--space-6);
+}
+
+.custom-detail-view .menu-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-2);
+}
+
+.custom-detail-view .menu-card h3 {
+    font-size: var(--text-xl);
+    margin: 0;
+}
+
+.custom-detail-view .menu-price {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+}
+
+.custom-detail-view .menu-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   12. REVIEWS SECTION
+   ========================================================================== */
+.custom-detail-view .reviews-notice {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--color-border-light);
+}
+
+.custom-detail-view .reviews-notice-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.custom-detail-view .gatekeeper-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    margin-left: auto;
+}
+
+.custom-detail-view .feedback-form {
+    max-width: 100%;
+}
+
+.custom-detail-view .form-group {
+    margin-bottom: var(--space-4);
+}
+
+.custom-detail-view .form-label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: var(--color-text-primary);
+}
+
+.custom-detail-view .form-input, .custom-detail-view .form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border-medium);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-primary);
+    font-size: var(--text-sm);
+    transition: all 0.2s var(--ease-out-expo);
+}
+
+.custom-detail-view .form-input:focus, .custom-detail-view .form-textarea:focus {
+    border-color: var(--color-text-primary);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.custom-detail-view .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==========================================================================
+   17. ANIMATIONS & RESPONSIVE
+   ========================================================================== */
+.custom-detail-view .animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+    .custom-detail-view .listing-layout { grid-template-columns: 1fr; }
+    .custom-detail-view .sticky-sidebar { position: static; margin-top: var(--space-8); box-shadow: var(--shadow-md); }
+    .custom-detail-view .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 250px 250px; }
+    .custom-detail-view .gallery-item:nth-child(3), .custom-detail-view .gallery-item:nth-child(4) { display: none; }
+}
+
+@media (max-width: 768px) {
+    .custom-detail-view .section { padding: var(--space-10) 0; }
+    .custom-detail-view .gallery-grid { grid-template-columns: 1fr; grid-template-rows: 300px; }
+    .custom-detail-view .gallery-item:nth-child(n+2) { display: none; }
+    .custom-detail-view .amenities-grid { grid-template-columns: 1fr; }
+    .custom-detail-view .listing-title { font-size: var(--text-3xl); }
+    .custom-detail-view .btn { width: 100%; }
+}

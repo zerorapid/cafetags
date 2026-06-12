@@ -22,6 +22,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [website, setWebsite] = useState('');
+  const [socialLink, setSocialLink] = useState('');
+  const [facebookUrl, setFacebookUrl] = useState('');
+  const [twitterUrl, setTwitterUrl] = useState('');
   const [timings, setTimings] = useState('8:00 AM - 10:00 PM Everyday');
 
   // Aesthetic
@@ -60,6 +63,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [menuCategory, setMenuCategory] = useState('Brews');
   const [menuSpecial, setMenuSpecial] = useState(false);
   const [menuImagesInput, setMenuImagesInput] = useState('');
+  const [moreImagesInput, setMoreImagesInput] = useState('');
 
   useEffect(() => {
     if (editingCafe) {
@@ -73,6 +77,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setPhone(editingCafe.phone || '');
       setEmail(editingCafe.email || '');
       setWebsite(editingCafe.website || '');
+      setSocialLink(editingCafe.socialLink || '');
+      setFacebookUrl(editingCafe.facebookUrl || '');
+      setTwitterUrl(editingCafe.twitterUrl || '');
       setTimings(editingCafe.timings || '');
       
       setAestheticType(editingCafe.aestheticType || '');
@@ -96,6 +103,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setCelebrities(editingCafe.celebrities || []);
       setMenuItems(editingCafe.featuredMenu || []);
       setMenuImagesInput(editingCafe.menuImages ? editingCafe.menuImages.join(', ') : '');
+      setMoreImagesInput(editingCafe.moreImages ? editingCafe.moreImages.join(', ') : '');
     }
   }, [editingCafe]);
 
@@ -135,13 +143,20 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const moreImages = moreImagesInput.split(',').map(s => s.trim()).filter(Boolean);
+    if (moreImages.length < 4) {
+      alert('Please provide at least 4 gallery images (along with the main thumbnail) to make up the 5 required hero images.');
+      return;
+    }
+
     const cafeData: any = {
-      name, area, founded, icon, logo, address, mapLink, phone, email, website, timings,
+      name, area, founded, icon, logo, address, mapLink, phone, email, website, socialLink, facebookUrl, twitterUrl, timings,
       aestheticType, vibe, crowd, discounts, signature, bookingUrl, image,
       dineIn, takeaway, onlineOrder, selfDelivery,
       isFeaturedBanner, isNewLaunch,
       tags, facilities, celebrities, featuredMenu: menuItems,
       menuImages: menuImagesInput.split(',').map(s => s.trim()).filter(Boolean),
+      moreImages: moreImages,
       userReviews: editingCafe ? editingCafe.userReviews : []
     };
 
@@ -281,6 +296,23 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <input type="text" placeholder="8:00 AM – 10:00 PM Everyday" value={timings} onChange={e => setTimings(e.target.value)} />
               </div>
             </div>
+
+            <div style={{ height: '20px' }}></div>
+
+            <div className="form-grid-3">
+              <div className="field">
+                <label>Instagram / Primary Social</label>
+                <input type="text" placeholder="https://instagram.com/..." value={socialLink} onChange={e => setSocialLink(e.target.value)} />
+              </div>
+              <div className="field">
+                <label>Facebook URL</label>
+                <input type="text" placeholder="https://facebook.com/..." value={facebookUrl} onChange={e => setFacebookUrl(e.target.value)} />
+              </div>
+              <div className="field">
+                <label>Twitter / X URL</label>
+                <input type="text" placeholder="https://twitter.com/..." value={twitterUrl} onChange={e => setTwitterUrl(e.target.value)} />
+              </div>
+            </div>
           </section>
 
           {/* ─── Section 2: Aesthetic & Media ─── */}
@@ -330,9 +362,19 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
               <div className="split-preview">
                 <div>
-                  <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Card Cover Image <span className="req">*</span></label>
-                  <div className="field">
+                  <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
+                  <div className="field" style={{ marginBottom: '16px' }}>
                     <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required />
+                  </div>
+                  <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Gallery Images (Min 4 required) <span className="req">*</span></label>
+                  <div className="field">
+                    <textarea 
+                      placeholder="Comma-separated image URLs (e.g. url1, url2, url3, url4)" 
+                      value={moreImagesInput} 
+                      onChange={e => setMoreImagesInput(e.target.value)} 
+                      required 
+                      rows={4}
+                    ></textarea>
                   </div>
                 </div>
 

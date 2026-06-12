@@ -39,6 +39,8 @@ export interface Cafe {
   email: string;
   website: string;
   socialLink?: string;
+  facebookUrl?: string;
+  twitterUrl?: string;
   timings: string;
   aestheticType: string;
   crowd: string;
