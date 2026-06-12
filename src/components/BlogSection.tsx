@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { BlogArticle } from '../types';
 import { MaterialIcon } from './MaterialIcon';
 import { generateSlug } from '../utils';
+import { OptimizedImage } from './OptimizedImage';
 
 interface BlogSectionProps {
   articles: BlogArticle[];
@@ -66,11 +67,10 @@ export function BlogSection({ articles }: BlogSectionProps) {
 
         {/* Article Cover Image */}
         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden mb-10 shadow-sm border border-stone-200">
-          <img
+          <OptimizedImage
             src={selectedArticle.image}
             alt={selectedArticle.title}
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            className="w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           <span className="absolute bottom-6 left-6 md:left-10 bg-amber-500 text-stone-900 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded tracking-wider font-mono">
@@ -196,11 +196,11 @@ export function BlogSection({ articles }: BlogSectionProps) {
               <div>
                 {/* Article Cover Thumbnail */}
                 <div className="relative h-48 overflow-hidden bg-stone-100">
-                  <img
+                  <OptimizedImage
                     src={article.image}
                     alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 duration-500 transition-all"
-                    referrerPolicy="no-referrer"
+                    className="w-full h-full"
+                    imageClassName="group-hover:scale-105 duration-500 transition-all"
                   />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-xs text-stone-900 text-[10px] font-bold px-2.5 py-1 rounded-sm shadow-3xs border border-stone-100 uppercase tracking-widest font-mono">
                     {article.readTime}

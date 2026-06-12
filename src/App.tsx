@@ -25,7 +25,7 @@ import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 're
 import { db } from './firebase';
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
 
-function CafeDetailWrapper({ cafes, journalLogs, onSaveNote, onDeleteCafe, noteSavingState, onSubmitFeedback, isAdmin }: any) {
+function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
   const { id } = useParams();
   const navigate = useNavigate();
   const cafe = cafes.find((c: Cafe) => generateSlug(c.name) === id || c.id.toString() === id);
@@ -51,13 +51,6 @@ function CafeDetailWrapper({ cafes, journalLogs, onSaveNote, onDeleteCafe, noteS
     <DetailView
       cafe={cafe}
       onBack={() => navigate('/')}
-      journalLogs={journalLogs}
-      onSaveNote={onSaveNote}
-      onDeleteCafe={(cid: number) => {
-        onDeleteCafe(cid);
-        navigate('/');
-      }}
-      noteSavingState={noteSavingState}
       allCafes={cafes}
       onSelectCafe={(c: Cafe) => navigate(`/cafe/${generateSlug(c.name)}`)}
       onSubmitFeedback={onSubmitFeedback}
@@ -233,25 +226,7 @@ export default function App() {
   const [sortBy, setSortBy] = useState<"founded-asc" | "founded-desc" | "name-az" | "area-az">("founded-asc");
   const [carouselIndex, setCarouselIndex] = useState(0);
 
-  // Journal notes memo cabinet
-  const [journalLogs, setJournalLogs] = useState<{ [id: number]: string }>(() => {
-    const saved = localStorage.getItem('hyd_cafe_journal_logs');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        console.error("Error restoring journal logs:", e);
-      }
-    }
-    return {};
-  });
 
-  const [noteSavingState, setNoteSavingState] = useState<"idle" | "saved">("idle");
-
-  // --- PERSISTENCE SYNCS ---
-  useEffect(() => {
-    localStorage.setItem('hyd_cafe_journal_logs', JSON.stringify(journalLogs));
-  }, [journalLogs]);
 
   // --- AUTO-ROTATING BANNERS EFFECT ---
   useEffect(() => {
@@ -342,23 +317,7 @@ export default function App() {
     await setDoc(doc(db, "cafes", id.toString()), createdSpot);
   };
 
-  const handleSaveNotesOnCafe = (id: number, text: string) => {
-    setJournalLogs(prev => ({ ...prev, [id]: text }));
-    setNoteSavingState("saved");
-    setTimeout(() => {
-      setNoteSavingState("idle");
-    }, 1200);
-  };
 
-  const handleDeleteCafe = async (id: number) => {
-    if (confirm("Are you sure you would like to remove this curated spot from your personal lookup cabinet?")) {
-      if (!import.meta.env.VITE_FIREBASE_API_KEY) {
-        setCafes(prev => prev.filter(c => c.id !== id));
-        return;
-      }
-      await deleteDoc(doc(db, "cafes", id.toString()));
-    }
-  };
 
   const handleAddUserFeedback = async (cafeId: number, author: string, rating: number, text: string, email: string) => {
     const targetCafe = cafes.find(c => c.id === cafeId);
@@ -402,10 +361,6 @@ export default function App() {
                   >
                     <CafeDetailWrapper 
                       cafes={cafes}
-                      journalLogs={journalLogs}
-                      onSaveNote={handleSaveNotesOnCafe}
-                      onDeleteCafe={handleDeleteCafe}
-                      noteSavingState={noteSavingState}
                       onSubmitFeedback={handleAddUserFeedback}
                       isAdmin={isAuthenticated}
                     />

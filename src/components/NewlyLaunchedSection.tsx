@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { Cafe } from '../types';
 import { MaterialIcon } from './MaterialIcon';
+import { OptimizedImage } from './OptimizedImage';
 
 interface NewlyLaunchedSectionProps {
   cafes: Cafe[];
@@ -66,11 +67,10 @@ export function NewlyLaunchedSection({ cafes, onSelectCafe }: NewlyLaunchedSecti
             {/* Left Node: Core Visual Brand identity */}
             <div className="brand-profile">
               <div className="avatar-frame">
-                <img 
+                <OptimizedImage 
                   className="avatar-img" 
                   src={listToUse[index].image} 
                   alt={listToUse[index].name}
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="brand-text">

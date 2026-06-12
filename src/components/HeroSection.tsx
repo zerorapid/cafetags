@@ -7,6 +7,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Cafe } from '../types';
 import { MaterialIcon } from './MaterialIcon';
+import { OptimizedImage } from './OptimizedImage';
 
 interface HeroSectionProps {
   cafes: Cafe[];
@@ -56,11 +57,11 @@ export function HeroSection({ cafes, carouselIndex, setCarouselIndex, onSelectCa
                   className="absolute inset-0 w-full h-full cursor-pointer"
                   onClick={() => onSelectCafe(cafe)}
                 >
-                  <img
+                  <OptimizedImage
                     src={cafe.image}
                     alt={cafe.name}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover saturate-[0.80] mix-blend-multiply opacity-85"
+                    className="absolute inset-0 w-full h-full mix-blend-multiply opacity-85"
+                    imageClassName="saturate-[0.80]"
                   />
                   {/* Radial/Linear twilight shadow backing text blocks safely */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent"></div>

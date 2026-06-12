@@ -7,6 +7,7 @@ import React from 'react';
 import { Cafe } from '../types';
 import { MaterialIcon } from './MaterialIcon';
 import { getTagIcon } from '../data';
+import { OptimizedImage } from './OptimizedImage';
 
 interface CafeCardProps {
   key?: React.Key;
@@ -31,11 +32,11 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       >
         {/* Image holder with desaturation layers & scale easing custom style */}
         <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#EBE7E0] border border-[#E6DFD3] rounded-xl flex items-center justify-center mb-4 transition-all duration-500 hover:shadow-xs">
-          <img 
+          <OptimizedImage 
             src={cafe.image} 
             alt={cafe.name}
-            referrerPolicy="no-referrer"
-            className="absolute inset-0 w-full h-full object-cover saturate-[0.85] group-hover:saturate-[1] group-hover:scale-[1.04] smooth-transition"
+            className="absolute inset-0 w-full h-full"
+            imageClassName="saturate-[0.85] group-hover:saturate-[1] group-hover:scale-[1.04] smooth-transition"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-stone-400/25 to-transparent pointer-events-none"></div>
           
@@ -124,12 +125,12 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
 
       {/* Micro preview cover picture */}
       <div className="w-24 h-16 overflow-hidden bg-tactile-divider invisible md:visible flex-shrink-0 border border-tactile-divider rounded-md">
-        <img 
-          src={cafe.image} 
-          alt={cafe.name} 
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover saturate-[0.80] group-hover:saturate-[1] group-hover:scale-110 smooth-transition"
-        />
+        <OptimizedImage 
+            src={cafe.image} 
+            alt={cafe.name} 
+            className="w-full h-full"
+            imageClassName="saturate-[0.80] group-hover:saturate-[1] group-hover:scale-110 smooth-transition"
+          />
       </div>
 
       {/* Spliced vibe essay strip */}

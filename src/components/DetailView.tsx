@@ -8,14 +8,12 @@ import { motion } from 'motion/react';
 import { Cafe } from '../types';
 import { MaterialIcon } from './MaterialIcon';
 import { getTagIcon } from '../data';
+import { OptimizedImage } from './OptimizedImage';
 
 interface DetailViewProps {
   cafe: Cafe;
   onBack: () => void;
-  journalLogs: { [id: number]: string };
-  onSaveNote: (id: number, text: string) => void;
   onDeleteCafe: (id: number) => void;
-  noteSavingState: "idle" | "saved";
   allCafes: Cafe[];
   onSelectCafe: (cafe: Cafe) => void;
   onSubmitFeedback?: (cafeId: number, author: string, rating: number, text: string, email: string) => void;
@@ -25,10 +23,7 @@ interface DetailViewProps {
 export function DetailView({
   cafe,
   onBack,
-  journalLogs,
-  onSaveNote,
   onDeleteCafe,
-  noteSavingState,
   allCafes,
   onSelectCafe,
   onSubmitFeedback,
@@ -192,11 +187,10 @@ export function DetailView({
                 activeImage === imgUrl ? "border-stone-900 ring-2 ring-stone-900/10 scale-95" : "border-stone-200 opacity-70 hover:opacity-100"
               }`}
             >
-              <img 
+              <OptimizedImage 
                 src={imgUrl} 
                 alt={`Mini slice ${i+1}`} 
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover" 
+                className="w-full h-full" 
               />
             </button>
           ))}
@@ -318,7 +312,7 @@ export function DetailView({
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {cafe.menuImages.map((imgUrl, i) => (
                           <div key={i} className="aspect-[3/4] rounded-lg border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                            <img src={imgUrl.trim()} alt={`Menu page ${i + 1}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" onClick={() => window.open(imgUrl.trim(), '_blank')} />
+                            <OptimizedImage src={imgUrl.trim()} alt={`Menu page ${i + 1}`} className="w-full h-full cursor-pointer" onClick={() => window.open(imgUrl.trim(), '_blank')} />
                           </div>
                         ))}
                       </div>
@@ -822,11 +816,11 @@ export function DetailView({
           </div>
 
           <div className="flex-1 flex items-center justify-center py-4">
-            <img 
+            <OptimizedImage 
               src={activeImage} 
               alt={cafe.name} 
-              referrerPolicy="no-referrer"
-              className="max-w-full max-h-[75vh] object-contain rounded-md shadow-2xl" 
+              className="max-w-full max-h-[75vh] rounded-md shadow-2xl" 
+              imageClassName="object-contain"
             />
           </div>
 
@@ -840,7 +834,7 @@ export function DetailView({
                   activeImage === imgUrl ? "border-white" : "border-transparent opacity-50 hover:opacity-100"
                 }`}
               >
-                <img src={imgUrl} alt="Thumbnail Selector" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+                <OptimizedImage src={imgUrl} alt="Thumbnail Selector" className="w-full h-full" />
               </button>
             ))}
           </div>
@@ -864,11 +858,11 @@ export function DetailView({
                 className="p-3 bg-white border border-stone-200 hover:border-stone-400 rounded-lg cursor-pointer transition-all group/related text-left"
               >
                 <div className="relative aspect-[4/3] overflow-hidden mb-2.5 bg-stone-100 rounded-md">
-                  <img 
+                  <OptimizedImage 
                     src={rcafe.image} 
                     alt={rcafe.name} 
-                    referrerPolicy="no-referrer" 
-                    className="w-full h-full object-cover saturate-[0.80] group-hover/related:saturate-100 transition-all duration-300" 
+                    className="w-full h-full" 
+                    imageClassName="saturate-[0.80] group-hover/related:saturate-100 transition-all duration-300"
                   />
                 </div>
                 <h5 className="font-serif text-[13px] text-stone-900 font-semibold group-hover/related:italic leading-tight truncate px-0.5">{rcafe.name}</h5>
