@@ -7,6 +7,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Cafe, BlogArticle, UserFeedback, SeoSettings } from './types';
 import { INITIAL_CAFES, INITIAL_BLOG_ARTICLES } from './data';
+import { generateSlug } from './utils';
 
 // --- CURATED COMPONENTS ---
 import { Navbar } from './components/Navbar';
@@ -27,7 +28,7 @@ import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firesto
 function CafeDetailWrapper({ cafes, journalLogs, onSaveNote, onDeleteCafe, noteSavingState, onSubmitFeedback, isAdmin }: any) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const cafe = cafes.find((c: Cafe) => c.id.toString() === id);
+  const cafe = cafes.find((c: Cafe) => generateSlug(c.name) === id || c.id.toString() === id);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -58,7 +59,7 @@ function CafeDetailWrapper({ cafes, journalLogs, onSaveNote, onDeleteCafe, noteS
       }}
       noteSavingState={noteSavingState}
       allCafes={cafes}
-      onSelectCafe={(c: Cafe) => navigate(`/cafe/${c.id}`)}
+      onSelectCafe={(c: Cafe) => navigate(`/cafe/${generateSlug(c.name)}`)}
       onSubmitFeedback={onSubmitFeedback}
       isAdmin={isAdmin}
     />
@@ -422,6 +423,17 @@ export default function App() {
                   </motion.div>
                 } />
 
+                <Route path="/journal/:slug" element={
+                  <motion.div
+                    key="blog_panel_detail"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <BlogSection articles={blogs} />
+                  </motion.div>
+                } />
+
                 <Route path="/admin" element={
                   !isAuthenticated ? (
                     <motion.div
@@ -472,13 +484,13 @@ export default function App() {
                   cafes={cafes}
                   carouselIndex={carouselIndex}
                   setCarouselIndex={setCarouselIndex}
-                  onSelectCafe={(c) => navigate(`/cafe/${c.id}`)}
+                  onSelectCafe={(c) => navigate(`/cafe/${generateSlug(c.name)}`)}
                 />
 
                 {/* NEWLY LAUNCHED AUTOMATIC SLIDER */}
                 <NewlyLaunchedSection
                   cafes={cafes}
-                  onSelectCafe={(c) => navigate(`/cafe/${c.id}`)}
+                  onSelectCafe={(c) => navigate(`/cafe/${generateSlug(c.name)}`)}
                 />
 
                 {/* SEARCH FILTERS MATRIX */}
@@ -531,7 +543,7 @@ export default function App() {
                           cafe={cafe}
                           index={index}
                           layout="grid"
-                          onSelect={() => navigate(`/cafe/${cafe.id}`)}
+                          onSelect={() => navigate(`/cafe/${generateSlug(cafe.name)}`)}
                         />
                       ))}
                     </div>
@@ -543,7 +555,7 @@ export default function App() {
                           cafe={cafe}
                           index={index}
                           layout="list"
-                          onSelect={() => navigate(`/cafe/${cafe.id}`)}
+                          onSelect={() => navigate(`/cafe/${generateSlug(cafe.name)}`)}
                         />
                       ))}
                     </div>

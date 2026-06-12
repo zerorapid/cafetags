@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { BlogArticle } from '../types';
 import { MaterialIcon } from './MaterialIcon';
+import { generateSlug } from '../utils';
 
 interface BlogSectionProps {
   articles: BlogArticle[];
 }
 
 export function BlogSection({ articles }: BlogSectionProps) {
-  const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  
+  const selectedArticle = slug 
+    ? articles.find(a => generateSlug(a.title) === slug || a.id.toString() === slug) || null 
+    : null;
+
+  useEffect(() => {
+    if (slug) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [slug]);
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
@@ -43,7 +57,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
       >
         {/* Back Link */}
         <button
-          onClick={() => setSelectedArticle(null)}
+          onClick={() => navigate('/journal')}
           className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-stone-500 hover:text-stone-900 mb-8 smooth-transition group cursor-pointer"
         >
           <MaterialIcon name="arrow_back" className="text-sm group-hover:-translate-x-1 transition-transform" />
@@ -176,7 +190,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              onClick={() => setSelectedArticle(article)}
+              onClick={() => navigate(`/journal/${generateSlug(article.title)}`)}
               className="group bg-white border border-stone-200/80 rounded-lg overflow-hidden shadow-xs hover:shadow-md hover:border-stone-400 cursor-pointer smooth-transition flex flex-col justify-between"
             >
               <div>
