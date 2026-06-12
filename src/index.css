@@ -5,21 +5,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-warm-beige: #FAF7F2;
-  --color-charcoal-ink: #24211E;
-  --color-tactile-divider: #E6DFD3;
-  --color-stone-gray: #544D46;
+  --color-warm-beige: #ffffff;
+  --color-charcoal-ink: #111111;
+  --color-tactile-divider: #e5e5e5;
+  --color-stone-gray: #1e3932;
   --font-serif: "Instrument Serif", "Georgia", "Times New Roman", serif;
-  --font-sans: "Noto Sans", sans-serif;
+  --font-sans: "Google Sans", "Outfit", "Product Sans", sans-serif;
 
-  /* Cozy, organic, luxuriously rounded corner scale (reduced 50%) */
-  --radius-xs: 0.125rem;
-  --radius-sm: 0.1875rem;
-  --radius-md: 0.25rem;
-  --radius-lg: 0.3375rem;
-  --radius-xl: 0.4625rem;
-  --radius-2xl: 0.625rem;
-  --radius-3xl: 1rem;
+  /* Starbucks Theming Overrides */
+  --color-stone-50: #ffffff;
+  --color-stone-100: #f9f9f9;
+  --color-stone-200: #e5e5e5;
+  --color-stone-300: #d4d4d4;
+  --color-stone-400: #a3a3a3;
+  --color-stone-500: #737373;
+  --color-stone-600: #525252;
+  --color-stone-800: #1e3932;
+  --color-stone-900: #111111;
+  --color-amber-100: #d4e9e2;
+  --color-amber-500: #00704A;
+  --color-amber-600: #006241;
+  --color-amber-800: #004c31;
+
+  /* Highly rounded Apple/Google style corners */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
 }
 
 .material-icon, .material-symbols-outlined {
@@ -49,9 +64,9 @@ html {
 }
 
 body {
-  background-color: #FAF7F2;
-  color: #24211E;
-  font-family: "Noto Sans", sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  font-family: "Google Sans", "Outfit", "Product Sans", sans-serif;
   min-height: 100vh;
 }
 
@@ -73,8 +88,8 @@ body {
 }
 
 .cafe-ux-card:hover {
-  border-color: #A88957;
-  box-shadow: 0 8px 24px rgba(44, 27, 16, 0.04);
+  border-color: #00704A;
+  box-shadow: 0 8px 24px rgba(0, 112, 74, 0.08);
 }
 
 .card-main-layout {
@@ -139,9 +154,10 @@ body {
 }
 
 .brand-text h2 {
-  font-family: 'Instrument Serif', serif;
-  font-size: 34px;
-  font-weight: 400;
+  font-family: 'Google Sans', 'Outfit', 'Product Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   color: #1C1917;
   margin: 0;
   line-height: 1.1;
@@ -178,8 +194,8 @@ body {
 
 .action-cta-button {
   background-color: transparent;
-  color: #A88957;
-  border: 1px solid #A88957;
+  color: #00704A;
+  border: 1px solid #00704A;
   padding: 12px 20px;
   font-size: 11px;
   font-weight: 600;
@@ -195,8 +211,8 @@ body {
 }
 
 .cafe-ux-card:hover .action-cta-button {
-  background-color: #A88957;
-  color: #FFFFFF;
+  background-color: #00704A;
+  color: #ffffff;
 }
 
 @media (max-width: 900px) {

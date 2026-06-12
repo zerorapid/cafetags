@@ -80,6 +80,20 @@ async function prerender() {
     console.log(`Pre-rendered /journal/${slug}`);
   }
 
+  // Pre-render base SPA routes to prevent Vercel 404 directory listing errors
+  const baseRoutes = ['journal', 'admin', 'cafe'];
+  for (const route of baseRoutes) {
+    const routeDir = path.join(distDir, route);
+    if (!fs.existsSync(routeDir)) {
+      fs.mkdirSync(routeDir, { recursive: true });
+    }
+    // Only write if we haven't already written an index.html here manually
+    if (!fs.existsSync(path.join(routeDir, 'index.html'))) {
+      fs.writeFileSync(path.join(routeDir, 'index.html'), template);
+      console.log(`Pre-rendered base SPA route /${route}`);
+    }
+  }
+
   console.log('✅ SSG Prerendering complete!');
 }
 
