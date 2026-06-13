@@ -54,7 +54,13 @@ export const INITIAL_CAFES: Cafe[] = [
     moreImages: [
       "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600&auto=format&fit=crop"
-    ]
+    ],
+    vibeScores: [
+      { label: "Heritage", score: 9.8 },
+      { label: "Photography", score: 9.5 },
+      { label: "Quiet Workspace", score: 2.0 }
+    ],
+    neighbourhoodGuide: "Charminar's bustling lanes are a sensory overload. Best visited before 7 AM to avoid the dense traffic and capture the rising sun reflecting off the minarets. Perfect for street photography and heritage walks."
   },
   {
     id: 2,

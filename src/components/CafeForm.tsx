@@ -64,6 +64,10 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [menuSpecial, setMenuSpecial] = useState(false);
   const [menuImagesInput, setMenuImagesInput] = useState('');
   const [moreImagesInput, setMoreImagesInput] = useState('');
+  
+  // New UX Fields
+  const [vibeScoresInput, setVibeScoresInput] = useState('');
+  const [neighbourhoodGuide, setNeighbourhoodGuide] = useState('');
 
   useEffect(() => {
     if (editingCafe) {
@@ -84,6 +88,8 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       
       setAestheticType(editingCafe.aestheticType || '');
       setVibe(editingCafe.vibe || '');
+      setNeighbourhoodGuide(editingCafe.neighbourhoodGuide || '');
+      setVibeScoresInput(editingCafe.vibeScores ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '');
       setCrowd(editingCafe.crowd || '');
       setDiscounts(editingCafe.discounts || '');
       setSignature(editingCafe.signature || '');
@@ -149,14 +155,23 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       return;
     }
 
+    const parsedVibeScores = vibeScoresInput.split(',')
+      .map(s => s.trim())
+      .filter(Boolean)
+      .map(s => {
+        const parts = s.split(':');
+        return { label: parts[0]?.trim() || '', score: parseFloat(parts[1]) || 0 };
+      });
+
     const cafeData: any = {
       name, area, founded, icon, logo, address, mapLink, phone, email, website, socialLink, facebookUrl, twitterUrl, timings,
-      aestheticType, vibe, crowd, discounts, signature, bookingUrl, image,
+      aestheticType, vibe, neighbourhoodGuide, crowd, discounts, signature, bookingUrl, image,
       dineIn, takeaway, onlineOrder, selfDelivery,
       isFeaturedBanner, isNewLaunch,
       tags, facilities, celebrities, featuredMenu: menuItems,
       menuImages: menuImagesInput.split(',').map(s => s.trim()).filter(Boolean),
       moreImages: moreImages,
+      vibeScores: parsedVibeScores,
       userReviews: editingCafe ? editingCafe.userReviews : []
     };
 
@@ -333,8 +348,19 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 </div>
 
                 <div className="field">
-                  <label>Aesthetic Vibe Analysis <span className="req">*</span></label>
+                  <label>Aesthetic Vibe Analysis (Curator's Take) <span className="req">*</span></label>
                   <textarea placeholder="Describe the architectural texture, shadows, study desk comfort, lighting temperature..." value={vibe} onChange={e => setVibe(e.target.value)} required></textarea>
+                </div>
+
+                <div className="field">
+                  <label>Vibe Scores</label>
+                  <input type="text" placeholder="e.g. Workspace:9.0, Heritage:8.5" value={vibeScoresInput} onChange={e => setVibeScoresInput(e.target.value)} />
+                  <small style={{ color: 'var(--color-text-tertiary)', display: 'block', marginTop: '4px' }}>Comma separated list of Label:Score</small>
+                </div>
+
+                <div className="field">
+                  <label>Neighbourhood Walking Guide</label>
+                  <textarea placeholder="e.g. Best visited before 7 AM to avoid the dense traffic..." value={neighbourhoodGuide} onChange={e => setNeighbourhoodGuide(e.target.value)}></textarea>
                 </div>
 
                 <div className="form-grid">

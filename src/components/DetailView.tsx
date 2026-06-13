@@ -164,21 +164,52 @@ export function DetailView({
                           </div>
                       </header>
 
-                      {/* About */}
+                      {/* About & Curator's Take */}
                       <div className="animate-on-scroll delay-2" style={{ marginBottom: 'var(--space-6)' }}>
-                          <h3 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-2)', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                              <Info size={28} color="var(--color-text-secondary)" /> About the place
+                          <h3 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-4)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                              <Info size={28} color="var(--color-text-secondary)" /> Curator's Take
                           </h3>
-                          {cafe.curatorNote && (
-                            <div style={{ padding: '16px', backgroundColor: '#fcfcfc', borderLeft: '4px solid #222', borderRadius: '0 8px 8px 0', marginBottom: '16px' }}>
-                                <strong style={{ display: 'block', marginBottom: '4px', fontFamily: '"Instrument Serif", serif', fontSize: '1.25rem' }}>Curator's Note</strong>
-                                <span style={{ color: '#444', fontStyle: 'italic' }}>"{cafe.curatorNote}"</span>
-                            </div>
-                          )}
-                          <p className="text-lead" style={{ marginBottom: '8px' }}>
-                              {cafe.vibe || "Elegant, bustling premium tea lounge experience with legendary baking roots."}
-                          </p>
+                          <div style={{ padding: '24px', backgroundColor: '#fafafa', borderLeft: '4px solid var(--color-brand)', borderRadius: '0 8px 8px 0', marginBottom: '24px' }}>
+                              <p className="text-lead" style={{ margin: 0, fontStyle: 'italic', color: 'var(--color-text-primary)' }}>
+                                  "{cafe.curatorNote || cafe.vibe || "Elegant, bustling premium tea lounge experience with legendary baking roots."}"
+                              </p>
+                          </div>
                       </div>
+
+                      {/* Vibe Scores */}
+                      {cafe.vibeScores && cafe.vibeScores.length > 0 && (
+                        <div className="animate-on-scroll" style={{ marginBottom: 'var(--space-6)' }}>
+                            <h3 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-4)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <Star size={28} color="var(--color-text-secondary)" /> Vibe Scores
+                            </h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+                                {cafe.vibeScores.map((vs, idx) => (
+                                    <div key={idx} style={{ backgroundColor: '#fff', padding: '16px', borderRadius: '12px', border: '1px solid var(--color-border-light)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                        <span style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>{vs.label}</span>
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                                            <strong style={{ fontSize: '1.5rem', fontFamily: '"Outfit", sans-serif', color: 'var(--color-text-primary)' }}>{vs.score.toFixed(1)}</strong>
+                                            <span style={{ color: 'var(--color-text-tertiary)', fontSize: '0.875rem' }}>/ 10</span>
+                                        </div>
+                                        <div style={{ width: '100%', height: '4px', backgroundColor: '#f0f0f0', borderRadius: '2px', overflow: 'hidden' }}>
+                                            <div style={{ width: `${(vs.score / 10) * 100}%`, height: '100%', backgroundColor: 'var(--color-brand)' }}></div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                      )}
+
+                      {/* Neighbourhood Guide */}
+                      {cafe.neighbourhoodGuide && (
+                        <div className="animate-on-scroll" style={{ marginBottom: 'var(--space-6)' }}>
+                            <h3 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-3)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <Map size={28} color="var(--color-text-secondary)" /> Neighbourhood Guide
+                            </h3>
+                            <p style={{ lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+                                {cafe.neighbourhoodGuide}
+                            </p>
+                        </div>
+                      )}
 
                       <div style={{ borderTop: '1px solid var(--color-border-light)', margin: 'var(--space-6) 0' }}></div>
 

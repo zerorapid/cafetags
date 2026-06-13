@@ -58,6 +58,8 @@ export interface Cafe {
   userReviews: CafeReview[];
   moreImages?: string[];
   menuImages?: string[];
+  vibeScores?: { label: string; score: number }[];
+  neighbourhoodGuide?: string;
   isFeaturedBanner?: boolean;
   bannerCatchyLine?: string;
   isNewLaunch?: boolean;
