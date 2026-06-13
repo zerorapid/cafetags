@@ -32,10 +32,10 @@ export function Navbar({ onResetCafeSelection }: NavbarProps) {
               id="nav_link_directory"
               to="/"
               onClick={() => { onResetCafeSelection(); }}
-              className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
+              className={`px-4.5 py-2 transition-all flex items-center gap-2.5 cursor-pointer text-[24px] leading-none border-b-[3px] ${
                 pathname === '/'
-                  ? 'bg-stone-900 text-white border-stone-900 shadow-2xs'
-                  : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
+                  ? 'border-amber-700 text-stone-900 font-medium'
+                  : 'border-transparent text-[#786F64] font-normal hover:text-stone-900'
               }`}
             >
               <MaterialIcon name="home" className="text-[24px]" />
@@ -46,10 +46,10 @@ export function Navbar({ onResetCafeSelection }: NavbarProps) {
               id="nav_link_blog"
               to="/journal"
               onClick={() => { onResetCafeSelection(); }}
-              className={`px-4.5 py-2 rounded-md border transition-all flex items-center gap-2.5 cursor-pointer text-[24px] font-normal leading-none ${
+              className={`px-4.5 py-2 transition-all flex items-center gap-2.5 cursor-pointer text-[24px] leading-none border-b-[3px] ${
                 pathname === '/journal'
-                  ? 'bg-stone-900 text-white border-stone-900 shadow-2xs'
-                  : 'border-transparent text-[#786F64] hover:bg-stone-100 hover:text-stone-900'
+                  ? 'border-amber-700 text-stone-900 font-medium'
+                  : 'border-transparent text-[#786F64] font-normal hover:text-stone-900'
               }`}
             >
               <MaterialIcon name="menu_book" className="text-[24px]" />

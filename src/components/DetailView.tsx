@@ -32,8 +32,10 @@ import {
   Users,
   Map,
   Calendar,
-  Twitter
+  Twitter,
+  AlertCircle
 } from 'lucide-react';
+import { TagPill } from './TagPill';
 
 interface DetailViewProps {
   cafe: Cafe;
@@ -161,6 +163,11 @@ export function DetailView({
                                   </div>
                                 </>
                               )}
+                          </div>
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {cafe.tags?.map(t => (
+                              <TagPill key={t} tag={t} />
+                            ))}
                           </div>
                       </header>
 
@@ -296,7 +303,7 @@ export function DetailView({
                           </div>
                           
                           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', position: 'relative', zIndex: 10 }}>
-                              <Star size={28} color="#FFD700" fill="#FFD700" />
+                              <Star size={28} color="#b45309" fill="#b45309" />
                               <h3 style={{ fontFamily: '"Instrument Serif", serif', fontSize: 'var(--text-3xl)', margin: 0, color: '#fff' }}>VIP Sightings</h3>
                           </div>
                           
@@ -311,7 +318,7 @@ export function DetailView({
                                   <div key={idx} style={{ backgroundColor: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '24px', textAlign: 'center', backdropFilter: 'blur(10px)' }}>
                                       <div style={{ width: '64px', height: '64px', backgroundColor: '#fff', color: '#222', borderRadius: '50%', margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: '"Instrument Serif", serif', fontSize: '1.5rem', fontStyle: 'italic' }}>{initials}</div>
                                       <div style={{ fontFamily: '"Instrument Serif", serif', fontSize: '1.25rem', marginBottom: '4px', color: '#fff' }}>{celeb}</div>
-                                      <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#FFD700', fontWeight: 700 }}>Spotted Here</div>
+                                      <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#b45309', fontWeight: 700 }}>Spotted Here</div>
                                   </div>
                                 )
                               })}

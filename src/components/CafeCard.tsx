@@ -8,6 +8,7 @@ import { Cafe } from '../types';
 import { MaterialIcon } from './MaterialIcon';
 import { getTagIcon } from '../data';
 import { OptimizedImage } from './OptimizedImage';
+import { TagPill } from './TagPill';
 
 interface CafeCardProps {
   key?: React.Key;
@@ -68,18 +69,17 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
 
           {/* Explicit Tags Pill Row under card */}
           <div className="flex flex-wrap gap-1.5 pt-1.5">
-            {cafe.tags.map(t => (
-              <span 
-                key={t}
-                className="px-2.5 py-1 text-xs font-sans tracking-normal border border-tactile-divider bg-[#FAF7F2]/80 text-stone-gray rounded-full uppercase font-semibold flex items-center gap-1 pb-1"
-              >
-                <MaterialIcon name={getTagIcon(t)} className="text-xs text-stone-gray" />
-                <span>{t}</span>
-              </span>
+            {cafe.tags.slice(0, 3).map(t => (
+              <TagPill key={t} tag={t} />
             ))}
+            {cafe.tags.length > 3 && (
+              <span className="px-2.5 py-1 text-xs font-sans tracking-normal border border-tactile-divider bg-[#FAF7F2]/80 text-stone-gray rounded-full uppercase font-semibold flex items-center gap-1 pb-1">
+                +{cafe.tags.length - 3}
+              </span>
+            )}
           </div>
           
-          <p className="text-stone-gray text-xs leading-relaxed italic font-serif line-clamp-2 pt-1 opacity-90 group-hover:opacity-100 smooth-transition">
+          <p className="text-stone-gray text-xs leading-relaxed italic font-serif line-clamp-2 pt-1 opacity-90 group-hover:opacity-100 smooth-transition" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
             "{cafe.vibe}"
           </p>
         </div>
@@ -111,15 +111,14 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
         
         {/* Tags list */}
         <div className="flex flex-wrap gap-x-3 gap-y-1.5 mt-2">
-          {cafe.tags.map(t => (
-            <span 
-              key={t} 
-              className="text-xs font-sans text-stone-gray uppercase tracking-wider flex items-center gap-1.5 border border-tactile-divider/60 px-3 py-1 rounded-full bg-[#FAF7F2]/40"
-            >
-              <MaterialIcon name={getTagIcon(t)} className="text-xs" />
-              <span>{t}</span>
-            </span>
+          {cafe.tags.slice(0, 3).map(t => (
+            <TagPill key={t} tag={t} />
           ))}
+          {cafe.tags.length > 3 && (
+            <span className="px-2.5 py-1 text-xs font-sans tracking-normal border border-tactile-divider bg-[#FAF7F2]/80 text-stone-gray rounded-full uppercase font-semibold flex items-center gap-1 pb-1">
+              +{cafe.tags.length - 3}
+            </span>
+          )}
         </div>
       </div>
 

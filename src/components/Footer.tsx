@@ -4,11 +4,19 @@
  */
 
 import React from 'react';
+import { Star } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer id="lookbook_footer" className="border-t border-stone-200 py-16 px-6 md:px-12 bg-[#1C1C1E] text-stone-200">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+    <footer id="lookbook_footer" className="border-t border-stone-200 py-16 px-6 md:px-12 text-stone-200 relative overflow-hidden" style={{ backgroundColor: '#222' }}>
+      <div style={{ position: 'absolute', top: '-50px', left: '-50px', opacity: 0.03, pointerEvents: 'none' }}>
+        <Star size={300} fill="white" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '-50px', right: '-50px', opacity: 0.03, pointerEvents: 'none' }}>
+        <Star size={200} fill="white" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 mb-12 relative z-10">
         <div className="space-y-3">
           <div className="flex items-center gap-1">
             <span className="font-serif text-3xl font-light italic tracking-wide text-white">cafetags</span>
