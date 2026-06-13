@@ -4,8 +4,6 @@
  */
 
 import React, { useState, useMemo } from 'react';
-import { MaterialIcon } from './MaterialIcon';
-import { getTagIcon } from '../data';
 
 interface FilterSectionProps {
   searchQuery: string;
@@ -42,245 +40,140 @@ export function FilterSection({
   selectedAesthetic,
   setSelectedAesthetic,
 }: FilterSectionProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isAdvancedOpen, setIsAdvancedOpen] = useState(false);
 
-  // Smart tag slice: show first 7 tags by default.
-  // If a tag beyond 7 is currently selected, make sure to keep it visible so the active state is evident.
-  const visibleTags = useMemo(() => {
-    if (isExpanded || allTags.length <= 8) {
-      return allTags;
-    }
-    const defaultSlice = allTags.slice(0, 7);
-    if (selectedTag && selectedTag !== "All" && !defaultSlice.includes(selectedTag)) {
-      return [...defaultSlice, selectedTag];
-    }
-    return defaultSlice;
-  }, [allTags, isExpanded, selectedTag]);
-
-  const hasAdditionalTags = allTags.length > 7;
-  const isFiltered = searchQuery !== "" || selectedTag !== "All" || selectedLocation !== "All" || selectedBudget !== "All" || selectedAesthetic !== "All";
+  const isFiltered = selectedTag !== "All" || selectedLocation !== "All" || selectedBudget !== "All" || selectedAesthetic !== "All";
 
   return (
-    <section id="filter_matrix" className="max-w-7xl mx-auto px-6 md:px-12 mb-16 space-y-6 animate-fade-in">
-      {/* Search & Sort & Layout Dashboard Container */}
-      <div className="border-t border-b border-tactile-divider py-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          
-          {/* SEARCH FIELD */}
-          <div className="col-span-1 md:col-span-4">
-            <label className="block text-[10px] tracking-widest text-[#8A7A6B] font-sans font-extrabold uppercase mb-2">
-              SEARCH CURATED spots
-            </label>
-            <div id="search_box_wrapper" className="relative flex items-center border border-tactile-divider bg-[#FAF7F2]/40 rounded-lg px-4 min-h-[44px] hover:border-stone-400 group smooth-transition">
-              <span className="text-stone-gray group-hover:text-charcoal-ink mr-2.5 flex items-center">
-                <MaterialIcon name="search" className="text-base" />
-              </span>
-              <input 
-                id="coffee_search_input"
-                type="text" 
-                placeholder="SEARCH BY NAME OR LOCATION..." 
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-transparent border-none text-xs tracking-wider focus:outline-none placeholder:text-stone-400 uppercase font-sans text-charcoal-ink font-bold"
-              />
-              {searchQuery && (
-                <button 
-                  id="btn_clear_search"
-                  onClick={() => setSearchQuery('')}
-                  className="text-stone-gray hover:text-charcoal-ink text-sm p-1 flex items-center cursor-pointer"
-                  aria-label="Clear Search"
+    <div style={{ maxWidth: '1440px', margin: '0 auto 40px auto', padding: '0 20px' }}>
+      <div className="search-hero">
+        
+        {/* Main Search Bar Row */}
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <div className="search-bar" style={{ flex: 1 }}>
+            <i className="ti ti-search" style={{ color: 'var(--ct-muted)', fontSize: '18px' }}></i>
+            <input 
+              type="text"
+              placeholder="Search spaces by name, vibe or location..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button 
+                onClick={() => setSearchQuery('')}
+                style={{ background: 'transparent', border: 'none', color: 'var(--ct-muted)', cursor: 'pointer', padding: '4px' }}
+              >
+                <i className="ti ti-x"></i>
+              </button>
+            )}
+            <button className="search-btn">Search</button>
+          </div>
+          <button 
+            className="adv-toggle-btn"
+            onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
+          >
+            <i className="ti ti-adjustments-horizontal"></i>
+            {isFiltered ? 'Filters Active' : 'Advanced'}
+          </button>
+        </div>
+
+        {/* Expandable Advanced Settings Panel */}
+        {isAdvancedOpen && (
+          <div className="filter-panel">
+            <div className="input-row" style={{ marginBottom: '20px' }}>
+              <div className="field">
+                <label className="field-label">Sort By</label>
+                <select 
+                  className="ct-input"
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
                 >
-                  <MaterialIcon name="close" />
-                </button>
+                  <option value="founded-desc">Newest First</option>
+                  <option value="founded-asc">Oldest First</option>
+                  <option value="name-az">Name (A-Z)</option>
+                  <option value="area-az">Location (A-Z)</option>
+                </select>
+              </div>
+
+              <div className="field">
+                <label className="field-label">Location</label>
+                <select 
+                  className="ct-input"
+                  value={selectedLocation}
+                  onChange={(e) => setSelectedLocation(e.target.value)}
+                >
+                  <option value="All">All Geographies</option>
+                  <option value="Banjara Hills">Banjara Hills</option>
+                  <option value="Charminar">Charminar (Old City)</option>
+                  <option value="Film Nagar">Film Nagar</option>
+                  <option value="Financial District">Financial District</option>
+                  <option value="Gachibowli">Gachibowli</option>
+                  <option value="Jubilee Hills">Jubilee Hills</option>
+                  <option value="Madhapur">Madhapur</option>
+                </select>
+              </div>
+              
+              <div className="field">
+                <label className="field-label">Budget</label>
+                <select 
+                  className="ct-input"
+                  value={selectedBudget}
+                  onChange={(e) => setSelectedBudget(e.target.value)}
+                >
+                  <option value="All">All Budgets</option>
+                  <option value="economical">Economical (Under ₹100)</option>
+                  <option value="moderate">Moderate (₹100 - ₹250)</option>
+                  <option value="premium">Premium (Above ₹250)</option>
+                </select>
+              </div>
+
+              <div className="field">
+                <label className="field-label">Layout</label>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <button 
+                    onClick={() => setLayout('grid')}
+                    className={layout === 'grid' ? 'chip chip-active' : 'chip'}
+                    style={{ flex: 1, justifyContent: 'center' }}
+                  >
+                    <i className="ti ti-layout-grid" style={{ fontSize: '14px' }}></i> Grid
+                  </button>
+                  <button 
+                    onClick={() => setLayout('list')}
+                    className={layout === 'list' ? 'chip chip-active' : 'chip'}
+                    style={{ flex: 1, justifyContent: 'center' }}
+                  >
+                    <i className="ti ti-list" style={{ fontSize: '14px' }}></i> List
+                  </button>
+                </div>
+              </div>
+              
+              {isFiltered && (
+                <div className="field" style={{ justifyContent: 'flex-end', alignItems: 'flex-start' }}>
+                  <button
+                    onClick={() => {
+                      setSelectedTag("All");
+                      setSelectedLocation("All");
+                      setSelectedBudget("All");
+                      setSelectedAesthetic("All");
+                    }}
+                    style={{ 
+                      background: 'transparent', 
+                      border: 'none', 
+                      color: 'var(--ct-voltage)', 
+                      fontSize: '13px', 
+                      fontWeight: 500, 
+                      cursor: 'pointer',
+                      padding: '11px 0'
+                    }}
+                  >
+                    Reset Filters
+                  </button>
+                </div>
               )}
             </div>
           </div>
-
-          {/* SORT SELECTOR */}
-          <div className="col-span-1 md:col-span-4 col-start-1 md:col-start-6">
-            <label className="block text-[10px] tracking-widest text-[#8A7A6B] font-sans font-extrabold uppercase mb-2">
-              SORT COFFEE SPACES
-            </label>
-            <div id="sort_by_wrapper" className="relative flex items-center border border-tactile-divider bg-[#FAF7F2]/40 rounded-lg px-4 min-h-[44px] hover:border-stone-400 smooth-transition">
-              <span className="text-stone-gray mr-2.5 flex items-center pointer-events-none">
-                <MaterialIcon name="sort" className="text-base" />
-              </span>
-              <select
-                id="coffee_sort_select"
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="w-full bg-transparent border-none text-xs tracking-wider focus:outline-none uppercase font-sans text-charcoal-ink font-bold cursor-pointer"
-              >
-                <option value="founded-asc">OLDEST FIRST</option>
-                <option value="founded-desc">NEWEST FIRST</option>
-                <option value="name-az">NAME (A-Z)</option>
-                <option value="area-az">LOCATION (A-Z)</option>
-              </select>
-            </div>
-          </div>
-
-          {/* VIEWPORT CONTROLLER LAYOUT */}
-          <div className="col-span-1 md:col-span-2 col-start-1 md:col-start-11 flex flex-col justify-end">
-            <label className="block text-[10px] tracking-widest text-[#8A7A6B] font-sans font-extrabold uppercase mb-2 md:text-right">
-              VIEWPORT
-            </label>
-            <div id="layout_toggle_wrapper" className="flex items-center justify-between p-1 border border-tactile-divider rounded-lg bg-[#FAF7F2]/30 text-xs font-sans tracking-wider font-bold min-h-[44px] w-full">
-              <button 
-                id="layout_toggle_grid"
-                onClick={() => setLayout('grid')} 
-                className={`flex-1 py-2 px-3 rounded-md smooth-transition flex items-center justify-center gap-2 cursor-pointer ${layout === 'grid' ? 'bg-charcoal-ink text-warm-beige shadow-xs' : 'text-stone-400 hover:text-charcoal-ink'}`}
-                title="Editorial Grid"
-              >
-                <MaterialIcon name="grid_view" className="text-sm" />
-                <span className="text-[10px] tracking-wider uppercase font-sans">GRID</span>
-              </button>
-              <button 
-                id="layout_toggle_list"
-                onClick={() => setLayout('list')} 
-                className={`flex-1 py-2 px-3 rounded-md smooth-transition flex items-center justify-center gap-2 cursor-pointer ${layout === 'list' ? 'bg-charcoal-ink text-warm-beige shadow-xs' : 'text-stone-400 hover:text-charcoal-ink'}`}
-                title="Journal List"
-              >
-                <MaterialIcon name="notes" className="text-sm" />
-                <span className="text-[10px] tracking-wider uppercase font-sans">LIST</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
+        )}
       </div>
-
-      {/* REFINED CHROME GEOGRAPHIC, BUDGET & AESTHETIC GRIDS (More features) */}
-      <div id="refined_dropdown_matrix" className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 pb-6 border-b border-tactile-divider">
-        {/* District Selector (Location wise) */}
-        <div>
-          <label className="block text-[10px] tracking-widest text-[#8A7A6B] font-sans font-extrabold uppercase mb-2 flex items-center gap-1">
-            <MaterialIcon name="place" className="text-[13px]" />
-            <span>LOCATION (DISTRICT)</span>
-          </label>
-          <div className="relative flex items-center border border-tactile-divider bg-[#FAF7F2]/40 rounded-lg px-4 min-h-[44px] hover:border-stone-400 smooth-transition">
-            <select
-              id="location_filter_select"
-              value={selectedLocation}
-              onChange={(e) => setSelectedLocation(e.target.value)}
-              className="w-full bg-transparent border-none text-xs tracking-wider focus:outline-none uppercase font-sans text-charcoal-ink font-bold cursor-pointer"
-            >
-              <option value="All">ALL GEOGRAPHIES (ALL AREAS)</option>
-              <option value="Banjara Hills">BANJARA HILLS</option>
-              <option value="Charminar">CHARMINAR (OLD CITY)</option>
-              <option value="Film Nagar">FILM NAGAR</option>
-              <option value="Financial District">FINANCIAL DISTRICT</option>
-              <option value="Gachibowli">GACHIBOWLI</option>
-              <option value="Jubilee Hills">JUBILEE HILLS</option>
-              <option value="Madhapur">MADHAPUR</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Budget Selector (Budget wise) */}
-        <div>
-          <label className="block text-[10px] tracking-widest text-[#8A7A6B] font-sans font-extrabold uppercase mb-2 flex items-center gap-1">
-            <MaterialIcon name="payments" className="text-[13px]" />
-            <span>BUDGET WISE RANGE</span>
-          </label>
-          <div className="relative flex items-center border border-tactile-divider bg-[#FAF7F2]/40 rounded-lg px-4 min-h-[44px] hover:border-stone-400 smooth-transition">
-            <select
-              id="budget_filter_select"
-              value={selectedBudget}
-              onChange={(e) => setSelectedBudget(e.target.value)}
-              className="w-full bg-transparent border-none text-xs tracking-wider focus:outline-none uppercase font-sans text-charcoal-ink font-bold cursor-pointer"
-            >
-              <option value="All">ALL BUDGETS</option>
-              <option value="economical">ECONOMICAL (UNDER ₹100 PER PERSON)</option>
-              <option value="moderate">MODERATE (₹100 - ₹250 PER PERSON)</option>
-              <option value="premium">PREMIUM (ABOVE ₹250 PER PERSON)</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Aesthetic Selector (Aesthetics wise) */}
-        <div>
-          <label className="block text-[10px] tracking-widest text-[#8A7A6B] font-sans font-extrabold uppercase mb-2 flex items-center gap-1">
-            <MaterialIcon name="palette" className="text-[13px]" />
-            <span>DESIGN AESTHETIC STYLE</span>
-          </label>
-          <div className="relative flex items-center border border-tactile-divider bg-[#FAF7F2]/40 rounded-lg px-4 min-h-[44px] hover:border-stone-400 smooth-transition">
-            <select
-              id="aesthetic_filter_select"
-              value={selectedAesthetic}
-              onChange={(e) => setSelectedAesthetic(e.target.value)}
-              className="w-full bg-transparent border-none text-xs tracking-wider focus:outline-none uppercase font-sans text-charcoal-ink font-bold cursor-pointer"
-            >
-              <option value="All">ALL DESIGN ARCHITECTURES</option>
-              <option value="heritage">COLONIAL & HISTORIC DECCANI</option>
-              <option value="minimalist">BRUTALIST & WABI-SABI MINIMALISM</option>
-              <option value="garden">LUSH GARDEN & STONE COURTYARD</option>
-              <option value="modern">MID-CENTURY MODERN BRASS & GLASS</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      {/* COLLAPSIBLE TAG FILTERS BLOCK */}
-      <div id="filter_tag_block" className="space-y-4 pt-1">
-        <div className="flex justify-between items-center text-xs text-stone-gray tracking-wider font-sans uppercase font-bold select-none">
-          <div className="flex items-center gap-2">
-            <span>FILTER BY</span>
-            {isFiltered && (
-              <span className="inline-block w-2 h-2 rounded-full bg-charcoal-ink animate-pulse" />
-            )}
-          </div>
-          {isFiltered && (
-            <button
-              onClick={() => {
-                setSelectedTag("All");
-                setSearchQuery("");
-              }}
-              className="text-[10px] tracking-widest text-charcoal-ink hover:underline cursor-pointer flex items-center gap-1.5"
-            >
-              <span>RESET ALL</span>
-              <MaterialIcon name="clear_all" className="text-[14px]" />
-            </button>
-          )}
-        </div>
-
-        {/* Dynamic tagging strip */}
-        <div className="flex flex-wrap items-center gap-2.5 transition-all duration-300">
-          {visibleTags.map((tag) => {
-            const isSelected = selectedTag === tag;
-            return (
-              <button
-                id={`tag_btn_${tag.replace(/\s+/g,'_')}`}
-                key={tag}
-                onClick={() => setSelectedTag(tag)}
-                className={`tag smooth-transition text-xs font-sans tracking-wide uppercase px-4 py-2 cursor-pointer select-none rounded-[3.5px] border flex items-center gap-2 min-h-[40px] shadow-xs ${
-                  isSelected
-                    ? 'bg-charcoal-ink border-charcoal-ink text-[#FAF7F2] font-bold'
-                    : 'bg-[#FAF7F2]/40 text-stone-gray border-tactile-divider hover:border-stone-gray hover:text-charcoal-ink font-semibold'
-                }`}
-              >
-                <MaterialIcon name={getTagIcon(tag)} className="text-sm" />
-                <span>{tag}</span>
-              </button>
-            );
-          })}
-
-          {/* Expander Controller */}
-          {hasAdditionalTags && (
-            <button
-              id="tag_expander_trigger"
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="text-xs font-sans tracking-widest uppercase px-4 py-2 cursor-pointer select-none rounded-[3.5px] border border-dashed border-tactile-divider hover:border-stone-gray text-stone-gray hover:text-charcoal-ink font-bold flex items-center gap-1.5 min-h-[40px] bg-transparent transition-colors duration-300"
-            >
-              <MaterialIcon 
-                name={isExpanded ? "keyboard_arrow_up" : "keyboard_arrow_down"} 
-                className="text-sm" 
-              />
-              <span>{isExpanded ? "SHOW LESS" : "SHOW MORE"}</span>
-            </button>
-          )}
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }
-

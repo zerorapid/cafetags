@@ -435,12 +435,7 @@ export default function App() {
                 exit={{ opacity: 0 }}
               >
                 {/* HERO & CINEMATIC RUNNER */}
-                <HeroSection
-                  cafes={cafes}
-                  carouselIndex={carouselIndex}
-                  setCarouselIndex={setCarouselIndex}
-                  onSelectCafe={(c) => navigate(`/cafe/${generateSlug(c.name)}`)}
-                />
+                <HeroSection />
 
                 {/* NEWLY LAUNCHED AUTOMATIC SLIDER */}
                 <NewlyLaunchedSection
