@@ -58,11 +58,12 @@ async function prerender() {
 
     const html = template
       .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>${title}</title>`)
+      .replace('<meta property="og:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="og:image" content="${imageUrl}">`)
+      .replace('<meta property="twitter:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="twitter:image" content="${imageUrl}">`)
       .replace('</head>', `  <meta name="description" content="${description}">
     <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
-    <meta property="og:image" content="${imageUrl}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="${url}">
     <meta property="twitter:card" content="summary_large_image">
@@ -119,17 +120,17 @@ async function prerender() {
 
     const html = template
       .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>${title}</title>`)
+      .replace('<meta property="og:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="og:image" content="${imageUrl}">`)
+      .replace('<meta property="twitter:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="twitter:image" content="${imageUrl}">`)
       .replace('</head>', `  <meta name="description" content="${description}">
     <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
-    <meta property="og:image" content="${imageUrl}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="${url}">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="${title}">
     <meta property="twitter:description" content="${description}">
-    <meta property="twitter:image" content="${imageUrl}">
     <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   </head>`)
       .replace('<div id="root"></div>', `<div id="root">
