@@ -23,7 +23,15 @@ service cloud.firestore {
     // Feedbacks Collection
     match /feedbacks/{feedbackId} {
       allow read: if request.auth != null;
-      allow create: if true;
+      // STRICT VALIDATION: Prevent Database Crash / DoS Attacks
+      allow create: if true 
+                    && request.resource.data.keys().hasAll(['id', 'cafeId', 'author', 'rating', 'text', 'date', 'status', 'email'])
+                    && request.resource.data.text is string 
+                    && request.resource.data.text.size() < 2000
+                    && request.resource.data.author is string
+                    && request.resource.data.author.size() < 100
+                    && request.resource.data.rating is number
+                    && request.resource.data.status == 'pending';
       allow update, delete: if request.auth != null;
     }
 
