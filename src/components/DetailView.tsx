@@ -433,7 +433,7 @@ export function DetailView({
                               <h3 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-2xl)', marginBottom: 'var(--space-4)' }}>Share Your Experience</h3>
                               <form onSubmit={(e) => {
                                 e.preventDefault();
-                                if(onSubmitFeedback) {
+                                const lastSubmit = localStorage.getItem('last_feedback_time'); const now = Date.now(); if (lastSubmit && now - parseInt(lastSubmit) < 60000) { alert('Please wait a minute before submitting another feedback to prevent spam.'); return; } if(onSubmitFeedback) { localStorage.setItem('last_feedback_time', now.toString());
                                   onSubmitFeedback(cafe.id, fbAuthor, 5, fbText, 'guest@cafetags.in');
                                   setFbText(''); setFbAuthor('');
                                   alert('Feedback submitted to Gatekeeper!');

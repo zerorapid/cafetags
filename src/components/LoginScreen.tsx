@@ -2,20 +2,30 @@ import React, { useState } from 'react';
 import { MaterialIcon } from './MaterialIcon';
 
 interface LoginScreenProps {
-  onLogin: (username: string, password: string) => boolean;
+  onLogin: (username: string, password: string) => Promise<boolean>;
 }
 
 export function LoginScreen({ onLogin }: LoginScreenProps) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const success = onLogin(username, password);
-    if (!success) {
+    setLoading(true);
+    setError(false);
+    try {
+      const success = await onLogin(username, password);
+      if (!success) {
+        setError(true);
+        setTimeout(() => setError(false), 3000);
+      }
+    } catch (err) {
       setError(true);
-      setTimeout(() => setError(false), 2000);
+      setTimeout(() => setError(false), 3000);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -65,10 +75,11 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
 
           <button
             type="submit"
-            className="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition-colors font-semibold tracking-wide text-sm flex justify-center items-center gap-2"
+            disabled={loading}
+            className={`w-full py-3 bg-stone-900 text-white rounded-lg transition-colors font-semibold tracking-wide text-sm flex justify-center items-center gap-2 ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-stone-800'}`}
           >
-            <span>Unlock Workspace</span>
-            <MaterialIcon name="arrow_forward" className="text-[18px]" />
+            <span>{loading ? 'Authenticating...' : 'Unlock Workspace'}</span>
+            {!loading && <MaterialIcon name="arrow_forward" className="text-[18px]" />}
           </button>
         </form>
       </div>

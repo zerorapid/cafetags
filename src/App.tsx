@@ -22,8 +22,9 @@ import { BlogSection } from './components/BlogSection';
 import { AdminSection } from './components/AdminSection';
 import { LoginScreen } from './components/LoginScreen';
 import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
-import { db } from './firebase';
+import { db, auth } from './firebase';
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
+import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 
 function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
   const { id } = useParams();
@@ -64,12 +65,18 @@ export default function App() {
   const location = useLocation();
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [adminUsername] = useState(() => {
-    return import.meta.env.VITE_ADMIN_USERNAME || "admin";
-  });
-  const [adminPassword] = useState(() => {
-    return import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
-  });
+  const [adminUsername] = useState(() => import.meta.env.VITE_ADMIN_USERNAME || "admin");
+  const [adminPassword] = useState(() => import.meta.env.VITE_ADMIN_PASSWORD || "admin123");
+
+  // --- Track Real Firebase Auth State ---
+  useEffect(() => {
+    if (import.meta.env.VITE_FIREBASE_API_KEY) {
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
+        setIsAuthenticated(!!user);
+      });
+      return () => unsubscribe();
+    }
+  }, []);
 
   // --- STATE LAYER ---
   const [cafes, setCafes] = useState<Cafe[]>([]);
@@ -396,12 +403,22 @@ export default function App() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                     >
-                      <LoginScreen onLogin={(user, pwd) => {
-                        if (user === adminUsername && pwd === adminPassword) {
-                          setIsAuthenticated(true);
-                          return true;
+                      <LoginScreen onLogin={async (user, pwd) => {
+                        if (import.meta.env.VITE_FIREBASE_API_KEY) {
+                          try {
+                            await signInWithEmailAndPassword(auth, user, pwd);
+                            return true;
+                          } catch (error) {
+                            console.error("Firebase Auth Error:", error);
+                            return false;
+                          }
+                        } else {
+                          if (user === adminUsername && pwd === adminPassword) {
+                            setIsAuthenticated(true);
+                            return true;
+                          }
+                          return false;
                         }
-                        return false;
                       }} />
                     </motion.div>
                   ) : (
