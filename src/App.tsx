@@ -434,8 +434,10 @@ export default function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                {/* HERO & CINEMATIC RUNNER */}
-                <HeroSection />
+                <HeroSection 
+                  cafes={cafes} 
+                  onSelectCafe={(c) => navigate(`/cafe/${generateSlug(c.name)}`)} 
+                />
 
                 {/* NEWLY LAUNCHED AUTOMATIC SLIDER */}
                 <NewlyLaunchedSection

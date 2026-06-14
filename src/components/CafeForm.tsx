@@ -62,12 +62,18 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [menuPrice, setMenuPrice] = useState('');
   const [menuCategory, setMenuCategory] = useState('Brews');
   const [menuSpecial, setMenuSpecial] = useState(false);
+  const [menuItemImage, setMenuItemImage] = useState('');
   const [menuImagesInput, setMenuImagesInput] = useState('');
   const [moreImagesInput, setMoreImagesInput] = useState('');
   
   // New UX Fields
   const [vibeScoresInput, setVibeScoresInput] = useState('');
   const [neighbourhoodGuide, setNeighbourhoodGuide] = useState('');
+  const [curatorNote, setCuratorNote] = useState('');
+  const [directionsTip, setDirectionsTip] = useState('');
+  const [videoUrl, setVideoUrl] = useState('');
+  const [bannerCatchyLine, setBannerCatchyLine] = useState('');
+  const [newLaunchCatchyline, setNewLaunchCatchyline] = useState('');
 
   useEffect(() => {
     if (editingCafe) {
@@ -88,6 +94,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       
       setAestheticType(editingCafe.aestheticType || '');
       setVibe(editingCafe.vibe || '');
+      setCuratorNote(editingCafe.curatorNote || '');
       setNeighbourhoodGuide(editingCafe.neighbourhoodGuide || '');
       setVibeScoresInput(editingCafe.vibeScores ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '');
       setCrowd(editingCafe.crowd || '');
@@ -95,6 +102,8 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setSignature(editingCafe.signature || '');
       setBookingUrl(editingCafe.bookingUrl || '');
       setImage(editingCafe.image || '');
+      setVideoUrl(editingCafe.videoUrl || '');
+      setDirectionsTip(editingCafe.directionsTip || '');
 
       setDineIn(editingCafe.dineIn ?? true);
       setTakeaway(editingCafe.takeaway ?? true);
@@ -102,7 +111,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setSelfDelivery(editingCafe.selfDelivery ?? false);
 
       setIsFeaturedBanner(editingCafe.isFeaturedBanner ?? false);
+      setBannerCatchyLine(editingCafe.bannerCatchyLine || '');
       setIsNewLaunch(editingCafe.isNewLaunch ?? false);
+      setNewLaunchCatchyline(editingCafe.newLaunchCatchyline || '');
 
       setTags(editingCafe.tags || []);
       setFacilities(editingCafe.facilities || []);
@@ -140,20 +151,17 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const handleAddMenuItem = (e: React.MouseEvent) => {
     e.preventDefault();
     if (menuTitle && menuPrice) {
-      setMenuItems([...menuItems, { name: menuTitle, price: menuPrice, category: menuCategory, isSpecial: menuSpecial }]);
+      setMenuItems([...menuItems, { name: menuTitle, price: menuPrice, category: menuCategory, isSpecial: menuSpecial, image: menuItemImage }]);
       setMenuTitle('');
       setMenuPrice('');
       setMenuSpecial(false);
+      setMenuItemImage('');
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const moreImages = moreImagesInput.split(',').map(s => s.trim()).filter(Boolean);
-    if (moreImages.length < 4) {
-      alert('Please provide at least 4 gallery images (along with the main thumbnail) to make up the 5 required hero images.');
-      return;
-    }
 
     const parsedVibeScores = vibeScoresInput.split(',')
       .map(s => s.trim())
@@ -165,9 +173,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
     const cafeData: any = {
       name, area, founded, icon, logo, address, mapLink, phone, email, website, socialLink, facebookUrl, twitterUrl, timings,
-      aestheticType, vibe, neighbourhoodGuide, crowd, discounts, signature, bookingUrl, image,
+      aestheticType, vibe, curatorNote, neighbourhoodGuide, crowd, discounts, signature, bookingUrl, image, videoUrl, directionsTip,
       dineIn, takeaway, onlineOrder, selfDelivery,
-      isFeaturedBanner, isNewLaunch,
+      isFeaturedBanner, bannerCatchyLine, isNewLaunch, newLaunchCatchyline,
       tags, facilities, celebrities, featuredMenu: menuItems,
       menuImages: menuImagesInput.split(',').map(s => s.trim()).filter(Boolean),
       moreImages: moreImages,
@@ -289,6 +297,10 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <label>Maps Deep Link</label>
                 <input type="text" placeholder="https://maps.app.goo.gl/..." value={mapLink} onChange={e => setMapLink(e.target.value)} />
               </div>
+              <div className="field" style={{ gridColumn: 'span 2' }}>
+                <label>Directions Tip</label>
+                <input type="text" placeholder="e.g. Park near the old oak tree" value={directionsTip} onChange={e => setDirectionsTip(e.target.value)} />
+              </div>
             </div>
 
             <div style={{ height: '20px' }}></div>
@@ -351,6 +363,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                   <label>Aesthetic Vibe Analysis (Curator's Take) <span className="req">*</span></label>
                   <textarea placeholder="Describe the architectural texture, shadows, study desk comfort, lighting temperature..." value={vibe} onChange={e => setVibe(e.target.value)} required></textarea>
                 </div>
+                
+                <div className="field">
+                  <label>Curator's Exact Quote (Optional)</label>
+                  <textarea placeholder="Specific note or quote from the curator..." value={curatorNote} onChange={e => setCuratorNote(e.target.value)}></textarea>
+                </div>
 
                 <div className="field">
                   <label>Vibe Scores</label>
@@ -391,6 +408,10 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
                   <div className="field" style={{ marginBottom: '16px' }}>
                     <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required />
+                  </div>
+                  <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Video URL (Optional)</label>
+                  <div className="field" style={{ marginBottom: '16px' }}>
+                    <input type="text" placeholder="https://youtube.com/..." value={videoUrl} onChange={e => setVideoUrl(e.target.value)} />
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Gallery Images (Min 4 required) <span className="req">*</span></label>
                   <div className="field">
@@ -451,19 +472,33 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Spotlight Toggles</label>
             <div className="toggle-grid">
-              <div className="toggle-card" onClick={() => setIsFeaturedBanner(!isFeaturedBanner)}>
-                <div className="toggle-text">
-                  <h5>Hero Spotlight Banner</h5>
-                  <p>Pin inside the cinematic home landing carousel.</p>
+              <div>
+                <div className="toggle-card" onClick={() => setIsFeaturedBanner(!isFeaturedBanner)}>
+                  <div className="toggle-text">
+                    <h5>Hero Spotlight Banner</h5>
+                    <p>Pin inside the cinematic home landing carousel.</p>
+                  </div>
+                  <div className={`toggle-switch ${isFeaturedBanner ? 'on' : ''}`}></div>
                 </div>
-                <div className={`toggle-switch ${isFeaturedBanner ? 'on' : ''}`}></div>
+                {isFeaturedBanner && (
+                  <div className="field" style={{ marginTop: '12px' }}>
+                    <input type="text" placeholder="Catchy headline for banner..." value={bannerCatchyLine} onChange={e => setBannerCatchyLine(e.target.value)} />
+                  </div>
+                )}
               </div>
-              <div className="toggle-card" onClick={() => setIsNewLaunch(!isNewLaunch)}>
-                <div className="toggle-text">
-                  <h5>Newly Launched Ticker</h5>
-                  <p>Feature on the newly launched sliding deck.</p>
+              <div>
+                <div className="toggle-card" onClick={() => setIsNewLaunch(!isNewLaunch)}>
+                  <div className="toggle-text">
+                    <h5>Newly Launched Ticker</h5>
+                    <p>Feature on the newly launched sliding deck.</p>
+                  </div>
+                  <div className={`toggle-switch ${isNewLaunch ? 'on' : ''}`}></div>
                 </div>
-                <div className={`toggle-switch ${isNewLaunch ? 'on' : ''}`}></div>
+                {isNewLaunch && (
+                  <div className="field" style={{ marginTop: '12px' }}>
+                    <input type="text" placeholder="Catchy line for new launch..." value={newLaunchCatchyline} onChange={e => setNewLaunchCatchyline(e.target.value)} />
+                  </div>
+                )}
               </div>
             </div>
 
@@ -542,6 +577,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div className="field">
                   <label>Item Title</label>
                   <input type="text" placeholder="e.g. Cranberry espresso tonic" value={menuTitle} onChange={e => setMenuTitle(e.target.value)} />
+                </div>
+                
+                <div className="field" style={{ marginTop: '14px' }}>
+                  <label>Item Image URL (Optional)</label>
+                  <input type="text" placeholder="https://img.jpg" value={menuItemImage} onChange={e => setMenuItemImage(e.target.value)} />
                 </div>
 
                 <div className="form-grid" style={{ gap: '14px', marginTop: '14px' }}>

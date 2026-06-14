@@ -33,7 +33,9 @@ import {
   Map,
   Calendar,
   Twitter,
-  AlertCircle
+  AlertCircle,
+  Mail,
+  Play
 } from 'lucide-react';
 import { TagPill } from './TagPill';
 
@@ -75,7 +77,7 @@ export function DetailView({
     allImages[3] || allImages[0] || cafe.image,
     allImages[4] || allImages[0] || cafe.image,
   ];
-  const totalPhotosCount = 1 + (cafe.moreImages?.length || 0);
+  const totalPhotosCount = allImages.length;
 
   return (
     <div className="custom-detail-view pb-24">
@@ -101,6 +103,12 @@ export function DetailView({
                           <GridIcon size={16} />
                           View Gallery ({totalPhotosCount})
                       </button>
+                      {cafe.videoUrl && (
+                      <a href={cafe.videoUrl} target="_blank" rel="noreferrer" className="gallery-overlay" style={{ right: 'auto', left: '24px', bottom: '24px', backgroundColor: 'var(--color-brand)', color: '#fff', border: 'none' }}>
+                          <Play size={16} />
+                          Watch Video
+                      </a>
+                      )}
                   </div>
               </div>
           </section>
@@ -130,6 +138,12 @@ export function DetailView({
                               </span>
                               <span className="divider-dot"></span>
                               <span>{cafe.aestheticType || "Modern Heritage Lounge"}</span>
+                              {cafe.crowd && (
+                                <>
+                                  <span className="divider-dot"></span>
+                                  <span>{cafe.crowd} Crowd</span>
+                                </>
+                              )}
                               {cafe.founded && (
                                 <>
                                   <span className="divider-dot"></span>
@@ -330,12 +344,14 @@ export function DetailView({
                       <div className="animate-on-scroll">
                           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 'var(--space-6)', flexWrap: 'wrap', gap: '16px' }}>
                               <h2 style={{ margin: 0 }}>Curated Menu</h2>
+                              {cafe.menuImages && cafe.menuImages.length > 0 && (
                               <button 
                                 onClick={() => { setActiveMenuIndex(0); setShowMenuModal(true); }}
                                 style={{ padding: '10px 20px', backgroundColor: '#222', color: '#fff', borderRadius: '32px', fontSize: '14px', fontWeight: 600, cursor: 'pointer', border: 'none', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
                               >
                                 <GridIcon size={16} /> View Full Menu
                               </button>
+                              )}
                           </div>
                           
                           <div className="menu-carousel" style={{ display: 'flex', overflowX: 'auto', gap: '16px', paddingBottom: '16px', scrollSnapType: 'x mandatory', msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
@@ -358,15 +374,17 @@ export function DetailView({
                                   </div>
                               </article>
 
-                              {/* 2 & 3. Featured Menu Items */}
-                              {cafe.featuredMenu?.slice(0, 2).map((item, idx) => (
-                              <article key={idx} className="menu-card" style={{ cursor: 'pointer' }} onClick={() => { setActiveMenuIndex(idx + 1); setShowMenuModal(true); }}>
+                              {/* Featured Menu Items */}
+                              {cafe.featuredMenu?.map((item, idx) => (
+                              <article key={idx} className="menu-card" style={{ cursor: 'pointer', position: 'relative' }} onClick={() => { setActiveMenuIndex(idx + 1); setShowMenuModal(true); }}>
                                   <div className="menu-card-image">
-                                      <img src={cafe.moreImages?.[idx] || cafe.image} alt={item.name} />
+                                      {item.isSpecial && <span className="badge badge-dark" style={{ position: 'absolute', top: '12px', left: '12px', zIndex: 2 }}>Popular</span>}
+                                      <img src={item.image || cafe.moreImages?.[idx] || cafe.image} alt={item.name} />
                                   </div>
                                   <div className="menu-card-content">
-                                      <div className="menu-card-header">
-                                          <h3 style={{ fontFamily: '"Instrument Serif", serif' }}>{item.name}</h3>
+                                      <div className="menu-card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
+                                          <h3 style={{ fontFamily: '"Instrument Serif", serif', margin: 0 }}>{item.name}</h3>
+                                          {item.price && <span style={{ fontWeight: 600, color: 'var(--color-brand)', fontSize: '14px', whiteSpace: 'nowrap' }}>{item.price}</span>}
                                       </div>
                                       <p>{item.category}. Highlighted signature recipe crafted from the heritage menu.</p>
                                   </div>
@@ -379,15 +397,15 @@ export function DetailView({
 
                       {/* Reviews */}
                       <div className="animate-on-scroll">
-                          <h2 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-6)' }}>Guestbook & Reviews ({cafe.userReviews?.length || 3})</h2>
+                          <h2 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-6)' }}>Guestbook & Reviews ({cafe.userReviews?.length || 0})</h2>
 
                           {/* Reviews List */}
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
-                              {(cafe.userReviews && cafe.userReviews.length > 0 ? cafe.userReviews : [
-                                { author: "Rahul M.", role: "Local Guide", text: "Absolutely stunning heritage architecture. The Irani chai is authentic and the Osmania biscuits melt in your mouth. Best spot for evening conversations.", date: "2 weeks ago", rating: 5 },
-                                { author: "Sarah K.", role: "Food Blogger", text: "Love the modern aesthetic blended with classic Hyderabadi roots. It gets quite crowded on weekends, but the service remains impeccable.", date: "1 month ago", rating: 4 },
-                                { author: "Vijay D.", role: "Regular", text: "The signature blends here are unmatched. Perfect ambiance for a date or just reading a book by the window.", date: "3 months ago", rating: 5 }
-                              ]).map((review, idx) => (
+                              {!cafe.userReviews || cafe.userReviews.length === 0 ? (
+                                <div style={{ padding: '32px', textAlign: 'center', backgroundColor: '#fcfcfc', border: '1px dashed #eaeaea', borderRadius: '16px', color: '#888' }}>
+                                  No reviews yet. Be the first to share your experience!
+                                </div>
+                              ) : cafe.userReviews.map((review, idx) => (
                                 <div key={idx} style={{ padding: '24px', backgroundColor: '#fcfcfc', border: '1px solid #eaeaea', borderRadius: '16px' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px' }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -396,7 +414,7 @@ export function DetailView({
                                             </div>
                                             <div>
                                                 <div style={{ fontWeight: 600, color: '#222' }}>{review.author}</div>
-                                                <div style={{ fontSize: '12px', color: '#717171' }}>{review.role}</div>
+                                                <div style={{ fontSize: '12px', color: '#717171' }}>{review.role || "Guest"}</div>
                                             </div>
                                         </div>
                                         <div style={{ textAlign: 'right' }}>
@@ -440,19 +458,33 @@ export function DetailView({
                   <div className="sticky-sidebar">
                       <div className="sidebar-header">
                           <div className="sidebar-price">
-                              Moderate <span>/ person</span>
+                              {cafe.dineIn ? "Dine In" : "Takeaway"} <span>Available</span>
                           </div>
                           <div className="sidebar-rating">
-                              ★ Heritage
+                              ★ {cafe.tags?.[0] || 'Curated'}
                           </div>
                       </div>
                       <div className="sidebar-actions">
+                          {cafe.mapLink && (
                           <a href={cafe.mapLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-pill">
                               <Navigation size={18} /> Get Directions
                           </a>
-                          <a href={`tel:${cafe.phone || ""}`} className="btn btn-secondary btn-pill">
+                          )}
+                          {cafe.bookingUrl && (
+                          <a href={cafe.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-pill" style={{ backgroundColor: '#e4a853', color: '#1C1412', border: 'none' }}>
+                              <Ticket size={18} /> Book / Order
+                          </a>
+                          )}
+                          {cafe.phone && (
+                          <a href={`tel:${cafe.phone}`} className="btn btn-secondary btn-pill">
                               <Phone size={18} /> Call
                           </a>
+                          )}
+                          {cafe.email && (
+                          <a href={`mailto:${cafe.email}`} className="btn btn-secondary btn-pill">
+                              <Mail size={18} /> Email
+                          </a>
+                          )}
                           {cafe.website && (
                           <a href={cafe.website} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-pill">
                               <Globe size={18} /> Website
