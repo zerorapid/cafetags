@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 const resolve = (p: string) => path.resolve(__dirname, '..', p);
 
-const SITE_URL = process.env.VITE_SITE_URL || 'https://cafetags.vercel.app';
+const SITE_URL = process.env.VITE_SITE_URL || 'https://cafetags.com';
 
 async function prerender() {
   const distDir = resolve('dist');
