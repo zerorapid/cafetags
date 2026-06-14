@@ -53,7 +53,7 @@ export function HeroSection({ cafes, onSelectCafe }: HeroSectionProps) {
               src={featured[index].image} 
               alt={featured[index].name} 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000"
-              style={{ transform: 'scale(1.05)' }}
+              imageClassName="scale-105"
             />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%)' }} />
             

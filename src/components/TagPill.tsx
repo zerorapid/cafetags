@@ -2,7 +2,8 @@ import React from 'react';
 import { MaterialIcon } from './MaterialIcon';
 import { getTagIcon } from '../data';
 
-interface TagPillProps {
+interface TagPillProps extends React.HTMLAttributes<HTMLSpanElement> {
+  key?: React.Key;
   tag: string;
   className?: string;
 }

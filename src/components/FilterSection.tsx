@@ -146,6 +146,22 @@ export function FilterSection({
                   </button>
                 </div>
               </div>
+
+              <div className="field">
+                <label className="field-label">Aesthetic</label>
+                <select 
+                  className="ct-input"
+                  value={selectedAesthetic}
+                  onChange={(e) => setSelectedAesthetic(e.target.value)}
+                >
+                  <option value="All">All Aesthetics</option>
+                  <option value="minimalist">Minimalist / Scandi</option>
+                  <option value="heritage">Heritage / Vintage</option>
+                  <option value="garden">Garden / Courtyard</option>
+                  <option value="modern">Modern / Industrial</option>
+                  <option value="other">Other Unique Vibes</option>
+                </select>
+              </div>
               
               {isFiltered && (
                 <div className="field" style={{ justifyContent: 'flex-end', alignItems: 'flex-start' }}>

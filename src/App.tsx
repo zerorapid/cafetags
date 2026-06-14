@@ -346,11 +346,10 @@ export default function App() {
       <div className="flex-1 flex flex-col justify-between">
         <div>
           {/* REFRACTION NAVIGATION BAR */}
-          <Navbar
-            onResetCafeSelection={() => navigate('/')}
-          />
+          <Navbar />
 
           <AnimatePresence mode="wait">
+              {/* @ts-ignore React Router v6 types miss the implicit key prop but AnimatePresence requires it */}
               <Routes location={location} key={location.pathname}>
                 <Route path="/cafe/:id" element={
                   <motion.div
