@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename);
 
 const resolve = (p: string) => path.resolve(__dirname, '..', p);
 
+const SITE_URL = process.env.VITE_SITE_URL || 'https://cafetags.vercel.app';
+
 async function prerender() {
   const distDir = resolve('dist');
   const templatePath = path.join(distDir, 'index.html');
@@ -19,12 +21,19 @@ async function prerender() {
   }
 
   const template = fs.readFileSync(templatePath, 'utf-8');
+  const sitemapUrls: string[] = [];
+
+  // Add Homepage to sitemap
+  sitemapUrls.push(`${SITE_URL}/`);
 
   // Create pre-rendered routes for cafes
   for (const cafe of INITIAL_CAFES) {
     const slug = generateSlug(cafe.name);
     const cafeDir = path.join(distDir, 'cafe');
+    const url = `${SITE_URL}/cafe/${slug}`;
     
+    sitemapUrls.push(url);
+
     if (!fs.existsSync(cafeDir)) {
       fs.mkdirSync(cafeDir, { recursive: true });
     }
@@ -33,17 +42,34 @@ async function prerender() {
     const description = cafe.vibe;
     const imageUrl = cafe.image;
 
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": cafe.name,
+      "image": cafe.image,
+      "description": cafe.vibe,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": cafe.area,
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      }
+    };
+
     const html = template
       .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>${title}</title>`)
       .replace('</head>', `  <meta name="description" content="${description}">
+    <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
     <meta property="og:image" content="${imageUrl}">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="${url}">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="${title}">
     <meta property="twitter:description" content="${description}">
     <meta property="twitter:image" content="${imageUrl}">
+    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   </head>`)
       .replace('<div id="root"></div>', `<div id="root">
         <main style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: system-ui, sans-serif;">
@@ -66,6 +92,9 @@ async function prerender() {
   for (const article of INITIAL_BLOG_ARTICLES) {
     const slug = generateSlug(article.title);
     const articleDir = path.join(distDir, 'journal');
+    const url = `${SITE_URL}/journal/${slug}`;
+
+    sitemapUrls.push(url);
     
     if (!fs.existsSync(articleDir)) {
       fs.mkdirSync(articleDir, { recursive: true });
@@ -75,17 +104,33 @@ async function prerender() {
     const description = article.excerpt;
     const imageUrl = article.image;
 
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": article.title,
+      "image": article.image,
+      "author": {
+        "@type": "Person",
+        "name": article.author
+      },
+      "datePublished": new Date(article.date).toISOString(),
+      "description": article.excerpt
+    };
+
     const html = template
       .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>${title}</title>`)
       .replace('</head>', `  <meta name="description" content="${description}">
+    <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
     <meta property="og:image" content="${imageUrl}">
     <meta property="og:type" content="article">
+    <meta property="og:url" content="${url}">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="${title}">
     <meta property="twitter:description" content="${description}">
     <meta property="twitter:image" content="${imageUrl}">
+    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   </head>`)
       .replace('<div id="root"></div>', `<div id="root">
         <article style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: system-ui, sans-serif;">
@@ -118,7 +163,19 @@ async function prerender() {
   }
 
   // Pre-render Homepage with a crawler-friendly skeleton
-  const homepageHtml = template.replace('<div id="root"></div>', `<div id="root">
+  const jsonLdHome = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CafeTags",
+    "url": SITE_URL,
+    "description": "Curated Coffee Spaces & Guides in Hyderabad"
+  };
+
+  const homepageHtml = template
+    .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>CafeTags — Curated Coffee Spaces & Guides</title>
+    <link rel="canonical" href="${SITE_URL}/" />
+    <script type="application/ld+json">${JSON.stringify(jsonLdHome)}</script>`)
+    .replace('<div id="root"></div>', `<div id="root">
     <main style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: system-ui, sans-serif;">
       <h1>CafeTags — Curated Coffee Spaces & Guides</h1>
       <p>Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.</p>
@@ -134,6 +191,23 @@ async function prerender() {
   </div>`);
   fs.writeFileSync(templatePath, homepageHtml);
   console.log('Pre-rendered Homepage index.html');
+
+  // --- GENERATE SITEMAP.XML ---
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(url => `  <url>\n    <loc>${url}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${url === SITE_URL + '/' ? '1.0' : '0.8'}</priority>\n  </url>`).join('\n')}
+</urlset>`;
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml);
+  console.log('✅ Generated sitemap.xml');
+
+  // --- GENERATE ROBOTS.TXT ---
+  const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`;
+  fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt);
+  console.log('✅ Generated robots.txt');
 
   console.log('✅ SSG Prerendering complete!');
 }
