@@ -442,9 +442,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
                   <div className="field" style={{ marginBottom: '16px' }}>
-                    <div className="flex gap-2">
-                      <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required className="flex-1" />
-                      <button type="button" onClick={() => fileInputRefImage.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3 h-[42px]" disabled={isUploadingImage}>
+                    <div className="flex flex-col xl:flex-row gap-2">
+                      <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required className="flex-1 w-full" />
+                      <button type="button" onClick={() => fileInputRefImage.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3 h-[42px] shrink-0" disabled={isUploadingImage}>
                         {isUploadingImage ? 'Uploading...' : 'Upload File'}
                       </button>
                       <input type="file" ref={fileInputRefImage} style={{ display: 'none' }} accept="image/*" onChange={(e) => handleFileUpload(e, setIsUploadingImage, (urls) => setImage(urls[0]))} />
@@ -698,6 +698,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             </div>
           </section>
 
+          <div style={{ height: '80px' }}></div> {/* Spacer to prevent floating bar overlap */}
         </form>
         {/* ═══════════ FLOATING ACTION BAR ═══════════ */}
         <div className="action-bar">
