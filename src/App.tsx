@@ -21,6 +21,7 @@ import { MaterialIcon } from './components/MaterialIcon';
 import { BlogSection } from './components/BlogSection';
 import { AdminSection } from './components/AdminSection';
 import { LoginScreen } from './components/LoginScreen';
+import { LoadingScreen } from './components/LoadingScreen';
 import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
 import { db, auth } from './firebase';
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
@@ -63,6 +64,13 @@ function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isAppLoading, setIsAppLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsAppLoading(false), 2200);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [adminUsername] = useState(() => import.meta.env.VITE_ADMIN_USERNAME || "admin");
@@ -348,7 +356,11 @@ export default function App() {
   };
 
   return (
-    <div id="main_layout" className="min-h-screen bg-warm-beige text-charcoal-ink font-sans selection:bg-charcoal-ink selection:text-warm-beige animate-fade-in flex flex-col">
+    <>
+      <AnimatePresence>
+        {isAppLoading && <LoadingScreen />}
+      </AnimatePresence>
+      <div id="main_layout" className="min-h-screen bg-warm-beige text-charcoal-ink font-sans selection:bg-charcoal-ink selection:text-warm-beige animate-fade-in flex flex-col">
       
       <div className="flex-1 flex flex-col justify-between">
         <div>
@@ -539,5 +551,6 @@ export default function App() {
         <Footer />
       </div>
     </div>
+    </>
   );
 }
