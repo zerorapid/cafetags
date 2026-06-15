@@ -421,7 +421,15 @@ export function AdminSection({
                       </td>
                       <td className="p-4 font-semibold text-stone-700">{cafe.area}</td>
                       <td className="p-4 italic text-stone-600 font-serif font-bold">{cafe.signature}</td>
-                      <td className="p-4 font-mono text-stone-500">{cafe.founded} AD</td>
+                      <td className="p-4 font-mono text-stone-500">
+                        {cafe.founded} AD
+                        <div className="mt-1">
+                          {cafe.status === 'renovating' && <span className="text-[9px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded-sm uppercase font-bold tracking-wider">Renovating</span>}
+                          {cafe.status === 'closed' && <span className="text-[9px] bg-stone-200 text-stone-600 px-1.5 py-0.5 rounded-sm uppercase font-bold tracking-wider">Closed</span>}
+                          {cafe.status === 'shutdown' && <span className="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded-sm uppercase font-bold tracking-wider">Shutdown</span>}
+                          {(!cafe.status || cafe.status === 'open') && <span className="text-[9px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded-sm uppercase font-bold tracking-wider">Open</span>}
+                        </div>
+                      </td>
                       <td className="p-4">
                         <div className="flex items-center gap-1 text-[10px] bg-amber-50 border border-amber-200 text-amber-950 px-2 py-0.5 rounded-sm font-bold max-w-max">
                           <MaterialIcon name="stars" className="text-xs text-amber-600" />
