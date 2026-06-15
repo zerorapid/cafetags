@@ -61,8 +61,8 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           
           <div className="flex justify-between items-center border-t border-tactile-divider/50 pt-2 text-xs tracking-wider uppercase text-stone-gray">
             <span className="flex items-center gap-1">
-              <MaterialIcon name="location_on" className="text-xs text-amber-700" />
-              <span>{cafe.area} — OPENED: {cafe.founded}</span>
+              <MaterialIcon name="calendar_today" className="text-[10px] text-stone-gray/80" />
+              <span>EST. {cafe.founded}</span>
             </span>
             <span className="text-xs text-stone-gray/80 italic font-serif">{(index + 1).toString().padStart(2, '0')}.</span>
           </div>
