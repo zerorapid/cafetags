@@ -81,9 +81,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [isUploadingImage, setIsUploadingImage] = useState(false);
   const [isUploadingGallery, setIsUploadingGallery] = useState(false);
   const [isUploadingMenu, setIsUploadingMenu] = useState(false);
+  const [isUploadingLogo, setIsUploadingLogo] = useState(false);
   const fileInputRefImage = useRef<HTMLInputElement>(null);
   const fileInputRefGallery = useRef<HTMLInputElement>(null);
   const fileInputRefMenu = useRef<HTMLInputElement>(null);
+  const fileInputRefLogo = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (editingCafe) {
@@ -317,7 +319,13 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid">
               <div className="field">
                 <label>Brand Logo URL</label>
-                <input type="text" placeholder="https://..." value={logo} onChange={e => setLogo(e.target.value)} />
+                <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+                  <input type="text" placeholder="https://..." value={logo} onChange={e => setLogo(e.target.value)} style={{ flex: '1 1 200px' }} />
+                  <button type="button" onClick={() => fileInputRefLogo.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3" style={{ height: '42px', flexShrink: 0 }} disabled={isUploadingLogo}>
+                    {isUploadingLogo ? 'Uploading...' : 'Upload Logo'}
+                  </button>
+                  <input type="file" ref={fileInputRefLogo} style={{ display: 'none' }} accept="image/*" onChange={(e) => handleFileUpload(e, setIsUploadingLogo, (urls) => setLogo(urls[0]))} />
+                </div>
               </div>
             </div>
 
