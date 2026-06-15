@@ -1,12 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+// Use environment variables first, but gracefully fallback to hardcoded keys if Vercel fails
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL?.trim() || "https://fqnjwmuoaedurvmozfvc.supabase.co";
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY?.trim() || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxbmp3bXVvYWVkdXJ2bW96ZnZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1MzM2MzcsImV4cCI6MjA5NzEwOTYzN30.QOmXBGRHXh7Frhw4Bh6mlYVMjHynWPC4ouDW20HS5sA";
 
-// Initialize the Supabase client only if keys are provided
-export const supabase = supabaseUrl && supabaseAnonKey 
-  ? createClient(supabaseUrl, supabaseAnonKey) 
-  : null;
+// Initialize the Supabase client
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 /**
  * Uploads a file to the 'cafes' public bucket in Supabase Storage.
