@@ -62,6 +62,7 @@ export function Footer() {
                 <li><a href="#" className="hover:text-white transition-colors duration-200">List Your Space</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Submit Feedback</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Advertise</a></li>
+                <li><a href="upi://pay?pa=7893026833%40mbk&pn=JAYAPAL&tn=BUY%20ME%20A%20COFFEE" className="hover:text-white transition-colors duration-200">☕ Buy me a coffee</a></li>
               </ul>
             </div>
           </div>
