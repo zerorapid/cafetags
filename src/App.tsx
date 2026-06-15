@@ -467,11 +467,13 @@ export default function App() {
                   onSelectCafe={(c) => navigate(`/cafe/${generateSlug(c.name)}`)} 
                 />
 
-                {/* NEWLY LAUNCHED AUTOMATIC SLIDER */}
+                {/* NEWLY LAUNCHED AUTOMATIC SLIDER - Removed for custom banner layout */}
+                {/* 
                 <NewlyLaunchedSection
                   cafes={cafes}
                   onSelectCafe={(c) => navigate(`/cafe/${generateSlug(c.name)}`)}
                 />
+                */}
 
                 {/* SEARCH FILTERS MATRIX */}
                 <FilterSection
