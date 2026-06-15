@@ -127,6 +127,7 @@ export function AdminSection({
             videoUrl: row.videoUrl || '',
             directionsTip: row.directionsTip || '',
             bannerCatchyLine: row.bannerCatchyLine || '',
+            status: row.status || 'open',
             featuredMenu: [],
             userReviews: []
           };

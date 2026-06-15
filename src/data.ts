@@ -60,7 +60,8 @@ export const INITIAL_CAFES: Cafe[] = [
       { label: "Photography", score: 9.5 },
       { label: "Quiet Workspace", score: 2.0 }
     ],
-    neighbourhoodGuide: "Charminar's bustling lanes are a sensory overload. Best visited before 7 AM to avoid the dense traffic and capture the rising sun reflecting off the minarets. Perfect for street photography and heritage walks."
+    neighbourhoodGuide: "Charminar's bustling lanes are a sensory overload. Best visited before 7 AM to avoid the dense traffic and capture the rising sun reflecting off the minarets. Perfect for street photography and heritage walks.",
+    status: 'open'
   },
   {
     id: 2,
@@ -106,7 +107,8 @@ export const INITIAL_CAFES: Cafe[] = [
     moreImages: [
       "https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=600&auto=format&fit=crop"
-    ]
+    ],
+    status: 'open'
   },
   {
     id: 3,
@@ -152,7 +154,8 @@ export const INITIAL_CAFES: Cafe[] = [
     moreImages: [
       "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=600&auto=format&fit=crop"
-    ]
+    ],
+    status: 'renovating'
   },
   {
     id: 4,
@@ -198,7 +201,8 @@ export const INITIAL_CAFES: Cafe[] = [
     moreImages: [
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600&auto=format&fit=crop"
-    ]
+    ],
+    status: 'open'
   },
   {
     id: 5,
@@ -244,7 +248,8 @@ export const INITIAL_CAFES: Cafe[] = [
     moreImages: [
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600&auto=format&fit=crop"
-    ]
+    ],
+    status: 'open'
   },
   {
     id: 6,
@@ -290,7 +295,8 @@ export const INITIAL_CAFES: Cafe[] = [
     moreImages: [
       "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=600&auto=format&fit=crop"
-    ]
+    ],
+    status: 'open'
   },
   {
     id: 7,
@@ -334,7 +340,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop"
     ],
     isNewLaunch: true,
-    newLaunchCatchyline: "Cube of Glass & Cedarwood Workspaces"
+    newLaunchCatchyline: "Cube of Glass & Cedarwood Workspaces",
+    status: 'open'
   },
   {
     id: 8,
@@ -378,7 +385,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600&auto=format&fit=crop"
     ],
     isNewLaunch: true,
-    newLaunchCatchyline: "Pastel Bougainvillea Italian Oasis"
+    newLaunchCatchyline: "Pastel Bougainvillea Italian Oasis",
+    status: 'open'
   },
   {
     id: 9,
@@ -422,7 +430,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=600&auto=format&fit=crop"
     ],
     isNewLaunch: true,
-    newLaunchCatchyline: "Acoustic Silence & Swedish Buns"
+    newLaunchCatchyline: "Acoustic Silence & Swedish Buns",
+    status: 'open'
   },
   {
     id: 10,
@@ -466,7 +475,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=600&auto=format&fit=crop"
     ],
     isNewLaunch: true,
-    newLaunchCatchyline: "Sunset Lake-view Specialty Sanctuary"
+    newLaunchCatchyline: "Sunset Lake-view Specialty Sanctuary",
+    status: 'open'
   }
 ];
 

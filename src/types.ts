@@ -64,6 +64,7 @@ export interface Cafe {
   bannerCatchyLine?: string;
   isNewLaunch?: boolean;
   newLaunchCatchyline?: string;
+  status?: 'open' | 'closed' | 'renovating' | 'shutdown';
 }
 
 export interface PresetCover {

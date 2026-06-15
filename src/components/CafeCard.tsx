@@ -24,6 +24,16 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const renderStatusBadge = (status?: string) => {
+    switch (status) {
+      case 'closed': return <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase rounded-sm bg-stone-200 text-stone-600 tracking-wider">Closed</span>;
+      case 'renovating': return <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase rounded-sm bg-orange-100 text-orange-700 border border-orange-200 tracking-wider">Renovating</span>;
+      case 'shutdown': return <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase rounded-sm bg-red-100 text-red-700 border border-red-200 tracking-wider">Shutdown</span>;
+      case 'open':
+      default: return <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase rounded-sm bg-green-100 text-green-700 border border-green-200 tracking-wider">Open</span>;
+    }
+  };
+
   if (layout === 'grid') {
     return (
       <article 
@@ -60,9 +70,9 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           </h3>
           
           <div className="flex justify-between items-center border-t border-tactile-divider/50 pt-2 text-xs tracking-wider uppercase text-stone-gray">
-            <span className="flex items-center gap-1">
-              <MaterialIcon name="calendar_today" className="text-[10px] text-stone-gray/80" />
-              <span>EST. {cafe.founded}</span>
+            <span className="flex items-center gap-1.5">
+              {renderStatusBadge(cafe.status)}
+              <span className="text-[10px] text-stone-gray/80">{cafe.timings?.split(' ')[0]} - {cafe.timings?.split('-')[1]?.split(' ')[1]}</span>
             </span>
             <span className="text-xs text-stone-gray/80 italic font-serif">{(index + 1).toString().padStart(2, '0')}.</span>
           </div>
@@ -94,9 +104,10 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       onClick={handleCardClick}
       className="group cursor-pointer py-10 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 smooth-transition hover:bg-[#FAF7F2]/50 hover:px-4"
     >
-      {/* Year tag */}
-      <div className="w-18 text-xs tracking-widest text-stone-gray flex-shrink-0 font-bold text-left">
-        OPENED: {cafe.founded}
+      {/* Year & Status */}
+      <div className="w-18 text-xs tracking-widest text-stone-gray flex-shrink-0 font-bold text-left space-y-1">
+        <div>OPENED: {cafe.founded}</div>
+        <div>{renderStatusBadge(cafe.status)}</div>
       </div>
       
       {/* Main Identity column */}
@@ -106,6 +117,9 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           <span className="text-xs tracking-wide font-bold uppercase text-stone-gray bg-transparent border border-tactile-divider px-3 py-1 rounded-full group-hover:bg-charcoal-ink group-hover:text-[#FAF7F2] group-hover:border-charcoal-ink smooth-transition shadow-xs flex items-center gap-1">
             <MaterialIcon name="location_on" className="text-xs text-amber-700" />
             <span>{cafe.area}</span>
+          </span>
+          <span className="text-[10px] tracking-wider uppercase text-stone-gray/80 font-sans flex items-center gap-1 mt-1 md:mt-0">
+            <MaterialIcon name="schedule" className="text-[11px]" /> {cafe.timings}
           </span>
         </h3>
         

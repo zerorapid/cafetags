@@ -79,6 +79,16 @@ export function DetailView({
   ];
   const totalPhotosCount = allImages.length;
 
+  const renderStatusBadge = (status?: string) => {
+    switch (status) {
+      case 'closed': return <span className="badge" style={{ backgroundColor: '#e5e7eb', color: '#4b5563', borderColor: '#d1d5db' }}>Temporarily Closed</span>;
+      case 'renovating': return <span className="badge" style={{ backgroundColor: '#ffedd5', color: '#c2410c', borderColor: '#fed7aa' }}>Renovating</span>;
+      case 'shutdown': return <span className="badge" style={{ backgroundColor: '#fee2e2', color: '#b91c1c', borderColor: '#fecaca' }}>Permanently Closed</span>;
+      case 'open':
+      default: return <span className="badge" style={{ backgroundColor: '#dcfce7', color: '#15803d', borderColor: '#bbf7d0' }}>Open Now</span>;
+    }
+  };
+
   return (
     <div className="custom-detail-view pb-24">
       {/* Global Nav is handled by App.tsx, just add padding and Back button */}
@@ -131,6 +141,7 @@ export function DetailView({
                                   <ShieldCheck size={12} />
                                   Vetted
                               </span>
+                              {renderStatusBadge(cafe.status)}
                               <span className="divider-dot"></span>
                               <span>
                                   <MapPin size={14} />

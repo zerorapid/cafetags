@@ -41,6 +41,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [takeaway, setTakeaway] = useState(true);
   const [onlineOrder, setOnlineOrder] = useState(true);
   const [selfDelivery, setSelfDelivery] = useState(false);
+  const [status, setStatus] = useState<'open' | 'closed' | 'renovating' | 'shutdown'>('open');
 
   // Spotlights
   const [isFeaturedBanner, setIsFeaturedBanner] = useState(false);
@@ -109,6 +110,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setTakeaway(editingCafe.takeaway ?? true);
       setOnlineOrder(editingCafe.onlineOrder ?? true);
       setSelfDelivery(editingCafe.selfDelivery ?? false);
+      setStatus(editingCafe.status || 'open');
 
       setIsFeaturedBanner(editingCafe.isFeaturedBanner ?? false);
       setBannerCatchyLine(editingCafe.bannerCatchyLine || '');
@@ -174,7 +176,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
     const cafeData: any = {
       name, area, founded, icon, logo, address, mapLink, phone, email, website, socialLink, facebookUrl, twitterUrl, timings,
       aestheticType, vibe, curatorNote, neighbourhoodGuide, crowd, discounts, signature, bookingUrl, image, videoUrl, directionsTip,
-      dineIn, takeaway, onlineOrder, selfDelivery,
+      dineIn, takeaway, onlineOrder, selfDelivery, status,
       isFeaturedBanner, bannerCatchyLine, isNewLaunch, newLaunchCatchyline,
       tags, facilities, celebrities, featuredMenu: menuItems,
       menuImages: menuImagesInput.split(',').map(s => s.trim()).filter(Boolean),
@@ -446,6 +448,16 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <h3>Operational Modalities &amp; Services</h3>
                 <p>Configure available services, spotlights, and facility tags.</p>
               </div>
+            </div>
+
+            <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Operational Status</label>
+            <div className="field" style={{ marginBottom: '24px' }}>
+              <select value={status} onChange={e => setStatus(e.target.value as any)}>
+                <option value="open">Open (Operating Normally)</option>
+                <option value="closed">Closed (Temporarily)</option>
+                <option value="renovating">Renovating (Closed for upgrades)</option>
+                <option value="shutdown">Shutdown (Permanently Closed)</option>
+              </select>
             </div>
 
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Available Services</label>
