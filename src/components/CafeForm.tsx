@@ -78,6 +78,15 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [gallery4, setGallery4] = useState('');
   const [gallery5, setGallery5] = useState('');
 
+  // New UX Fields
+  const [vibeScoresInput, setVibeScoresInput] = useState('');
+  const [neighbourhoodGuide, setNeighbourhoodGuide] = useState('');
+  const [curatorNote, setCuratorNote] = useState('');
+  const [directionsTip, setDirectionsTip] = useState('');
+  const [videoUrl, setVideoUrl] = useState('');
+  const [bannerCatchyLine, setBannerCatchyLine] = useState('');
+  const [newLaunchCatchyline, setNewLaunchCatchyline] = useState('');
+
   useEffect(() => {
     if (editingCafe) {
       setName(editingCafe.name || '');
