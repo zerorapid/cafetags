@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Cafe, CafeMenuItem } from '../types';
-import { uploadImageToSupabase } from '../supabase';
 import './CafeForm.css';
 
 interface CafeFormProps {
@@ -65,27 +64,19 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [menuCategory, setMenuCategory] = useState('Brews');
   const [menuSpecial, setMenuSpecial] = useState(false);
   const [menuItemImage, setMenuItemImage] = useState('');
-  const [menuImagesInput, setMenuImagesInput] = useState('');
-  const [moreImagesInput, setMoreImagesInput] = useState('');
-  
-  // New UX Fields
-  const [vibeScoresInput, setVibeScoresInput] = useState('');
-  const [neighbourhoodGuide, setNeighbourhoodGuide] = useState('');
-  const [curatorNote, setCuratorNote] = useState('');
-  const [directionsTip, setDirectionsTip] = useState('');
-  const [videoUrl, setVideoUrl] = useState('');
-  const [bannerCatchyLine, setBannerCatchyLine] = useState('');
-  const [newLaunchCatchyline, setNewLaunchCatchyline] = useState('');
+  // Menu URLs (1 to 5)
+  const [menu1, setMenu1] = useState('');
+  const [menu2, setMenu2] = useState('');
+  const [menu3, setMenu3] = useState('');
+  const [menu4, setMenu4] = useState('');
+  const [menu5, setMenu5] = useState('');
 
-  // Upload States
-  const [isUploadingImage, setIsUploadingImage] = useState(false);
-  const [isUploadingGallery, setIsUploadingGallery] = useState(false);
-  const [isUploadingMenu, setIsUploadingMenu] = useState(false);
-  const [isUploadingLogo, setIsUploadingLogo] = useState(false);
-  const fileInputRefImage = useRef<HTMLInputElement>(null);
-  const fileInputRefGallery = useRef<HTMLInputElement>(null);
-  const fileInputRefMenu = useRef<HTMLInputElement>(null);
-  const fileInputRefLogo = useRef<HTMLInputElement>(null);
+  // Gallery URLs (1 to 5)
+  const [gallery1, setGallery1] = useState('');
+  const [gallery2, setGallery2] = useState('');
+  const [gallery3, setGallery3] = useState('');
+  const [gallery4, setGallery4] = useState('');
+  const [gallery5, setGallery5] = useState('');
 
   useEffect(() => {
     if (editingCafe) {
@@ -132,8 +123,23 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setFacilities(editingCafe.facilities || []);
       setCelebrities(editingCafe.celebrities || []);
       setMenuItems(editingCafe.featuredMenu || []);
-      setMenuImagesInput(editingCafe.menuImages ? editingCafe.menuImages.join(', ') : '');
-      setMoreImagesInput(editingCafe.moreImages ? editingCafe.moreImages.join(', ') : '');
+      setMenuItems(editingCafe.featuredMenu || []);
+      
+      if (editingCafe.menuImages) {
+        setMenu1(editingCafe.menuImages[0] || '');
+        setMenu2(editingCafe.menuImages[1] || '');
+        setMenu3(editingCafe.menuImages[2] || '');
+        setMenu4(editingCafe.menuImages[3] || '');
+        setMenu5(editingCafe.menuImages[4] || '');
+      }
+
+      if (editingCafe.moreImages) {
+        setGallery1(editingCafe.moreImages[0] || '');
+        setGallery2(editingCafe.moreImages[1] || '');
+        setGallery3(editingCafe.moreImages[2] || '');
+        setGallery4(editingCafe.moreImages[3] || '');
+        setGallery5(editingCafe.moreImages[4] || '');
+      }
     }
   }, [editingCafe]);
 
@@ -172,34 +178,10 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
     }
   };
 
-  const handleFileUpload = async (
-    e: React.ChangeEvent<HTMLInputElement>,
-    setLoadingState: (val: boolean) => void,
-    onSuccess: (urls: string[]) => void
-  ) => {
-    const files = e.target.files;
-    if (!files || files.length === 0) return;
-    
-    setLoadingState(true);
-    try {
-      const urls: string[] = [];
-      for (let i = 0; i < files.length; i++) {
-        const url = await uploadImageToSupabase(files[i]);
-        urls.push(url);
-      }
-      onSuccess(urls);
-    } catch (error: any) {
-      console.error(error);
-      alert("Upload failed! Error: " + (error.message || JSON.stringify(error)));
-    } finally {
-      setLoadingState(false);
-      if (e.target) e.target.value = ''; // Reset input
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const moreImages = moreImagesInput.split(',').map(s => s.trim()).filter(Boolean);
+    const moreImages = [gallery1, gallery2, gallery3, gallery4, gallery5].map(s => s.trim()).filter(Boolean);
+    const menuImages = [menu1, menu2, menu3, menu4, menu5].map(s => s.trim()).filter(Boolean);
 
     const parsedVibeScores = vibeScoresInput.split(',')
       .map(s => s.trim())
@@ -215,7 +197,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       dineIn, takeaway, onlineOrder, selfDelivery, status,
       isFeaturedBanner, bannerCatchyLine, isNewLaunch, newLaunchCatchyline,
       tags, facilities, celebrities, featuredMenu: menuItems,
-      menuImages: menuImagesInput.split(',').map(s => s.trim()).filter(Boolean),
+      menuImages: menuImages,
       moreImages: moreImages,
       vibeScores: parsedVibeScores,
       userReviews: editingCafe ? editingCafe.userReviews : []
@@ -320,13 +302,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid">
               <div className="field">
                 <label>Brand Logo URL</label>
-                <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
-                  <input type="text" placeholder="https://..." value={logo} onChange={e => setLogo(e.target.value)} style={{ flex: '1 1 200px' }} />
-                  <button type="button" onClick={() => fileInputRefLogo.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3" style={{ height: '42px', flexShrink: 0 }} disabled={isUploadingLogo}>
-                    {isUploadingLogo ? 'Uploading...' : 'Upload Logo'}
-                  </button>
-                  <input type="file" ref={fileInputRefLogo} style={{ display: 'none' }} accept="image/*" onChange={(e) => handleFileUpload(e, setIsUploadingLogo, (urls) => setLogo(urls[0]))} />
-                </div>
+                <input type="text" placeholder="https://i.pinimg.com/originals/..." value={logo} onChange={e => setLogo(e.target.value)} />
               </div>
             </div>
 
@@ -451,34 +427,19 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
                   <div className="field" style={{ marginBottom: '16px' }}>
-                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
-                      <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required style={{ flex: '1 1 200px' }} />
-                      <button type="button" onClick={() => fileInputRefImage.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3" style={{ height: '42px', flexShrink: 0 }} disabled={isUploadingImage}>
-                        {isUploadingImage ? 'Uploading...' : 'Upload File'}
-                      </button>
-                      <input type="file" ref={fileInputRefImage} style={{ display: 'none' }} accept="image/*" onChange={(e) => handleFileUpload(e, setIsUploadingImage, (urls) => setImage(urls[0]))} />
-                    </div>
+                    <input type="text" placeholder="https://i.pinimg.com/originals/..." value={image} onChange={e => setImage(e.target.value)} required />
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Video URL (Optional)</label>
                   <div className="field" style={{ marginBottom: '16px' }}>
                     <input type="text" placeholder="https://youtube.com/..." value={videoUrl} onChange={e => setVideoUrl(e.target.value)} />
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Gallery Images (Min 4 required) <span className="req">*</span></label>
-                  <div className="field">
-                    <textarea 
-                      placeholder="Comma-separated image URLs (e.g. url1, url2, url3, url4)" 
-                      value={moreImagesInput} 
-                      onChange={e => setMoreImagesInput(e.target.value)} 
-                      required 
-                      rows={4}
-                    ></textarea>
-                    <button type="button" onClick={() => fileInputRefGallery.current?.click()} className="btn-action secondary text-xs mt-2 w-full" style={{ padding: '12px', marginTop: '8px' }} disabled={isUploadingGallery}>
-                      {isUploadingGallery ? 'Uploading...' : 'Upload Multiple Files'}
-                    </button>
-                    <input type="file" ref={fileInputRefGallery} style={{ display: 'none' }} accept="image/*" multiple onChange={(e) => handleFileUpload(e, setIsUploadingGallery, (urls) => {
-                      const newImages = urls.join(', ');
-                      setMoreImagesInput(prev => prev ? `${prev}, ${newImages}` : newImages);
-                    })} />
+                  <div className="field" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <input type="text" placeholder="Image 1 URL (e.g. Pinterest Image Address)" value={gallery1} onChange={e => setGallery1(e.target.value)} required />
+                    <input type="text" placeholder="Image 2 URL" value={gallery2} onChange={e => setGallery2(e.target.value)} required />
+                    <input type="text" placeholder="Image 3 URL" value={gallery3} onChange={e => setGallery3(e.target.value)} required />
+                    <input type="text" placeholder="Image 4 URL" value={gallery4} onChange={e => setGallery4(e.target.value)} required />
+                    <input type="text" placeholder="Image 5 URL (Optional)" value={gallery5} onChange={e => setGallery5(e.target.value)} />
                   </div>
                 </div>
 
@@ -634,16 +595,13 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="menu-form-panel">
                 <h4>Original Menu Cards (Images)</h4>
                 <div className="field">
-                  <label>Menu Image URLs (comma separated)</label>
+                  <label>Menu Image URLs</label>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <input type="text" placeholder="https://img1.jpg, https://img2.jpg" value={menuImagesInput} onChange={e => setMenuImagesInput(e.target.value)} />
-                    <button type="button" onClick={() => fileInputRefMenu.current?.click()} className="btn-action secondary text-xs" style={{ alignSelf: 'flex-start', padding: '10px 16px' }} disabled={isUploadingMenu}>
-                      {isUploadingMenu ? 'Uploading...' : 'Upload Files'}
-                    </button>
-                    <input type="file" ref={fileInputRefMenu} style={{ display: 'none' }} accept="image/*" multiple onChange={(e) => handleFileUpload(e, setIsUploadingMenu, (urls) => {
-                      const newImages = urls.join(', ');
-                      setMenuImagesInput(prev => prev ? `${prev}, ${newImages}` : newImages);
-                    })} />
+                    <input type="text" placeholder="Menu Page 1 URL" value={menu1} onChange={e => setMenu1(e.target.value)} />
+                    <input type="text" placeholder="Menu Page 2 URL" value={menu2} onChange={e => setMenu2(e.target.value)} />
+                    <input type="text" placeholder="Menu Page 3 URL" value={menu3} onChange={e => setMenu3(e.target.value)} />
+                    <input type="text" placeholder="Menu Page 4 URL" value={menu4} onChange={e => setMenu4(e.target.value)} />
+                    <input type="text" placeholder="Menu Page 5 URL" value={menu5} onChange={e => setMenu5(e.target.value)} />
                   </div>
                 </div>
                 <div style={{ height: '24px' }}></div>
