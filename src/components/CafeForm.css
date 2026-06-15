@@ -775,20 +775,15 @@
   color: var(--danger);
 }
 
-/* ─── Floating Action Bar ─── */
+/* ─── Action Bar (Static) ─── */
 .cafe-form-container .action-bar {
-  position: sticky;
-  bottom: 0;
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  padding: 16px 40px;
+  background: transparent;
+  border-top: 1px solid var(--border-light);
+  padding: 24px 0 0 0;
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  z-index: 100;
-  box-shadow: 0 -4px 16px rgba(0,0,0,0.04);
-  margin: 40px -40px -100px -40px;
-  width: calc(100% + 80px);
+  margin-top: 24px;
 }
 
 .cafe-form-container .btn-action {

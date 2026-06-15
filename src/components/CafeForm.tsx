@@ -698,9 +698,8 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             </div>
           </section>
 
-          <div style={{ height: '80px' }}></div> {/* Spacer to prevent floating bar overlap */}
         </form>
-        {/* ═══════════ FLOATING ACTION BAR ═══════════ */}
+        {/* ═══════════ ACTION BAR ═══════════ */}
         <div className="action-bar">
           <button type="submit" form="cafe_catalog_form" className="btn-action primary">
             {editingCafe ? "Update Lookbook Listing" : "Save Lookbook Catalog Listing"}
