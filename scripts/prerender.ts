@@ -71,7 +71,7 @@ async function prerender() {
     <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   </head>`)
       .replace('<div id="root"></div>', `<div id="root">
-        <main style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: system-ui, sans-serif;">
+        <main style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
           <h1>${cafe.name}</h1>
           <p><strong>Location:</strong> ${cafe.address || cafe.area}</p>
           <img src="${cafe.image}" alt="${cafe.name}" style="max-width: 100%; border-radius: 8px;" />
@@ -131,7 +131,7 @@ async function prerender() {
     <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   </head>`)
       .replace('<div id="root"></div>', `<div id="root">
-        <article style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: system-ui, sans-serif;">
+        <article style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
           <h1>${article.title}</h1>
           <p><strong>By ${article.author}</strong> &bull; ${article.date}</p>
           <img src="${article.image}" alt="${article.title}" style="max-width: 100%; border-radius: 8px;" />
@@ -174,7 +174,7 @@ async function prerender() {
     <link rel="canonical" href="${SITE_URL}/" />
     <script type="application/ld+json">${JSON.stringify(jsonLdHome)}</script>`)
     .replace('<div id="root"></div>', `<div id="root">
-    <main style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: system-ui, sans-serif;">
+    <main style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
       <h1>CafeTags — Curated Coffee Spaces & Guides</h1>
       <p>Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.</p>
       <h2>Curated Cafes</h2>
