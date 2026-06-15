@@ -21,7 +21,7 @@ export function Navbar() {
       borderBottom: '1px solid rgba(60,32,12,0.05)'
     }}>
       <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
-        <nav className="nav-bar" style={{ background: 'rgba(255,255,255,0.4)', boxShadow: '0 4px 20px rgba(28,20,18,0.03)' }}>
+        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '56px', padding: '0 20px' }}>
         <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614.4 205.8" style={{ height: '24px', width: 'auto', fill: 'currentColor' }}>

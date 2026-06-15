@@ -43,7 +43,7 @@ export function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="lg:col-span-7 grid grid-cols-2 gap-8">
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
             {/* Column 1 */}
             <div className="space-y-4">
               <h4 className="text-xs font-semibold uppercase tracking-wider text-[#e4a853]">Explore</h4>
@@ -63,6 +63,29 @@ export function Footer() {
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Submit Feedback</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Advertise</a></li>
                 <li><a href="upi://pay?pa=7893026833%40mbk&pn=JAYAPAL&tn=BUY%20ME%20A%20COFFEE" className="hover:text-white transition-colors duration-200">☕ Buy me a coffee</a></li>
+              </ul>
+            </div>
+            
+            {/* Column 3 */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#e4a853]">Locations</h4>
+              <ul className="space-y-2.5 text-sm font-medium text-[#C4B8AE]">
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Jubilee Hills</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Banjara Hills</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Hi-Tech City</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Financial District</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Kondapur</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Gachibowli</a></li>
+              </ul>
+            </div>
+
+            {/* Column 4 */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#e4a853]">Others</h4>
+              <ul className="space-y-2.5 text-sm font-medium text-[#C4B8AE]">
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Work With Us</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Community</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Get Free Stickers</a></li>
               </ul>
             </div>
           </div>
