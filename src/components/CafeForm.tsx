@@ -188,8 +188,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
         urls.push(url);
       }
       onSuccess(urls);
-    } catch (error) {
-      alert("Upload failed. Make sure your Supabase keys are in the .env file.");
+    } catch (error: any) {
+      console.error(error);
+      alert("Upload failed! Error: " + (error.message || JSON.stringify(error)));
     } finally {
       setLoadingState(false);
       if (e.target) e.target.value = ''; // Reset input
