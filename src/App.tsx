@@ -93,7 +93,7 @@ export default function App() {
   const [seoSettings, setSeoSettings] = useState<SeoSettings>({
     websiteTitle: "CafeTags Hyderabad — Curated Specialty Coffee & Heritage Chai Lookbook",
     websiteDescription: "Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.",
-    favicon: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=128&auto=format&fit=crop&q=80",
+    favicon: "/favicon.svg",
     socialImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop",
     googleAnalyticsId: "",
     googleSearchConsoleToken: ""
@@ -164,7 +164,7 @@ export default function App() {
       faviconLink.rel = 'icon';
       document.head.appendChild(faviconLink);
     }
-    faviconLink.href = seoSettings.favicon || 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=128&auto=format&fit=crop&q=80';
+    faviconLink.href = seoSettings.favicon || '/favicon.svg';
 
     // 4. Dynamic Social Graph / Open Graph Meta Tags
     const ogTags = [
