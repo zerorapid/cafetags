@@ -470,11 +470,6 @@ export function DetailView({
                               <Navigation size={18} /> Get Directions
                           </a>
                           )}
-                          {cafe.bookingUrl && (
-                          <a href={cafe.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-pill" style={{ backgroundColor: '#e4a853', color: '#1C1412', border: 'none' }}>
-                              <Ticket size={18} /> Book / Order
-                          </a>
-                          )}
                           {cafe.phone && (
                           <a href={`tel:${cafe.phone}`} className="btn btn-secondary btn-pill">
                               <Phone size={18} /> Call
