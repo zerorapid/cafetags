@@ -35,7 +35,7 @@ export function HeroSection({ cafes, onSelectCafe }: HeroSectionProps) {
         </p>
       </div>
 
-      <div className="w-full relative pb-4 md:pb-8">
+      <div className="w-full relative">
         <img 
           src="/cafetags-homepage-banner.png" 
           alt="Hyderabad Coffee Banner" 
