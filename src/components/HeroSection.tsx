@@ -39,7 +39,7 @@ export function HeroSection({ cafes, onSelectCafe }: HeroSectionProps) {
         <img 
           src="/cafetags-homepage-banner.png" 
           alt="Hyderabad Coffee Banner" 
-          className="w-full h-auto max-h-[500px] object-cover object-bottom"
+          className="w-full h-[200px] sm:h-[300px] md:h-auto md:max-h-[500px] object-cover object-bottom"
         />
       </div>
     </div>

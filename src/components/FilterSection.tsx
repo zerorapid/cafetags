@@ -45,7 +45,7 @@ export function FilterSection({
   const isFiltered = selectedTag !== "All" || selectedLocation !== "All" || selectedBudget !== "All" || selectedAesthetic !== "All";
 
   return (
-    <div style={{ maxWidth: '1440px', margin: '-60px auto 40px auto', padding: '0 20px', position: 'relative', zIndex: 10 }}>
+    <div className="relative z-10 mx-auto px-5 mb-10 -mt-8 md:-mt-[60px]" style={{ maxWidth: '1440px' }}>
       <div className="search-hero">
         
         {/* Main Search Bar Row */}
