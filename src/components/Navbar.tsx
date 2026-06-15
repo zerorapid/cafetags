@@ -44,8 +44,9 @@ export function Navbar() {
             <div className={location.pathname.includes('/journal') ? "nav-link-active" : "nav-link"}>Journal</div>
           </Link>
         </div>
-        <a href="upi://pay?pa=7893026833%40mbk&pn=JAYAPAL&tn=BUY%20ME%20A%20COFFEE" className="nav-cta" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <i className="ti ti-coffee" style={{ marginRight: '6px' }} /> Buy me a coffee
+        <a href="upi://pay?pa=7893026833%40mbk&pn=JAYAPAL&tn=BUY%20ME%20A%20COFFEE" className="nav-cta !px-3 sm:!px-[18px]" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <i className="ti ti-coffee" /> 
+          <span className="hidden sm:inline" style={{ marginLeft: '6px' }}>Buy me a coffee</span>
         </a>
         </nav>
       </div>
