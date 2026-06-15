@@ -442,9 +442,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
                   <div className="field" style={{ marginBottom: '16px' }}>
-                    <div className="flex flex-col xl:flex-row gap-2">
-                      <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required className="flex-1 w-full" />
-                      <button type="button" onClick={() => fileInputRefImage.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3 h-[42px] shrink-0" disabled={isUploadingImage}>
+                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+                      <input type="text" placeholder="https://images.unsplash.com/..." value={image} onChange={e => setImage(e.target.value)} required style={{ flex: '1 1 200px' }} />
+                      <button type="button" onClick={() => fileInputRefImage.current?.click()} className="btn-action secondary text-xs whitespace-nowrap px-3" style={{ height: '42px', flexShrink: 0 }} disabled={isUploadingImage}>
                         {isUploadingImage ? 'Uploading...' : 'Upload File'}
                       </button>
                       <input type="file" ref={fileInputRefImage} style={{ display: 'none' }} accept="image/*" onChange={(e) => handleFileUpload(e, setIsUploadingImage, (urls) => setImage(urls[0]))} />
@@ -463,7 +463,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                       required 
                       rows={4}
                     ></textarea>
-                    <button type="button" onClick={() => fileInputRefGallery.current?.click()} className="btn-action secondary text-xs mt-2 w-full" disabled={isUploadingGallery}>
+                    <button type="button" onClick={() => fileInputRefGallery.current?.click()} className="btn-action secondary text-xs mt-2 w-full" style={{ padding: '12px', marginTop: '8px' }} disabled={isUploadingGallery}>
                       {isUploadingGallery ? 'Uploading...' : 'Upload Multiple Files'}
                     </button>
                     <input type="file" ref={fileInputRefGallery} style={{ display: 'none' }} accept="image/*" multiple onChange={(e) => handleFileUpload(e, setIsUploadingGallery, (urls) => {
@@ -626,9 +626,9 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <h4>Original Menu Cards (Images)</h4>
                 <div className="field">
                   <label>Menu Image URLs (comma separated)</label>
-                  <div className="flex flex-col gap-2">
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     <input type="text" placeholder="https://img1.jpg, https://img2.jpg" value={menuImagesInput} onChange={e => setMenuImagesInput(e.target.value)} />
-                    <button type="button" onClick={() => fileInputRefMenu.current?.click()} className="btn-action secondary text-xs self-start" disabled={isUploadingMenu}>
+                    <button type="button" onClick={() => fileInputRefMenu.current?.click()} className="btn-action secondary text-xs" style={{ alignSelf: 'flex-start', padding: '10px 16px' }} disabled={isUploadingMenu}>
                       {isUploadingMenu ? 'Uploading...' : 'Upload Files'}
                     </button>
                     <input type="file" ref={fileInputRefMenu} style={{ display: 'none' }} accept="image/*" multiple onChange={(e) => handleFileUpload(e, setIsUploadingMenu, (urls) => {
