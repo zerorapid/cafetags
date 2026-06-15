@@ -26,7 +26,7 @@ export function HeroSection({ cafes, onSelectCafe }: HeroSectionProps) {
 
   return (
     <div style={{ textAlign: 'center', width: '100%' }}>
-      <div style={{ padding: '60px 20px 40px', maxWidth: '1440px', margin: '0 auto' }}>
+      <div className="px-5 mx-auto max-w-[1440px] pt-10 pb-2 md:pt-[60px] md:pb-[40px]">
         <h1 className="t-d1">
           Hyderabad <em>Coffee</em> Corners
         </h1>
@@ -39,7 +39,7 @@ export function HeroSection({ cafes, onSelectCafe }: HeroSectionProps) {
         <img 
           src="/cafetags-homepage-banner.png" 
           alt="Hyderabad Coffee Banner" 
-          className="w-full h-[200px] sm:h-[300px] md:h-auto md:max-h-[500px] object-cover object-bottom"
+          className="w-full h-auto max-h-[500px] object-contain object-bottom md:object-cover"
         />
       </div>
     </div>

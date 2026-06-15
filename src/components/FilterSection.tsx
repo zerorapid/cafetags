@@ -45,8 +45,8 @@ export function FilterSection({
   const isFiltered = selectedTag !== "All" || selectedLocation !== "All" || selectedBudget !== "All" || selectedAesthetic !== "All";
 
   return (
-    <div className="relative z-10 mx-auto px-5 mb-10 -mt-8 md:-mt-[60px]" style={{ maxWidth: '1440px' }}>
-      <div className="search-hero">
+    <div className="relative z-10 mx-auto px-4 sm:px-5 mb-10 -mt-6 sm:-mt-8 md:-mt-[60px]" style={{ maxWidth: '1440px' }}>
+      <div className="search-hero !p-3 sm:!p-5 md:!p-[28px]">
         
         {/* Main Search Bar Row */}
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
