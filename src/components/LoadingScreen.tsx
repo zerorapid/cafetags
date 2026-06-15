@@ -12,7 +12,7 @@ export function LoadingScreen() {
     >
       <div className="w-64 h-64 md:w-80 md:h-80">
         <DotLottieReact
-          src="https://lottie.host/16b69e12-0efb-4061-b33d-12dc2b93fd84/Ax2k12jKRd.lottie"
+          src="/loading-house.lottie"
           loop
           autoplay
         />
