@@ -108,7 +108,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setVibe(editingCafe.vibe || '');
       setCuratorNote(editingCafe.curatorNote || '');
       setNeighbourhoodGuide(editingCafe.neighbourhoodGuide || '');
-      setVibeScoresInput(editingCafe.vibeScores ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '');
+      setVibeScoresInput(Array.isArray(editingCafe.vibeScores) ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '');
       setCrowd(editingCafe.crowd || '');
       setDiscounts(editingCafe.discounts || '');
       setSignature(editingCafe.signature || '');
@@ -128,13 +128,12 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       setIsNewLaunch(editingCafe.isNewLaunch ?? false);
       setNewLaunchCatchyline(editingCafe.newLaunchCatchyline || '');
 
-      setTags(editingCafe.tags || []);
-      setFacilities(editingCafe.facilities || []);
-      setCelebrities(editingCafe.celebrities || []);
-      setMenuItems(editingCafe.featuredMenu || []);
-      setMenuItems(editingCafe.featuredMenu || []);
+      setTags(Array.isArray(editingCafe.tags) ? editingCafe.tags : []);
+      setFacilities(Array.isArray(editingCafe.facilities) ? editingCafe.facilities : []);
+      setCelebrities(Array.isArray(editingCafe.celebrities) ? editingCafe.celebrities : []);
+      setMenuItems(Array.isArray(editingCafe.featuredMenu) ? editingCafe.featuredMenu : []);
       
-      if (editingCafe.menuImages) {
+      if (Array.isArray(editingCafe.menuImages)) {
         setMenu1(editingCafe.menuImages[0] || '');
         setMenu2(editingCafe.menuImages[1] || '');
         setMenu3(editingCafe.menuImages[2] || '');
@@ -142,7 +141,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
         setMenu5(editingCafe.menuImages[4] || '');
       }
 
-      if (editingCafe.moreImages) {
+      if (Array.isArray(editingCafe.moreImages)) {
         setGallery1(editingCafe.moreImages[0] || '');
         setGallery2(editingCafe.moreImages[1] || '');
         setGallery3(editingCafe.moreImages[2] || '');
