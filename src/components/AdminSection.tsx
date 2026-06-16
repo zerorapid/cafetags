@@ -15,6 +15,7 @@ interface AdminSectionProps {
   setFeedbacks: React.Dispatch<React.SetStateAction<UserFeedback[]>>;
   seoSettings: SeoSettings;
   setSeoSettings: React.Dispatch<React.SetStateAction<SeoSettings>>;
+  onLogout?: () => void;
 }
 
 export function AdminSection({ 
@@ -25,7 +26,8 @@ export function AdminSection({
   feedbacks, 
   setFeedbacks,
   seoSettings,
-  setSeoSettings 
+  setSeoSettings,
+  onLogout
 }: AdminSectionProps) {
   const [activeTab, setActiveTab] = useState<'listings' | 'blogs' | 'feedbacks' | 'seo'>('listings');
   
@@ -368,6 +370,17 @@ export function AdminSection({
             <span>SEO SETTINGS</span>
           </button>
         </div>
+        
+        {/* Logout Button */}
+        {onLogout && (
+          <button 
+            onClick={onLogout}
+            className="absolute top-6 right-6 px-4 py-2 bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white rounded text-sm font-mono transition-colors flex items-center gap-2 cursor-pointer z-10"
+          >
+            <MaterialIcon name="logout" className="text-[16px]" />
+            <span>LOG OUT</span>
+          </button>
+        )}
       </div>
 
       {/* --- TAB 1: LISTINGS MANAGEMENT --- */}

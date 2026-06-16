@@ -454,6 +454,12 @@ export default function App() {
                         setFeedbacks={setFeedbacks}
                         seoSettings={seoSettings}
                         setSeoSettings={setSeoSettings}
+                        onLogout={() => {
+                          if (import.meta.env.VITE_FIREBASE_API_KEY) {
+                            import('firebase/auth').then(({ signOut }) => signOut(auth));
+                          }
+                          setIsAuthenticated(false);
+                        }}
                       />
                     </motion.div>
                   )
