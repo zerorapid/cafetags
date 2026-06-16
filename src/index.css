@@ -290,7 +290,7 @@ body {
 .search-bar input::placeholder { color: var(--ct-placeholder); }
 .search-btn { font-family: var(--f-body); font-size: 14px; font-weight: 500; color: white; background: var(--ct-voltage); border: none; border-radius: var(--r-pill); padding: 11px 22px; cursor: pointer; white-space: nowrap; transition: opacity 0.15s; }
 .search-btn:hover { opacity: 0.88; }
-.adv-toggle-btn { font-family: var(--f-body); font-size: 14px; color: var(--ct-ink); background: var(--ct-raised); border: none; border-radius: var(--r-pill); padding: 11px 16px; cursor: pointer; white-space: nowrap; transition: background 0.15s; display: flex; align-items: center; gap: 6px; font-weight: 500; }
+.adv-toggle-btn { font-family: var(--f-body); font-size: 14px; color: var(--ct-ink); background: var(--ct-raised); border: none; border-radius: var(--r-pill); padding: 11px 16px; cursor: pointer; white-space: nowrap; transition: background 0.15s; display: flex; align-items: center; justify-content: center; gap: 6px; font-weight: 500; }
 .adv-toggle-btn:hover { background: #e6dfd7; }
 
 .filter-panel { margin-top: 16px; border-top: 1px solid var(--ct-border); padding-top: 16px; animation: slideDown 0.3s ease forwards; }

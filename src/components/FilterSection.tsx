@@ -49,7 +49,7 @@ export function FilterSection({
       <div className="search-hero !p-3 sm:!p-5 md:!p-[28px]">
         
         {/* Main Search Bar Row */}
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:items-center w-full">
           <div className="search-bar" style={{ flex: 1 }}>
             <i className="ti ti-search" style={{ color: 'var(--ct-muted)', fontSize: '18px' }}></i>
             <input 
