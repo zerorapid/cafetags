@@ -101,9 +101,9 @@ export function ImageUploadField({ value, onChange, placeholder, required }: Ima
       const snapshot = await uploadBytes(storageRef, file);
       const downloadURL = await getDownloadURL(snapshot.ref);
       onChange(downloadURL);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error uploading image:", error);
-      alert("Failed to upload image. Please try again.");
+      alert(`Failed to upload image. Error: ${error?.message || "Unknown error"}`);
     } finally {
       setIsUploading(false);
       if (fileInputRef.current) {
