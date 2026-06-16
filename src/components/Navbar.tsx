@@ -50,13 +50,13 @@ export function Navbar({ isAuthenticated, onLogout }: NavbarProps) {
           </Link>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          {isAuthenticated && onLogout && (
+          {isAuthenticated && onLogout && location.pathname.includes('/admin') && (
             <button 
               onClick={onLogout}
-              className="px-3 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white rounded text-xs font-mono transition-colors flex items-center gap-1.5 cursor-pointer"
-              style={{ border: 'none' }}
+              className="px-4 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 hover:text-white rounded transition-colors flex items-center gap-2 cursor-pointer"
+              style={{ border: 'none', fontFamily: 'var(--f-display)', fontSize: '18px' }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                 <polyline points="16 17 21 12 16 7"></polyline>
                 <line x1="21" y1="12" x2="9" y2="12"></line>
