@@ -76,15 +76,15 @@ export default function App() {
   const [adminUsername] = useState(() => import.meta.env.VITE_ADMIN_USERNAME || "admin");
   const [adminPassword] = useState(() => import.meta.env.VITE_ADMIN_PASSWORD || "admin123");
 
-  // --- Track Real Firebase Auth State ---
-  useEffect(() => {
-    if (import.meta.env.VITE_FIREBASE_API_KEY) {
-      const unsubscribe = onAuthStateChanged(auth, (user) => {
-        setIsAuthenticated(!!user);
-      });
-      return () => unsubscribe();
-    }
-  }, []);
+  // --- Track Real Firebase Auth State (Disabled for simple login) ---
+  // useEffect(() => {
+  //   if (import.meta.env.VITE_FIREBASE_API_KEY) {
+  //     const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //       setIsAuthenticated(!!user);
+  //     });
+  //     return () => unsubscribe();
+  //   }
+  // }, []);
 
   // --- STATE LAYER ---
   const [cafes, setCafes] = useState<Cafe[]>([]);
@@ -416,21 +416,11 @@ export default function App() {
                       exit={{ opacity: 0 }}
                     >
                       <LoginScreen onLogin={async (user, pwd) => {
-                        if (import.meta.env.VITE_FIREBASE_API_KEY) {
-                          try {
-                            await signInWithEmailAndPassword(auth, user, pwd);
-                            return true;
-                          } catch (error) {
-                            console.error("Firebase Auth Error:", error);
-                            return false;
-                          }
-                        } else {
-                          if (user === adminUsername && pwd === adminPassword) {
-                            setIsAuthenticated(true);
-                            return true;
-                          }
-                          return false;
+                        if (user === adminUsername && pwd === adminPassword) {
+                          setIsAuthenticated(true);
+                          return true;
                         }
+                        return false;
                       }} />
                     </motion.div>
                   ) : (

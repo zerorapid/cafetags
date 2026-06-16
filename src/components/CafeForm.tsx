@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Cafe, CafeMenuItem } from '../types';
 import './CafeForm.css';
+import { ImageUploadField } from './ImageUploadField';
 
 interface CafeFormProps {
   editingCafe: Cafe | null;
@@ -25,7 +26,33 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [socialLink, setSocialLink] = useState('');
   const [facebookUrl, setFacebookUrl] = useState('');
   const [twitterUrl, setTwitterUrl] = useState('');
+  
+  // Timings state
   const [timings, setTimings] = useState('8:00 AM - 10:00 PM Everyday');
+  const [openTime, setOpenTime] = useState('08:00');
+  const [closeTime, setCloseTime] = useState('22:00');
+  const [timingDays, setTimingDays] = useState('Everyday');
+
+  const handleTimeChange = (type: 'open' | 'close' | 'days', val: string) => {
+    let newOpen = openTime;
+    let newClose = closeTime;
+    let newDays = timingDays;
+
+    if (type === 'open') { newOpen = val; setOpenTime(val); }
+    if (type === 'close') { newClose = val; setCloseTime(val); }
+    if (type === 'days') { newDays = val; setTimingDays(val); }
+
+    const formatTime = (time: string) => {
+      if (!time) return '';
+      const [h, m] = time.split(':');
+      let hour = parseInt(h, 10);
+      const ampm = hour >= 12 ? 'PM' : 'AM';
+      hour = hour % 12 || 12;
+      return `${hour}:${m} ${ampm}`;
+    };
+
+    setTimings(`${formatTime(newOpen)} - ${formatTime(newClose)} ${newDays}`);
+  };
 
   // Aesthetic
   const [aestheticType, setAestheticType] = useState('');
@@ -296,8 +323,8 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <input type="text" placeholder="e.g. Jubilee Hills" value={area} onChange={e => setArea(e.target.value)} required />
               </div>
               <div className="field">
-                <label>Established Year <span className="req">*</span></label>
-                <input type="text" value={founded} onChange={e => setFounded(e.target.value)} required />
+                <label>Established Date <span className="req">*</span></label>
+                <input type="date" value={founded} onChange={e => setFounded(e.target.value)} required />
               </div>
               <div className="field">
                 <label>Brand Icon <span className="req">*</span></label>
@@ -310,7 +337,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid">
               <div className="field">
                 <label>Brand Logo URL</label>
-                <input type="text" placeholder="https://i.pinimg.com/originals/..." value={logo} onChange={e => setLogo(e.target.value)} />
+                <ImageUploadField placeholder="https://i.pinimg.com/originals/..." value={logo} onChange={setLogo} />
               </div>
             </div>
 
@@ -348,7 +375,22 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               </div>
               <div className="field">
                 <label>Dine-Out Timings</label>
-                <input type="text" placeholder="8:00 AM – 10:00 PM Everyday" value={timings} onChange={e => setTimings(e.target.value)} />
+                <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+                  <input type="time" value={openTime} onChange={e => handleTimeChange('open', e.target.value)} style={{ padding: '6px' }} />
+                  <span style={{ color: 'var(--text-secondary)' }}>to</span>
+                  <input type="time" value={closeTime} onChange={e => handleTimeChange('close', e.target.value)} style={{ padding: '6px' }} />
+                </div>
+                <div style={{ marginTop: '8px' }}>
+                  <select value={timingDays} onChange={e => handleTimeChange('days', e.target.value)} style={{ padding: '8px' }}>
+                    <option>Everyday</option>
+                    <option>Weekdays (Mon-Fri)</option>
+                    <option>Weekends (Sat-Sun)</option>
+                    <option>Closed Mondays</option>
+                  </select>
+                </div>
+                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '8px', fontWeight: 500 }}>
+                  Preview: {timings}
+                </div>
               </div>
             </div>
 
@@ -420,11 +462,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 </div>
 
                 <div className="form-grid-3">
-                  <div className="field">
+                  <div className="field" style={{ gridColumn: 'span 2' }}>
                     <label>Signature Master Brew <span className="req">*</span></label>
                     <input type="text" placeholder="e.g. Kyoto 12-hr Slow Drip" value={signature} onChange={e => setSignature(e.target.value)} required />
                   </div>
-                  <div className="field" style={{ gridColumn: 'span 2' }}>
+                  <div className="field">
                     <label>Swiggy / Dineout Link</label>
                     <input type="text" placeholder="https://swiggy.com/dineout/hyd" value={bookingUrl} onChange={e => setBookingUrl(e.target.value)} />
                   </div>
@@ -435,7 +477,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
                   <div className="field" style={{ marginBottom: '16px' }}>
-                    <input type="text" placeholder="https://i.pinimg.com/originals/..." value={image} onChange={e => setImage(e.target.value)} required />
+                    <ImageUploadField placeholder="https://i.pinimg.com/originals/..." value={image} onChange={setImage} required />
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Video URL (Optional)</label>
                   <div className="field" style={{ marginBottom: '16px' }}>
@@ -443,11 +485,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Gallery Images (Min 4 required) <span className="req">*</span></label>
                   <div className="field" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <input type="text" placeholder="Image 1 URL (e.g. Pinterest Image Address)" value={gallery1} onChange={e => setGallery1(e.target.value)} required />
-                    <input type="text" placeholder="Image 2 URL" value={gallery2} onChange={e => setGallery2(e.target.value)} required />
-                    <input type="text" placeholder="Image 3 URL" value={gallery3} onChange={e => setGallery3(e.target.value)} required />
-                    <input type="text" placeholder="Image 4 URL" value={gallery4} onChange={e => setGallery4(e.target.value)} required />
-                    <input type="text" placeholder="Image 5 URL (Optional)" value={gallery5} onChange={e => setGallery5(e.target.value)} />
+                    <ImageUploadField placeholder="Image 1 URL (e.g. Pinterest Image Address)" value={gallery1} onChange={setGallery1} required />
+                    <ImageUploadField placeholder="Image 2 URL" value={gallery2} onChange={setGallery2} required />
+                    <ImageUploadField placeholder="Image 3 URL" value={gallery3} onChange={setGallery3} required />
+                    <ImageUploadField placeholder="Image 4 URL" value={gallery4} onChange={setGallery4} required />
+                    <ImageUploadField placeholder="Image 5 URL (Optional)" value={gallery5} onChange={setGallery5} />
                   </div>
                 </div>
 
@@ -605,11 +647,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div className="field">
                   <label>Menu Image URLs</label>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <input type="text" placeholder="Menu Page 1 URL" value={menu1} onChange={e => setMenu1(e.target.value)} />
-                    <input type="text" placeholder="Menu Page 2 URL" value={menu2} onChange={e => setMenu2(e.target.value)} />
-                    <input type="text" placeholder="Menu Page 3 URL" value={menu3} onChange={e => setMenu3(e.target.value)} />
-                    <input type="text" placeholder="Menu Page 4 URL" value={menu4} onChange={e => setMenu4(e.target.value)} />
-                    <input type="text" placeholder="Menu Page 5 URL" value={menu5} onChange={e => setMenu5(e.target.value)} />
+                    <ImageUploadField placeholder="Menu Page 1 URL" value={menu1} onChange={setMenu1} />
+                    <ImageUploadField placeholder="Menu Page 2 URL" value={menu2} onChange={setMenu2} />
+                    <ImageUploadField placeholder="Menu Page 3 URL" value={menu3} onChange={setMenu3} />
+                    <ImageUploadField placeholder="Menu Page 4 URL" value={menu4} onChange={setMenu4} />
+                    <ImageUploadField placeholder="Menu Page 5 URL" value={menu5} onChange={setMenu5} />
                   </div>
                 </div>
                 <div style={{ height: '24px' }}></div>
@@ -623,7 +665,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 
                 <div className="field" style={{ marginTop: '14px' }}>
                   <label>Item Image URL (Optional)</label>
-                  <input type="text" placeholder="https://img.jpg" value={menuItemImage} onChange={e => setMenuItemImage(e.target.value)} />
+                  <ImageUploadField placeholder="https://img.jpg" value={menuItemImage} onChange={setMenuItemImage} />
                 </div>
 
                 <div className="form-grid" style={{ gap: '14px', marginTop: '14px' }}>
