@@ -107,9 +107,10 @@ export function BlogSection({ articles }: BlogSectionProps) {
           </div>
 
           {/* Body Content */}
-          <div className="font-serif text-[17px] md:text-[19px] leading-relaxed text-stone-800 space-y-6 whitespace-pre-line antialiased">
-            {selectedArticle.content}
-          </div>
+          <div 
+            className="font-serif text-[17px] md:text-[19px] leading-relaxed text-stone-800 space-y-6 antialiased editor-content"
+            dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
+          />
 
           {/* Author Bio Footer */}
           <div className="mt-16 bg-[#FAF9F6] border border-stone-200 p-6 rounded-lg flex items-start gap-4">

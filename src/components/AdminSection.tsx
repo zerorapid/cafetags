@@ -6,6 +6,10 @@ import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 import { CafeForm } from './CafeForm';
 import Papa from 'papaparse';
 
+// @ts-ignore
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 interface AdminSectionProps {
   cafes: Cafe[];
   setCafes: React.Dispatch<React.SetStateAction<Cafe[]>>;
@@ -695,15 +699,14 @@ export function AdminSection({
               </div>
             </div>
 
-            <div>
+            <div className="react-quill-wrapper">
               <label className="block text-[#786F64] font-bold mb-1 uppercase tracking-wider">LONG ARTICLE CONTENT BODY</label>
-              <textarea
-                required
-                rows={10}
+              <ReactQuill
+                theme="snow"
                 value={editingBlog ? editingBlog.content : blogForm.content}
-                onChange={e => editingBlog ? setEditingBlog({ ...editingBlog, content: e.target.value }) : setBlogForm({ ...blogForm, content: e.target.value })}
-                className="w-full bg-[#FAF9F6] border border-stone-200 p-4.5 rounded-lg focus:outline-none font-serif text-sm text-[#1C1C1E]"
-                placeholder="Draft article columns utilizing Deccani terminology..."
+                onChange={val => editingBlog ? setEditingBlog({ ...editingBlog, content: val }) : setBlogForm({ ...blogForm, content: val })}
+                className="bg-white rounded-md mb-12"
+                style={{ height: '350px' }}
               />
             </div>
           </div>
