@@ -539,7 +539,9 @@
     color: var(--color-text-secondary);
 }
 
-.custom-detail-view .sidebar-info-item i {
+.custom-detail-view .sidebar-info-item i,
+.custom-detail-view .sidebar-info-item svg {
+    flex-shrink: 0;
     margin-top: 2px;
     color: var(--color-text-primary);
 }
