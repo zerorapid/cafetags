@@ -73,8 +73,6 @@ export default function App() {
 
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [adminUsername] = useState(() => import.meta.env.VITE_ADMIN_USERNAME || "admin");
-  const [adminPassword] = useState(() => import.meta.env.VITE_ADMIN_PASSWORD || "admin123");
 
   // --- Track Real Firebase Auth State ---
   useEffect(() => {
@@ -365,7 +363,15 @@ export default function App() {
       <div className="flex-1 flex flex-col justify-between">
         <div>
           {/* REFRACTION NAVIGATION BAR */}
-          <Navbar />
+          <Navbar 
+            isAuthenticated={isAuthenticated} 
+            onLogout={() => {
+              if (import.meta.env.VITE_FIREBASE_API_KEY) {
+                import('firebase/auth').then(({ signOut }) => signOut(auth));
+              }
+              setIsAuthenticated(false);
+            }} 
+          />
 
           <AnimatePresence mode="wait">
               {/* @ts-ignore React Router v6 types miss the implicit key prop but AnimatePresence requires it */}
@@ -422,20 +428,10 @@ export default function App() {
                             return true;
                           } catch (error) {
                             console.error("Firebase Auth Error:", error);
-                            // Fallback to local admin for local testing if Firebase fails
-                            if (user === adminUsername && pwd === adminPassword) {
-                              setIsAuthenticated(true);
-                              return true;
-                            }
                             return false;
                           }
-                        } else {
-                          if (user === adminUsername && pwd === adminPassword) {
-                            setIsAuthenticated(true);
-                            return true;
-                          }
-                          return false;
                         }
+                        return false;
                       }} />
                     </motion.div>
                   ) : (
@@ -454,12 +450,6 @@ export default function App() {
                         setFeedbacks={setFeedbacks}
                         seoSettings={seoSettings}
                         setSeoSettings={setSeoSettings}
-                        onLogout={() => {
-                          if (import.meta.env.VITE_FIREBASE_API_KEY) {
-                            import('firebase/auth').then(({ signOut }) => signOut(auth));
-                          }
-                          setIsAuthenticated(false);
-                        }}
                       />
                     </motion.div>
                   )
