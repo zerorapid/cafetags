@@ -68,6 +68,7 @@ body {
   color: #111111;
   font-family: "Google Sans", "Outfit", "Product Sans", sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 

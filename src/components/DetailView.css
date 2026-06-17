@@ -767,8 +767,12 @@
 
 @media (max-width: 768px) {
     .custom-detail-view .section { padding: var(--space-10) 0; }
-    .custom-detail-view .gallery-grid { grid-template-columns: 1fr; grid-template-rows: 300px; }
+    .custom-detail-view .hero-gallery { margin-top: 24px; }
+    .custom-detail-view .hero-gallery .custom-container { padding: 0; }
+    .custom-detail-view .gallery-grid { grid-template-columns: 1fr; grid-template-rows: 300px; border-radius: 0; }
+    .custom-detail-view .gallery-item img { border-radius: 0; }
     .custom-detail-view .gallery-item:nth-child(n+2) { display: none; }
+    .custom-detail-view .gallery-overlay { bottom: 12px; right: 12px; }
     .custom-detail-view .amenities-grid { grid-template-columns: 1fr; }
     .custom-detail-view .listing-title { font-size: var(--text-3xl); }
     .custom-detail-view .btn { width: 100%; }

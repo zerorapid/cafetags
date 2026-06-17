@@ -38,6 +38,9 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
           </div>
           <h2 className="text-2xl font-serif text-charcoal-ink">Admin Portal</h2>
           <p className="text-sm text-stone-gray mt-2">Enter credentials to manage lookbook.</p>
+          <p className="text-xs text-amber-600 mt-4 block sm:hidden p-2 bg-amber-50 rounded border border-amber-200">
+            Note: The admin dashboard is best experienced on a desktop.
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
