@@ -25,8 +25,7 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
 import { db, auth } from './firebase';
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
-import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-
+import { supabase } from './lib/supabase';
 function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -74,14 +73,12 @@ export default function App() {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // --- Track Real Firebase Auth State ---
+  // --- Track Real Auth State ---
   useEffect(() => {
-    if (import.meta.env.VITE_FIREBASE_API_KEY) {
-      const unsubscribe = onAuthStateChanged(auth, (user) => {
-        setIsAuthenticated(!!user);
-      });
-      return () => unsubscribe();
-    }
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsAuthenticated(!!session);
+    });
+    return () => subscription.unsubscribe();
   }, []);
 
   // --- STATE LAYER ---
@@ -366,9 +363,7 @@ export default function App() {
           <Navbar 
             isAuthenticated={isAuthenticated} 
             onLogout={() => {
-              if (import.meta.env.VITE_FIREBASE_API_KEY) {
-                import('firebase/auth').then(({ signOut }) => signOut(auth));
-              }
+              supabase.auth.signOut();
               setIsAuthenticated(false);
             }} 
           />
@@ -422,16 +417,17 @@ export default function App() {
                       exit={{ opacity: 0 }}
                     >
                       <LoginScreen onLogin={async (user, pwd) => {
-                        if (import.meta.env.VITE_FIREBASE_API_KEY) {
-                          try {
-                            await signInWithEmailAndPassword(auth, user, pwd);
-                            return true;
-                          } catch (error) {
-                            console.error("Firebase Auth Error:", error);
+                        try {
+                          const { error } = await supabase.auth.signInWithPassword({ email: user, password: pwd });
+                          if (error) {
+                            console.error("Supabase Auth Error:", error.message);
                             return false;
                           }
+                          return true;
+                        } catch (error) {
+                          console.error("Auth Error:", error);
+                          return false;
                         }
-                        return false;
                       }} />
                     </motion.div>
                   ) : (
