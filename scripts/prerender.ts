@@ -1,15 +1,25 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { INITIAL_CAFES, INITIAL_BLOG_ARTICLES } from '../src/data';
+import * as dotenv from 'dotenv';
+import { createClient } from '@supabase/supabase-js';
 import { generateSlug } from '../src/utils';
+import { transformCafe, transformPost } from '../src/lib/transforms';
+import { Cafe, BlogArticle } from '../src/types';
+import { INITIAL_CAFES, INITIAL_BLOG_ARTICLES } from '../src/data';
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const resolve = (p: string) => path.resolve(__dirname, '..', p);
 
 const SITE_URL = process.env.VITE_SITE_URL || 'https://cafetags.com';
+
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co',
+  process.env.VITE_SUPABASE_ANON_KEY || 'placeholder'
+);
 
 async function prerender() {
   const distDir = resolve('dist');
@@ -22,21 +32,29 @@ async function prerender() {
 
   const template = fs.readFileSync(templatePath, 'utf-8');
   const sitemapUrls: string[] = [];
+  
+  // Try fetching live data, fallback to static if Supabase URL is missing during local build testing
+  let cafes: Cafe[] = INITIAL_CAFES;
+  let blogs: BlogArticle[] = INITIAL_BLOG_ARTICLES;
 
-  // Add Homepage to sitemap
+  if (process.env.VITE_SUPABASE_URL) {
+    const { data: cafesData } = await supabase.from('cafes').select('*');
+    if (cafesData) cafes = cafesData.map(transformCafe);
+
+    const { data: postsData } = await supabase.from('posts').select('*').eq('status', 'published');
+    if (postsData) blogs = postsData.map(transformPost);
+  }
+
   sitemapUrls.push(`${SITE_URL}/`);
 
-  // Create pre-rendered routes for cafes
-  for (const cafe of INITIAL_CAFES) {
+  for (const cafe of cafes) {
     const slug = generateSlug(cafe.name);
     const cafeDir = path.join(distDir, 'cafe');
     const url = `${SITE_URL}/cafe/${slug}`;
     
     sitemapUrls.push(url);
 
-    if (!fs.existsSync(cafeDir)) {
-      fs.mkdirSync(cafeDir, { recursive: true });
-    }
+    if (!fs.existsSync(cafeDir)) fs.mkdirSync(cafeDir, { recursive: true });
 
     const title = `${cafe.name} | CafeTags`;
     const description = cafe.vibe;
@@ -57,12 +75,12 @@ async function prerender() {
     };
 
     const html = template
-      .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>${title}</title>`)
-      .replace('<meta name="description" content="Discover the most aesthetic, architecture-forward, and work-friendly curated coffee spaces in Hyderabad.">', `<meta name="description" content="${description}">`)
-      .replace('<meta property="og:title" content="CafeTags — Curated Coffee Spaces & Guides">', `<meta property="og:title" content="${title}">`)
-      .replace('<meta property="og:description" content="Discover the most aesthetic, architecture-forward, and work-friendly curated coffee spaces in Hyderabad.">', `<meta property="og:description" content="${description}">`)
-      .replace('<meta property="twitter:title" content="CafeTags — Curated Coffee Spaces & Guides">', `<meta property="twitter:title" content="${title}">`)
-      .replace('<meta property="twitter:description" content="Discover the most aesthetic, architecture-forward, and work-friendly curated coffee spaces in Hyderabad.">', `<meta property="twitter:description" content="${description}">`)
+      .replace('<title>CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals</title>', `<title>${title}</title>`)
+      .replace('<meta name="description" content="The ultimate insider guide to Hyderabad\'s cafe culture. Discover hidden aesthetic spaces, specialty coffee spots, latest openings, and exclusive discounts.">', `<meta name="description" content="${description}">`)
+      .replace('<meta property="og:title" content="CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals">', `<meta property="og:title" content="${title}">`)
+      .replace('<meta property="og:description" content="The ultimate insider guide to Hyderabad\'s cafe culture. Discover hidden aesthetic spaces, specialty coffee spots, latest openings, and exclusive discounts.">', `<meta property="og:description" content="${description}">`)
+      .replace('<meta property="twitter:title" content="CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals">', `<meta property="twitter:title" content="${title}">`)
+      .replace('<meta property="twitter:description" content="The ultimate insider guide to Hyderabad\'s cafe culture. Discover hidden aesthetic spaces, specialty coffee spots, latest openings, and exclusive discounts.">', `<meta property="twitter:description" content="${description}">`)
       .replace('<meta property="og:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="og:image" content="${imageUrl}">`)
       .replace('<meta property="twitter:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="twitter:image" content="${imageUrl}">`)
       .replace('</head>', `  <link rel="canonical" href="${url}" />
@@ -87,17 +105,14 @@ async function prerender() {
     console.log(`Pre-rendered /cafe/${slug}.html`);
   }
 
-  // Create pre-rendered routes for journal articles
-  for (const article of INITIAL_BLOG_ARTICLES) {
+  for (const article of blogs) {
     const slug = generateSlug(article.title);
     const articleDir = path.join(distDir, 'journal');
     const url = `${SITE_URL}/journal/${slug}`;
 
     sitemapUrls.push(url);
     
-    if (!fs.existsSync(articleDir)) {
-      fs.mkdirSync(articleDir, { recursive: true });
-    }
+    if (!fs.existsSync(articleDir)) fs.mkdirSync(articleDir, { recursive: true });
 
     const title = `${article.title} | Journal | CafeTags`;
     const description = article.excerpt;
@@ -117,12 +132,12 @@ async function prerender() {
     };
 
     const html = template
-      .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>${title}</title>`)
-      .replace('<meta name="description" content="Discover the most aesthetic, architecture-forward, and work-friendly curated coffee spaces in Hyderabad.">', `<meta name="description" content="${description}">`)
-      .replace('<meta property="og:title" content="CafeTags — Curated Coffee Spaces & Guides">', `<meta property="og:title" content="${title}">`)
-      .replace('<meta property="og:description" content="Discover the most aesthetic, architecture-forward, and work-friendly curated coffee spaces in Hyderabad.">', `<meta property="og:description" content="${description}">`)
-      .replace('<meta property="twitter:title" content="CafeTags — Curated Coffee Spaces & Guides">', `<meta property="twitter:title" content="${title}">`)
-      .replace('<meta property="twitter:description" content="Discover the most aesthetic, architecture-forward, and work-friendly curated coffee spaces in Hyderabad.">', `<meta property="twitter:description" content="${description}">`)
+      .replace('<title>CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals</title>', `<title>${title}</title>`)
+      .replace('<meta name="description" content="The ultimate insider guide to Hyderabad\'s cafe culture. Discover hidden aesthetic spaces, specialty coffee spots, latest openings, and exclusive discounts.">', `<meta name="description" content="${description}">`)
+      .replace('<meta property="og:title" content="CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals">', `<meta property="og:title" content="${title}">`)
+      .replace('<meta property="og:description" content="The ultimate insider guide to Hyderabad\'s cafe culture. Discover hidden aesthetic spaces, specialty coffee spots, latest openings, and exclusive discounts.">', `<meta property="og:description" content="${description}">`)
+      .replace('<meta property="twitter:title" content="CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals">', `<meta property="twitter:title" content="${title}">`)
+      .replace('<meta property="twitter:description" content="The ultimate insider guide to Hyderabad\'s cafe culture. Discover hidden aesthetic spaces, specialty coffee spots, latest openings, and exclusive discounts.">', `<meta property="twitter:description" content="${description}">`)
       .replace('<meta property="og:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="og:image" content="${imageUrl}">`)
       .replace('<meta property="twitter:image" content="https://i.pinimg.com/736x/e2/43/88/e24388c075816fb20b13b109ae807b92.jpg">', `<meta property="twitter:image" content="${imageUrl}">`)
       .replace('</head>', `  <link rel="canonical" href="${url}" />
@@ -136,9 +151,7 @@ async function prerender() {
           <p><strong>By ${article.author}</strong> &bull; ${article.date}</p>
           <img src="${article.image}" alt="${article.title}" style="max-width: 100%; border-radius: 8px;" />
           <p><em>${article.excerpt}</em></p>
-          <div>
-            ${article.content}
-          </div>
+          <div>${article.content}</div>
         </article>
       </div>`);
 
@@ -146,71 +159,40 @@ async function prerender() {
     console.log(`Pre-rendered /journal/${slug}.html`);
   }
 
-  // Pre-render base SPA routes to prevent Vercel 404 directory listing errors
-  const baseRoutes = ['journal', 'admin', 'cafe'];
-  for (const route of baseRoutes) {
-    const routeDir = path.join(distDir, route);
-    if (!fs.existsSync(routeDir)) {
-      fs.mkdirSync(routeDir, { recursive: true });
-    }
-    // Only write if we haven't already written an index.html here manually
-    if (!fs.existsSync(path.join(routeDir, 'index.html'))) {
-      fs.writeFileSync(path.join(routeDir, 'index.html'), template);
-      console.log(`Pre-rendered base SPA route /${route}`);
-    }
-  }
-
-  // Pre-render Homepage with a crawler-friendly skeleton
-  const jsonLdHome = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "CafeTags",
-    "url": SITE_URL,
-    "description": "Curated Coffee Spaces & Guides in Hyderabad"
-  };
-
-  const homepageHtml = template
-    .replace('<title>CafeTags — Curated Coffee Spaces & Guides</title>', `<title>CafeTags — Curated Coffee Spaces & Guides</title>
-    <link rel="canonical" href="${SITE_URL}/" />
-    <script type="application/ld+json">${JSON.stringify(jsonLdHome)}</script>`)
-    .replace('<div id="root"></div>', `<div id="root">
-    <main style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
-      <h1>CafeTags — Curated Coffee Spaces & Guides</h1>
-      <p>Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.</p>
-      <h2>Curated Cafes</h2>
-      <ul>
-        ${INITIAL_CAFES.map(c => `<li><a href="/cafe/${generateSlug(c.name)}">${c.name} - ${c.area}</a></li>`).join('\n')}
-      </ul>
-      <h2>Journal & Guides</h2>
-      <ul>
-        ${INITIAL_BLOG_ARTICLES.map(a => `<li><a href="/journal/${generateSlug(a.title)}">${a.title}</a></li>`).join('\n')}
-      </ul>
-    </main>
-  </div>`);
-  fs.writeFileSync(templatePath, homepageHtml);
-  console.log('Pre-rendered Homepage index.html');
-
-  // --- GENERATE SITEMAP.XML ---
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(url => `  <url>\n    <loc>${url}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${url === SITE_URL + '/' ? '1.0' : '0.8'}</priority>\n  </url>`).join('\n')}
+${sitemapUrls.map(url => `  <url>
+    <loc>${url}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>${url === `${SITE_URL}/` ? '1.0' : '0.8'}</priority>
+  </url>`).join('\n')}
 </urlset>`;
-  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml);
+
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
   console.log('✅ Generated sitemap.xml');
 
-  // --- GENERATE ROBOTS.TXT ---
   const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: ${SITE_URL}/sitemap.xml
-`;
+Sitemap: ${SITE_URL}/sitemap.xml`;
+
   fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt);
   console.log('✅ Generated robots.txt');
+
+  const homepageHtml = template
+    .replace('</head>', `  <link rel="canonical" href="${SITE_URL}/" />
+  </head>`);
+  fs.writeFileSync(path.join(distDir, 'index.html'), homepageHtml);
+  console.log('Pre-rendered Homepage index.html');
+
+  ['journal', 'admin', 'cafe'].forEach(dir => {
+    const dirPath = path.join(distDir, dir);
+    if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
+    fs.copyFileSync(path.join(distDir, 'index.html'), path.join(dirPath, 'index.html'));
+    console.log(`Pre-rendered base SPA route /${dir}`);
+  });
 
   console.log('✅ SSG Prerendering complete!');
 }
 
-prerender().catch(e => {
-  console.error(e);
-  process.exit(1);
-});
+prerender().catch(console.error);
