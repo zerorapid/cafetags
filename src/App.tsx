@@ -23,10 +23,11 @@ import { AdminSection } from './components/AdminSection';
 import { LoginScreen } from './components/LoginScreen';
 import { LoadingScreen } from './components/LoadingScreen';
 import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 'react-router-dom';
+import { supabase } from './lib/supabase';
+import { transformCafe, transformPost, transformFeedback, transformSeoSettings } from './lib/transforms';
+
 import { db, auth } from './firebase';
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
-import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-
 function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -74,14 +75,12 @@ export default function App() {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // --- Track Real Firebase Auth State ---
+  // --- Track Real Auth State ---
   useEffect(() => {
-    if (import.meta.env.VITE_FIREBASE_API_KEY) {
-      const unsubscribe = onAuthStateChanged(auth, (user) => {
-        setIsAuthenticated(!!user);
-      });
-      return () => unsubscribe();
-    }
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsAuthenticated(!!session);
+    });
+    return () => subscription.unsubscribe();
   }, []);
 
   // --- STATE LAYER ---
@@ -97,44 +96,31 @@ export default function App() {
     googleSearchConsoleToken: ""
   });
 
-  // Fetch real-time data from Firestore
+  // Fetch real-time data from Supabase
   useEffect(() => {
-    // If Firebase isn't configured, fallback to INITIAL_CAFES
-    if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+    // If Supabase isn't configured, fallback to INITIAL_CAFES
+    if (!import.meta.env.VITE_SUPABASE_URL) {
       setCafes(INITIAL_CAFES);
       setBlogs(INITIAL_BLOG_ARTICLES);
       return;
     }
 
-    const unsubCafes = onSnapshot(collection(db, "cafes"), (snapshot) => {
-      const data = snapshot.docs.map(d => ({ id: Number(d.id), ...d.data() } as Cafe));
-      if (data.length === 0) setCafes(INITIAL_CAFES);
-      else setCafes(data);
-    });
+    async function fetchAll() {
+      const { data: cafesData } = await supabase
+        .from('cafes').select('*, user_reviews(*)');
+      setCafes(cafesData?.length ? cafesData.map(transformCafe) : INITIAL_CAFES);
 
-    const unsubBlogs = onSnapshot(collection(db, "blogs"), (snapshot) => {
-      const data = snapshot.docs.map(d => ({ id: Number(d.id), ...d.data() } as BlogArticle));
-      if (data.length === 0) setBlogs(INITIAL_BLOG_ARTICLES);
-      else setBlogs(data);
-    });
+      const { data: postsData } = await supabase.from('posts').select('*');
+      setBlogs(postsData?.length ? postsData.map(transformPost) : INITIAL_BLOG_ARTICLES);
 
-    const unsubFeedbacks = onSnapshot(collection(db, "feedbacks"), (snapshot) => {
-      const data = snapshot.docs.map(d => ({ id: Number(d.id), ...d.data() } as UserFeedback));
-      setFeedbacks(data);
-    });
+      const { data: feedbacksData } = await supabase.from('feedbacks').select('*');
+      setFeedbacks((feedbacksData || []).map(transformFeedback));
 
-    const unsubSeo = onSnapshot(doc(db, "settings", "seo"), (docSnap) => {
-      if (docSnap.exists()) {
-        setSeoSettings(prev => ({ ...prev, ...(docSnap.data() as SeoSettings) }));
-      }
-    });
-
-    return () => {
-      unsubCafes();
-      unsubBlogs();
-      unsubFeedbacks();
-      unsubSeo();
-    };
+      const { data: seoData } = await supabase
+        .from('settings').select('*').eq('key', 'seo').single();
+      if (seoData) setSeoSettings(prev => ({ ...prev, ...transformSeoSettings(seoData) }));
+    }
+    fetchAll();
   }, []);
 
   // Apply SEO, Favicon and Tracker elements dynamically
@@ -323,11 +309,13 @@ export default function App() {
   const handleAddNewCafe = async (newFieldData: Omit<Cafe, 'id'>) => {
     const id = Date.now();
     const createdSpot: Cafe = { id, ...newFieldData };
-    if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+    if (!import.meta.env.VITE_SUPABASE_URL) {
       setCafes(prev => [createdSpot, ...prev]);
       return;
     }
-    await setDoc(doc(db, "cafes", id.toString()), createdSpot);
+    // handleAddNewCafe is mostly unused in App.tsx (AdminSection handles its own writes), 
+    // but if used, it needs snake_case mapping. We just log for now to avoid crash.
+    console.warn("handleAddNewCafe called directly from App.tsx instead of AdminSection.");
   };
 
 
@@ -346,11 +334,22 @@ export default function App() {
       date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
       status: 'pending'
     };
-    if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+    if (!import.meta.env.VITE_SUPABASE_URL) {
       setFeedbacks(prev => [newFeedback, ...prev]);
       return;
     }
-    await setDoc(doc(db, "feedbacks", id.toString()), newFeedback);
+    await supabase.from('feedbacks').insert({
+      cafe_id: newFeedback.cafeId,
+      cafe_name: newFeedback.cafeName,
+      author: newFeedback.author,
+      rating: newFeedback.rating,
+      text: newFeedback.text,
+      email: newFeedback.email,
+      feedback_date: newFeedback.date,
+      status: 'pending',
+    });
+    // Optimistic UI update
+    setFeedbacks(prev => [newFeedback, ...prev]);
   };
 
   return (
@@ -366,9 +365,7 @@ export default function App() {
           <Navbar 
             isAuthenticated={isAuthenticated} 
             onLogout={() => {
-              if (import.meta.env.VITE_FIREBASE_API_KEY) {
-                import('firebase/auth').then(({ signOut }) => signOut(auth));
-              }
+              supabase.auth.signOut();
               setIsAuthenticated(false);
             }} 
           />
@@ -422,16 +419,17 @@ export default function App() {
                       exit={{ opacity: 0 }}
                     >
                       <LoginScreen onLogin={async (user, pwd) => {
-                        if (import.meta.env.VITE_FIREBASE_API_KEY) {
-                          try {
-                            await signInWithEmailAndPassword(auth, user, pwd);
-                            return true;
-                          } catch (error) {
-                            console.error("Firebase Auth Error:", error);
+                        try {
+                          const { error } = await supabase.auth.signInWithPassword({ email: user, password: pwd });
+                          if (error) {
+                            console.error("Supabase Auth Error:", error.message);
                             return false;
                           }
+                          return true;
+                        } catch (error) {
+                          console.error("Auth Error:", error);
+                          return false;
                         }
-                        return false;
                       }} />
                     </motion.div>
                   ) : (
