@@ -7,3 +7,8 @@ coverage/
 .env*
 !.env.example
 .vercel
+test-supabase.js
+test-browser.js
+dummy.txt
+.env.migration
+firebase-service-account.json
