@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { storage } from '../firebase';
+import { supabase } from '../lib/supabase';
 import './ImageUploadField.css';
 import { UploadCloud, Loader2 } from 'lucide-react';
 
@@ -97,10 +96,17 @@ export function ImageUploadField({ value, onChange, placeholder, required }: Ima
       setIsUploading(true);
       const file = await compressImage(rawFile); // Always convert to WebP
 
-      const storageRef = ref(storage, `images/${Date.now()}_${file.name}`);
-      const snapshot = await uploadBytes(storageRef, file);
-      const downloadURL = await getDownloadURL(snapshot.ref);
-      onChange(downloadURL);
+      const fileName = `${Date.now()}_${file.name}`;
+      const { error: uploadError } = await supabase.storage
+        .from('cafe-images')
+        .upload(fileName, file, { contentType: file.type, upsert: false });
+      
+      if (uploadError) throw uploadError;
+      
+      const { data: urlData } = supabase.storage
+        .from('cafe-images').getPublicUrl(fileName);
+        
+      onChange(urlData.publicUrl);
     } catch (error: any) {
       console.error("Error uploading image:", error);
       alert(`Failed to upload image. Error: ${error?.message || "Unknown error"}`);

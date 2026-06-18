@@ -26,8 +26,7 @@ import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from 're
 import { supabase } from './lib/supabase';
 import { transformCafe, transformPost, transformFeedback, transformSeoSettings } from './lib/transforms';
 
-import { db, auth } from './firebase';
-import { collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
+
 function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
   const { id } = useParams();
   const navigate = useNavigate();

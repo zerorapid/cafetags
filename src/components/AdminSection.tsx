@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Cafe, BlogArticle, UserFeedback, CafeMenuItem, CafeReview, SeoSettings } from '../types';
 import { MaterialIcon } from './MaterialIcon';
-import { db } from '../firebase';
-import { doc, setDoc, deleteDoc } from 'firebase/firestore';
+import { supabase } from '../lib/supabase';
+import { generateSlug } from '../utils';
 import { CafeForm } from './CafeForm';
 import Papa from 'papaparse';
 
@@ -136,11 +136,60 @@ export function AdminSection({
             userReviews: []
           };
           newCafes.push(newCafe);
-          if (import.meta.env.VITE_FIREBASE_API_KEY) {
-            await setDoc(doc(db, "cafes", newCafe.id.toString()), newCafe);
-          }
         }
-        if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+        if (import.meta.env.VITE_SUPABASE_URL) {
+          for (const c of newCafes) {
+            const { id, userReviews, featuredMenu, vibeScores, moreImages, menuImages, ...rest } = c as any;
+            await supabase.from('cafes').upsert({
+              id: c.id,
+              slug: generateSlug(c.name),
+              name: rest.name,
+              area: rest.area,
+              image: rest.image,
+              icon: rest.icon,
+              logo: rest.logo,
+              video_url: rest.videoUrl,
+              vibe: rest.vibe,
+              signature: rest.signature,
+              aesthetic_type: rest.aestheticType,
+              crowd: rest.crowd,
+              curator_note: rest.curatorNote,
+              directions_tip: rest.directionsTip,
+              neighbourhood_guide: rest.neighbourhoodGuide,
+              address: rest.address,
+              phone: rest.phone,
+              email: rest.email,
+              website: rest.website,
+              social_link: rest.socialLink,
+              facebook_url: rest.facebookUrl,
+              twitter_url: rest.twitterUrl,
+              map_link: rest.mapLink,
+              booking_url: rest.bookingUrl,
+              founded: rest.founded,
+              timings: rest.timings,
+              discounts: rest.discounts,
+              dine_in: rest.dineIn,
+              takeaway: rest.takeaway,
+              online_order: rest.onlineOrder,
+              self_delivery: rest.selfDelivery,
+              status: rest.status,
+              tags: rest.tags,
+              facilities: rest.facilities,
+              celebrities: rest.celebrities,
+              more_images: moreImages || [],
+              menu_images: menuImages || [],
+              vibe_scores: vibeScores || [],
+              featured_menu: featuredMenu || [],
+              is_featured_banner: rest.isFeaturedBanner || false,
+              banner_catchy_line: rest.bannerCatchyLine || null,
+              is_new_launch: rest.isNewLaunch || false,
+              new_launch_catchyline: rest.newLaunchCatchyline || null,
+            });
+          }
+          // After bulk insert, trigger refetch natively (or optimistically update)
+          // Actually, App.tsx handles fetch on mount. We optimistically update.
+          setCafes(prev => [...newCafes, ...prev]);
+        } else {
           setCafes(prev => [...newCafes, ...prev]);
         }
         alert(`Successfully imported ${newCafes.length} cafes!`);
@@ -175,11 +224,28 @@ export function AdminSection({
             seoDescription: row.seoDescription || ''
           };
           newBlogs.push(newBlog);
-          if (import.meta.env.VITE_FIREBASE_API_KEY) {
-            await setDoc(doc(db, "blogs", newBlog.id.toString()), newBlog);
-          }
         }
-        if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+        if (import.meta.env.VITE_SUPABASE_URL) {
+          for (const b of newBlogs) {
+            await supabase.from('posts').upsert({
+              id: b.id,
+              title: b.title,
+              slug: generateSlug(b.title),
+              excerpt: b.excerpt,
+              content: b.content,
+              image: b.image,
+              author: b.author,
+              read_time: b.readTime,
+              status: b.status,
+              is_featured: b.isFeatured,
+              seo_title: b.seoTitle,
+              seo_description: b.seoDescription,
+              tags: b.tags,
+              post_date: b.date,
+            });
+          }
+          setBlogs(prev => [...newBlogs, ...prev]);
+        } else {
           setBlogs(prev => [...newBlogs, ...prev]);
         }
         alert(`Successfully imported ${newBlogs.length} blog columns!`);
@@ -191,8 +257,9 @@ export function AdminSection({
   // Action: Delete Cafe
   const handleDeleteCafe = async (id: number) => {
     if (confirm("Are you sure you would like to permanently purge this cafe listing? Regular users have no access to delete details.")) {
-      if (import.meta.env.VITE_FIREBASE_API_KEY) {
-        await deleteDoc(doc(db, "cafes", id.toString()));
+      if (import.meta.env.VITE_SUPABASE_URL) {
+        await supabase.from('cafes').delete().eq('id', id);
+        setCafes(prev => prev.filter(c => c.id !== id));
       } else {
         setCafes(prev => prev.filter(c => c.id !== id));
       }
@@ -203,8 +270,23 @@ export function AdminSection({
   const handleSaveBlog = async (e: React.FormEvent) => {
     e.preventDefault();
     if (editingBlog) {
-      if (import.meta.env.VITE_FIREBASE_API_KEY) {
-        await setDoc(doc(db, "blogs", editingBlog.id.toString()), editingBlog);
+      if (import.meta.env.VITE_SUPABASE_URL) {
+        await supabase.from('posts').update({
+          title: editingBlog.title,
+          slug: generateSlug(editingBlog.title),
+          excerpt: editingBlog.excerpt,
+          content: editingBlog.content,
+          image: editingBlog.image,
+          author: editingBlog.author,
+          read_time: editingBlog.readTime,
+          status: editingBlog.status,
+          is_featured: editingBlog.isFeatured,
+          seo_title: editingBlog.seoTitle,
+          seo_description: editingBlog.seoDescription,
+          tags: editingBlog.tags,
+          post_date: editingBlog.date,
+        }).eq('id', editingBlog.id);
+        setBlogs(prev => prev.map(b => b.id === editingBlog.id ? { ...editingBlog } : b));
       } else {
         setBlogs(prev => prev.map(b => b.id === editingBlog.id ? { ...editingBlog } : b));
       }
@@ -215,8 +297,24 @@ export function AdminSection({
         ...blogForm,
         id: Date.now()
       };
-      if (import.meta.env.VITE_FIREBASE_API_KEY) {
-        await setDoc(doc(db, "blogs", newBlog.id.toString()), newBlog);
+      if (import.meta.env.VITE_SUPABASE_URL) {
+        await supabase.from('posts').insert({
+          id: newBlog.id,
+          title: newBlog.title,
+          slug: generateSlug(newBlog.title),
+          excerpt: newBlog.excerpt,
+          content: newBlog.content,
+          image: newBlog.image,
+          author: newBlog.author,
+          read_time: newBlog.readTime,
+          status: newBlog.status,
+          is_featured: newBlog.isFeatured,
+          seo_title: newBlog.seoTitle,
+          seo_description: newBlog.seoDescription,
+          tags: newBlog.tags,
+          post_date: newBlog.date,
+        });
+        setBlogs(prev => [newBlog, ...prev]);
       } else {
         setBlogs(prev => [newBlog, ...prev]);
       }
@@ -242,8 +340,9 @@ export function AdminSection({
   // Action: Delete Blog
   const handleDeleteBlog = async (id: number) => {
     if (confirm("Are you sure you want to permanently delete this journal article?")) {
-      if (import.meta.env.VITE_FIREBASE_API_KEY) {
-        await deleteDoc(doc(db, "blogs", id.toString()));
+      if (import.meta.env.VITE_SUPABASE_URL) {
+        await supabase.from('posts').delete().eq('id', id);
+        setBlogs(prev => prev.filter(b => b.id !== id));
       } else {
         setBlogs(prev => prev.filter(b => b.id !== id));
       }
@@ -265,12 +364,26 @@ export function AdminSection({
 
     const targetCafe = cafes.find(c => c.id === f.cafeId);
 
-    if (import.meta.env.VITE_FIREBASE_API_KEY) {
-      await setDoc(doc(db, "feedbacks", f.id.toString()), updatedFeedback);
-      if (targetCafe) {
-        const updatedCafe = { ...targetCafe, userReviews: [...(targetCafe.userReviews || []), influencerRev] };
-        await setDoc(doc(db, "cafes", targetCafe.id.toString()), updatedCafe);
-      }
+    if (import.meta.env.VITE_SUPABASE_URL) {
+      // Mark feedback as approved
+      await supabase.from('feedbacks').update({ status: 'approved' }).eq('id', f.id);
+      
+      // Insert new user_review
+      await supabase.from('user_reviews').insert({
+        cafe_id: f.cafeId,
+        author: influencerRev.author,
+        rating: influencerRev.rating,
+        text: influencerRev.text,
+        role: influencerRev.role,
+        review_date: influencerRev.date,
+      });
+
+      // Optimistic UI updates
+      setFeedbacks(prev => prev.map(item => item.id === f.id ? updatedFeedback as UserFeedback : item));
+      setCafes(prev => prev.map(c => {
+        if (c.id === f.cafeId) return { ...c, userReviews: [...(c.userReviews || []), influencerRev] };
+        return c;
+      }));
     } else {
       setFeedbacks(prev => prev.map(item => item.id === f.id ? updatedFeedback as UserFeedback : item));
       setCafes(prev => prev.map(c => {
@@ -293,8 +406,9 @@ export function AdminSection({
     if (!f) return;
     const updated = { ...f, status: 'spam' };
 
-    if (import.meta.env.VITE_FIREBASE_API_KEY) {
-      await setDoc(doc(db, "feedbacks", id.toString()), updated);
+    if (import.meta.env.VITE_SUPABASE_URL) {
+      await supabase.from('feedbacks').update({ status: 'spam' }).eq('id', id);
+      setFeedbacks(prev => prev.map(item => item.id === id ? updated as UserFeedback : item));
     } else {
       setFeedbacks(prev => prev.map(item => item.id === id ? updated as UserFeedback : item));
     }
@@ -303,8 +417,17 @@ export function AdminSection({
 
   const handleSaveSeoSettings = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (import.meta.env.VITE_FIREBASE_API_KEY) {
-      await setDoc(doc(db, "settings", "seo"), seoForm);
+    if (import.meta.env.VITE_SUPABASE_URL) {
+      await supabase.from('settings').upsert({
+        key: 'seo',
+        website_title: seoForm.websiteTitle,
+        website_description: seoForm.websiteDescription,
+        favicon: seoForm.favicon,
+        social_image: seoForm.socialImage,
+        google_analytics_id: seoForm.googleAnalyticsId,
+        google_search_console_token: seoForm.googleSearchConsoleToken,
+      });
+      setSeoSettings(seoForm);
     } else {
       setSeoSettings(seoForm);
     }
