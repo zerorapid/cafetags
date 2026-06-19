@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 @import "tailwindcss";
@@ -10,7 +10,7 @@
   --color-tactile-divider: #e5e5e5;
   --color-stone-gray: #1e3932;
   --font-serif: "Instrument Serif", "Georgia", "Times New Roman", serif;
-  --font-sans: "Google Sans", "Outfit", "Product Sans", sans-serif;
+  --font-sans: "Google Sans Text", sans-serif;
 
   /* Starbucks Theming Overrides */
   --color-stone-50: #ffffff;
@@ -66,7 +66,7 @@ html {
 body {
   background-color: #ffffff;
   color: #111111;
-  font-family: "Google Sans", "Outfit", "Product Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -83,7 +83,7 @@ body {
   padding: 32px;
   box-sizing: border-box;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   text-align: left;
 }
 
@@ -154,7 +154,7 @@ body {
 }
 
 .brand-text h2 {
-  font-family: 'Google Sans', 'Outfit', 'Product Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -171,7 +171,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .editorial-content-block {
@@ -207,7 +207,7 @@ body {
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .cafe-ux-card:hover .action-cta-button {
@@ -266,7 +266,7 @@ body {
   --r-pill: 999px;
 
   --f-display: 'Instrument Serif', Georgia, serif;
-  --f-body:    'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --f-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --f-mono:    'DM Mono', 'SF Mono', Menlo, monospace;
 }
 
@@ -286,7 +286,7 @@ body {
 .nav-cta:hover { background: var(--ct-voltage-lt); }
 
 .search-hero { background: var(--ct-surface); border-radius: var(--r-xl); padding: 28px; transition: all 0.3s ease; }
-.search-bar { display: flex; align-items: center; background: var(--ct-canvas); border-radius: var(--r-pill); padding: 6px 6px 6px 20px; box-shadow: 0 4px 16px rgba(28,20,18,0.10); gap: 8px; }
+.search-bar { display: flex; align-items: center; background: var(--ct-canvas); border-radius: var(--r-pill); padding: 16px 24px; box-shadow: 0 4px 16px rgba(28,20,18,0.10); gap: 12px; }
 .search-bar input { font-family: var(--f-body); font-size: 15px; color: var(--ct-ink); border: none; outline: none; flex: 1; background: transparent; }
 .search-bar input::placeholder { color: var(--ct-placeholder); }
 .search-btn { font-family: var(--f-body); font-size: 14px; font-weight: 500; color: white; background: var(--ct-voltage); border: none; border-radius: var(--r-pill); padding: 11px 22px; cursor: pointer; white-space: nowrap; transition: opacity 0.15s; }

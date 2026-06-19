@@ -25,22 +25,19 @@ export function HeroSection({ cafes, onSelectCafe }: HeroSectionProps) {
   }, [featured.length]);
 
   return (
-    <div style={{ textAlign: 'center', width: '100%' }}>
-      <div className="px-5 mx-auto max-w-[1440px] pt-10 pb-2 md:pt-[60px] md:pb-[40px]">
-        <h1 className="t-d1">
-          Hyderabad <em>Coffee</em> Corners
+    <div className="w-full relative bg-[#1C1412] flex items-center justify-center overflow-hidden h-[250px]" style={{ textAlign: 'center' }}>
+      <img 
+        src="https://images.unsplash.com/photo-1719716134533-ae84dee42751?q=80&w=2000&auto=format&fit=crop" 
+        alt="Hyderabad Coffee Banner" 
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-50"
+      />
+      <div className="relative z-10 px-5 mx-auto max-w-[1440px] flex flex-col items-center justify-center">
+        <h1 className="t-d1 !text-white">
+          Hyderabad <em className="!text-[#F2E4D8]">Coffee</em> Corners
         </h1>
-        <p className="hero-sub">
+        <p className="hero-sub !text-white/80 mt-3">
           A curated lookbook of standout aesthetic spaces and artisan brews
         </p>
-      </div>
-
-      <div className="w-full relative">
-        <img 
-          src="/cafetags-homepage-banner.png" 
-          alt="Hyderabad Coffee Banner" 
-          className="w-full h-auto max-h-[500px] object-contain object-bottom md:object-cover"
-        />
       </div>
     </div>
   );

@@ -18,6 +18,17 @@ interface CafeCardProps {
   onSelect: () => void;
 }
 
+const formatTimings = (t?: string) => {
+  if (!t) return 'Check timings';
+  return t
+    .replace(/ Everyday/ig, '')
+    .replace(/:00/g, '')
+    .replace(/ AM/g, 'AM')
+    .replace(/ PM/g, 'PM')
+    .replace(/Open 24 Hours, 365 Days/ig, '24/7 Open')
+    .replace(/Open 24 Hours/ig, '24/7 Open');
+};
+
 export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
   const handleCardClick = () => {
     onSelect();
@@ -39,59 +50,93 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       <article 
         id={`grid_item_${cafe.id}`}
         onClick={handleCardClick}
-        className="group cursor-pointer flex flex-col"
+        className="w-full bg-white rounded-lg overflow-hidden border border-[#E6DFD3] shadow-sm font-sans cursor-pointer transition-transform hover:-translate-y-1"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
-        {/* Image holder with desaturation layers & scale easing custom style */}
-        <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#EBE7E0] border border-[#E6DFD3] rounded-xl flex items-center justify-center mb-4 transition-all duration-500 hover:shadow-xs">
+        {/* Image */}
+        <div className="w-full h-[160px] overflow-hidden relative">
           <OptimizedImage 
             src={cafe.image} 
             alt={cafe.name}
-            className="absolute inset-0 w-full h-full"
-            imageClassName="saturate-[0.85] group-hover:saturate-[1] group-hover:scale-[1.04] smooth-transition"
+            className="w-full h-full"
+            imageClassName="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-400/25 to-transparent pointer-events-none"></div>
           
-          <div className="absolute top-4 left-4 bg-[#FAF7F2]/95 backdrop-blur-xs border border-tactile-divider px-3 py-1.5 rounded-full flex items-center gap-1 opacity-95 group-hover:opacity-100 smooth-transition">
-            <MaterialIcon name="location_on" className="text-sm text-amber-700" />
-            <span className="text-xs tracking-wider text-charcoal-ink font-bold">{cafe.area.toUpperCase()}</span>
-          </div>
-          
-          {/* Subtle hover lookbook badge */}
-          <div className="absolute inset-0 bg-charcoal-ink/10 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
-            <span className="text-xs tracking-widest text-[#FAF7F2] bg-[#24211E]/95 backdrop-blur-md px-5 py-2.5 border border-[#E6DFD3] rounded-lg font-sans font-bold uppercase shadow-md">
-              VIEW DETAILS
-            </span>
+          <div className="absolute top-3 left-3 flex gap-2">
+            {cafe.isNewLaunch && (
+              <div className="flex items-center gap-1.5 bg-[#3C2F28] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm border border-white/20 backdrop-blur-sm">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.518l4.276 3.664a1 1 0 0 0 1.516-.294z"/>
+                  <path d="M5 21h14"/>
+                </svg>
+                New Launch
+              </div>
+            )}
           </div>
         </div>
 
-        <div className="mt-2 space-y-2 text-left">
-          <h3 className="font-serif text-3xl group-hover:italic text-charcoal-ink leading-tight smooth-transition">
-            {cafe.name}
-          </h3>
+        <div className="p-4 text-left flex flex-col h-[calc(100%-160px)]">
           
-          <div className="flex justify-between items-center border-t border-tactile-divider/50 pt-2 text-xs tracking-wider uppercase text-stone-gray">
-            <span className="flex items-center gap-2">
-              {renderStatusBadge(cafe.status)}
-              <span className="text-[12px] font-semibold text-stone-gray/90 tracking-wide flex items-center gap-1"><MaterialIcon name="schedule" className="text-[12px]" /> {cafe.timings?.split(' ')[0]} - {cafe.timings?.split('-')[1]?.split(' ')[1]}</span>
-            </span>
-            <span className="text-xs text-stone-gray/80 italic font-serif">{(index + 1).toString().padStart(2, '0')}.</span>
+          {/* Top Section: Title & Rating Badge */}
+          <div className="flex justify-between items-start gap-2 mb-1">
+            <h2 
+              className="text-[22.5px] font-medium text-[#1C1C1C] leading-snug line-clamp-2"
+            >
+              {cafe.name}
+            </h2>
+            <div className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm font-semibold bg-[#F6EFE6] text-[#1C1C1C] whitespace-nowrap">
+              {/* Star Icon SVG */}
+              <svg 
+                className="text-[#D97706]"
+                width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              4.8
+            </div>
           </div>
 
-          {/* Explicit Tags Pill Row under card */}
-          <div className="flex flex-wrap gap-1.5 pt-1.5">
-            {cafe.tags.slice(0, 3).map(t => (
-              <TagPill key={t} tag={t} />
-            ))}
-            {cafe.tags.length > 3 && (
-              <span className="px-2.5 py-1 text-xs font-sans tracking-normal border border-tactile-divider bg-[#FAF7F2]/80 text-stone-gray rounded-full uppercase font-semibold flex items-center gap-1 pb-1">
-                +{cafe.tags.length - 3}
-              </span>
-            )}
-          </div>
-          
-          <p className="text-stone-gray text-xs leading-relaxed italic font-serif line-clamp-2 pt-1 opacity-90 group-hover:opacity-100 smooth-transition" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-            "{cafe.vibe}"
+          {/* Short description */}
+          <p className="text-xs text-[#6B7280] mb-3 truncate">
+            {cafe.vibe ? cafe.vibe.split(' ').slice(0, 5).join(' ') + '...' : cafe.signature}
           </p>
+
+          <div className="flex flex-col gap-2 mb-4">
+            {/* Location */}
+            <div className="flex items-center gap-1.5 text-[#6B7280] text-sm font-medium">
+              {/* Map Pin Icon SVG */}
+              <svg 
+                className="opacity-80 flex-shrink-0"
+                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span className="truncate">{cafe.area}</span>
+            </div>
+
+            {/* Feature Tags */}
+            <div className="flex flex-wrap gap-1.5">
+              {cafe.tags.slice(0, 3).map((tag) => (
+                <span key={tag} className="inline-flex items-center px-2.5 py-1 bg-[#F4F4F4] text-[#4B5563] text-xs font-normal rounded-md whitespace-nowrap">
+                  {tag}
+                </span>
+              ))}
+              {cafe.tags.length > 3 && (
+                <span className="inline-flex items-center px-2.5 py-1 bg-[#F4F4F4] text-[#4B5563] text-xs font-normal rounded-md">
+                  +{cafe.tags.length - 3}
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div className="flex-grow"></div>
+
+          {/* Full Width Button */}
+          <button className="w-full px-4 py-2.5 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90 bg-[#3C2F28] text-white">
+            View Details
+          </button>
+          
         </div>
       </article>
     );

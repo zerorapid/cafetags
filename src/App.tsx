@@ -64,11 +64,11 @@ function CafeDetailWrapper({ cafes, onSubmitFeedback, isAdmin }: any) {
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [isAppLoading, setIsAppLoading] = useState(true);
+  const [isAppLoading, setIsAppLoading] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsAppLoading(false), 2200);
-    return () => clearTimeout(timer);
+    // const timer = setTimeout(() => setIsAppLoading(false), 2200);
+    // return () => clearTimeout(timer);
   }, []);
 
   // Authentication State
@@ -516,7 +516,7 @@ export default function App() {
                       </button>
                     </div>
                   ) : layout === 'grid' ? (
-                    <div id="layout_editorial_grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-10">
+                    <div id="layout_editorial_grid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-12 gap-x-6 px-2 md:px-4">
                       {filteredCafes.map((cafe, index) => (
                         <CafeCard
                           key={cafe.id}
