@@ -5,7 +5,8 @@ import {
   ArrowLeft, Coffee, Clock, Accessibility, Store, 
   Award, Heart, Camera, PawPrint, BookOpen, UtensilsCrossed,
   Flame, Sparkles, BarChart3, MessageCircleHeart, Star, ThumbsUp,
-  MapPin, Phone, Globe, Navigation, Images, CheckCircle2
+  MapPin, Phone, Globe, Navigation, Images, CheckCircle2,
+  Instagram, Facebook, Twitter, Share2
 } from 'lucide-react';
 
 interface DetailViewProps {
@@ -291,7 +292,6 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             <div className="sidebar">
                 <div className="sidebar-card">
                     <h3 className="sidebar-title">
-                        <MapPin size={22} />
                         Visit Info
                     </h3>
                     
@@ -319,6 +319,20 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         <div className="info-row-content">
                             <strong>Website</strong>
                             <a href={cafe.website} target="_blank" rel="noreferrer">Visit official site</a>
+                        </div>
+                    </div>
+                    )}
+
+                    {(cafe.socialLink || cafe.facebookUrl || cafe.twitterUrl) && (
+                    <div className="info-row">
+                        <Share2 size={18} />
+                        <div className="info-row-content">
+                            <strong>Social</strong>
+                            <div style={{ display: 'flex', gap: '16px', marginTop: '6px' }}>
+                                {cafe.socialLink && <a href={cafe.socialLink} target="_blank" rel="noreferrer"><Instagram size={20} /></a>}
+                                {cafe.facebookUrl && <a href={cafe.facebookUrl} target="_blank" rel="noreferrer"><Facebook size={20} /></a>}
+                                {cafe.twitterUrl && <a href={cafe.twitterUrl} target="_blank" rel="noreferrer"><Twitter size={20} /></a>}
+                            </div>
                         </div>
                     </div>
                     )}

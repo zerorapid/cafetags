@@ -324,10 +324,9 @@
 }
 
 .verdict-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: inherit;
     font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: var(--space-4);
     max-width: 800px;
@@ -373,9 +372,8 @@
 
 .section-title {
     font-size: 1.75rem;
-    font-family: 'Instrument Serif', serif;
-    font-weight: 400;
-    font-style: italic;
+    font-family: inherit;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: var(--space-3);
@@ -850,7 +848,7 @@
 }
 
 /* SIDEBAR */
-.sidebar { position: sticky; top: 24px; height: max-content; }
+.sidebar { position: sticky; top: 100px; height: max-content; }
 
 .sidebar-card {
     background: var(--bg-white);
@@ -911,11 +909,12 @@
     border: 2px solid transparent;
     width: 100%;
     margin-top: var(--space-4);
+    padding: 0 var(--space-8);
 }
 
 .sidebar-btn-primary {
     background: var(--text-primary);
-    color: var(--bg-white);
+    color: var(--bg-white) !important;
     border-color: var(--text-primary);
     cursor: pointer;
 }
@@ -961,7 +960,7 @@
     .lookbook-container .main-container { padding: var(--space-8); }
     .hero-section { height: 580px; }
     .content-grid { grid-template-columns: 1.5fr 1fr; }
-    .sidebar { position: sticky; top: 24px; }
+    .sidebar { position: sticky; top: 100px; }
     .menu-grid { grid-template-columns: repeat(2, 1fr); }
     .about-highlights { grid-template-columns: repeat(4, 1fr); }
     .vibe-grid { grid-template-columns: repeat(5, 1fr); }
