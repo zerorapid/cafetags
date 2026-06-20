@@ -476,6 +476,113 @@
 
 .about-highlight svg { color: var(--success); flex-shrink: 0; }
 
+/* MENU CARD CONTAINER */
+.menu-card-container {
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+}
+
+.menu-header-section {
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.menu-header-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #b45309, #92400e);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-white);
+    flex-shrink: 0;
+}
+
+.menu-header-content h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.menu-section-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* SIGNATURE ROW */
+.signature-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.sig-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.sig-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.sig-card-img {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sig-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sig-card:hover .sig-card-img img {
+    transform: scale(1.08);
+}
+
+.sig-details {
+    padding: var(--space-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-white);
+}
+
+.sig-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.price-tag {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
 /* MENU CAROUSEL */
 .carousel-wrapper {
     position: relative;
@@ -1025,6 +1132,7 @@
 /* RESPONSIVE */
 @media (max-width: 1024px) {
     .info-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .signature-row { grid-template-columns: repeat(2, 1fr); }
     .menu-carousel-item { flex: 0 0 170px; }
     .bento-grid { 
         grid-template-columns: repeat(2, 1fr);
@@ -1045,27 +1153,17 @@
 }
 
 @media (max-width: 768px) {
-    .hero-content {
-        padding: var(--space-6);
-    }
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    .hero-description {
-        font-size: 1rem;
-        line-height: 1.4;
-    }
-    .bento-grid {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-meta { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+    
+    .bento-grid { 
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-template-areas:
-            "hero"
-            "tall"
-            "img3"
-            "img4";
+        grid-template-areas: none;
     }
     .bento-item { min-height: 250px; }
     .info-cards-grid { grid-template-columns: 1fr; }
+    .signature-row { grid-template-columns: 1fr; }
     .menu-carousel-item { flex: 0 0 150px; }
     .about-highlights { grid-template-columns: repeat(2, 1fr); }
     .vibe-grid { grid-template-columns: repeat(2, 1fr); }

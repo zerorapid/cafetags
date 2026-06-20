@@ -217,31 +217,70 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     </div>
                 </div>
 
-                {/* MENU */}
+                {/* MENU CARD */}
                 {cafe.featuredMenu && cafe.featuredMenu.length > 0 && (
-                <div className="info-card">
-                    <h3 className="info-card-title">
-                        <UtensilsCrossed size={22} />
-                        Popular Items
-                    </h3>
-                    
-                    <div className="carousel-wrapper">
-                        <DraggableCarousel>
-                            {cafe.featuredMenu.map((item, idx) => (
-                            <div key={idx} className="menu-carousel-item">
-                                <div className="menu-img">
+                <div className="menu-card-container">
+                    <div className="menu-header-section">
+                        <div className="menu-header-icon">
+                            <Coffee size={18} />
+                        </div>
+                        <div className="menu-header-content">
+                            <h1>Menu Card</h1>
+                        </div>
+                    </div>
+
+                    {cafe.featuredMenu.length > 0 && (
+                    <>
+                        <h2 className="menu-section-title">
+                            <Star size={16} color="var(--accent)" />
+                            Signature Dishes
+                        </h2>
+
+                        <div className="signature-row">
+                            {cafe.featuredMenu.slice(0, 3).map((item, idx) => (
+                            <div key={`sig-${idx}`} className="sig-card">
+                                <div className="sig-card-img">
                                     {cafe.menuImages?.[idx] ? (
-                                        <img src={cafe.menuImages[idx]} alt={item.name} draggable="false" />
+                                        <img src={cafe.menuImages[idx]} alt={item.name} loading="lazy" />
                                     ) : (
                                         <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
                                     )}
                                 </div>
-                                <div className="menu-label">{item.name}</div>
-                                <div className="menu-price" style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--accent)' }}>{item.price}</div>
+                                <div className="sig-details">
+                                    <span className="sig-name">{item.name}</span>
+                                    <span className="price-tag">{item.price}</span>
+                                </div>
                             </div>
                             ))}
-                        </DraggableCarousel>
-                    </div>
+                        </div>
+                    </>
+                    )}
+
+                    {cafe.featuredMenu.length > 0 && (
+                    <>
+                        <h2 className="menu-section-title">
+                            <UtensilsCrossed size={16} color="var(--accent)" />
+                            Browse Menu
+                        </h2>
+
+                        <div className="carousel-wrapper">
+                            <DraggableCarousel>
+                                {cafe.featuredMenu.map((item, idx) => (
+                                <div key={`browse-${idx}`} className="menu-carousel-item">
+                                    <div className="menu-img">
+                                        {cafe.menuImages?.[idx] ? (
+                                            <img src={cafe.menuImages[idx]} alt={item.name} draggable="false" />
+                                        ) : (
+                                            <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
+                                        )}
+                                    </div>
+                                    <div className="menu-label">{item.name}</div>
+                                </div>
+                                ))}
+                            </DraggableCarousel>
+                        </div>
+                    </>
+                    )}
                 </div>
                 )}
 
