@@ -41,20 +41,6 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             <div className="hero-bg" style={{ backgroundImage: `url('${cafe.image}')` }}></div>
             <div className="hero-overlay"></div>
             
-            <button className="hero-back-btn" onClick={onBack}>
-              <ArrowLeft size={16} />
-              Back to Directory
-            </button>
-            
-            <div className="hero-chips">
-                <div className={`hero-chip ${isClosed ? 'status-closed' : 'status-open'}`}>
-                  {isClosed ? 'Closed' : 'Open Now'}
-                </div>
-                {cafe.tags?.slice(0, 1).map(t => (
-                  <div key={t} className="hero-chip" style={{ background: 'rgba(255,255,255,0.2)' }}>{t}</div>
-                ))}
-            </div>
-            
             <div className="hero-content">
                 <h1 className="hero-title">{cafe.name}</h1>
                 
