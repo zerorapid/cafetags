@@ -66,52 +66,34 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
         {/* INFO CARDS */}
         <section className="info-cards-section">
             <div className="info-cards-grid">
-                <div className="info-card-item">
-                    <div className="info-card-icon coffee"><Coffee size={22} /></div>
-                    <div className="info-card-text">
-                        <h3>{cafe.signature || "Specialty Brews"}</h3>
-                        <p>Signature Offering</p>
+                <div className="info-card-item grouped-info-card">
+                    <div className="info-card-sub-item">
+                        <div className="info-card-icon coffee"><Coffee size={22} /></div>
+                        <div className="info-card-text">
+                            <h3>{cafe.signature || "Specialty Brews"}</h3>
+                            <p>Signature Offering</p>
+                        </div>
+                    </div>
+                    <div className="info-card-divider"></div>
+                    <div className="info-card-sub-item">
+                        <div className="info-card-icon clock"><Clock size={22} /></div>
+                        <div className="info-card-text">
+                            <h3>{cafe.timings || "Check hours online"}</h3>
+                            <p>Opening Hours</p>
+                        </div>
                     </div>
                 </div>
-                <div className="info-card-item">
-                    <div className="info-card-icon clock"><Clock size={22} /></div>
-                    <div className="info-card-text">
-                        <h3>{cafe.timings || "Check hours online"}</h3>
-                        <p>Opening Hours</p>
+                
+                <div className="info-card-item verdict-card">
+                    <div className="verdict-label-small">
+                        <Award size={16} />
+                        CafeTags Verdict
                     </div>
+                    <h3 className="verdict-title-small">{cafe.curatorNote || `A standout destination in ${cafe.area} blending modern design with exceptional hospitality.`}</h3>
+                    <p className="verdict-description-small">
+                        {cafe.neighbourhoodGuide || "Perfect for remote workers, casual dates, and photography sessions."}
+                    </p>
                 </div>
-                <div className="info-card-item">
-                    <div className="info-card-icon access"><Accessibility size={22} /></div>
-                    <div className="info-card-text">
-                        <h3>{cafe.aestheticType || "Premium Vibe"}</h3>
-                        <p>Aesthetic Style</p>
-                    </div>
-                </div>
-                <div className="info-card-item">
-                    <div className="info-card-icon store"><Store size={22} /></div>
-                    <div className="info-card-text">
-                        <h3>Est. {cafe.founded || "Recently Opened"}</h3>
-                        <p>{cafe.crowd || "All are welcome"}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {/* VERDICT SECTION */}
-        <section className="verdict-section">
-            <div className="verdict-label">
-                <Award size={18} />
-                CafeTags Verdict
-            </div>
-            <h2 className="verdict-title">{cafe.curatorNote || `A standout destination in ${cafe.area} blending modern design with exceptional hospitality.`}</h2>
-            <p className="verdict-description">
-                {cafe.neighbourhoodGuide || "Perfect for remote workers, casual dates, and photography sessions. The meticulously designed layout creates an unmatched ambiance."}
-            </p>
-            <div className="verdict-tags">
-                <div className="verdict-tag"><Heart size={18} /> Dates</div>
-                <div className="verdict-tag"><Camera size={18} /> Photography</div>
-                {(cafe.facilities || []).includes('Pet Friendly') && <div className="verdict-tag"><PawPrint size={18} /> Pet Owners</div>}
-                <div className="verdict-tag"><Coffee size={18} /> Coffee Lovers</div>
             </div>
         </section>
 
