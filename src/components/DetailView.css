@@ -945,9 +945,16 @@
 .amenity-item svg { width: 20px; height: 20px; color: var(--text-tertiary); flex-shrink: 0; }
 
 /* RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .info-cards-grid { grid-template-columns: repeat(2, 1fr); }
-    .bento-grid { grid-template-rows: repeat(3, 200px); }
+    .bento-grid { 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 250px);
+        grid-template-areas:
+            "hero tall"
+            "img3 img4";
+    }
 }
 
 @media (min-width: 768px) {
@@ -961,6 +968,16 @@
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        padding: var(--space-6);
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
     .bento-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -968,11 +985,15 @@
             "hero"
             "tall"
             "img3"
-            "img4"
-            "img5";
+            "img4";
     }
-    .bento-item { min-height: 220px; }
+    .bento-item { min-height: 250px; }
     .info-cards-grid { grid-template-columns: 1fr; }
+    .about-highlights { grid-template-columns: repeat(2, 1fr); }
+    .vibe-grid { grid-template-columns: repeat(2, 1fr); }
+    .verdict-section { padding: var(--space-6); }
+    .verdict-title { font-size: 1.5rem; }
+    .sidebar-card { padding: var(--space-5); }
 }
 
 @media (min-width: 1024px) {
