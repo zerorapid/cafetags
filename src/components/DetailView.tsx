@@ -187,8 +187,14 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     <div className="menu-grid">
                         {cafe.featuredMenu.map((item, idx) => (
                         <div key={idx} className="menu-item">
-                            {cafe.menuImages?.[idx] && (
-                                <div className="menu-item-img" style={{ backgroundImage: `url('${cafe.menuImages[idx]}')` }}></div>
+                            {cafe.menuImages?.[idx] ? (
+                                <div className="menu-item-img-wrapper">
+                                    <div className="menu-item-img" style={{ backgroundImage: `url('${cafe.menuImages[idx]}')` }}></div>
+                                </div>
+                            ) : (
+                                <div className="menu-item-img-wrapper">
+                                    <div className="menu-item-img" style={{ background: 'var(--bg-light-gray)' }}></div>
+                                </div>
                             )}
                             <div className="menu-item-content">
                                 <div className="menu-item-header">
