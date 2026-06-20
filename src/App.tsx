@@ -107,7 +107,25 @@ export default function App() {
     async function fetchAll() {
       const { data: cafesData } = await supabase
         .from('cafes').select('*, user_reviews(*)');
-      setCafes(cafesData?.length ? cafesData.map(transformCafe) : INITIAL_CAFES);
+        
+      if (cafesData?.length) {
+        const transformedCafes = cafesData.map(transformCafe).map(cafe => {
+          // Merge rich mock data from INITIAL_CAFES if missing in Supabase
+          const localCafe = INITIAL_CAFES.find(c => c.id === cafe.id || c.name === cafe.name);
+          if (localCafe) {
+            return {
+              ...cafe,
+              userReviews: cafe.userReviews?.length ? cafe.userReviews : localCafe.userReviews,
+              featuredMenu: cafe.featuredMenu?.length ? cafe.featuredMenu : localCafe.featuredMenu,
+              vibeScores: cafe.vibeScores?.length ? cafe.vibeScores : localCafe.vibeScores,
+            };
+          }
+          return cafe;
+        });
+        setCafes(transformedCafes);
+      } else {
+        setCafes(INITIAL_CAFES);
+      }
 
       const { data: postsData } = await supabase.from('posts').select('*');
       setBlogs(postsData?.length ? postsData.map(transformPost) : INITIAL_BLOG_ARTICLES);
