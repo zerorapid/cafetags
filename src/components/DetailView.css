@@ -347,12 +347,13 @@
 }
 
 .section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-family: inherit;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: var(--space-3);
+    color: var(--text-primary);
 }
 
 .section-title svg { color: var(--accent); }
@@ -429,16 +430,17 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
 }
 
 .info-card-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: var(--space-5);
     display: flex;
     align-items: center;
     gap: var(--space-3);
+    color: var(--text-primary);
     letter-spacing: -0.02em;
 }
 
@@ -548,7 +550,7 @@
 
 .vibe-header {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: var(--space-8);
     color: var(--text-primary);
     letter-spacing: -0.02em;
@@ -835,12 +837,13 @@
 }
 
 .sidebar-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: var(--space-5);
     display: flex;
     align-items: center;
     gap: var(--space-3);
+    color: var(--text-primary);
     letter-spacing: -0.02em;
 }
 
