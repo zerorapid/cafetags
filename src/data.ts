@@ -513,9 +513,21 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     celebrities: ["Allu Arjun", "Samantha"],
     bookingUrl: "https://swiggy.com/dineout",
-    userReviews: [],
-    featuredMenu: [],
-    vibeScores: [],
+    userReviews: [
+      { author: "Rahul V.", rating: 5, text: "The ambiance is so lush and green. Their cranberry coffee is to die for! The heritage villa setting makes it the perfect weekend escape.", date: "May 12, 2026", role: "Coffee Enthusiast" },
+      { author: "Sneha Reddy", rating: 4.8, text: "Absolutely loved the heritage vibe. The outdoor seating is perfect for a lazy Sunday afternoon and they are super welcoming to dogs.", date: "Jun 02, 2026", role: "Local Guide" }
+    ],
+    featuredMenu: [
+      { name: "Cranberry Coffee", price: "₹280", category: "Signature Brew", isSpecial: true },
+      { name: "Vietnamese Iced Coffee", price: "₹260", category: "Cold Brew" },
+      { name: "Almond Croissant", price: "₹220", category: "Pastry", isSpecial: true }
+    ],
+    vibeScores: [
+      { label: "Aesthetic", score: 9.2 },
+      { label: "Coffee", score: 8.8 },
+      { label: "Workspace", score: 7.5 },
+      { label: "Pet Friendly", score: 9.5 }
+    ],
     isNewLaunch: false,
     status: 'open'
   },
@@ -552,9 +564,21 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     celebrities: [],
     bookingUrl: "",
-    userReviews: [],
-    featuredMenu: [],
-    vibeScores: [],
+    userReviews: [
+      { author: "Imran Khan", rating: 5, text: "No place beats the Irani Chai and Osmania biscuits here. A legendary spot.", date: "Jan 15, 2026", role: "Local Legend" },
+      { author: "Anita Desai", rating: 4.5, text: "Always crowded but totally worth it. The true taste of old Hyderabad.", date: "Mar 22, 2026", role: "Food Blogger" }
+    ],
+    featuredMenu: [
+      { name: "Special Irani Chai", price: "₹80", category: "Beverages", isSpecial: true },
+      { name: "Osmania Biscuits (Set of 4)", price: "₹60", category: "Snacks", isSpecial: true },
+      { name: "Malai Bun", price: "₹100", category: "Snacks" }
+    ],
+    vibeScores: [
+      { label: "Heritage", score: 9.8 },
+      { label: "Taste", score: 9.5 },
+      { label: "Ambiance", score: 8.0 },
+      { label: "Value", score: 9.0 }
+    ],
     isNewLaunch: false,
     status: 'open'
   }
