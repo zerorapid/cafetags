@@ -591,14 +591,13 @@ export function AdminSection({
         <CafeForm
           editingCafe={editingCafe}
           onSave={async (cafe: any) => {
-            if (import.meta.env.VITE_FIREBASE_API_KEY) {
-              await setDoc(doc(db, "cafes", cafe.id.toString()), cafe);
+            if (import.meta.env.VITE_SUPABASE_URL) {
+              await supabase.from('cafes').upsert(cafe);
+            }
+            if (editingCafe) {
+              setCafes(prev => prev.map(c => c.id === cafe.id ? cafe : c));
             } else {
-              if (editingCafe) {
-                setCafes(prev => prev.map(c => c.id === cafe.id ? cafe : c));
-              } else {
-                setCafes(prev => [cafe, ...prev]);
-              }
+              setCafes(prev => [cafe, ...prev]);
             }
             setIsAddingCafe(false);
             setEditingCafe(null);
