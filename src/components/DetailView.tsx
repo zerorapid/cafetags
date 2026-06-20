@@ -26,11 +26,52 @@ const NucleoIcon = ({ name, disabled }: { name: string, disabled?: boolean }) =>
     );
     if (name === 'twitter') return (
         <svg viewBox="0 0 24 24" style={style}>
-            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
         </svg>
     );
     return null;
 }
+
+const DraggableCarousel = ({ children }: { children: React.ReactNode }) => {
+    const scrollRef = React.useRef<HTMLDivElement>(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const onMouseDown = (e: React.MouseEvent) => {
+        setIsDragging(true);
+        setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
+        setScrollLeft(scrollRef.current?.scrollLeft || 0);
+    };
+
+    const onMouseLeave = () => setIsDragging(false);
+    const onMouseUp = () => setIsDragging(false);
+
+    const onMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - (scrollRef.current?.offsetLeft || 0);
+        const walk = (x - startX) * 2;
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft = scrollLeft - walk;
+        }
+    };
+
+    return (
+        <div 
+            className={`carousel-container ${isDragging ? 'dragging' : ''}`}
+            ref={scrollRef}
+            onMouseDown={onMouseDown}
+            onMouseLeave={onMouseLeave}
+            onMouseUp={onMouseUp}
+            onMouseMove={onMouseMove}
+        >
+            <div className="carousel-track">
+                {children}
+            </div>
+        </div>
+    );
+};
 
 interface DetailViewProps {
   cafe: Cafe;
@@ -184,32 +225,22 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         Popular Items
                     </h3>
                     
-                    <div className="menu-grid">
-                        {cafe.featuredMenu.map((item, idx) => (
-                        <div key={idx} className="menu-item">
-                            {cafe.menuImages?.[idx] ? (
-                                <div className="menu-item-img-wrapper">
-                                    <div className="menu-item-img" style={{ backgroundImage: `url('${cafe.menuImages[idx]}')` }}></div>
+                    <div className="carousel-wrapper">
+                        <DraggableCarousel>
+                            {cafe.featuredMenu.map((item, idx) => (
+                            <div key={idx} className="menu-carousel-item">
+                                <div className="menu-img">
+                                    {cafe.menuImages?.[idx] ? (
+                                        <img src={cafe.menuImages[idx]} alt={item.name} draggable="false" />
+                                    ) : (
+                                        <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
+                                    )}
                                 </div>
-                            ) : (
-                                <div className="menu-item-img-wrapper">
-                                    <div className="menu-item-img" style={{ background: 'var(--bg-light-gray)' }}></div>
-                                </div>
-                            )}
-                            <div className="menu-item-content">
-                                <div className="menu-item-header">
-                                    <h4 className="menu-item-name">{item.name}</h4>
-                                    <span className="menu-item-price">{item.price}</span>
-                                </div>
-                                <p className="menu-item-desc">{item.category}</p>
-                                {item.isSpecial && (
-                                <span className="menu-item-badge">
-                                    <Flame size={14} /> Bestseller
-                                </span>
-                                )}
+                                <div className="menu-label">{item.name}</div>
+                                <div className="menu-price" style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--accent)' }}>{item.price}</div>
                             </div>
-                        </div>
-                        ))}
+                            ))}
+                        </DraggableCarousel>
                     </div>
                 </div>
                 )}
@@ -301,66 +332,63 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
             {/* SIDEBAR */}
             <div className="sidebar">
-                <div className="sidebar-card">
+                <div className="sidebar-card visit-card">
                     <h3 className="sidebar-title">
                         Visit Info
                     </h3>
                     
-                    <div className="info-row">
-                        <MapPin size={18} />
-                        <div className="info-row-content">
-                            <strong>Address</strong>
-                            {cafe.address || `${cafe.area}, Hyderabad`}
+                    <div className="info-group">
+                        <div className="icon-box"><MapPin size={20} /></div>
+                        <div className="info-content">
+                            <h4>Address</h4>
+                            <p>{cafe.address || `${cafe.area}, Hyderabad`}</p>
                         </div>
                     </div>
                     
                     {cafe.phone && cafe.phone !== '#ERROR!' && (
-                    <div className="info-row">
-                        <Phone size={18} />
-                        <div className="info-row-content">
-                            <strong>Phone</strong>
-                            <a href={`tel:${cafe.phone}`}>{cafe.phone}</a>
+                    <div className="info-group">
+                        <div className="icon-box"><Phone size={20} /></div>
+                        <div className="info-content">
+                            <h4>Phone</h4>
+                            <p className="highlight-text"><a href={`tel:${cafe.phone}`}>{cafe.phone}</a></p>
                         </div>
                     </div>
                     )}
                     
                     {cafe.website && (
-                    <div className="info-row">
-                        <Globe size={18} />
-                        <div className="info-row-content">
-                            <strong>Website</strong>
-                            <a href={cafe.website} target="_blank" rel="noreferrer">Visit official site</a>
+                    <div className="info-group">
+                        <div className="icon-box"><Globe size={20} /></div>
+                        <div className="info-content">
+                            <h4>Website</h4>
+                            <a href={cafe.website} target="_blank" rel="noreferrer" className="highlight-text">Visit official site</a>
                         </div>
                     </div>
                     )}
 
-                    <div className="info-row">
-                        <div className="info-row-content">
-                            <strong>Social Links</strong>
-                            <div style={{ display: 'flex', gap: '16px', marginTop: '8px' }}>
-                                {cafe.socialLink ? (
-                                    <a href={cafe.socialLink} target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}><NucleoIcon name="instagram" /></a>
-                                ) : (
-                                    <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="instagram" disabled /></div>
-                                )}
-                                {cafe.facebookUrl ? (
-                                    <a href={cafe.facebookUrl} target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}><NucleoIcon name="facebook" /></a>
-                                ) : (
-                                    <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="facebook" disabled /></div>
-                                )}
-                                {cafe.twitterUrl ? (
-                                    <a href={cafe.twitterUrl} target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}><NucleoIcon name="twitter" /></a>
-                                ) : (
-                                    <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="twitter" disabled /></div>
-                                )}
-                            </div>
+                    <div className="social-section">
+                        <div className="social-title">Social Links</div>
+                        <div className="social-icons">
+                            {cafe.socialLink ? (
+                                <a href={cafe.socialLink} target="_blank" rel="noreferrer"><NucleoIcon name="instagram" /></a>
+                            ) : (
+                                <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="instagram" disabled /></div>
+                            )}
+                            {cafe.facebookUrl ? (
+                                <a href={cafe.facebookUrl} target="_blank" rel="noreferrer"><NucleoIcon name="facebook" /></a>
+                            ) : (
+                                <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="facebook" disabled /></div>
+                            )}
+                            {cafe.twitterUrl ? (
+                                <a href={cafe.twitterUrl} target="_blank" rel="noreferrer"><NucleoIcon name="twitter" /></a>
+                            ) : (
+                                <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="twitter" disabled /></div>
+                            )}
                         </div>
                     </div>
 
                     {cafe.mapLink && (
-                    <a href={cafe.mapLink} target="_blank" rel="noreferrer" className="sidebar-btn sidebar-btn-primary">
-                        <Navigation size={18} />
-                        Get Directions
+                    <a href={cafe.mapLink} target="_blank" rel="noreferrer" className="btn-directions">
+                        <Navigation size={18} /> Get Directions
                     </a>
                     )}
                 </div>
