@@ -200,7 +200,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 {/* ABOUT */}
                 <div className="info-card">
                     <h3 className="info-card-title">
-                        <BookOpen size={22} />
+                        <BookOpen size={24} color="var(--accent)" />
                         About Cafe
                     </h3>
                     <p className="about-text">
@@ -221,14 +221,14 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 {cafe.featuredMenu && cafe.featuredMenu.length > 0 && (
                 <div className="menu-card-container">
                     <h3 className="info-card-title">
-                        <Coffee size={22} color="var(--accent)" />
+                        <Coffee size={24} color="var(--accent)" />
                         Menu Card
                     </h3>
 
                     {cafe.featuredMenu.length > 0 && (
                     <>
                         <h2 className="menu-section-title">
-                            <Star size={16} color="var(--accent)" />
+                            <Star size={24} color="var(--accent)" />
                             Signature Dishes
                         </h2>
 
@@ -255,7 +255,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     {cafe.featuredMenu.length > 0 && (
                     <>
                         <h2 className="menu-section-title">
-                            <UtensilsCrossed size={16} color="var(--accent)" />
+                            <UtensilsCrossed size={24} color="var(--accent)" />
                             Browse Menu
                         </h2>
 
@@ -284,7 +284,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 {cafe.vibeScores && cafe.vibeScores.length > 0 && (
                 <div className="cafe-metrics">
                     <div className="vibe-metrics-header">
-                        <Coffee size={24} color="#6f4e37" />
+                        <Coffee size={24} color="var(--accent)" />
                         <h2 style={{ margin: 0 }}>Vibe Scores</h2>
                     </div>
 
@@ -307,7 +307,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 {cafe.celebrities && cafe.celebrities.length > 0 && (
                 <div className="info-card">
                     <h3 className="info-card-title">
-                        <Sparkles size={22} />
+                        <Sparkles size={24} color="var(--accent)" />
                         Celebrity Visitors
                     </h3>
                     <div className="celebs-grid">
@@ -328,7 +328,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 {cafe.userReviews && cafe.userReviews.length > 0 && (
                 <div className="reviews-container">
                     <div className="reviews-header">
-                        <MessageSquare color="#d35400" size={24} />
+                        <MessageSquare size={24} color="var(--accent)" />
                         <h2>{cafe.userReviews.length} Reviews</h2>
                     </div>
 
@@ -370,6 +370,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             <div className="sidebar">
                 <div className="sidebar-card visit-card">
                     <h3 className="sidebar-title">
+                        <Navigation size={24} color="var(--accent)" />
                         Visit Info
                     </h3>
                     
