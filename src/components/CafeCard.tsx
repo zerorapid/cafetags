@@ -8,6 +8,7 @@ import { Cafe } from '../types';
 import { MaterialIcon } from './MaterialIcon';
 import { getTagIcon } from '../data';
 import { OptimizedImage } from './OptimizedImage';
+import { Star, MapPin, Sparkles, Clock, ArrowRight } from 'lucide-react';
 import { TagPill } from './TagPill';
 
 interface CafeCardProps {
@@ -50,7 +51,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       <article 
         id={`grid_item_${cafe.id}`}
         onClick={handleCardClick}
-        className="w-full bg-white rounded-lg overflow-hidden border border-[#E6DFD3] shadow-sm font-sans cursor-pointer transition-transform hover:-translate-y-1"
+        className="w-full bg-white rounded-[20px] overflow-hidden border border-[#e2e8f0] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.05),0_8px_10px_-6px_rgba(0,0,0,0.05)] font-sans cursor-pointer transition-transform hover:-translate-y-1"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
         {/* Image */}
@@ -65,10 +66,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           <div className="absolute top-3 left-3 flex gap-2">
             {cafe.isNewLaunch && (
               <div className="flex items-center gap-1.5 bg-[#3C2F28] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm border border-white/20 backdrop-blur-sm">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.518l4.276 3.664a1 1 0 0 0 1.516-.294z"/>
-                  <path d="M5 21h14"/>
-                </svg>
+                <Sparkles size={12} className="flex-shrink-0" />
                 New Launch
               </div>
             )}
@@ -80,18 +78,13 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           {/* Top Section: Title & Rating Badge */}
           <div className="flex justify-between items-start gap-2 mb-1">
             <h2 
-              className="text-[22.5px] font-medium text-[#1C1C1C] leading-snug line-clamp-2"
+              className="text-2xl font-bold text-[#1C1C1C] leading-snug line-clamp-2"
+              style={{ letterSpacing: '-0.02em' }}
             >
               {cafe.name}
             </h2>
             <div className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm font-semibold bg-[#F6EFE6] text-[#1C1C1C] whitespace-nowrap">
-              {/* Star Icon SVG */}
-              <svg 
-                className="text-[#D97706]"
-                width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"
-              >
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
+              <Star size={14} className="text-[#b45309]" fill="currentColor" stroke="none" />
               4.8
             </div>
           </div>
@@ -104,14 +97,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           <div className="flex flex-col gap-2 mb-4">
             {/* Location */}
             <div className="flex items-center gap-1.5 text-[#6B7280] text-sm font-medium">
-              {/* Map Pin Icon SVG */}
-              <svg 
-                className="opacity-80 flex-shrink-0"
-                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
+              <MapPin size={14} className="opacity-80 flex-shrink-0" />
               <span className="truncate">{cafe.area}</span>
             </div>
 
@@ -133,7 +119,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           <div className="flex-grow"></div>
 
           {/* Full Width Button */}
-          <button className="w-full px-4 py-2.5 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90 bg-[#3C2F28] text-white">
+          <button className="w-full px-4 py-2.5 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90 text-white" style={{ backgroundColor: '#b45309' }}>
             View Details
           </button>
           
@@ -157,14 +143,14 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       
       {/* Main Identity column */}
       <div className="flex-1 min-w-[240px] text-left">
-        <h3 className="font-serif text-3xl md:text-4xl text-charcoal-ink group-hover:italic group-hover:translate-x-2 smooth-transition flex items-center flex-wrap gap-x-4 gap-y-2">
+        <h3 className="font-sans text-3xl md:text-4xl text-[#0f172a] font-bold group-hover:italic group-hover:translate-x-2 smooth-transition flex items-center flex-wrap gap-x-4 gap-y-2" style={{ letterSpacing: '-0.02em' }}>
           {cafe.name}
-          <span className="text-xs tracking-wide font-bold uppercase text-stone-gray bg-transparent border border-tactile-divider px-3 py-1 rounded-full group-hover:bg-charcoal-ink group-hover:text-[#FAF7F2] group-hover:border-charcoal-ink smooth-transition shadow-xs flex items-center gap-1">
-            <MaterialIcon name="location_on" className="text-xs text-amber-700" />
+          <span className="text-xs tracking-wide font-bold uppercase text-stone-gray bg-transparent border border-tactile-divider px-3 py-1 rounded-full group-hover:bg-[#0f172a] group-hover:text-white group-hover:border-[#0f172a] smooth-transition shadow-xs flex items-center gap-1">
+            <MapPin size={14} className="text-[#b45309] group-hover:text-white" />
             <span>{cafe.area}</span>
           </span>
           <span className="text-xs font-semibold tracking-wide uppercase text-stone-gray/90 flex items-center gap-1.5 mt-1 md:mt-0">
-            <MaterialIcon name="schedule" className="text-[14px]" /> {cafe.timings}
+            <Clock size={14} /> {cafe.timings}
           </span>
         </h3>
         
@@ -196,10 +182,9 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
         "{cafe.vibe}"
       </div>
 
-      {/* Custom CTA study prompt */}
-      <div className="text-xs tracking-wider text-stone-gray group-hover:text-charcoal-ink group-hover:translate-x-1.5 smooth-transition uppercase flex items-center gap-1.5 font-bold self-center ml-auto">
+      <div className="text-xs tracking-wider text-[#b45309] group-hover:text-charcoal-ink group-hover:translate-x-1.5 smooth-transition uppercase flex items-center gap-1.5 font-bold self-center ml-auto">
         <span>VIEW {(index + 1).toString().padStart(2, '0')}</span>
-        <MaterialIcon name="arrow_right_alt" className="text-sm" />
+        <ArrowRight size={16} />
       </div>
     </article>
   );
