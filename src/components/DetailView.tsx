@@ -403,13 +403,13 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     <div className="social-section">
                         <div className="social-title">Social Links</div>
                         <div className="social-icons">
-                            <a href={cafe.socialLink || '#'} target="_blank" rel="noreferrer" style={!cafe.socialLink ? { opacity: 0.3 } : {}}>
+                            <a href={cafe.socialLink || '#'} target="_blank" rel="noreferrer" style={!cafe.socialLink ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
                                 <NucleoIcon name="instagram" />
                             </a>
-                            <a href={cafe.facebookUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.facebookUrl ? { opacity: 0.3 } : {}}>
+                            <a href={cafe.facebookUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.facebookUrl ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
                                 <NucleoIcon name="facebook" />
                             </a>
-                            <a href={cafe.twitterUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.twitterUrl ? { opacity: 0.3 } : {}}>
+                            <a href={cafe.twitterUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.twitterUrl ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
                                 <NucleoIcon name="twitter" />
                             </a>
                         </div>
