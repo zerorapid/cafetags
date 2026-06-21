@@ -114,8 +114,12 @@ export default function App() {
         setCafes(INITIAL_CAFES);
       }
 
-      const { data: postsData } = await supabase.from('posts').select('*');
-      setBlogs(postsData?.length ? postsData.map(transformPost) : INITIAL_BLOG_ARTICLES);
+        const { data: postsData } = await supabase
+          .from('posts').select('*').order('post_date', { ascending: false });
+        
+        if (postsData) {
+          setBlogs(postsData.map(transformPost));
+        }
 
       const { data: feedbacksData } = await supabase.from('feedbacks').select('*');
       setFeedbacks((feedbacksData || []).map(transformFeedback));

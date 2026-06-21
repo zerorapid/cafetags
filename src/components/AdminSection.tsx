@@ -594,6 +594,9 @@ export function AdminSection({
             if (import.meta.env.VITE_SUPABASE_URL) {
               const { inverseTransformCafe } = await import('../lib/transforms');
               const dbRow = inverseTransformCafe(cafe);
+              if (!editingCafe) {
+                delete dbRow.id;
+              }
               await supabase.from('cafes').upsert(dbRow);
             }
             if (editingCafe) {
