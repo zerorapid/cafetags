@@ -213,21 +213,23 @@ export function AdminCafes({ cafes, setCafes }: AdminCafesProps) {
                           <span>{cafe.celebrities ? cafe.celebrities.length : 0} Celebs</span>
                         </div>
                       </td>
-                      <td className="p-4 pr-6 text-right space-x-2">
-                        <button
-                          onClick={() => setEditingCafe(cafe)}
-                          disabled={deletingId !== null}
-                          className="bg-stone-100 hover:bg-stone-200 text-stone-950 text-[11px] font-bold px-3 py-1.5 rounded-sm transition-colors cursor-pointer disabled:opacity-50"
-                        >
-                          EDIT
-                        </button>
-                        <button
-                          onClick={() => handleDeleteCafe(cafe.id)}
-                          disabled={deletingId !== null}
-                          className="bg-red-50 hover:bg-red-100 text-red-700 text-[11px] font-bold px-3 py-1.5 rounded-sm transition-colors cursor-pointer flex items-center justify-center gap-1 min-w-[70px] disabled:opacity-50"
-                        >
-                          {deletingId === cafe.id ? <MaterialIcon name="refresh" className="animate-spin text-[12px]" /> : "DELETE"}
-                        </button>
+                      <td className="p-4 pr-6 text-right">
+                        <div className="flex items-center justify-end gap-2">
+                          <button
+                            onClick={() => setEditingCafe(cafe)}
+                            disabled={deletingId !== null}
+                            className="bg-stone-100 hover:bg-stone-200 text-stone-950 text-[10px] font-bold px-2.5 py-1.5 rounded-sm transition-colors cursor-pointer disabled:opacity-50 whitespace-nowrap"
+                          >
+                            EDIT
+                          </button>
+                          <button
+                            onClick={() => handleDeleteCafe(cafe.id)}
+                            disabled={deletingId !== null}
+                            className="bg-red-50 hover:bg-red-100 text-red-700 text-[10px] font-bold px-2.5 py-1.5 rounded-sm transition-colors cursor-pointer flex items-center justify-center gap-1 disabled:opacity-50 whitespace-nowrap"
+                          >
+                            {deletingId === cafe.id ? <MaterialIcon name="refresh" className="animate-spin text-[12px]" /> : "DELETE"}
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))}

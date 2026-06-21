@@ -34,7 +34,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
               <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-md border border-stone-200 shadow-sm">Catalog</span>
             </div>
             <h4 className="font-sans text-5xl font-black text-stone-900 mb-2 tracking-tight">{cafes.length}</h4>
-            <p className="text-sm font-bold text-stone-500 uppercase tracking-widest">Total Curated Cafes</p>
+            <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Total Curated Cafes</p>
             <div className="mt-6 pt-5 border-t border-stone-100 flex items-center gap-2 text-xs text-stone-500 font-semibold tracking-wide">
               <MaterialIcon name="star" className="text-amber-500 text-lg" />
               <span>{topCafes} Spotlit listings active</span>
@@ -53,7 +53,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
               <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-md border border-stone-200 shadow-sm">Editorial</span>
             </div>
             <h4 className="font-sans text-5xl font-black text-stone-900 mb-2 tracking-tight">{blogs.length}</h4>
-            <p className="text-sm font-bold text-stone-500 uppercase tracking-widest">Journal Columns</p>
+            <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Journal Columns</p>
             <div className="mt-6 pt-5 border-t border-stone-100 flex items-center gap-2 text-xs text-stone-500 font-semibold tracking-wide">
               <MaterialIcon name="public" className="text-green-600 text-lg" />
               <span>{publishedBlogsCount} Published / {blogs.length - publishedBlogsCount} Drafts</span>
@@ -72,7 +72,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
               <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-md border border-stone-200 shadow-sm">Integrity</span>
             </div>
             <h4 className="font-sans text-5xl font-black text-stone-900 mb-2 tracking-tight">{pendingFeedbacksCount}</h4>
-            <p className="text-sm font-bold text-stone-500 uppercase tracking-widest">Pending Reviews</p>
+            <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Pending Reviews</p>
             <div className={`mt-6 pt-5 border-t border-stone-100 flex items-center gap-2 text-xs font-semibold tracking-wide ${pendingFeedbacksCount > 0 ? 'text-red-500' : 'text-stone-500'}`}>
               {pendingFeedbacksCount > 0 ? (
                 <>

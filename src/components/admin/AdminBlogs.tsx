@@ -231,10 +231,10 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
                     <img src={blog.image} alt={blog.title} className="w-12 h-12 rounded-sm object-cover" referrerPolicy="no-referrer" />
                     <div>
                       <span className="text-[10px] text-stone-400 font-extrabold uppercase tracking-widest block font-mono">{blog.date} • {blog.readTime}</span>
-                      <h4 className="font-sans text-lg font-bold text-stone-900 leading-tight line-clamp-1">{blog.title}</h4>
+                      <h4 className="font-sans text-base font-bold text-stone-900 leading-snug line-clamp-2">{blog.title}</h4>
                     </div>
                   </div>
-                  <p className="text-stone-500 text-xs leading-relaxed line-clamp-2">{blog.excerpt}</p>
+                  <p className="text-stone-500 text-xs leading-relaxed line-clamp-3">{blog.excerpt}</p>
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-stone-100 flex justify-between items-center text-xs font-bold">

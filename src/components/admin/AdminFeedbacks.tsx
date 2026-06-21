@@ -79,7 +79,7 @@ export function AdminFeedbacks({ feedbacks, setFeedbacks }: AdminFeedbacksProps)
         <div className="space-y-4">
           {feedbacks.map(f => (
             <div key={f.id} className="bg-white border border-stone-200 rounded-lg p-6 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-              <div className="space-y-3 max-w-2xl text-xs">
+              <div className="space-y-3 flex-1 text-xs">
                 <div className="flex flex-wrap items-center gap-2.5">
                   <span className="font-bold text-stone-900 bg-[#FAF9F6] border border-stone-200 px-3 py-1 rounded-sm text-[13px]">{f.author}</span>
                   <span className="text-stone-400 font-semibold">•</span>
