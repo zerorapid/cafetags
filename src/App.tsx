@@ -105,28 +105,37 @@ export default function App() {
     }
 
     async function fetchAll() {
-      const { data: cafesData } = await supabase
-        .from('cafes').select('*, user_reviews(*)');
-        
-      if (cafesData?.length) {
-        setCafes(cafesData.map(transformCafe));
-      } else {
+      try {
+        const { data: cafesData } = await supabase.from('cafes').select('*, user_reviews(*)');
+        if (cafesData && cafesData.length > 0) setCafes(cafesData.map(transformCafe));
+        else setCafes(INITIAL_CAFES);
+      } catch (e) {
+        console.error("Cafes fetch error:", e);
         setCafes(INITIAL_CAFES);
       }
 
-        const { data: postsData } = await supabase
-          .from('posts').select('*').order('post_date', { ascending: false });
-        
-        if (postsData) {
-          setBlogs(postsData.map(transformPost));
-        }
+      try {
+        const { data: postsData } = await supabase.from('posts').select('*').order('post_date', { ascending: false });
+        if (postsData && postsData.length > 0) setBlogs(postsData.map(transformPost));
+        else setBlogs(INITIAL_BLOG_ARTICLES);
+      } catch (e) {
+        console.error("Posts fetch error:", e);
+        setBlogs(INITIAL_BLOG_ARTICLES);
+      }
 
-      const { data: feedbacksData } = await supabase.from('feedbacks').select('*');
-      setFeedbacks((feedbacksData || []).map(transformFeedback));
+      try {
+        const { data: feedbacksData } = await supabase.from('feedbacks').select('*');
+        if (feedbacksData) setFeedbacks(feedbacksData.map(transformFeedback));
+      } catch (e) {
+        console.error("Feedbacks fetch error:", e);
+      }
 
-      const { data: seoData } = await supabase
-        .from('settings').select('*').eq('key', 'seo').single();
-      if (seoData) setSeoSettings(prev => ({ ...prev, ...transformSeoSettings(seoData) }));
+      try {
+        const { data: seoData } = await supabase.from('settings').select('*').eq('key', 'seo').single();
+        if (seoData) setSeoSettings(prev => ({ ...prev, ...transformSeoSettings(seoData) }));
+      } catch (e) {
+        console.error("SEO fetch error:", e);
+      }
     }
     fetchAll();
   }, []);
