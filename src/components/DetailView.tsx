@@ -6,7 +6,7 @@ import {
   Award, Heart, Camera, PawPrint, BookOpen, UtensilsCrossed,
   Flame, Sparkles, BarChart3, MessageCircleHeart, Star, ThumbsUp,
   MapPin, Phone, Globe, Navigation, Images, CheckCircle2,
-  Instagram, Facebook, Twitter, Share2
+  Instagram, Facebook, Twitter, Share2, MessageSquare
 } from 'lucide-react';
 
 const NucleoIcon = ({ name, disabled }: { name: string, disabled?: boolean }) => {
@@ -220,14 +220,10 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 {/* MENU CARD */}
                 {cafe.featuredMenu && cafe.featuredMenu.length > 0 && (
                 <div className="menu-card-container">
-                    <div className="menu-header-section">
-                        <div className="menu-header-icon">
-                            <Coffee size={18} />
-                        </div>
-                        <div className="menu-header-content">
-                            <h1>Menu Card</h1>
-                        </div>
-                    </div>
+                    <h3 className="info-card-title">
+                        <Coffee size={22} color="var(--accent)" />
+                        Menu Card
+                    </h3>
 
                     {cafe.featuredMenu.length > 0 && (
                     <>
@@ -327,44 +323,42 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
                 {/* REVIEWS */}
                 {cafe.userReviews && cafe.userReviews.length > 0 && (
-                <div>
-                    <div className="section-header">
-                        <h2 className="section-title">
-                            <MessageCircleHeart size={28} />
-                            {cafe.userReviews.length} Reviews
-                        </h2>
+                <div className="reviews-container">
+                    <div className="reviews-header">
+                        <MessageSquare color="#d35400" size={24} />
+                        <h2>{cafe.userReviews.length} Reviews</h2>
                     </div>
 
-                    <div className="reviews-summary">
-                        <div className="overall-rating">
-                            <div className="overall-score">{avgRating}</div>
-                            <div className="overall-stars">
-                                <Star /> <Star /> <Star /> <Star /> <Star />
+                    <div className="rating-summary">
+                        <div className="rating-number">{avgRating}</div>
+                        <div>
+                            <div className="stars">
+                                <Star fill="#f59e0b" stroke="none" size={16} />
+                                <Star fill="#f59e0b" stroke="none" size={16} />
+                                <Star fill="#f59e0b" stroke="none" size={16} />
+                                <Star fill="#f59e0b" stroke="none" size={16} />
+                                <Star fill="#f59e0b" stroke="none" size={16} />
                             </div>
-                            <div className="overall-count">{cafe.userReviews.length} reviews</div>
+                            <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>{cafe.userReviews.length} reviews</div>
                         </div>
                     </div>
 
-                    <div className="reviews-list">
-                        {cafe.userReviews.map((review, idx) => (
-                        <div key={idx} className="review-card">
-                            <div className="review-header">
-                                <div className="reviewer-info">
-                                    <div className="reviewer-avatar">{review.author.charAt(0)}</div>
-                                    <div className="reviewer-details">
-                                        <h4>{review.author}</h4>
-                                        <div className="reviewer-meta">{review.role || 'Guest'} · {review.date}</div>
-                                    </div>
+                    {cafe.userReviews.map((review, idx) => (
+                    <div key={idx} className="review-card">
+                        <div className="user-info">
+                            <div className="user-profile">
+                                <div className="avatar" style={{ background: idx % 2 === 0 ? '#0f172a' : '#64748b' }}>{review.author.charAt(0)}</div>
+                                <div className="user-details">
+                                    <h4>{review.author}</h4>
+                                    <p>{review.role || 'Guest'} • {review.date}</p>
                                 </div>
-                                <div className="review-rating"><Star /><span>{review.rating}.0</span></div>
                             </div>
-                            <p className="review-text">{review.text}</p>
-                            <div className="review-actions">
-                                <div className="review-action"><ThumbsUp size={18} /><span>Helpful</span></div>
-                            </div>
+                            <div className="badge"><Star size={12} fill="currentColor" stroke="none" /> {review.rating}.0</div>
                         </div>
-                        ))}
+                        <p className="review-text">{review.text}</p>
+                        <div className="helpful"><ThumbsUp size={16} /> Helpful</div>
                     </div>
+                    ))}
                 </div>
                 )}
             </div>
