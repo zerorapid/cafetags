@@ -354,7 +354,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                                     <p>{review.role || 'Guest'} • {review.date}</p>
                                 </div>
                             </div>
-                            <div className="badge"><Star size={12} fill="currentColor" stroke="none" /> {review.rating}.0</div>
+                            <div className="badge"><Star size={12} fill="currentColor" stroke="none" /> {review.rating % 1 === 0 ? review.rating + ".0" : review.rating}</div>
                         </div>
                         <p className="review-text">{review.text}</p>
                         <div className="helpful"><ThumbsUp size={16} /> Helpful</div>
