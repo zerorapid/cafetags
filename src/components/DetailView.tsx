@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Cafe } from '../types';
 import './DetailView.css';
+import { OptimizedImage } from './OptimizedImage';
 import { 
   ArrowLeft, Coffee, Clock, Accessibility, Store, 
   Award, Heart, Camera, PawPrint, BookOpen, UtensilsCrossed,
@@ -103,7 +104,9 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
         {/* HERO SECTION */}
         <section className="hero-section">
-            <div className="hero-bg" style={{ backgroundImage: `url('${cafe.image}')` }}></div>
+            <div className="hero-bg overflow-hidden">
+                <OptimizedImage src={cafe.image} alt={cafe.name} className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
+            </div>
             <div className="hero-overlay"></div>
             
             <div className="hero-content">
@@ -172,19 +175,24 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             </div>
             
             <div className="bento-grid">
-                <div className="bento-item area-hero" style={{ backgroundImage: `url('${getImg(0)}')` }}>
+                <div className="bento-item area-hero relative">
+                    <OptimizedImage src={getImg(0)} alt="Ambiance" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Ambiance</span>
                 </div>
-                <div className="bento-item area-tall" style={{ backgroundImage: `url('${getImg(1)}')` }}>
+                <div className="bento-item area-tall relative">
+                    <OptimizedImage src={getImg(1)} alt="Interior" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Interior</span>
                 </div>
-                <div className="bento-item area-3" style={{ backgroundImage: `url('${getImg(2)}')` }}>
+                <div className="bento-item area-3 relative">
+                    <OptimizedImage src={getImg(2)} alt="Details" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Details</span>
                 </div>
-                <div className="bento-item area-4" style={{ backgroundImage: `url('${getImg(3)}')` }}>
+                <div className="bento-item area-4 relative">
+                    <OptimizedImage src={getImg(3)} alt="Food & Drinks" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Food & Drinks</span>
                 </div>
-                <div className="bento-item area-5" style={{ backgroundImage: `url('${getImg(4)}')` }}>
+                <div className="bento-item area-5 relative">
+                    <OptimizedImage src={getImg(4)} alt="More" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">More</span>
                 </div>
             </div>
