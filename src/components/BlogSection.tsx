@@ -54,7 +54,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -15 }}
-        className="max-w-4xl mx-auto px-6 md:px-12 py-12"
+        className="font-dm-sans max-w-4xl mx-auto px-6 md:px-12 py-12"
       >
         {/* Back Link */}
         <button
@@ -131,7 +131,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
+    <div className="font-dm-sans max-w-7xl mx-auto px-6 md:px-12 py-12">
       {/* Blog Header Title */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
         <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest block font-mono">ESTABLISHED JUN 2026</span>
