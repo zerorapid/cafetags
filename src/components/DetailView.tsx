@@ -376,7 +376,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         <div className="icon-box"><MapPin size={20} /></div>
                         <div className="info-content">
                             <h4>Address</h4>
-                            <p>{cafe.address || cafe.area ? `${cafe.address ? cafe.address + ', ' : ''}${cafe.area ? cafe.area + ', ' : ''}Hyderabad` : '123 Lorem Ipsum Street, Cafe District, Hyderabad'}</p>
+                            <p>{cafe.address ? cafe.address : (cafe.area ? `${cafe.area}, Hyderabad` : '123 Lorem Ipsum Street, Cafe District, Hyderabad')}</p>
                         </div>
                     </div>
                     
