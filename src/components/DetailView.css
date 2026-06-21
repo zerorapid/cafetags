@@ -425,6 +425,10 @@
 }
 
 /* INFO CARDS */
+.main-content {
+    min-width: 0;
+}
+
 .info-card {
     background: var(--bg-white);
     border: 1px solid var(--border);
