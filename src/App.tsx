@@ -442,6 +442,7 @@ export default function App() {
                             user === "cafeowner" &&
                             pwd === "hydcafe2026"
                           ) {
+                            setIsAuthenticated(true);
                             return true;
                           }
 
@@ -450,6 +451,7 @@ export default function App() {
                             console.error("Supabase Auth Error:", error.message);
                             return false;
                           }
+                          setIsAuthenticated(true);
                           return true;
                         } catch (error) {
                           console.error("Auth Error:", error);
