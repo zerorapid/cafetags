@@ -16,7 +16,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
   return (
     <div className="space-y-8 animate-fade-in">
       <div className="space-y-1 border-b border-stone-200 pb-5">
-        <h3 className="font-serif text-3xl font-normal text-stone-900 italic tracking-wide">Command Center</h3>
+        <h3 className="font-sans text-3xl font-normal text-stone-900 italic tracking-wide">Command Center</h3>
         <p className="text-stone-550 text-xs font-sans">
           Overview of CafeTags ecosystem. Monitor listings, content, and community interactions.
         </p>
@@ -33,7 +33,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
               </div>
               <span className="text-stone-400 font-mono text-[10px] font-bold uppercase tracking-widest bg-stone-50 px-2 py-1 rounded-sm border border-stone-100">Catalog</span>
             </div>
-            <h4 className="font-serif text-4xl font-bold text-stone-900 mb-1">{cafes.length}</h4>
+            <h4 className="font-sans text-4xl font-bold text-stone-900 mb-1">{cafes.length}</h4>
             <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Total Curated Cafes</p>
             <div className="mt-4 pt-4 border-t border-stone-100 flex items-center gap-1.5 text-[10px] text-stone-500 font-medium">
               <MaterialIcon name="star" className="text-amber-500 text-[12px]" />
@@ -52,7 +52,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
               </div>
               <span className="text-stone-400 font-mono text-[10px] font-bold uppercase tracking-widest bg-stone-50 px-2 py-1 rounded-sm border border-stone-100">Editorial</span>
             </div>
-            <h4 className="font-serif text-4xl font-bold text-stone-900 mb-1">{blogs.length}</h4>
+            <h4 className="font-sans text-4xl font-bold text-stone-900 mb-1">{blogs.length}</h4>
             <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Journal Columns</p>
             <div className="mt-4 pt-4 border-t border-stone-100 flex items-center gap-1.5 text-[10px] text-stone-500 font-medium">
               <MaterialIcon name="public" className="text-green-600 text-[12px]" />
@@ -71,7 +71,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
               </div>
               <span className="text-stone-400 font-mono text-[10px] font-bold uppercase tracking-widest bg-stone-50 px-2 py-1 rounded-sm border border-stone-100">Community</span>
             </div>
-            <h4 className="font-serif text-4xl font-bold text-stone-900 mb-1">{pendingFeedbacksCount}</h4>
+            <h4 className="font-sans text-4xl font-bold text-stone-900 mb-1">{pendingFeedbacksCount}</h4>
             <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Pending Reviews</p>
             <div className="mt-4 pt-4 border-t border-stone-100 flex items-center gap-1.5 text-[10px] text-stone-500 font-medium">
               {pendingFeedbacksCount > 0 ? (

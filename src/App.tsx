@@ -380,13 +380,15 @@ export default function App() {
       <div className="flex-1 flex flex-col justify-between">
         <div>
           {/* REFRACTION NAVIGATION BAR */}
-          <Navbar 
-            isAuthenticated={isAuthenticated} 
-            onLogout={() => {
-              supabase.auth.signOut();
-              setIsAuthenticated(false);
-            }} 
-          />
+          {!location.pathname.startsWith('/admin') && (
+            <Navbar 
+              isAuthenticated={isAuthenticated} 
+              onLogout={() => {
+                supabase.auth.signOut();
+                setIsAuthenticated(false);
+              }} 
+            />
+          )}
 
           <AnimatePresence mode="wait">
               {/* @ts-ignore React Router v6 types miss the implicit key prop but AnimatePresence requires it */}
@@ -429,13 +431,25 @@ export default function App() {
                 } />
 
                 <Route path="/admin" element={
-                  !isAuthenticated ? (
-                    <motion.div
-                      key="login_panel"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
+                  <div className="admin-route-wrapper">
+                    <div className="md:hidden flex items-center justify-center min-h-screen bg-stone-950 p-6 text-center">
+                      <div className="max-w-sm">
+                        <MaterialIcon name="desktop_windows" className="text-4xl text-amber-500 mb-4" />
+                        <h2 className="font-serif text-2xl text-white mb-2">Desktop Required</h2>
+                        <p className="text-stone-400 text-sm font-sans">
+                          Please use a desktop browser to login to the admin panel. The management dashboard is not optimized for mobile viewports.
+                        </p>
+                        <button onClick={() => navigate('/')} className="mt-6 px-6 py-2 bg-amber-600 text-white rounded-md text-xs font-bold uppercase tracking-widest">Return Home</button>
+                      </div>
+                    </div>
+                    <div className="hidden md:block">
+                      {!isAuthenticated ? (
+                        <motion.div
+                          key="login_panel"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
                       <LoginScreen onLogin={async (user, pwd) => {
                         try {
                           // Allow local .env credentials as a fallback
@@ -478,7 +492,9 @@ export default function App() {
                         setSeoSettings={setSeoSettings}
                       />
                     </motion.div>
-                  )
+                  )}
+                  </div>
+                  </div>
                 } />
 
                 <Route path="/" element={
@@ -577,7 +593,7 @@ export default function App() {
         </div>
 
         {/* COMPACT STYLISH FOOTER */}
-        <Footer />
+        {!location.pathname.startsWith('/admin') && <Footer />}
       </div>
       </div>
     </ToastProvider>

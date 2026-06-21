@@ -32,7 +32,7 @@ export function AdminSeo({ seoSettings, setSeoSettings }: AdminSeoProps) {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 text-left animate-fade-in">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-stone-200 pb-5">
         <div className="space-y-1">
-          <h3 className="font-serif text-3xl font-normal text-stone-900 italic tracking-wide">SEO & Site Integrations</h3>
+          <h3 className="font-sans text-3xl font-normal text-stone-900 italic tracking-wide">SEO & Site Integrations</h3>
           <p className="text-stone-550 text-xs font-sans">
             Curate search result rankings, social media graph previews, and configure analytics with search console tags.
           </p>
@@ -59,7 +59,7 @@ export function AdminSeo({ seoSettings, setSeoSettings }: AdminSeoProps) {
           <div className="bg-white border border-stone-200 rounded-lg p-6 md:p-8 space-y-5 shadow-3xs">
             <div className="flex items-center gap-2.5 border-b border-stone-100 pb-3">
               <MaterialIcon name="language" className="text-amber-700 text-xl" />
-              <h4 className="font-serif text-lg font-bold text-stone-900">Core Search Metadata</h4>
+              <h4 className="font-sans text-lg font-bold text-stone-900">Core Search Metadata</h4>
             </div>
 
             <div className="space-y-1">
@@ -92,7 +92,7 @@ export function AdminSeo({ seoSettings, setSeoSettings }: AdminSeoProps) {
           <div className="bg-white border border-stone-200 rounded-lg p-6 md:p-8 space-y-5 shadow-3xs">
             <div className="flex items-center gap-2.5 border-b border-stone-100 pb-3">
               <MaterialIcon name="image" className="text-amber-700 text-xl" />
-              <h4 className="font-serif text-lg font-bold text-stone-900">Brand Assets & Previews</h4>
+              <h4 className="font-sans text-lg font-bold text-stone-900">Brand Assets & Previews</h4>
             </div>
 
             <div className="space-y-1">
@@ -152,7 +152,7 @@ export function AdminSeo({ seoSettings, setSeoSettings }: AdminSeoProps) {
           <div className="bg-white border border-stone-200 rounded-lg p-6 md:p-8 space-y-5 shadow-3xs">
             <div className="flex items-center gap-2.5 border-b border-stone-100 pb-3">
               <MaterialIcon name="analytics" className="text-amber-700 text-xl" />
-              <h4 className="font-serif text-lg font-bold text-stone-900">Google Engine Integrations</h4>
+              <h4 className="font-sans text-lg font-bold text-stone-900">Google Engine Integrations</h4>
             </div>
 
             <div className="space-y-1">
@@ -240,7 +240,7 @@ export function AdminSeo({ seoSettings, setSeoSettings }: AdminSeoProps) {
                 {watchSocialImage ? (
                   <img src={watchSocialImage} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="site card visual" referrerPolicy="no-referrer" />
                 ) : (
-                  <div className="p-4 text-center text-stone-400 font-serif italic text-sm flex flex-col items-center gap-2">
+                  <div className="p-4 text-center text-stone-400 font-sans italic text-sm flex flex-col items-center gap-2">
                     <MaterialIcon name="image_not_supported" className="text-3xl text-stone-300" />
                     Specify a social preview image
                   </div>

@@ -203,7 +203,7 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
       {!editingBlog && !isAddingBlog ? (
         <div className="space-y-6">
           <div className="flex justify-between items-center">
-            <h3 className="font-serif text-xl font-bold text-stone-950 italic">Journal Columns Vault ({blogs.length})</h3>
+            <h3 className="font-sans text-xl font-bold text-stone-950 italic">Journal Columns Vault ({blogs.length})</h3>
             <div className="flex gap-3">
               <input type="file" accept=".csv" ref={blogFileInputRef} onChange={handleBlogCsvUpload} className="hidden" />
               <button
@@ -231,7 +231,7 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
                     <img src={blog.image} alt={blog.title} className="w-12 h-12 rounded-sm object-cover" referrerPolicy="no-referrer" />
                     <div>
                       <span className="text-[10px] text-stone-400 font-extrabold uppercase tracking-widest block font-mono">{blog.date} • {blog.readTime}</span>
-                      <h4 className="font-serif text-lg font-bold text-stone-900 leading-tight line-clamp-1">{blog.title}</h4>
+                      <h4 className="font-sans text-lg font-bold text-stone-900 leading-tight line-clamp-1">{blog.title}</h4>
                     </div>
                   </div>
                   <p className="text-stone-500 text-xs leading-relaxed line-clamp-2">{blog.excerpt}</p>
@@ -261,7 +261,7 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
       ) : (
         <form onSubmit={handleSaveBlog} className="bg-white border border-stone-200 rounded-lg p-6 md:p-8 space-y-5 shadow-sm">
           <div className="flex justify-between items-center border-b border-stone-200 pb-4">
-            <h3 className="font-serif text-xl font-bold text-stone-950">
+            <h3 className="font-sans text-xl font-bold text-stone-950">
               {editingBlog ? `Modify Column: ${editingBlog.title}` : "Compose New Journal Column"}
             </h3>
             <button

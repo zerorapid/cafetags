@@ -151,7 +151,7 @@ export function AdminCafes({ cafes, setCafes }: AdminCafesProps) {
       {!editingCafe && !isAddingCafe ? (
         <div className="space-y-6">
           <div className="flex justify-between items-center">
-            <h3 className="font-serif text-xl font-bold text-stone-950 italic">Home Listings Vault ({cafes.length})</h3>
+            <h3 className="font-sans text-xl font-bold text-stone-950 italic">Home Listings Vault ({cafes.length})</h3>
             <div className="flex gap-3">
               <input type="file" accept=".csv" ref={fileInputRef} onChange={handleCafeCsvUpload} className="hidden" />
               <button
@@ -197,7 +197,7 @@ export function AdminCafes({ cafes, setCafes }: AdminCafesProps) {
                         </div>
                       </td>
                       <td className="p-4 font-semibold text-stone-700">{cafe.area}</td>
-                      <td className="p-4 italic text-stone-600 font-serif font-bold">{cafe.signature}</td>
+                      <td className="p-4 italic text-stone-600 font-sans font-bold">{cafe.signature}</td>
                       <td className="p-4 font-mono text-stone-500">
                         {cafe.founded} AD
                         <div className="mt-1">

@@ -59,7 +59,7 @@ export function AdminFeedbacks({ feedbacks, setFeedbacks }: AdminFeedbacksProps)
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="font-serif text-xl font-bold text-stone-950 italic">User Feedback Submissions Chamber</h3>
+          <h3 className="font-sans text-xl font-bold text-stone-950 italic">User Feedback Submissions Chamber</h3>
           <p className="text-stone-400 text-xs mt-1">
             To maintain CafeTags pristine quality, general community opinions are held in check here. Owners can promote them to official influencer reviews.
           </p>
@@ -72,7 +72,7 @@ export function AdminFeedbacks({ feedbacks, setFeedbacks }: AdminFeedbacksProps)
       {feedbacks.length === 0 ? (
         <div className="text-center py-20 border border-dashed border-stone-250 bg-white rounded-lg max-w-xl mx-auto shadow-3xs p-6">
           <MaterialIcon name="verified_user" className="text-5xl text-stone-300 mb-2" />
-          <p className="font-serif text-lg text-stone-900 italic">Integrity logs are clean</p>
+          <p className="font-sans text-lg text-stone-900 italic">Integrity logs are clean</p>
           <p className="text-stone-400 text-xs mt-1">No user feedback logs reside in the queue currently.</p>
         </div>
       ) : (
