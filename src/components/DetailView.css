@@ -59,7 +59,7 @@
 .lookbook-container .main-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: var(--space-6) var(--space-4) var(--space-8);
+    padding: var(--space-6) var(--space-4) 80px var(--space-4);
 }
 
 /* HERO SECTION */
@@ -1114,10 +1114,10 @@
 }
 
 @media (min-width: 768px) {
-    .lookbook-container .main-container { padding: var(--space-8); }
+    .lookbook-container .main-container { padding: var(--space-8) var(--space-8) 120px var(--space-8); }
     .hero-section { height: 580px; }
     .content-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
-    .sidebar { position: sticky; top: 100px; }
+    .sidebar { position: sticky; top: 100px; align-self: start; }
     .about-highlights { grid-template-columns: repeat(4, 1fr); }
     .metrics-grid { grid-template-columns: repeat(5, 1fr); }
 }
