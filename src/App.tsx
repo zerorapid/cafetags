@@ -437,6 +437,15 @@ export default function App() {
                     >
                       <LoginScreen onLogin={async (user, pwd) => {
                         try {
+                          // Allow local .env credentials as a fallback
+                          if (
+                            import.meta.env.VITE_ADMIN_USERNAME &&
+                            user === import.meta.env.VITE_ADMIN_USERNAME &&
+                            pwd === import.meta.env.VITE_ADMIN_PASSWORD
+                          ) {
+                            return true;
+                          }
+
                           const { error } = await supabase.auth.signInWithPassword({ email: user, password: pwd });
                           if (error) {
                             console.error("Supabase Auth Error:", error.message);
