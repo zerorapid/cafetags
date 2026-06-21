@@ -1,7 +1,60 @@
 import React, { useState, useEffect } from 'react';
+import { useForm, useFieldArray, Controller } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 import { Cafe, CafeMenuItem } from '../types';
 import './CafeForm.css';
 import { ImageUploadField } from './ImageUploadField';
+
+const cafeSchema = z.object({
+  name: z.string().min(2, 'Name is required'),
+  area: z.string().min(2, 'Area is required'),
+  founded: z.string().min(4, 'Founded year is required'),
+  icon: z.string().min(2, 'Icon is required'),
+  logo: z.string().optional(),
+  address: z.string().min(5, 'Address is required'),
+  mapLink: z.string().optional(),
+  directionsTip: z.string().optional(),
+  phone: z.string().optional(),
+  email: z.string().optional(),
+  website: z.string().optional(),
+  timings: z.string().optional(),
+  socialLink: z.string().optional(),
+  facebookUrl: z.string().optional(),
+  twitterUrl: z.string().optional(),
+  aestheticType: z.string().min(2, 'Aesthetic Type is required'),
+  vibe: z.string().min(10, 'Vibe analysis is required'),
+  curatorNote: z.string().optional(),
+  vibeScoresInput: z.string().optional(),
+  neighbourhoodGuide: z.string().optional(),
+  crowd: z.string().optional(),
+  discounts: z.string().optional(),
+  signature: z.string().min(2, 'Signature brew is required'),
+  bookingUrl: z.string().optional(),
+  image: z.string().min(5, 'Main image is required'),
+  videoUrl: z.string().optional(),
+  status: z.enum(['open', 'closed', 'renovating', 'shutdown']).default('open'),
+  dineIn: z.boolean().default(true),
+  takeaway: z.boolean().default(true),
+  onlineOrder: z.boolean().default(true),
+  selfDelivery: z.boolean().default(false),
+  isFeaturedBanner: z.boolean().default(false),
+  bannerCatchyLine: z.string().optional(),
+  isNewLaunch: z.boolean().default(false),
+  newLaunchCatchyline: z.string().optional(),
+  
+  // Arrays managed via local state or custom handlers
+  tags: z.array(z.string()).optional(),
+  facilities: z.array(z.string()).optional(),
+  celebrities: z.array(z.string()).optional(),
+  featuredMenu: z.any().optional(),
+  menuImages: z.array(z.string()).optional(),
+  moreImages: z.array(z.string()).optional(),
+  vibeScores: z.any().optional(),
+  userReviews: z.any().optional()
+});
+
+type CafeFormValues = z.infer<typeof cafeSchema>;
 
 interface CafeFormProps {
   editingCafe: Cafe | null;
@@ -12,26 +65,96 @@ interface CafeFormProps {
 export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [activeSection, setActiveSection] = useState('section-1');
 
-  // Basic Details
-  const [name, setName] = useState('');
-  const [area, setArea] = useState('');
-  const [founded, setFounded] = useState('2026');
-  const [icon, setIcon] = useState('local_cafe');
-  const [logo, setLogo] = useState('');
-  const [address, setAddress] = useState('');
-  const [mapLink, setMapLink] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [website, setWebsite] = useState('');
-  const [socialLink, setSocialLink] = useState('');
-  const [facebookUrl, setFacebookUrl] = useState('');
-  const [twitterUrl, setTwitterUrl] = useState('');
-  
-  // Timings state
-  const [timings, setTimings] = useState('8:00 AM - 10:00 PM Everyday');
+  // Timings helper state
   const [openTime, setOpenTime] = useState('08:00');
   const [closeTime, setCloseTime] = useState('22:00');
   const [timingDays, setTimingDays] = useState('Everyday');
+
+  // Tags, Facilities, Celebs
+  const [tagInput, setTagInput] = useState('');
+  const [facilityInput, setFacilityInput] = useState('');
+  const [celebInput, setCelebInput] = useState('');
+
+  // Menu helper state
+  const [menuTitle, setMenuTitle] = useState('');
+  const [menuPrice, setMenuPrice] = useState('');
+  const [menuCategory, setMenuCategory] = useState('Brews');
+  const [menuSpecial, setMenuSpecial] = useState(false);
+  const [menuItemImage, setMenuItemImage] = useState('');
+
+  // Media arrays
+  const [gallery1, setGallery1] = useState('');
+  const [gallery2, setGallery2] = useState('');
+  const [gallery3, setGallery3] = useState('');
+  const [gallery4, setGallery4] = useState('');
+  const [gallery5, setGallery5] = useState('');
+
+  const [menu1, setMenu1] = useState('');
+  const [menu2, setMenu2] = useState('');
+  const [menu3, setMenu3] = useState('');
+  const [menu4, setMenu4] = useState('');
+  const [menu5, setMenu5] = useState('');
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    setValue,
+    watch,
+    formState: { errors, isSubmitting }
+  } = useForm<any>({
+    resolver: zodResolver(cafeSchema) as any,
+    defaultValues: editingCafe ? {
+      ...editingCafe,
+      vibeScoresInput: Array.isArray(editingCafe.vibeScores) ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '',
+    } : {
+      founded: '2026',
+      icon: 'local_cafe',
+      status: 'open',
+      dineIn: true,
+      takeaway: true,
+      onlineOrder: true,
+      selfDelivery: false,
+      isFeaturedBanner: false,
+      isNewLaunch: false,
+      timings: '8:00 AM - 10:00 PM Everyday',
+      tags: [],
+      facilities: ['Wi-Fi', 'Power Outlets'],
+      celebrities: [],
+      featuredMenu: []
+    }
+  });
+
+  const watchDineIn = watch('dineIn');
+  const watchTakeaway = watch('takeaway');
+  const watchOnlineOrder = watch('onlineOrder');
+  const watchSelfDelivery = watch('selfDelivery');
+  const watchIsFeaturedBanner = watch('isFeaturedBanner');
+  const watchIsNewLaunch = watch('isNewLaunch');
+  const watchTags = watch('tags') || [];
+  const watchFacilities = watch('facilities') || [];
+  const watchCelebrities = watch('celebrities') || [];
+  const watchFeaturedMenu = watch('featuredMenu') || [];
+  const watchImage = watch('image');
+
+  useEffect(() => {
+    if (editingCafe) {
+      if (Array.isArray(editingCafe.moreImages)) {
+        setGallery1(editingCafe.moreImages[0] || '');
+        setGallery2(editingCafe.moreImages[1] || '');
+        setGallery3(editingCafe.moreImages[2] || '');
+        setGallery4(editingCafe.moreImages[3] || '');
+        setGallery5(editingCafe.moreImages[4] || '');
+      }
+      if (Array.isArray(editingCafe.menuImages)) {
+        setMenu1(editingCafe.menuImages[0] || '');
+        setMenu2(editingCafe.menuImages[1] || '');
+        setMenu3(editingCafe.menuImages[2] || '');
+        setMenu4(editingCafe.menuImages[3] || '');
+        setMenu5(editingCafe.menuImages[4] || '');
+      }
+    }
+  }, [editingCafe]);
 
   const handleTimeChange = (type: 'open' | 'close' | 'days', val: string) => {
     let newOpen = openTime;
@@ -51,153 +174,29 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       return `${hour}:${m} ${ampm}`;
     };
 
-    setTimings(`${formatTime(newOpen)} - ${formatTime(newClose)} ${newDays}`);
+    setValue('timings', `${formatTime(newOpen)} - ${formatTime(newClose)} ${newDays}`);
   };
 
-  // Aesthetic
-  const [aestheticType, setAestheticType] = useState('');
-  const [vibe, setVibe] = useState('');
-  const [crowd, setCrowd] = useState('');
-  const [discounts, setDiscounts] = useState('');
-  const [signature, setSignature] = useState('');
-  const [bookingUrl, setBookingUrl] = useState('');
-  const [image, setImage] = useState('');
-
-  // Services
-  const [dineIn, setDineIn] = useState(true);
-  const [takeaway, setTakeaway] = useState(true);
-  const [onlineOrder, setOnlineOrder] = useState(true);
-  const [selfDelivery, setSelfDelivery] = useState(false);
-  const [status, setStatus] = useState<'open' | 'closed' | 'renovating' | 'shutdown'>('open');
-
-  // Spotlights
-  const [isFeaturedBanner, setIsFeaturedBanner] = useState(false);
-  const [isNewLaunch, setIsNewLaunch] = useState(false);
-
-  // Tags
-  const [tags, setTags] = useState<string[]>([]);
-  const [tagInput, setTagInput] = useState('');
-
-  const [facilities, setFacilities] = useState<string[]>(['Wi-Fi', 'Power Outlets']);
-  const [facilityInput, setFacilityInput] = useState('');
-
-  const [celebrities, setCelebrities] = useState<string[]>([]);
-  const [celebInput, setCelebInput] = useState('');
-
-  // Menu
-  const [menuItems, setMenuItems] = useState<CafeMenuItem[]>([]);
-  const [menuTitle, setMenuTitle] = useState('');
-  const [menuPrice, setMenuPrice] = useState('');
-  const [menuCategory, setMenuCategory] = useState('Brews');
-  const [menuSpecial, setMenuSpecial] = useState(false);
-  const [menuItemImage, setMenuItemImage] = useState('');
-  // Menu URLs (1 to 5)
-  const [menu1, setMenu1] = useState('');
-  const [menu2, setMenu2] = useState('');
-  const [menu3, setMenu3] = useState('');
-  const [menu4, setMenu4] = useState('');
-  const [menu5, setMenu5] = useState('');
-
-  // Gallery URLs (1 to 5)
-  const [gallery1, setGallery1] = useState('');
-  const [gallery2, setGallery2] = useState('');
-  const [gallery3, setGallery3] = useState('');
-  const [gallery4, setGallery4] = useState('');
-  const [gallery5, setGallery5] = useState('');
-
-  // New UX Fields
-  const [vibeScoresInput, setVibeScoresInput] = useState('');
-  const [neighbourhoodGuide, setNeighbourhoodGuide] = useState('');
-  const [curatorNote, setCuratorNote] = useState('');
-  const [directionsTip, setDirectionsTip] = useState('');
-  const [videoUrl, setVideoUrl] = useState('');
-  const [bannerCatchyLine, setBannerCatchyLine] = useState('');
-  const [newLaunchCatchyline, setNewLaunchCatchyline] = useState('');
-
-  useEffect(() => {
-    if (editingCafe) {
-      setName(editingCafe.name || '');
-      setArea(editingCafe.area || '');
-      setFounded(editingCafe.founded || '2026');
-      setIcon(editingCafe.icon || 'local_cafe');
-      setLogo(editingCafe.logo || '');
-      setAddress(editingCafe.address || '');
-      setMapLink(editingCafe.mapLink || '');
-      setPhone(editingCafe.phone || '');
-      setEmail(editingCafe.email || '');
-      setWebsite(editingCafe.website || '');
-      setSocialLink(editingCafe.socialLink || '');
-      setFacebookUrl(editingCafe.facebookUrl || '');
-      setTwitterUrl(editingCafe.twitterUrl || '');
-      setTimings(editingCafe.timings || '');
-      
-      setAestheticType(editingCafe.aestheticType || '');
-      setVibe(editingCafe.vibe || '');
-      setCuratorNote(editingCafe.curatorNote || '');
-      setNeighbourhoodGuide(editingCafe.neighbourhoodGuide || '');
-      setVibeScoresInput(Array.isArray(editingCafe.vibeScores) ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '');
-      setCrowd(editingCafe.crowd || '');
-      setDiscounts(editingCafe.discounts || '');
-      setSignature(editingCafe.signature || '');
-      setBookingUrl(editingCafe.bookingUrl || '');
-      setImage(editingCafe.image || '');
-      setVideoUrl(editingCafe.videoUrl || '');
-      setDirectionsTip(editingCafe.directionsTip || '');
-
-      setDineIn(editingCafe.dineIn ?? true);
-      setTakeaway(editingCafe.takeaway ?? true);
-      setOnlineOrder(editingCafe.onlineOrder ?? true);
-      setSelfDelivery(editingCafe.selfDelivery ?? false);
-      setStatus(editingCafe.status || 'open');
-
-      setIsFeaturedBanner(editingCafe.isFeaturedBanner ?? false);
-      setBannerCatchyLine(editingCafe.bannerCatchyLine || '');
-      setIsNewLaunch(editingCafe.isNewLaunch ?? false);
-      setNewLaunchCatchyline(editingCafe.newLaunchCatchyline || '');
-
-      setTags(Array.isArray(editingCafe.tags) ? editingCafe.tags : []);
-      setFacilities(Array.isArray(editingCafe.facilities) ? editingCafe.facilities : []);
-      setCelebrities(Array.isArray(editingCafe.celebrities) ? editingCafe.celebrities : []);
-      setMenuItems(Array.isArray(editingCafe.featuredMenu) ? editingCafe.featuredMenu : []);
-      
-      if (Array.isArray(editingCafe.menuImages)) {
-        setMenu1(editingCafe.menuImages[0] || '');
-        setMenu2(editingCafe.menuImages[1] || '');
-        setMenu3(editingCafe.menuImages[2] || '');
-        setMenu4(editingCafe.menuImages[3] || '');
-        setMenu5(editingCafe.menuImages[4] || '');
-      }
-
-      if (Array.isArray(editingCafe.moreImages)) {
-        setGallery1(editingCafe.moreImages[0] || '');
-        setGallery2(editingCafe.moreImages[1] || '');
-        setGallery3(editingCafe.moreImages[2] || '');
-        setGallery4(editingCafe.moreImages[3] || '');
-        setGallery5(editingCafe.moreImages[4] || '');
-      }
-    }
-  }, [editingCafe]);
-
-  const handleAddTag = (e: React.MouseEvent) => {
+  const handleAddTag = (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();
-    if (tagInput && !tags.includes(tagInput)) {
-      setTags([...tags, tagInput]);
+    if (tagInput && !watchTags.includes(tagInput)) {
+      setValue('tags', [...watchTags, tagInput]);
       setTagInput('');
     }
   };
 
-  const handleAddFacility = (e: React.MouseEvent) => {
+  const handleAddFacility = (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();
-    if (facilityInput && !facilities.includes(facilityInput)) {
-      setFacilities([...facilities, facilityInput]);
+    if (facilityInput && !watchFacilities.includes(facilityInput)) {
+      setValue('facilities', [...watchFacilities, facilityInput]);
       setFacilityInput('');
     }
   };
 
-  const handleAddCeleb = (e: React.MouseEvent) => {
+  const handleAddCeleb = (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();
-    if (celebInput && !celebrities.includes(celebInput)) {
-      setCelebrities([...celebrities, celebInput]);
+    if (celebInput && !watchCelebrities.includes(celebInput)) {
+      setValue('celebrities', [...watchCelebrities, celebInput]);
       setCelebInput('');
     }
   };
@@ -205,7 +204,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const handleAddMenuItem = (e: React.MouseEvent) => {
     e.preventDefault();
     if (menuTitle && menuPrice) {
-      setMenuItems([...menuItems, { name: menuTitle, price: menuPrice, category: menuCategory, isSpecial: menuSpecial, image: menuItemImage }]);
+      setValue('featuredMenu', [...watchFeaturedMenu, { name: menuTitle, price: menuPrice, category: menuCategory, isSpecial: menuSpecial, image: menuItemImage }]);
       setMenuTitle('');
       setMenuPrice('');
       setMenuSpecial(false);
@@ -213,27 +212,25 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: CafeFormValues) => {
     const moreImages = [gallery1, gallery2, gallery3, gallery4, gallery5].map(s => s.trim()).filter(Boolean);
     const menuImages = [menu1, menu2, menu3, menu4, menu5].map(s => s.trim()).filter(Boolean);
 
-    const parsedVibeScores = vibeScoresInput.split(',')
-      .map(s => s.trim())
-      .filter(Boolean)
-      .map(s => {
-        const parts = s.split(':');
-        return { label: parts[0]?.trim() || '', score: parseFloat(parts[1]) || 0 };
-      });
+    let parsedVibeScores: {label: string, score: number}[] = [];
+    if (data.vibeScoresInput) {
+      parsedVibeScores = data.vibeScoresInput.split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+        .map(s => {
+          const parts = s.split(':');
+          return { label: parts[0]?.trim() || '', score: parseFloat(parts[1]) || 0 };
+        });
+    }
 
     const cafeData: any = {
-      name, area, founded, icon, logo, address, mapLink, phone, email, website, socialLink, facebookUrl, twitterUrl, timings,
-      aestheticType, vibe, curatorNote, neighbourhoodGuide, crowd, discounts, signature, bookingUrl, image, videoUrl, directionsTip,
-      dineIn, takeaway, onlineOrder, selfDelivery, status,
-      isFeaturedBanner, bannerCatchyLine, isNewLaunch, newLaunchCatchyline,
-      tags, facilities, celebrities, featuredMenu: menuItems,
-      menuImages: menuImages,
-      moreImages: moreImages,
+      ...data,
+      menuImages,
+      moreImages,
       vibeScores: parsedVibeScores,
       userReviews: editingCafe ? editingCafe.userReviews : []
     };
@@ -270,28 +267,23 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
           <button type="button" onClick={() => scrollTo('section-1')} className={`nav-item ${activeSection === 'section-1' ? 'active' : ''}`}>
             <span className="nav-icon">1</span>
             <span>Identity & Coordinates</span>
-            <span className="nav-status"></span>
           </button>
 
           <button type="button" onClick={() => scrollTo('section-2')} className={`nav-item ${activeSection === 'section-2' ? 'active' : ''}`}>
             <span className="nav-icon">2</span>
             <span>Aesthetic & Media</span>
-            <span className="nav-status"></span>
           </button>
 
           <button type="button" onClick={() => scrollTo('section-3')} className={`nav-item ${activeSection === 'section-3' ? 'active' : ''}`}>
             <span className="nav-icon">3</span>
             <span>Services & Operations</span>
-            <span className="nav-status"></span>
           </button>
 
           <button type="button" onClick={() => scrollTo('section-5')} className={`nav-item ${activeSection === 'section-5' ? 'active' : ''}`}>
             <span className="nav-icon">4</span>
             <span>Menu Items</span>
-            <span className="nav-status"></span>
           </button>
         </nav>
-
       </aside>
 
       {/* ══════════ MAIN CONTENT ═══════════ */}
@@ -301,7 +293,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
           <p>Fill in the details below to list your cafe on the lookbook platform.</p>
         </div>
 
-        <form id="cafe_catalog_form" onSubmit={handleSubmit}>
+        <form id="cafe_catalog_form" onSubmit={handleSubmit(onSubmit)}>
           
           {/* ─── Section 1: Identity ─── */}
           <section className="section-card" id="section-1">
@@ -316,19 +308,23 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid-4">
               <div className="field">
                 <label>Cafe Name <span className="req">*</span></label>
-                <input type="text" placeholder="e.g. True Black Specialty Coffee" value={name} onChange={e => setName(e.target.value)} required />
+                <input type="text" placeholder="e.g. True Black Specialty Coffee" {...register('name')} />
+                {errors.name && <span className="text-red-500 text-[10px] mt-1">{errors.name.message}</span>}
               </div>
               <div className="field">
                 <label>District Area <span className="req">*</span></label>
-                <input type="text" placeholder="e.g. Jubilee Hills" value={area} onChange={e => setArea(e.target.value)} required />
+                <input type="text" placeholder="e.g. Jubilee Hills" {...register('area')} />
+                {errors.area && <span className="text-red-500 text-[10px] mt-1">{errors.area.message}</span>}
               </div>
               <div className="field">
                 <label>Established Date <span className="req">*</span></label>
-                <input type="date" value={founded} onChange={e => setFounded(e.target.value)} required />
+                <input type="date" {...register('founded')} />
+                {errors.founded && <span className="text-red-500 text-[10px] mt-1">{errors.founded.message}</span>}
               </div>
               <div className="field">
                 <label>Brand Icon <span className="req">*</span></label>
-                <input type="text" placeholder="e.g. local_cafe" value={icon} onChange={e => setIcon(e.target.value)} required />
+                <input type="text" placeholder="e.g. local_cafe" {...register('icon')} />
+                {errors.icon && <span className="text-red-500 text-[10px] mt-1">{errors.icon.message}</span>}
               </div>
             </div>
 
@@ -337,7 +333,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid">
               <div className="field">
                 <label>Brand Logo URL</label>
-                <ImageUploadField placeholder="https://i.pinimg.com/originals/..." value={logo} onChange={setLogo} />
+                <Controller
+                  name="logo"
+                  control={control}
+                  render={({ field }) => <ImageUploadField placeholder="https://..." value={field.value || ''} onChange={field.onChange} />}
+                />
               </div>
             </div>
 
@@ -346,15 +346,16 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid">
               <div className="field">
                 <label>Street Address <span className="req">*</span></label>
-                <input type="text" placeholder="Full Address" value={address} onChange={e => setAddress(e.target.value)} required />
+                <input type="text" placeholder="Full Address" {...register('address')} />
+                {errors.address && <span className="text-red-500 text-[10px] mt-1">{errors.address.message}</span>}
               </div>
               <div className="field">
                 <label>Maps Deep Link</label>
-                <input type="text" placeholder="https://maps.app.goo.gl/..." value={mapLink} onChange={e => setMapLink(e.target.value)} />
+                <input type="text" placeholder="https://maps.app.goo.gl/..." {...register('mapLink')} />
               </div>
               <div className="field" style={{ gridColumn: 'span 2' }}>
                 <label>Directions Tip</label>
-                <input type="text" placeholder="e.g. Park near the old oak tree" value={directionsTip} onChange={e => setDirectionsTip(e.target.value)} />
+                <input type="text" placeholder="e.g. Park near the old oak tree" {...register('directionsTip')} />
               </div>
             </div>
 
@@ -363,15 +364,15 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid-4">
               <div className="field">
                 <label>Phone Direct Line</label>
-                <input type="text" placeholder="+91 XXXXX XXXXX" value={phone} onChange={e => setPhone(e.target.value)} />
+                <input type="text" placeholder="+91 XXXXX XXXXX" {...register('phone')} />
               </div>
               <div className="field">
                 <label>Reservation Email</label>
-                <input type="text" placeholder="desk@cafe.co" value={email} onChange={e => setEmail(e.target.value)} />
+                <input type="text" placeholder="desk@cafe.co" {...register('email')} />
               </div>
               <div className="field">
                 <label>Official Website</label>
-                <input type="text" placeholder="https://cafe.co" value={website} onChange={e => setWebsite(e.target.value)} />
+                <input type="text" placeholder="https://cafe.co" {...register('website')} />
               </div>
               <div className="field">
                 <label>Dine-Out Timings</label>
@@ -388,9 +389,6 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                     <option>Closed Mondays</option>
                   </select>
                 </div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '8px', fontWeight: 500 }}>
-                  Preview: {timings}
-                </div>
               </div>
             </div>
 
@@ -399,15 +397,15 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <div className="form-grid-3">
               <div className="field">
                 <label>Instagram / Primary Social</label>
-                <input type="text" placeholder="https://instagram.com/..." value={socialLink} onChange={e => setSocialLink(e.target.value)} />
+                <input type="text" placeholder="https://instagram.com/..." {...register('socialLink')} />
               </div>
               <div className="field">
                 <label>Facebook URL</label>
-                <input type="text" placeholder="https://facebook.com/..." value={facebookUrl} onChange={e => setFacebookUrl(e.target.value)} />
+                <input type="text" placeholder="https://facebook.com/..." {...register('facebookUrl')} />
               </div>
               <div className="field">
                 <label>Twitter / X URL</label>
-                <input type="text" placeholder="https://twitter.com/..." value={twitterUrl} onChange={e => setTwitterUrl(e.target.value)} />
+                <input type="text" placeholder="https://twitter.com/..." {...register('twitterUrl')} />
               </div>
             </div>
           </section>
@@ -426,49 +424,51 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="split-form">
                 <div className="field">
                   <label>Aesthetic Designs Archetype <span className="req">*</span></label>
-                  <input type="text" placeholder="e.g. Scandi Wabi-Sabi & Acoustic Cedar Timber" value={aestheticType} onChange={e => setAestheticType(e.target.value)} required />
+                  <input type="text" placeholder="e.g. Scandi Wabi-Sabi & Acoustic Cedar Timber" {...register('aestheticType')} />
+                  {errors.aestheticType && <span className="text-red-500 text-[10px] mt-1">{errors.aestheticType.message}</span>}
                 </div>
 
                 <div className="field">
                   <label>Aesthetic Vibe Analysis (Curator's Take) <span className="req">*</span></label>
-                  <textarea placeholder="Describe the architectural texture, shadows, study desk comfort, lighting temperature..." value={vibe} onChange={e => setVibe(e.target.value)} required></textarea>
+                  <textarea placeholder="Describe the architectural texture, shadows, study desk comfort, lighting temperature..." {...register('vibe')}></textarea>
+                  {errors.vibe && <span className="text-red-500 text-[10px] mt-1">{errors.vibe.message}</span>}
                 </div>
                 
                 <div className="field">
                   <label>Curator's Exact Quote (Optional)</label>
-                  <textarea placeholder="Specific note or quote from the curator..." value={curatorNote} onChange={e => setCuratorNote(e.target.value)}></textarea>
+                  <textarea placeholder="Specific note or quote from the curator..." {...register('curatorNote')}></textarea>
                 </div>
 
                 <div className="field">
                   <label>Vibe Scores</label>
-                  <input type="text" placeholder="e.g. Workspace:9.0, Heritage:8.5" value={vibeScoresInput} onChange={e => setVibeScoresInput(e.target.value)} />
-                  <small style={{ color: 'var(--color-text-tertiary)', display: 'block', marginTop: '4px' }}>Comma separated list of Label:Score</small>
+                  <input type="text" placeholder="e.g. Workspace:9.0, Heritage:8.5" {...register('vibeScoresInput')} />
                 </div>
 
                 <div className="field">
                   <label>Neighbourhood Walking Guide</label>
-                  <textarea placeholder="e.g. Best visited before 7 AM to avoid the dense traffic..." value={neighbourhoodGuide} onChange={e => setNeighbourhoodGuide(e.target.value)}></textarea>
+                  <textarea placeholder="e.g. Best visited before 7 AM to avoid the dense traffic..." {...register('neighbourhoodGuide')}></textarea>
                 </div>
 
                 <div className="form-grid">
                   <div className="field">
                     <label>Target Crowd / Audience</label>
-                    <input type="text" placeholder="e.g. Writers, researchers, builders" value={crowd} onChange={e => setCrowd(e.target.value)} />
+                    <input type="text" placeholder="e.g. Writers, researchers, builders" {...register('crowd')} />
                   </div>
                   <div className="field">
                     <label>Privilege Offers / Codes</label>
-                    <input type="text" placeholder="e.g. Flat 10% for members" value={discounts} onChange={e => setDiscounts(e.target.value)} />
+                    <input type="text" placeholder="e.g. Flat 10% for members" {...register('discounts')} />
                   </div>
                 </div>
 
                 <div className="form-grid-3">
                   <div className="field" style={{ gridColumn: 'span 2' }}>
                     <label>Signature Master Brew <span className="req">*</span></label>
-                    <input type="text" placeholder="e.g. Kyoto 12-hr Slow Drip" value={signature} onChange={e => setSignature(e.target.value)} required />
+                    <input type="text" placeholder="e.g. Kyoto 12-hr Slow Drip" {...register('signature')} />
+                    {errors.signature && <span className="text-red-500 text-[10px] mt-1">{errors.signature.message}</span>}
                   </div>
                   <div className="field">
                     <label>Swiggy / Dineout Link</label>
-                    <input type="text" placeholder="https://swiggy.com/dineout/hyd" value={bookingUrl} onChange={e => setBookingUrl(e.target.value)} />
+                    <input type="text" placeholder="https://swiggy.com/dineout/hyd" {...register('bookingUrl')} />
                   </div>
                 </div>
               </div>
@@ -477,28 +477,33 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Thumbnail / Main Image <span className="req">*</span></label>
                   <div className="field" style={{ marginBottom: '16px' }}>
-                    <ImageUploadField placeholder="https://i.pinimg.com/originals/..." value={image} onChange={setImage} required />
+                    <Controller
+                      name="image"
+                      control={control}
+                      render={({ field }) => <ImageUploadField placeholder="https://..." value={field.value || ''} onChange={field.onChange} />}
+                    />
+                    {errors.image && <span className="text-red-500 text-[10px] mt-1 block">{errors.image.message}</span>}
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Video URL (Optional)</label>
                   <div className="field" style={{ marginBottom: '16px' }}>
-                    <input type="text" placeholder="https://youtube.com/..." value={videoUrl} onChange={e => setVideoUrl(e.target.value)} />
+                    <input type="text" placeholder="https://youtube.com/..." {...register('videoUrl')} />
                   </div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Gallery Images (Min 4 required) <span className="req">*</span></label>
                   <div className="field" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <ImageUploadField placeholder="Image 1 URL (e.g. Pinterest Image Address)" value={gallery1} onChange={setGallery1} required />
-                    <ImageUploadField placeholder="Image 2 URL" value={gallery2} onChange={setGallery2} required />
-                    <ImageUploadField placeholder="Image 3 URL" value={gallery3} onChange={setGallery3} required />
-                    <ImageUploadField placeholder="Image 4 URL" value={gallery4} onChange={setGallery4} required />
+                    <ImageUploadField placeholder="Image 1 URL (e.g. Pinterest Image Address)" value={gallery1} onChange={setGallery1} />
+                    <ImageUploadField placeholder="Image 2 URL" value={gallery2} onChange={setGallery2} />
+                    <ImageUploadField placeholder="Image 3 URL" value={gallery3} onChange={setGallery3} />
+                    <ImageUploadField placeholder="Image 4 URL" value={gallery4} onChange={setGallery4} />
                     <ImageUploadField placeholder="Image 5 URL (Optional)" value={gallery5} onChange={setGallery5} />
                   </div>
                 </div>
 
-                {image && (
+                {watchImage && (
                   <div className="preview-card">
-                    <img src={image} alt="Cafe Preview" />
+                    <img src={watchImage} alt="Cafe Preview" />
                     <div className="preview-info">
                       <div className="preview-label">Image Source</div>
-                      <div className="preview-url">{image.substring(0, 40)}...</div>
+                      <div className="preview-url">{watchImage.substring(0, 40)}...</div>
                     </div>
                   </div>
                 )}
@@ -518,7 +523,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Operational Status</label>
             <div className="field" style={{ marginBottom: '24px' }}>
-              <select value={status} onChange={e => setStatus(e.target.value as any)}>
+              <select {...register('status')}>
                 <option value="open">Open (Operating Normally)</option>
                 <option value="closed">Closed (Temporarily)</option>
                 <option value="renovating">Renovating (Closed for upgrades)</option>
@@ -528,19 +533,19 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Available Services</label>
             <div className="services-grid">
-              <label className={`service-chip ${dineIn ? 'checked' : ''}`} onClick={() => setDineIn(!dineIn)}>
+              <label className={`service-chip ${watchDineIn ? 'checked' : ''}`} onClick={() => setValue('dineIn', !watchDineIn)}>
                 <span className="check-box">✓</span>
                 <span className="service-label">Dine-In Space</span>
               </label>
-              <label className={`service-chip ${takeaway ? 'checked' : ''}`} onClick={() => setTakeaway(!takeaway)}>
+              <label className={`service-chip ${watchTakeaway ? 'checked' : ''}`} onClick={() => setValue('takeaway', !watchTakeaway)}>
                 <span className="check-box">✓</span>
                 <span className="service-label">Takeaway Ready</span>
               </label>
-              <label className={`service-chip ${onlineOrder ? 'checked' : ''}`} onClick={() => setOnlineOrder(!onlineOrder)}>
+              <label className={`service-chip ${watchOnlineOrder ? 'checked' : ''}`} onClick={() => setValue('onlineOrder', !watchOnlineOrder)}>
                 <span className="check-box">✓</span>
                 <span className="service-label">Online / App Ordering</span>
               </label>
-              <label className={`service-chip ${selfDelivery ? 'checked' : ''}`} onClick={() => setSelfDelivery(!selfDelivery)}>
+              <label className={`service-chip ${watchSelfDelivery ? 'checked' : ''}`} onClick={() => setValue('selfDelivery', !watchSelfDelivery)}>
                 <span className="check-box">✓</span>
                 <span className="service-label">Self Home Delivery</span>
               </label>
@@ -551,30 +556,30 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Spotlight Toggles</label>
             <div className="toggle-grid">
               <div>
-                <div className="toggle-card" onClick={() => setIsFeaturedBanner(!isFeaturedBanner)}>
+                <div className="toggle-card" onClick={() => setValue('isFeaturedBanner', !watchIsFeaturedBanner)}>
                   <div className="toggle-text">
                     <h5>Hero Spotlight Banner</h5>
                     <p>Pin inside the cinematic home landing carousel.</p>
                   </div>
-                  <div className={`toggle-switch ${isFeaturedBanner ? 'on' : ''}`}></div>
+                  <div className={`toggle-switch ${watchIsFeaturedBanner ? 'on' : ''}`}></div>
                 </div>
-                {isFeaturedBanner && (
+                {watchIsFeaturedBanner && (
                   <div className="field" style={{ marginTop: '12px' }}>
-                    <input type="text" placeholder="Catchy headline for banner..." value={bannerCatchyLine} onChange={e => setBannerCatchyLine(e.target.value)} />
+                    <input type="text" placeholder="Catchy headline for banner..." {...register('bannerCatchyLine')} />
                   </div>
                 )}
               </div>
               <div>
-                <div className="toggle-card" onClick={() => setIsNewLaunch(!isNewLaunch)}>
+                <div className="toggle-card" onClick={() => setValue('isNewLaunch', !watchIsNewLaunch)}>
                   <div className="toggle-text">
                     <h5>Newly Launched Ticker</h5>
                     <p>Feature on the newly launched sliding deck.</p>
                   </div>
-                  <div className={`toggle-switch ${isNewLaunch ? 'on' : ''}`}></div>
+                  <div className={`toggle-switch ${watchIsNewLaunch ? 'on' : ''}`}></div>
                 </div>
-                {isNewLaunch && (
+                {watchIsNewLaunch && (
                   <div className="field" style={{ marginTop: '12px' }}>
-                    <input type="text" placeholder="Catchy line for new launch..." value={newLaunchCatchyline} onChange={e => setNewLaunchCatchyline(e.target.value)} />
+                    <input type="text" placeholder="Catchy line for new launch..." {...register('newLaunchCatchyline')} />
                   </div>
                 )}
               </div>
@@ -587,13 +592,13 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="tag-block">
                 <label>Cafe Chip Archive Tags</label>
                 <div className="tag-input-row">
-                  <input type="text" placeholder="Type then add..." value={tagInput} onChange={e => setTagInput(e.target.value)} onKeyDown={e => { if(e.key==='Enter') handleAddTag(e as any) }} />
+                  <input type="text" placeholder="Type then add..." value={tagInput} onChange={e => setTagInput(e.target.value)} onKeyDown={e => { if(e.key==='Enter') handleAddTag(e) }} />
                   <button type="button" className="btn-add-tag" onClick={handleAddTag}>Add</button>
                 </div>
                 <div className="tag-chips">
-                  {tags.map((t, i) => (
+                  {watchTags.map((t, i) => (
                     <span key={i} className="chip active">
-                      {t} <span className="chip-remove" onClick={() => setTags(tags.filter((_, idx) => idx !== i))}>×</span>
+                      {t} <span className="chip-remove" onClick={() => setValue('tags', watchTags.filter((_, idx) => idx !== i))}>×</span>
                     </span>
                   ))}
                 </div>
@@ -602,13 +607,13 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="tag-block">
                 <label>Famous Celebs Observed</label>
                 <div className="tag-input-row">
-                  <input type="text" placeholder="e.g. Rana Daggubati" value={celebInput} onChange={e => setCelebInput(e.target.value)} onKeyDown={e => { if(e.key==='Enter') handleAddCeleb(e as any) }} />
+                  <input type="text" placeholder="e.g. Rana Daggubati" value={celebInput} onChange={e => setCelebInput(e.target.value)} onKeyDown={e => { if(e.key==='Enter') handleAddCeleb(e) }} />
                   <button type="button" className="btn-add-tag" onClick={handleAddCeleb}>Add</button>
                 </div>
                 <div className="tag-chips">
-                  {celebrities.map((c, i) => (
+                  {watchCelebrities.map((c, i) => (
                     <span key={i} className="chip active">
-                      {c} <span className="chip-remove" onClick={() => setCelebrities(celebrities.filter((_, idx) => idx !== i))}>×</span>
+                      {c} <span className="chip-remove" onClick={() => setValue('celebrities', watchCelebrities.filter((_, idx) => idx !== i))}>×</span>
                     </span>
                   ))}
                 </div>
@@ -617,13 +622,13 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="tag-block">
                 <label>Workstation Facilities</label>
                 <div className="tag-input-row">
-                  <input type="text" placeholder="Custom amenity..." value={facilityInput} onChange={e => setFacilityInput(e.target.value)} onKeyDown={e => { if(e.key==='Enter') handleAddFacility(e as any) }} />
+                  <input type="text" placeholder="Custom amenity..." value={facilityInput} onChange={e => setFacilityInput(e.target.value)} onKeyDown={e => { if(e.key==='Enter') handleAddFacility(e) }} />
                   <button type="button" className="btn-add-tag" onClick={handleAddFacility}>Add</button>
                 </div>
                 <div className="tag-chips">
-                  {facilities.map((f, i) => (
+                  {watchFacilities.map((f, i) => (
                     <span key={i} className="chip active">
-                      ✓ {f} <span className="chip-remove" onClick={() => setFacilities(facilities.filter((_, idx) => idx !== i))}>×</span>
+                      ✓ {f} <span className="chip-remove" onClick={() => setValue('facilities', watchFacilities.filter((_, idx) => idx !== i))}>×</span>
                     </span>
                   ))}
                 </div>
@@ -695,7 +700,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
               <div className="catalog-panel">
                 <h4>Compiled Gastronomy Catalog</h4>
 
-                {menuItems.map((item, idx) => (
+                {watchFeaturedMenu.map((item: any, idx: number) => (
                   <div key={idx} className="catalog-item">
                     <div className="catalog-thumb">🍴</div>
                     <div className="catalog-details">
@@ -706,11 +711,11 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                       <div className="item-cat">{item.category}</div>
                     </div>
                     <div className="catalog-price">{item.price}</div>
-                    <button type="button" className="catalog-delete" onClick={() => setMenuItems(menuItems.filter((_, i) => i !== idx))}>🗑</button>
+                    <button type="button" className="catalog-delete" onClick={() => setValue('featuredMenu', watchFeaturedMenu.filter((_: any, i: number) => i !== idx))}>🗑</button>
                   </div>
                 ))}
                 
-                {menuItems.length === 0 && <p className="text-sm text-gray-400 italic">No menu items added yet.</p>}
+                {watchFeaturedMenu.length === 0 && <p className="text-sm text-gray-400 italic">No menu items added yet.</p>}
               </div>
             </div>
           </section>
@@ -718,8 +723,8 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
         </form>
         {/* ═══════════ ACTION BAR ═══════════ */}
         <div className="action-bar">
-          <button type="submit" form="cafe_catalog_form" className="btn-action primary">
-            {editingCafe ? "Update Lookbook Listing" : "Save Lookbook Catalog Listing"}
+          <button type="submit" form="cafe_catalog_form" disabled={isSubmitting} className={`btn-action primary ${isSubmitting ? 'opacity-50' : ''}`}>
+            {isSubmitting ? "Saving..." : (editingCafe ? "Update Lookbook Listing" : "Save Lookbook Catalog Listing")}
           </button>
           <button type="button" onClick={onCancel} className="btn-action secondary" style={{ marginLeft: '12px' }}>Discard Changes</button>
         </div>

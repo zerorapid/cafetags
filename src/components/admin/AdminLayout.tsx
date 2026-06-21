@@ -3,8 +3,8 @@ import { MaterialIcon } from '../MaterialIcon';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
-  activeTab: 'listings' | 'blogs' | 'feedbacks' | 'seo';
-  setActiveTab: (tab: 'listings' | 'blogs' | 'feedbacks' | 'seo') => void;
+  activeTab: 'dashboard' | 'listings' | 'blogs' | 'feedbacks' | 'seo';
+  setActiveTab: (tab: 'dashboard' | 'listings' | 'blogs' | 'feedbacks' | 'seo') => void;
   onLogout?: () => void;
   pendingFeedbacksCount?: number;
 }
@@ -29,6 +29,16 @@ export function AdminLayout({ children, activeTab, setActiveTab, onLogout, pendi
         <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
           <div className="text-[10px] uppercase tracking-widest font-extrabold text-stone-600 mb-4 px-2">Management Modules</div>
           
+          <button
+            onClick={() => setActiveTab('dashboard')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-sm font-semibold cursor-pointer ${
+              activeTab === 'dashboard' ? 'bg-amber-600 text-white shadow-md' : 'hover:bg-stone-900 hover:text-white'
+            }`}
+          >
+            <MaterialIcon name="dashboard" className="text-[18px]" />
+            Overview Panel
+          </button>
+
           <button
             onClick={() => setActiveTab('listings')}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-sm font-semibold cursor-pointer ${

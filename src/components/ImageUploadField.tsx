@@ -84,17 +84,18 @@ const compressImage = (file: File): Promise<File> => {
   });
 };
 
+import { useToast } from './ui/ToastContext';
+
 export function ImageUploadField({ value, onChange, placeholder, required }: ImageUploadFieldProps) {
   const [isUploading, setIsUploading] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { toast } = useToast();
 
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawFile = e.target.files?.[0];
-    if (!rawFile) return;
-
+  const handleProcessFile = async (rawFile: File) => {
     try {
       setIsUploading(true);
-      const file = await compressImage(rawFile); // Always convert to WebP
+      const file = await compressImage(rawFile);
 
       const fileName = `${Date.now()}_${file.name}`;
       const { error: uploadError } = await supabase.storage
@@ -107,9 +108,10 @@ export function ImageUploadField({ value, onChange, placeholder, required }: Ima
         .from('cafe-images').getPublicUrl(fileName);
         
       onChange(urlData.publicUrl);
+      toast("Image successfully processed and uploaded!");
     } catch (error: any) {
       console.error("Error uploading image:", error);
-      alert(`Failed to upload image. Error: ${error?.message || "Unknown error"}`);
+      toast(`Failed to upload image: ${error?.message || "Unknown error"}`);
     } finally {
       setIsUploading(false);
       if (fileInputRef.current) {
@@ -118,32 +120,71 @@ export function ImageUploadField({ value, onChange, placeholder, required }: Ima
     }
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawFile = e.target.files?.[0];
+    if (rawFile) handleProcessFile(rawFile);
+  };
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const rawFile = e.dataTransfer.files?.[0];
+    if (rawFile && rawFile.type.startsWith('image/')) {
+      handleProcessFile(rawFile);
+    } else {
+      toast("Please drop a valid image file.");
+    }
+  };
+
   return (
-    <div className="image-upload-wrapper">
-      <input
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        required={required}
-        className="image-upload-input"
-      />
-      <input
-        type="file"
-        accept="image/*"
-        onChange={handleFileChange}
-        ref={fileInputRef}
-        style={{ display: 'none' }}
-      />
-      <button 
-        type="button" 
-        className="image-upload-btn" 
-        onClick={() => fileInputRef.current?.click()}
-        disabled={isUploading}
-      >
-        {isUploading ? <Loader2 className="animate-spin" size={16} /> : <UploadCloud size={16} />}
-        {isUploading ? 'Uploading...' : 'Upload'}
-      </button>
+    <div 
+      className={`relative border-2 border-dashed rounded-lg transition-colors p-1 ${isDragging ? 'border-amber-500 bg-amber-50' : 'border-stone-200 bg-[#FAF9F6]'} ${isUploading ? 'opacity-70 pointer-events-none' : ''}`}
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}
+    >
+      <div className="flex flex-col sm:flex-row items-center gap-2 p-2 w-full">
+        <input
+          type="text"
+          placeholder={placeholder || "https://... or Drag & Drop"}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          required={required}
+          className="flex-1 bg-transparent border-none text-xs font-mono text-stone-700 w-full focus:outline-none p-2"
+        />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+          ref={fileInputRef}
+          className="hidden"
+        />
+        <button 
+          type="button" 
+          onClick={() => fileInputRef.current?.click()}
+          disabled={isUploading}
+          className="bg-stone-900 hover:bg-stone-800 text-white px-4 py-2 rounded text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors whitespace-nowrap shadow-sm cursor-pointer"
+        >
+          {isUploading ? <Loader2 className="animate-spin" size={14} /> : <UploadCloud size={14} />}
+          {isUploading ? 'Processing...' : 'Upload Media'}
+        </button>
+      </div>
+      
+      {isDragging && (
+        <div className="absolute inset-0 flex items-center justify-center bg-amber-500/10 rounded-lg backdrop-blur-[1px]">
+          <span className="text-amber-700 font-bold uppercase tracking-widest text-[11px] pointer-events-none">Drop image here</span>
+        </div>
+      )}
     </div>
   );
 }
