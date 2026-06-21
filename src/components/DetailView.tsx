@@ -376,56 +376,48 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         <div className="icon-box"><MapPin size={20} /></div>
                         <div className="info-content">
                             <h4>Address</h4>
-                            <p>{cafe.address || `${cafe.area}, Hyderabad`}</p>
+                            <p>{cafe.address || cafe.area ? `${cafe.address ? cafe.address + ', ' : ''}${cafe.area ? cafe.area + ', ' : ''}Hyderabad` : '123 Lorem Ipsum Street, Cafe District, Hyderabad'}</p>
                         </div>
                     </div>
                     
-                    {cafe.phone && cafe.phone !== '#ERROR!' && (
                     <div className="info-group">
                         <div className="icon-box"><Phone size={20} /></div>
                         <div className="info-content">
                             <h4>Phone</h4>
-                            <p className="highlight-text"><a href={`tel:${cafe.phone}`}>{cafe.phone}</a></p>
+                            <p className="highlight-text">
+                                <a href={`tel:${(cafe.phone && cafe.phone !== '#ERROR!') ? cafe.phone : '+919876543210'}`}>
+                                    {(cafe.phone && cafe.phone !== '#ERROR!') ? cafe.phone : '+91 98765 43210'}
+                                </a>
+                            </p>
                         </div>
                     </div>
-                    )}
                     
-                    {cafe.website && (
                     <div className="info-group">
                         <div className="icon-box"><Globe size={20} /></div>
                         <div className="info-content">
                             <h4>Website</h4>
-                            <a href={cafe.website} target="_blank" rel="noreferrer" className="highlight-text">Visit official site</a>
+                            <a href={cafe.website || '#'} target="_blank" rel="noreferrer" className="highlight-text">Visit official site</a>
                         </div>
                     </div>
-                    )}
 
                     <div className="social-section">
                         <div className="social-title">Social Links</div>
                         <div className="social-icons">
-                            {cafe.socialLink ? (
-                                <a href={cafe.socialLink} target="_blank" rel="noreferrer"><NucleoIcon name="instagram" /></a>
-                            ) : (
-                                <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="instagram" disabled /></div>
-                            )}
-                            {cafe.facebookUrl ? (
-                                <a href={cafe.facebookUrl} target="_blank" rel="noreferrer"><NucleoIcon name="facebook" /></a>
-                            ) : (
-                                <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="facebook" disabled /></div>
-                            )}
-                            {cafe.twitterUrl ? (
-                                <a href={cafe.twitterUrl} target="_blank" rel="noreferrer"><NucleoIcon name="twitter" /></a>
-                            ) : (
-                                <div style={{ opacity: 0.3, cursor: 'not-allowed' }}><NucleoIcon name="twitter" disabled /></div>
-                            )}
+                            <a href={cafe.socialLink || '#'} target="_blank" rel="noreferrer" style={!cafe.socialLink ? { opacity: 0.3 } : {}}>
+                                <NucleoIcon name="instagram" />
+                            </a>
+                            <a href={cafe.facebookUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.facebookUrl ? { opacity: 0.3 } : {}}>
+                                <NucleoIcon name="facebook" />
+                            </a>
+                            <a href={cafe.twitterUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.twitterUrl ? { opacity: 0.3 } : {}}>
+                                <NucleoIcon name="twitter" />
+                            </a>
                         </div>
                     </div>
 
-                    {cafe.mapLink && (
-                    <a href={cafe.mapLink} target="_blank" rel="noreferrer" className="btn-directions">
+                    <a href={cafe.mapLink || '#'} target="_blank" rel="noreferrer" className="btn-directions">
                         <Navigation size={18} /> Get Directions
                     </a>
-                    )}
                 </div>
             </div>
         </div>
