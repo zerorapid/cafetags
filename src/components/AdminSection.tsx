@@ -227,8 +227,7 @@ export function AdminSection({
         }
         if (import.meta.env.VITE_SUPABASE_URL) {
           for (const b of newBlogs) {
-            await supabase.from('posts').upsert({
-              id: b.id,
+            await supabase.from('posts').insert({
               title: b.title,
               slug: generateSlug(b.title),
               excerpt: b.excerpt,
@@ -295,11 +294,10 @@ export function AdminSection({
     } else {
       const newBlog: BlogArticle = {
         ...blogForm,
-        id: Date.now()
+        id: Date.now() // Temporary ID for UI if no DB
       };
       if (import.meta.env.VITE_SUPABASE_URL) {
-        await supabase.from('posts').insert({
-          id: newBlog.id,
+        const { data, error } = await supabase.from('posts').insert({
           title: newBlog.title,
           slug: generateSlug(newBlog.title),
           excerpt: newBlog.excerpt,
@@ -313,7 +311,11 @@ export function AdminSection({
           seo_description: newBlog.seoDescription,
           tags: newBlog.tags,
           post_date: newBlog.date,
-        });
+        }).select().single();
+        
+        if (data) newBlog.id = data.id;
+        if (error) console.error("Error creating blog:", error);
+        
         setBlogs(prev => [newBlog, ...prev]);
       } else {
         setBlogs(prev => [newBlog, ...prev]);
