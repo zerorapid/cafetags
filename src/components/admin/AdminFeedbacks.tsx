@@ -57,7 +57,7 @@ export function AdminFeedbacks({ feedbacks, setFeedbacks }: AdminFeedbacksProps)
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
+      <div className="flex items-center justify-between sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 mb-6">
         <div>
           <h3 className="font-sans text-2xl font-bold text-stone-950">User Feedback Submissions Chamber</h3>
           <p className="text-stone-500 text-sm mt-1.5 max-w-2xl">

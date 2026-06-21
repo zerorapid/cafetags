@@ -202,7 +202,7 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
     <>
       {!editingBlog && !isAddingBlog ? (
         <div className="space-y-6">
-          <div className="flex justify-between items-center sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
+          <div className="flex justify-between items-center sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 mb-6">
             <h3 className="font-sans text-2xl font-bold text-stone-950">Journal Columns Vault ({blogs.length})</h3>
             <div className="flex gap-4">
               <input type="file" accept=".csv" ref={blogFileInputRef} onChange={handleBlogCsvUpload} className="hidden" />

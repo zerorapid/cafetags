@@ -15,7 +15,7 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
 
   return (
     <div className="space-y-8 animate-fade-in">
-      <div className="space-y-1.5 sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
+      <div className="space-y-1.5 sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 mb-6">
         <h3 className="font-sans text-2xl font-bold text-stone-900 tracking-wide">Command Center</h3>
         <p className="text-stone-500 text-sm font-sans">
           Overview of CafeTags ecosystem. Monitor listings, content, and community interactions.
@@ -28,10 +28,10 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
           <div className="absolute top-0 right-0 w-40 h-40 bg-amber-50 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none group-hover:bg-amber-100 transition-colors" />
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-6">
-              <div className="w-14 h-14 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center shadow-sm">
-                <MaterialIcon name="storefront" className="text-3xl" />
+              <div className="w-20 h-20 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center shadow-sm">
+                <MaterialIcon name="storefront" className="text-[40px]" />
               </div>
-              <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-md border border-stone-200 shadow-sm">Catalog</span>
+              <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-full border border-stone-200 shadow-sm">Catalog</span>
             </div>
             <h4 className="font-sans text-5xl font-black text-stone-900 mb-2 tracking-tight">{cafes.length}</h4>
             <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Total Curated Cafes</p>
@@ -47,10 +47,10 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
           <div className="absolute top-0 right-0 w-40 h-40 bg-stone-50 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none group-hover:bg-stone-100 transition-colors" />
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-6">
-              <div className="w-14 h-14 bg-stone-100 text-stone-700 rounded-xl flex items-center justify-center shadow-sm">
-                <MaterialIcon name="newspaper" className="text-3xl" />
+              <div className="w-20 h-20 bg-stone-100 text-stone-700 rounded-full flex items-center justify-center shadow-sm">
+                <MaterialIcon name="newspaper" className="text-[40px]" />
               </div>
-              <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-md border border-stone-200 shadow-sm">Editorial</span>
+              <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-full border border-stone-200 shadow-sm">Editorial</span>
             </div>
             <h4 className="font-sans text-5xl font-black text-stone-900 mb-2 tracking-tight">{blogs.length}</h4>
             <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Journal Columns</p>
@@ -66,10 +66,10 @@ export function AdminDashboard({ cafes, blogs, feedbacks }: AdminDashboardProps)
           <div className={`absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none transition-colors ${pendingFeedbacksCount > 0 ? 'bg-red-50 group-hover:bg-red-100' : 'bg-stone-50 group-hover:bg-stone-100'}`} />
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-6">
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-sm ${pendingFeedbacksCount > 0 ? 'bg-red-100 text-red-600' : 'bg-stone-100 text-stone-700'}`}>
-                <MaterialIcon name="verified_user" className="text-3xl" />
+              <div className={`w-20 h-20 rounded-full flex items-center justify-center shadow-sm ${pendingFeedbacksCount > 0 ? 'bg-red-100 text-red-600' : 'bg-stone-100 text-stone-700'}`}>
+                <MaterialIcon name="verified_user" className="text-[40px]" />
               </div>
-              <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-md border border-stone-200 shadow-sm">Integrity</span>
+              <span className="text-stone-500 font-mono text-[11px] font-bold uppercase tracking-widest bg-stone-50 px-3 py-1.5 rounded-full border border-stone-200 shadow-sm">Integrity</span>
             </div>
             <h4 className="font-sans text-5xl font-black text-stone-900 mb-2 tracking-tight">{pendingFeedbacksCount}</h4>
             <p className="text-xs font-bold text-stone-500 uppercase tracking-wider">Pending Reviews</p>

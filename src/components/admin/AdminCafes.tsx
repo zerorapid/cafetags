@@ -150,7 +150,7 @@ export function AdminCafes({ cafes, setCafes }: AdminCafesProps) {
     <>
       {!editingCafe && !isAddingCafe ? (
         <div className="space-y-6">
-          <div className="flex justify-between items-center sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
+          <div className="flex justify-between items-center sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 mb-6">
             <h3 className="font-sans text-2xl font-bold text-stone-950">Home Listings Vault ({cafes.length})</h3>
             <div className="flex gap-4">
               <input type="file" accept=".csv" ref={fileInputRef} onChange={handleCafeCsvUpload} className="hidden" />
@@ -176,12 +176,12 @@ export function AdminCafes({ cafes, setCafes }: AdminCafesProps) {
               <table className="w-full text-left text-xs font-sans">
                 <thead className="bg-[#FAF9F6] text-[#786F64] font-bold border-b border-stone-200">
                   <tr>
-                    <th className="p-4 pl-6">Cafe Detail</th>
-                    <th className="p-4">Geographic Area</th>
-                    <th className="p-4">Curator Signature Beverage</th>
-                    <th className="p-4">Established State</th>
-                    <th className="p-4">Spotlights</th>
-                    <th className="p-4 pr-6 text-right">Action Logs</th>
+                    <th className="p-4 pl-6 w-[28%]">Cafe Detail</th>
+                    <th className="p-4 w-[15%] whitespace-nowrap">Geographic Area</th>
+                    <th className="p-4 w-[25%]">Curator Signature Beverage</th>
+                    <th className="p-4 w-[12%] whitespace-nowrap">Established State</th>
+                    <th className="p-4 w-[10%]">Spotlights</th>
+                    <th className="p-4 pr-6 w-[10%] text-right whitespace-nowrap">Action Logs</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-stone-100">
