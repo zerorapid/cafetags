@@ -109,20 +109,7 @@ export default function App() {
         .from('cafes').select('*, user_reviews(*)');
         
       if (cafesData?.length) {
-        const transformedCafes = cafesData.map(transformCafe).map(cafe => {
-          // Merge rich mock data from INITIAL_CAFES if missing in Supabase
-          const localCafe = INITIAL_CAFES.find(c => c.id === cafe.id || c.name === cafe.name);
-          if (localCafe) {
-            return {
-              ...cafe,
-              userReviews: cafe.userReviews?.length ? cafe.userReviews : localCafe.userReviews,
-              featuredMenu: cafe.featuredMenu?.length ? cafe.featuredMenu : localCafe.featuredMenu,
-              vibeScores: cafe.vibeScores?.length ? cafe.vibeScores : localCafe.vibeScores,
-            };
-          }
-          return cafe;
-        });
-        setCafes(transformedCafes);
+        setCafes(cafesData.map(transformCafe));
       } else {
         setCafes(INITIAL_CAFES);
       }

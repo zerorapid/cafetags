@@ -54,9 +54,12 @@ export function transformCafe(row: any): Cafe {
   };
 }
 
+import { generateSlug } from '../utils';
+
 export function inverseTransformCafe(cafe: Cafe): any {
   return {
     id: cafe.id,
+    slug: generateSlug(cafe.name),
     name: cafe.name,
     area: cafe.area,
     tags: cafe.tags || [],
