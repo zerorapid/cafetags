@@ -30,10 +30,10 @@ export function AdminSeo({ seoSettings, setSeoSettings }: AdminSeoProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 text-left animate-fade-in">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-stone-200 pb-5">
-        <div className="space-y-1">
-          <h3 className="font-sans text-3xl font-normal text-stone-900 italic tracking-wide">SEO & Site Integrations</h3>
-          <p className="text-stone-550 text-xs font-sans">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
+        <div className="space-y-1.5 max-w-2xl">
+          <h3 className="font-sans text-2xl font-bold text-stone-900 tracking-wide">SEO & Site Integrations</h3>
+          <p className="text-stone-500 text-sm font-sans">
             Curate search result rankings, social media graph previews, and configure analytics with search console tags.
           </p>
         </div>

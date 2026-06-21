@@ -57,14 +57,14 @@ export function AdminFeedbacks({ feedbacks, setFeedbacks }: AdminFeedbacksProps)
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
         <div>
-          <h3 className="font-sans text-xl font-bold text-stone-950 italic">User Feedback Submissions Chamber</h3>
-          <p className="text-stone-400 text-xs mt-1">
+          <h3 className="font-sans text-2xl font-bold text-stone-950">User Feedback Submissions Chamber</h3>
+          <p className="text-stone-500 text-sm mt-1.5 max-w-2xl">
             To maintain CafeTags pristine quality, general community opinions are held in check here. Owners can promote them to official influencer reviews.
           </p>
         </div>
-        <span className="bg-amber-900/15 text-amber-900 border border-amber-950/15 text-[10px] font-bold px-3 py-1 rounded-sm">
+        <span className="bg-amber-900/15 text-amber-900 border border-amber-950/15 text-[11px] tracking-wider uppercase font-bold px-4 py-2 rounded-md shadow-sm">
           Influencer Gatekeeper Active
         </span>
       </div>

@@ -113,7 +113,7 @@ export function AdminLayout({ children, activeTab, setActiveTab, onLogout, pendi
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-500/5 rounded-full blur-3xl pointer-events-none" />
         
         {/* Dynamic Content */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 py-10">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 pb-10">
           {children}
         </div>
       </main>

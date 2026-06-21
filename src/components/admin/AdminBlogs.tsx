@@ -202,22 +202,22 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
     <>
       {!editingBlog && !isAddingBlog ? (
         <div className="space-y-6">
-          <div className="flex justify-between items-center">
-            <h3 className="font-sans text-xl font-bold text-stone-950 italic">Journal Columns Vault ({blogs.length})</h3>
-            <div className="flex gap-3">
+          <div className="flex justify-between items-center sticky top-0 z-20 bg-[#FAF9F6] pt-10 pb-5 border-b border-stone-200/60 -mt-10 mb-6">
+            <h3 className="font-sans text-2xl font-bold text-stone-950">Journal Columns Vault ({blogs.length})</h3>
+            <div className="flex gap-4">
               <input type="file" accept=".csv" ref={blogFileInputRef} onChange={handleBlogCsvUpload} className="hidden" />
               <button
                 onClick={() => blogFileInputRef.current?.click()}
-                className="bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold tracking-wider uppercase px-4 py-3 rounded-md border border-stone-300 transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="bg-white hover:bg-stone-50 text-stone-700 text-xs font-bold tracking-wider uppercase px-5 py-3.5 rounded-md border border-stone-200 shadow-sm transition-colors flex items-center gap-2 cursor-pointer"
               >
-                <MaterialIcon name="upload_file" className="text-sm" />
+                <MaterialIcon name="upload_file" className="text-[18px]" />
                 <span>BULK IMPORT CSV</span>
               </button>
               <button
                 onClick={() => setIsAddingBlog(true)}
-                className="bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-md shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="bg-stone-950 hover:bg-stone-800 text-white text-xs font-bold tracking-wider uppercase px-6 py-3.5 rounded-md shadow-sm transition-colors flex items-center gap-2 cursor-pointer"
               >
-                <MaterialIcon name="post_add" className="text-sm" />
+                <MaterialIcon name="post_add" className="text-[18px]" />
                 <span>PUBLISH NEW COLUMN</span>
               </button>
             </div>
