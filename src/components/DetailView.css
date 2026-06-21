@@ -1123,26 +1123,41 @@
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
+    .lookbook-container .main-container {
+        padding-bottom: calc(80px + env(safe-area-inset-bottom, 20px));
+    }
+    .hero-section { height: 420px; }
+    .hero-content { padding: var(--space-6); }
+    .hero-title { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: var(--space-2); }
+    .hero-description { font-size: 0.95rem; line-height: 1.5; max-height: 4.5em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+    .hero-rating { font-size: 0.95rem; padding: 4px 12px; }
     .hero-meta { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
     
+    .section-title { font-size: 1.3rem; }
+    .section-title svg { width: 20px; height: 20px; }
+
     .bento-grid { 
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: none;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 140px 140px;
+        grid-template-areas:
+            "hero hero"
+            "tall img3"
+            "img4 img5";
+        gap: var(--space-2);
     }
-    .bento-hero, .bento-sub1, .bento-sub2, .bento-sub3, .bento-sub4 {
-        grid-area: auto;
-    }
-    .bento-item { min-height: 250px; }
+    .bento-item { min-height: auto; }
+    .bento-label { font-size: 0.85rem; bottom: var(--space-3); left: var(--space-3); }
+
     .info-cards-grid { grid-template-columns: 1fr; }
     .signature-row { grid-template-columns: 1fr; }
     .menu-carousel-item { flex: 0 0 150px; }
     .about-highlights { grid-template-columns: repeat(2, 1fr); }
     .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-    .verdict-section { padding: var(--space-6); }
-    .verdict-title { font-size: 1.5rem; }
+    .verdict-section { padding: var(--space-5); }
+    .verdict-title { font-size: 1.25rem; }
     .sidebar-card { padding: var(--space-5); }
+    
+    .sidebar { position: static; }
 }
 
 @media (min-width: 1024px) {
