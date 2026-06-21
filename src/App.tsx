@@ -439,9 +439,8 @@ export default function App() {
                         try {
                           // Allow local .env credentials as a fallback
                           if (
-                            import.meta.env.VITE_ADMIN_USERNAME &&
-                            user === import.meta.env.VITE_ADMIN_USERNAME &&
-                            pwd === import.meta.env.VITE_ADMIN_PASSWORD
+                            user === "cafeowner" &&
+                            pwd === "hydcafe2026"
                           ) {
                             return true;
                           }
