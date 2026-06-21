@@ -688,91 +688,73 @@
 
 .highlight-chip:hover { background: var(--success); color: white; border-color: var(--success); }
 
-/* VIBE SCORES - RADIAL */
-.vibe-section {
-    background: var(--bg-white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-    padding: var(--space-8);
-    margin-bottom: var(--space-6);
+/* VIBE SCORES - METRICS */
+.cafe-metrics { 
+    background: #ffffff; 
+    border-radius: 28px; 
+    padding: 32px; 
+    margin-bottom: var(--space-6); 
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
 }
 
-.vibe-header {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: var(--space-8);
-    color: var(--text-primary);
-    letter-spacing: -0.02em;
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
+.vibe-metrics-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 32px; 
+    color: #6f4e37; 
 }
 
-.vibe-header svg { color: var(--accent); }
-
-.vibe-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
+.metrics-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 24px; 
 }
 
-.radial-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--space-4);
-    border-radius: var(--radius-lg);
-    transition: background 0.2s var(--ease);
+.metric-card { 
+    background: #fcfbf9; 
+    padding: 20px; 
+    border-radius: 20px; 
+    border: 1px solid #efeae3; 
+    display: flex; 
+    align-items: center; 
+    gap: 16px;
 }
 
-.radial-card:hover { background: var(--bg-off-white); }
-
-.radial-circle {
-    position: relative;
-    width: 120px;
-    height: 120px;
+.metric-ring { 
+    width: 60px; 
+    height: 60px; 
     border-radius: 50%;
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     justify-content: center;
-    background: 
-        radial-gradient(closest-side, var(--bg-white) 72%, transparent 0 99%, var(--bg-white) 0),
-        conic-gradient(var(--accent) var(--val), var(--border) 0);
-    margin-bottom: var(--space-4);
-    transition: transform 0.3s var(--ease);
+    background: conic-gradient(#6f4e37 var(--percentage), #e2e8f0 0);
+    flex-shrink: 0;
 }
 
-.radial-card:hover .radial-circle { transform: scale(1.05); }
-
-.radial-circle::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 1px solid var(--border);
+.metric-inner { 
+    width: 50px; 
+    height: 50px; 
+    background: white; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: 700; 
+    font-size: 14px; 
 }
 
-.radial-value {
-    font-weight: 900;
-    font-size: 1.75rem;
-    color: var(--text-primary);
-    letter-spacing: -0.02em;
-    line-height: 1;
+.metric-info h3 { 
+    margin: 0; 
+    font-size: 15px; 
+    color: #1e293b; 
 }
 
-.radial-value span {
-    font-size: 0.9rem;
-    color: var(--text-tertiary);
-    font-weight: 600;
-}
-
-.radial-label {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
+.metric-info p { 
+    margin: 4px 0 0; 
+    font-size: 12px; 
+    color: #64748b; 
 }
 
 /* CELEBRITY VISITORS */
@@ -1120,7 +1102,7 @@
     .content-grid { grid-template-columns: 1.5fr 1fr; }
     .sidebar { position: sticky; top: 100px; }
     .about-highlights { grid-template-columns: repeat(4, 1fr); }
-    .vibe-grid { grid-template-columns: repeat(5, 1fr); }
+    .metrics-grid { grid-template-columns: repeat(5, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1137,7 +1119,7 @@
     .signature-row { grid-template-columns: 1fr; }
     .menu-carousel-item { flex: 0 0 150px; }
     .about-highlights { grid-template-columns: repeat(2, 1fr); }
-    .vibe-grid { grid-template-columns: repeat(2, 1fr); }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
     .verdict-section { padding: var(--space-6); }
     .verdict-title { font-size: 1.5rem; }
     .sidebar-card { padding: var(--space-5); }
@@ -1145,4 +1127,8 @@
 
 @media (min-width: 1024px) {
     .hero-section { height: 640px; }
+}
+
+@media (max-width: 480px) {
+    .metrics-grid { grid-template-columns: 1fr; }
 }

@@ -282,18 +282,21 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
                 {/* VIBE SCORES */}
                 {cafe.vibeScores && cafe.vibeScores.length > 0 && (
-                <div className="vibe-section">
-                    <div className="vibe-header">
-                        <BarChart3 size={22} />
-                        Vibe Scores
+                <div className="cafe-metrics">
+                    <div className="vibe-metrics-header">
+                        <Coffee size={24} color="#6f4e37" />
+                        <h2 style={{ margin: 0 }}>Vibe Scores</h2>
                     </div>
-                    <div className="vibe-grid">
+
+                    <div className="metrics-grid">
                         {cafe.vibeScores.map((score, idx) => (
-                        <div key={idx} className="radial-card">
-                            <div className="radial-circle" style={{ '--val': `${score.score * 10}%` } as any}>
-                                <div className="radial-value">{score.score}<span>/10</span></div>
+                        <div key={idx} className="metric-card">
+                            <div className="metric-ring" style={{ '--percentage': `${score.score * 10}%` } as any}>
+                                <div className="metric-inner">{score.score}</div>
                             </div>
-                            <div className="radial-label">{score.label}</div>
+                            <div className="metric-info">
+                                <h3>{score.label}</h3>
+                            </div>
                         </div>
                         ))}
                     </div>
