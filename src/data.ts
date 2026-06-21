@@ -39,7 +39,9 @@ export const INITIAL_CAFES: Cafe[] = [
       { name: "Avocado Sourdough Toast", price: "₹350", category: "Savory", isSpecial: true }
     ],
     menuImages: [
-      "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1200&auto=format&fit=crop"
     ],
     userReviews: [
       { author: "QA Tester", rating: 5, text: "Perfect test cafe. Data pipelines flow beautifully.", date: "Jun 22, 2026", role: "Quality Assurance" }

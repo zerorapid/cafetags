@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Cafe } from '../types';
 import './DetailView.css';
 import { OptimizedImage } from './OptimizedImage';
+import { ImageLightbox } from './ImageLightbox';
 import { 
   ArrowLeft, Coffee, Clock, Accessibility, Store, 
   Award, Heart, Camera, PawPrint, BookOpen, UtensilsCrossed,
@@ -85,6 +86,8 @@ interface DetailViewProps {
 }
 
 export function DetailView({ cafe, onBack }: DetailViewProps) {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [cafe]);
@@ -175,23 +178,23 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             </div>
             
             <div className="bento-grid">
-                <div className="bento-item area-hero relative">
+                <div className="bento-item area-hero relative cursor-pointer" onClick={() => setLightboxImage(getImg(0))}>
                     <OptimizedImage src={getImg(0)} alt="Ambiance" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Ambiance</span>
                 </div>
-                <div className="bento-item area-tall relative">
+                <div className="bento-item area-tall relative cursor-pointer" onClick={() => setLightboxImage(getImg(1))}>
                     <OptimizedImage src={getImg(1)} alt="Interior" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Interior</span>
                 </div>
-                <div className="bento-item area-3 relative">
+                <div className="bento-item area-3 relative cursor-pointer" onClick={() => setLightboxImage(getImg(2))}>
                     <OptimizedImage src={getImg(2)} alt="Details" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Details</span>
                 </div>
-                <div className="bento-item area-4 relative">
+                <div className="bento-item area-4 relative cursor-pointer" onClick={() => setLightboxImage(getImg(3))}>
                     <OptimizedImage src={getImg(3)} alt="Food & Drinks" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">Food & Drinks</span>
                 </div>
-                <div className="bento-item area-5 relative">
+                <div className="bento-item area-5 relative cursor-pointer" onClick={() => setLightboxImage(getImg(4))}>
                     <OptimizedImage src={getImg(4)} alt="More" className="absolute inset-0 w-full h-full z-0" imageClassName="w-full h-full object-cover" />
                     <span className="bento-label">More</span>
                 </div>
@@ -242,7 +245,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         <div className="signature-row">
                             {cafe.featuredMenu.slice(0, 3).map((item, idx) => (
                             <div key={`sig-${idx}`} className="sig-card">
-                                <div className="sig-card-img">
+                                <div className="sig-card-img cursor-pointer" onClick={() => cafe.menuImages?.[idx] && setLightboxImage(cafe.menuImages[idx])}>
                                     {cafe.menuImages?.[idx] ? (
                                         <img src={cafe.menuImages[idx]} alt={item.name} loading="lazy" />
                                     ) : (
@@ -269,7 +272,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                             <DraggableCarousel>
                                 {cafe.featuredMenu.map((item, idx) => (
                                 <div key={`browse-${idx}`} className="menu-carousel-item">
-                                    <div className="menu-img">
+                                    <div className="menu-img cursor-pointer" onClick={() => cafe.menuImages?.[idx] && setLightboxImage(cafe.menuImages[idx])}>
                                         {cafe.menuImages?.[idx] ? (
                                             <img src={cafe.menuImages[idx]} alt={item.name} draggable="false" />
                                         ) : (
@@ -429,7 +432,9 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 </div>
             </div>
         </div>
-      </div>
+        </div>
+
+        <ImageLightbox src={lightboxImage} onClose={() => setLightboxImage(null)} />
     </div>
   );
 }
