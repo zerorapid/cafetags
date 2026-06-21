@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { ToastProvider } from './components/ui/ToastContext';
 import { Cafe, BlogArticle, UserFeedback, SeoSettings } from './types';
 import { INITIAL_CAFES, INITIAL_BLOG_ARTICLES } from './data';
 import { generateSlug } from './utils';
@@ -370,7 +371,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <ToastProvider>
       <AnimatePresence>
         {isAppLoading && <LoadingScreen />}
       </AnimatePresence>
@@ -578,7 +579,7 @@ export default function App() {
         {/* COMPACT STYLISH FOOTER */}
         <Footer />
       </div>
-    </div>
-    </>
+      </div>
+    </ToastProvider>
   );
 }

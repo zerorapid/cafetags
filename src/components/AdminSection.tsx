@@ -10,6 +10,10 @@ import Papa from 'papaparse';
 import ReactQuill from 'react-quill-new';
 import 'react-quill-new/dist/quill.snow.css';
 
+import { AdminLayout } from './admin/AdminLayout';
+import { useToast } from './ui/ToastContext';
+import { ConfirmModal } from './ui/ConfirmModal';
+
 interface AdminSectionProps {
   cafes: Cafe[];
   setCafes: React.Dispatch<React.SetStateAction<Cafe[]>>;
@@ -31,7 +35,14 @@ export function AdminSection({
   seoSettings,
   setSeoSettings
 }: AdminSectionProps) {
+  const { toast } = useToast();
   const [activeTab, setActiveTab] = useState<'listings' | 'blogs' | 'feedbacks' | 'seo'>('listings');
+  const [confirmModal, setConfirmModal] = useState<{ isOpen: boolean; title: string; message: string; onConfirm: () => void; }>({
+    isOpen: false,
+    title: '',
+    message: '',
+    onConfirm: () => {}
+  });
   
   const fileInputRef = useRef<HTMLInputElement>(null);
   const blogFileInputRef = useRef<HTMLInputElement>(null);
@@ -192,7 +203,7 @@ export function AdminSection({
         } else {
           setCafes(prev => [...newCafes, ...prev]);
         }
-        alert(`Successfully imported ${newCafes.length} cafes!`);
+        toast(`Successfully imported ${newCafes.length} cafes!`);
         if (fileInputRef.current) fileInputRef.current.value = '';
       }
     });
@@ -247,7 +258,7 @@ export function AdminSection({
         } else {
           setBlogs(prev => [...newBlogs, ...prev]);
         }
-        alert(`Successfully imported ${newBlogs.length} blog columns!`);
+        toast(`Successfully imported ${newBlogs.length} blog columns!`);
         if (blogFileInputRef.current) blogFileInputRef.current.value = '';
       }
     });
@@ -255,14 +266,19 @@ export function AdminSection({
 
   // Action: Delete Cafe
   const handleDeleteCafe = async (id: number) => {
-    if (confirm("Are you sure you would like to permanently purge this cafe listing? Regular users have no access to delete details.")) {
-      if (import.meta.env.VITE_SUPABASE_URL) {
-        await supabase.from('cafes').delete().eq('id', id);
-        setCafes(prev => prev.filter(c => c.id !== id));
-      } else {
+    setConfirmModal({
+      isOpen: true,
+      title: "Delete Cafe Spot",
+      message: "Are you sure you would like to permanently purge this cafe listing? Regular users have no access to delete details.",
+      onConfirm: async () => {
+        setConfirmModal(prev => ({ ...prev, isOpen: false }));
+        if (import.meta.env.VITE_SUPABASE_URL) {
+          const { error } = await supabase.from('cafes').delete().eq('id', id);
+          if (error) console.error("Error deleting cafe:", error);
+        }
         setCafes(prev => prev.filter(c => c.id !== id));
       }
-    }
+    });
   };
 
   // Action: Save Blog
@@ -290,7 +306,7 @@ export function AdminSection({
         setBlogs(prev => prev.map(b => b.id === editingBlog.id ? { ...editingBlog } : b));
       }
       setEditingBlog(null);
-      alert("Blog article content successfully updated!");
+      toast("Blog article content successfully updated!");
     } else {
       const newBlog: BlogArticle = {
         ...blogForm,
@@ -335,20 +351,25 @@ export function AdminSection({
         seoTitle: '',
         seoDescription: ''
       });
-      alert("New blog article successfully published on the journal forum!");
+      toast("New blog article successfully published on the journal forum!");
     }
   };
 
   // Action: Delete Blog
   const handleDeleteBlog = async (id: number) => {
-    if (confirm("Are you sure you want to permanently delete this journal article?")) {
-      if (import.meta.env.VITE_SUPABASE_URL) {
-        await supabase.from('posts').delete().eq('id', id);
-        setBlogs(prev => prev.filter(b => b.id !== id));
-      } else {
+    setConfirmModal({
+      isOpen: true,
+      title: "Delete Journal Column",
+      message: "Are you sure you want to permanently delete this journal article?",
+      onConfirm: async () => {
+        setConfirmModal(prev => ({ ...prev, isOpen: false }));
+        if (import.meta.env.VITE_SUPABASE_URL) {
+          const { error } = await supabase.from('posts').delete().eq('id', id);
+          if (error) console.error("Error deleting blog:", error);
+        }
         setBlogs(prev => prev.filter(b => b.id !== id));
       }
-    }
+    });
   };
 
   // Action: Approve Public Feedback to Influencer Review
@@ -399,7 +420,7 @@ export function AdminSection({
       }));
     }
 
-    alert(`Feedback Promoted! This is now published as a Verified Influencer Review on ${f.cafeName}.`);
+    toast(`Feedback Promoted! This is now published as a Verified Influencer Review on ${f.cafeName}.`);
   };
 
   // Action: Spam Flag Feedback
@@ -414,7 +435,7 @@ export function AdminSection({
     } else {
       setFeedbacks(prev => prev.map(item => item.id === id ? updated as UserFeedback : item));
     }
-    alert("Feedback flagged as spam / locked out.");
+    toast("Feedback flagged as spam / locked out.");
   };
 
   const handleSaveSeoSettings = async (e: React.FormEvent) => {
@@ -433,71 +454,18 @@ export function AdminSection({
     } else {
       setSeoSettings(seoForm);
     }
-    alert("🚀 SEO configurations, dynamic meta headers, and site trackers successfully updated!");
+    toast("🚀 SEO configurations, dynamic meta headers, and site trackers successfully updated!");
   };
 
-  return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 space-y-8">
-      {/* Admin header */}
-      <div className="bg-stone-900 text-white rounded-lg p-8 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400 font-extrabold text-[10px] bg-white/10 px-2.5 py-1 rounded-sm tracking-widest uppercase font-mono">
-              ★ OWNER PRIVILEGED WORKSPACE
-            </span>
-          </div>
-          <h2 className="font-serif text-3xl md:text-4xl font-light tracking-wide text-stone-100">CafeTags Owner Center</h2>
-          <p className="text-stone-400 text-xs font-sans max-w-xl">
-            Authorize new cafes, publish editorial research columns, and audit spam logs to maintain structural accuracy.
-          </p>
-        </div>
+  const pendingFeedbacksCount = feedbacks.filter(fb => fb.status === 'pending').length;
 
-        {/* Tab Selection */}
-        <div className="flex gap-2 bg-stone-800 p-1.5 rounded-md border border-stone-700 font-sans text-xs font-bold font-mono">
-          <button
-            onClick={() => setActiveTab('listings')}
-            className={`px-4 py-2 rounded-sm transition-colors flex items-center gap-1.5 cursor-pointer ${
-              activeTab === 'listings' ? 'bg-amber-600 text-white' : 'text-stone-300 hover:text-white'
-            }`}
-          >
-            <MaterialIcon name="storefront" className="text-sm" />
-            <span>CAFES</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('blogs')}
-            className={`px-4 py-2 rounded-sm transition-colors flex items-center gap-1.5 cursor-pointer ${
-              activeTab === 'blogs' ? 'bg-amber-600 text-white' : 'text-stone-300 hover:text-white'
-            }`}
-          >
-            <MaterialIcon name="newspaper" className="text-sm" />
-            <span>BLOG COLUMNS</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('feedbacks')}
-            className={`px-4 py-2 rounded-sm transition-colors flex items-center gap-1.5 cursor-pointer relative ${
-              activeTab === 'feedbacks' ? 'bg-amber-600 text-white' : 'text-stone-300 hover:text-white'
-            }`}
-          >
-            <MaterialIcon name="verified_user" className="text-sm" />
-            <span>VERIFY FEEDBACK</span>
-            {feedbacks.filter(fb => fb.status === 'pending').length > 0 && (
-              <span className="absolute -top-1.5 -right-1 bg-red-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
-                {feedbacks.filter(fb => fb.status === 'pending').length}
-              </span>
-            )}
-          </button>
-          <button
-            onClick={() => setActiveTab('seo')}
-            className={`px-4 py-2 rounded-sm transition-colors flex items-center gap-1.5 cursor-pointer ${
-              activeTab === 'seo' ? 'bg-amber-600 text-white' : 'text-stone-300 hover:text-white'
-            }`}
-          >
-            <MaterialIcon name="search" className="text-sm" />
-            <span>SEO SETTINGS</span>
-          </button>
-        </div>
-      </div>
+  return (
+    <AdminLayout 
+      activeTab={activeTab} 
+      setActiveTab={setActiveTab} 
+      pendingFeedbacksCount={pendingFeedbacksCount}
+      onLogout={() => { window.location.href = '/'; }} // simple logout mock for now, redirect to home
+    >
 
       {/* --- TAB 1: LISTINGS MANAGEMENT --- */}
       {activeTab === 'listings' && !editingCafe && !isAddingCafe && (
@@ -608,7 +576,7 @@ export function AdminSection({
             }
             setIsAddingCafe(false);
             setEditingCafe(null);
-            alert("Cafe Spot successfully cataloged!");
+            toast("Cafe Spot successfully cataloged!");
           }}
           onCancel={() => { setIsAddingCafe(false); setEditingCafe(null); }}
         />
@@ -1219,6 +1187,14 @@ export function AdminSection({
           </div>
         </form>
       )}
-    </div>
+
+      <ConfirmModal
+        isOpen={confirmModal.isOpen}
+        title={confirmModal.title}
+        message={confirmModal.message}
+        onConfirm={confirmModal.onConfirm}
+        onCancel={() => setConfirmModal(prev => ({ ...prev, isOpen: false }))}
+      />
+    </AdminLayout>
   );
 }
