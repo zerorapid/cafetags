@@ -592,7 +592,9 @@ export function AdminSection({
           editingCafe={editingCafe}
           onSave={async (cafe: any) => {
             if (import.meta.env.VITE_SUPABASE_URL) {
-              await supabase.from('cafes').upsert(cafe);
+              const { inverseTransformCafe } = await import('../lib/transforms');
+              const dbRow = inverseTransformCafe(cafe);
+              await supabase.from('cafes').upsert(dbRow);
             }
             if (editingCafe) {
               setCafes(prev => prev.map(c => c.id === cafe.id ? cafe : c));

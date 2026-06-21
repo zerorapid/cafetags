@@ -1131,6 +1131,9 @@
         grid-template-rows: auto;
         grid-template-areas: none;
     }
+    .bento-hero, .bento-sub1, .bento-sub2, .bento-sub3, .bento-sub4 {
+        grid-area: auto;
+    }
     .bento-item { min-height: 250px; }
     .info-cards-grid { grid-template-columns: 1fr; }
     .signature-row { grid-template-columns: 1fr; }

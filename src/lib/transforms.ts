@@ -54,6 +54,60 @@ export function transformCafe(row: any): Cafe {
   };
 }
 
+export function inverseTransformCafe(cafe: Cafe): any {
+  return {
+    id: cafe.id,
+    name: cafe.name,
+    area: cafe.area,
+    tags: cafe.tags || [],
+    image: cafe.image,
+    vibe: cafe.vibe,
+    map_link: cafe.mapLink,
+    icon: cafe.icon,
+    logo: cafe.logo,
+    signature: cafe.signature,
+    founded: cafe.founded,
+    curator_note: cafe.curatorNote,
+    address: cafe.address,
+    phone: cafe.phone,
+    email: cafe.email,
+    website: cafe.website,
+    social_link: cafe.socialLink,
+    facebook_url: cafe.facebookUrl,
+    twitter_url: cafe.twitterUrl,
+    timings: cafe.timings,
+    aesthetic_type: cafe.aestheticType,
+    crowd: cafe.crowd,
+    discounts: cafe.discounts,
+    facilities: cafe.facilities || [],
+    dine_in: cafe.dineIn,
+    takeaway: cafe.takeaway,
+    online_order: cafe.onlineOrder,
+    self_delivery: cafe.selfDelivery,
+    video_url: cafe.videoUrl,
+    celebrities: cafe.celebrities || [],
+    booking_url: cafe.bookingUrl,
+    directions_tip: cafe.directionsTip,
+    featured_menu: cafe.featuredMenu || [],
+    user_reviews: (cafe.userReviews || []).map((r: any) => ({
+      author: r.author,
+      rating: r.rating,
+      text: r.text,
+      review_date: r.date,
+      role: r.role,
+    })),
+    more_images: cafe.moreImages || [],
+    menu_images: cafe.menuImages || [],
+    vibe_scores: cafe.vibeScores || [],
+    neighbourhood_guide: cafe.neighbourhoodGuide,
+    is_featured_banner: cafe.isFeaturedBanner,
+    banner_catchy_line: cafe.bannerCatchyLine,
+    is_new_launch: cafe.isNewLaunch,
+    new_launch_catchyline: cafe.newLaunchCatchyline,
+    status: cafe.status,
+  };
+}
+
 export function transformPost(row: any): BlogArticle {
   return {
     id: row.id,
