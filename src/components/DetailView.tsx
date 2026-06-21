@@ -227,10 +227,9 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
                     {cafe.featuredMenu.length > 0 && (
                     <>
-                        <h2 className="menu-section-title">
-                            <Star size={24} color="var(--accent)" />
+                        <h3 className="menu-section-title">
                             Signature Dishes
-                        </h2>
+                        </h3>
 
                         <div className="signature-row">
                             {cafe.featuredMenu.slice(0, 3).map((item, idx) => (
@@ -254,10 +253,9 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
                     {cafe.featuredMenu.length > 0 && (
                     <>
-                        <h2 className="menu-section-title">
-                            <UtensilsCrossed size={24} color="var(--accent)" />
+                        <h3 className="menu-section-title">
                             Browse Menu
-                        </h2>
+                        </h3>
 
                         <div className="carousel-wrapper">
                             <DraggableCarousel>
