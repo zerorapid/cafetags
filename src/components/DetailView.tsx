@@ -208,7 +208,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     </p>
                     
                     <div className="about-highlights">
-                        {cafe.facilities?.slice(0, 4).map(facility => (
+                        {cafe.facilities?.map(facility => (
                         <div key={facility} className="about-highlight">
                             <CheckCircle2 size={18} />
                             <span>{facility}</span>
@@ -425,20 +425,6 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     </a>
                     )}
                 </div>
-
-                {cafe.facilities && cafe.facilities.length > 0 && (
-                <div className="sidebar-card">
-                    <h3 className="sidebar-title">Amenities</h3>
-                    <div className="amenities-grid">
-                        {cafe.facilities.map(fac => (
-                        <div key={fac} className="amenity-item">
-                            <CheckCircle2 size={18} />
-                            {fac}
-                        </div>
-                        ))}
-                    </div>
-                </div>
-                )}
             </div>
         </div>
       </div>
