@@ -242,7 +242,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                                     )}
                                 </div>
                                 <div className="sig-details">
-                                    <span className="sig-name">{item.name}</span>
+                                    <span className="sig-name">Menu {String(idx + 1).padStart(2, '0')}</span>
                                     <span className="price-tag">{item.price}</span>
                                 </div>
                             </div>
@@ -268,7 +268,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                                             <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
                                         )}
                                     </div>
-                                    <div className="menu-label">{item.name}</div>
+                                    <div className="menu-label">Menu {String(idx + 1).padStart(2, '0')}</div>
                                 </div>
                                 ))}
                             </DraggableCarousel>
