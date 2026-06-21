@@ -126,10 +126,6 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         {cafe.area}, Hyderabad
                     </span>
                 </div>
-                
-                <p className="hero-description">
-                    {cafe.vibe}
-                </p>
             </div>
         </section>
 

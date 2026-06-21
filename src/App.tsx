@@ -166,7 +166,10 @@ export default function App() {
       faviconLink.rel = 'icon';
       document.head.appendChild(faviconLink);
     }
-    faviconLink.href = seoSettings.favicon || '/favicon.svg';
+    // Prevent accidental unsplash photos from being used as favicons
+    const userFavicon = seoSettings.favicon;
+    const isInvalidFavicon = !userFavicon || userFavicon.includes('unsplash.com');
+    faviconLink.href = isInvalidFavicon ? '/favicon.svg' : userFavicon;
 
     // 4. Dynamic Social Graph / Open Graph Meta Tags
     const ogTags = [
