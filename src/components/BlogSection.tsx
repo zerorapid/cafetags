@@ -108,7 +108,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
 
           {/* Body Content */}
           <div 
-            className="font-serif text-[17px] md:text-[19px] leading-relaxed text-stone-800 space-y-6 antialiased editor-content"
+            className="font-dm-sans text-[17px] md:text-[19px] leading-relaxed text-stone-800 space-y-6 antialiased editor-content"
             dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
           />
 
@@ -120,7 +120,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
             <div>
               <span className="block text-xs font-extrabold text-stone-400 uppercase tracking-widest leading-none">ABOUT THE OWNER</span>
               <span className="block text-sm font-bold text-stone-900 mt-1">{selectedArticle.author}</span>
-              <p className="text-xs text-stone-500 mt-1.5 leading-relaxed font-sans">
+              <p className="text-xs text-stone-500 mt-1.5 leading-relaxed font-dm-sans">
                 Documenting the delicate intersection of specialty espresso brewing, architectural layout studies, and physical aesthetic sanctuaries inside Hyderabad's technology zones.
               </p>
             </div>
@@ -136,7 +136,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
         <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest block font-mono">ESTABLISHED JUN 2026</span>
         <h2 className="font-serif text-4xl md:text-5xl font-light italic text-stone-900 tracking-wide">The Coffee Journal</h2>
-        <p className="text-stone-500 text-xs font-sans max-w-md mx-auto leading-relaxed">
+        <p className="text-stone-500 text-xs font-dm-sans max-w-md mx-auto leading-relaxed">
           Critical study logs, design breakdowns, and historical chronologies about Hyderabad's unique cafe architectural movement.
         </p>
       </div>
