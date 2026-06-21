@@ -254,38 +254,6 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
   return (
     <div className="cafe-form-container">
-      {/* ═══════════ SIDEBAR ══════════ */}
-      <aside className="sidebar">
-        <div className="sidebar-brand">
-          <span className="badge">Drafting Fresh Curation</span>
-          <h2>Catalog New Fine Coffee Spot</h2>
-        </div>
-
-        <nav className="sidebar-nav">
-          <div className="nav-label">Form Sections</div>
-
-          <button type="button" onClick={() => scrollTo('section-1')} className={`nav-item ${activeSection === 'section-1' ? 'active' : ''}`}>
-            <span className="nav-icon">1</span>
-            <span>Identity & Coordinates</span>
-          </button>
-
-          <button type="button" onClick={() => scrollTo('section-2')} className={`nav-item ${activeSection === 'section-2' ? 'active' : ''}`}>
-            <span className="nav-icon">2</span>
-            <span>Aesthetic & Media</span>
-          </button>
-
-          <button type="button" onClick={() => scrollTo('section-3')} className={`nav-item ${activeSection === 'section-3' ? 'active' : ''}`}>
-            <span className="nav-icon">3</span>
-            <span>Services & Operations</span>
-          </button>
-
-          <button type="button" onClick={() => scrollTo('section-5')} className={`nav-item ${activeSection === 'section-5' ? 'active' : ''}`}>
-            <span className="nav-icon">4</span>
-            <span>Menu Items</span>
-          </button>
-        </nav>
-      </aside>
-
       {/* ══════════ MAIN CONTENT ═══════════ */}
       <main className="main">
         <div className="page-header">

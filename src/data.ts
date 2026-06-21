@@ -7,6 +7,59 @@ import { Cafe, PresetCover } from './types';
 
 export const INITIAL_CAFES: Cafe[] = [
   {
+    id: 999,
+    name: "The Unsplash Oasis",
+    area: "Banjara Hills",
+    tags: ["Minimalist", "Work-friendly", "Aesthetic"],
+    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop",
+    vibe: "A serene, light-filled minimalist oasis designed for deep work and creative sessions. Sunlight filters through vast glass windows onto pristine white marble counters.",
+    mapLink: "https://maps.app.goo.gl/dummy",
+    icon: "local_cafe",
+    signature: "Madagascar Vanilla Bean Latte",
+    founded: "2026",
+    address: "Road No 12, Banjara Hills, Hyderabad",
+    phone: "+91 99999 00000",
+    email: "hello@unsplashoasis.in",
+    website: "https://unsplashoasis.in",
+    socialLink: "https://instagram.com/unsplashoasis",
+    timings: "8:00 AM - 11:00 PM",
+    aestheticType: "Scandinavian Minimalist & Glasshouse",
+    crowd: "Designers, architects, remote workers",
+    discounts: "10% off for verified creatives",
+    facilities: ["Gigabit Wi-Fi", "Ergonomic Chairs", "Silent Zone"],
+    dineIn: true,
+    takeaway: true,
+    onlineOrder: true,
+    selfDelivery: true,
+    celebrities: ["Design Influencer X", "Tech CEO Y"],
+    bookingUrl: "https://zomato.com",
+    directionsTip: "Look for the large glass facade next to the art gallery.",
+    featuredMenu: [
+      { name: "Madagascar Vanilla Bean Latte", price: "₹280", category: "Brews", isSpecial: true },
+      { name: "Avocado Sourdough Toast", price: "₹350", category: "Savory", isSpecial: true }
+    ],
+    menuImages: [
+      "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600&auto=format&fit=crop"
+    ],
+    userReviews: [
+      { author: "QA Tester", rating: 5, text: "Perfect test cafe. Data pipelines flow beautifully.", date: "Jun 22, 2026", role: "Quality Assurance" }
+    ],
+    moreImages: [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=600&auto=format&fit=crop"
+    ],
+    vibeScores: [
+      { label: "Aesthetic", score: 10 },
+      { label: "Productivity", score: 9.8 }
+    ],
+    neighbourhoodGuide: "Right in the heart of Banjara Hills' creative district.",
+    isFeaturedBanner: true,
+    bannerCatchyLine: "Unsplash Elegance in Hyderabad",
+    isNewLaunch: true,
+    newLaunchCatchyline: "The latest addition to the city's minimalist scene",
+    status: 'open'
+  },
+  {
     id: 1,
     name: "Nimrah Cafe",
     area: "Charminar",
