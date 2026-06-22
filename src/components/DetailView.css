@@ -302,38 +302,49 @@
     gap: var(--space-3);
 }
 
-.verdict-card {
+.verdict-card-container {
+    width: 100%;
+    padding: 2px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #c86c52, #3d2b1f, #e0917a);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.verdict-card-content {
+    background: #1a120b;
+    padding: 2rem;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
     justify-content: center;
+    height: 100%;
 }
 
-.verdict-label-small {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-1);
-    color: var(--accent);
-    font-size: 0.8rem;
+.verdict-label-premium {
+    color: #e0917a;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-1);
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.verdict-title-small {
+.verdict-headline {
+    margin: 0;
     font-size: 1.15rem;
     font-weight: 700;
     line-height: 1.4;
-    color: var(--text-primary);
-    margin: 0;
+    color: #fdf5e6;
 }
 
-.verdict-description-small {
+.verdict-desc-premium {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: rgba(253, 245, 230, 0.7);
     line-height: 1.5;
-    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
 }
 
 /* SECTION HEADERS */
@@ -695,79 +706,82 @@
 .highlight-chip:hover { background: var(--success); color: white; border-color: var(--success); }
 
 /* VIBE SCORES - METRICS */
-.cafe-metrics { 
-    background: #ffffff; 
-    border-radius: 28px; 
-    padding: 32px; 
-    margin-bottom: var(--space-6); 
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+.vibe-scores-container {
+    width: 100%;
+    margin-bottom: var(--space-8);
 }
 
-.vibe-metrics-header { 
-    display: flex; 
-    align-items: center; 
-    gap: var(--space-3);
-    margin-bottom: var(--space-5);
-    color: var(--text-primary); 
+.vibe-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
 }
 
-.vibe-metrics-header h2 {
+.vibe-icon-wrapper {
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vibe-header h2 {
+    margin: 0;
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 0;
-    letter-spacing: -0.02em;
+    color: var(--text-primary);
 }
 
-.metrics-grid { 
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 24px; 
+.vibe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
 }
 
-.metric-card { 
-    background: #fcfbf9; 
-    padding: 20px; 
-    border-radius: 20px; 
-    border: 1px solid #efeae3; 
-    display: flex; 
-    align-items: center; 
-    gap: 16px;
+@media (min-width: 640px) {
+    .vibe-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.metric-ring { 
-    width: 60px; 
-    height: 60px; 
-    border-radius: 50%;
-    display: flex; 
-    align-items: center; 
+.vibe-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    padding: var(--space-5) var(--space-3);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: all 0.2s var(--ease);
+}
+
+.vibe-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.vibe-card-icon {
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+    display: flex;
     justify-content: center;
-    background: conic-gradient(#6f4e37 var(--percentage), #e2e8f0 0);
-    flex-shrink: 0;
 }
 
-.metric-inner { 
-    width: 50px; 
-    height: 50px; 
-    background: white; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-weight: 700; 
-    font-size: 14px; 
+.vibe-card-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
 }
 
-.metric-info h3 { 
-    margin: 0; 
-    font-size: 15px; 
-    color: #1e293b; 
-}
-
-.metric-info p { 
-    margin: 4px 0 0; 
-    font-size: 12px; 
-    color: #64748b; 
+.vibe-card-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* CELEBRITY VISITORS */
@@ -1166,4 +1180,45 @@
 
 @media (max-width: 480px) {
     .metrics-grid { grid-template-columns: 1fr; }
+}
+
+/* MOBILE TABS */
+.mobile-tabs-container {
+    margin-bottom: var(--space-6);
+    position: sticky;
+    top: 60px; /* Adjust based on navbar height if any, else 0 */
+    z-index: 40;
+    background: var(--bg-white);
+    padding-top: var(--space-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.mobile-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--space-2);
+    padding-bottom: var(--space-3);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mobile-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    background: var(--bg-light-gray);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s var(--ease);
+    border: 1px solid transparent;
+}
+
+.tab-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-white);
 }

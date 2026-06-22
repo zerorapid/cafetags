@@ -121,7 +121,7 @@ export function transformPost(row: any): BlogArticle {
     author: row.author,
     date: row.post_date,
     readTime: row.read_time,
-    status: row.status,
+    status: row.status as 'draft' | 'published',
     tags: row.tags || [],
     isFeatured: row.is_featured,
     seoTitle: row.seo_title,

@@ -636,6 +636,104 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     isNewLaunch: false,
     status: 'open'
+  },
+  {
+    id: 11,
+    name: "Audiocup Coffeehouse",
+    area: "Srinagar Colony",
+    tags: ["Live Music", "Cozy", "Coffee Roaster"],
+    image: "https://content.jdmagicbox.com/v2/comp/hyderabad/a4/040pxx40.xx40.241107200158.e9a4/catalogue/audiocup-coffeehouse-sri-nagar-colony-hyderabad-coffee-shops-ox5vlh9n6v.jpg",
+    vibe: "Brewing coffee and good vibes with live music to stir your soul. A cozy cafe atmosphere for solo or group visits, punctuated by regular live gigs and acoustic evenings.",
+    mapLink: "https://maps.google.com/?q=Audiocup+Coffeehouse+Hyderabad",
+    icon: "music_note",
+    signature: "Classic Cold Brews & Evening Desserts",
+    founded: "2023",
+    address: "1st Floor, Tomar House, Srinagar Colony, Opp. Karnataka Bank, Next to Banjara Hills Rd No 2, Hyderabad, Telangana 500073",
+    phone: "Contact via Website",
+    email: "hello@audiocupcoffee.com",
+    website: "https://audiocupcoffee.com",
+    socialLink: "https://instagram.com/audiocupcoffee",
+    timings: "10:00 AM – 10:00 PM (Monday–Saturday)",
+    aestheticType: "Live Music Coffeehouse & Cozy Acoustic Stage",
+    crowd: "Live music lovers, evening hangouts, coffee enthusiasts",
+    discounts: "",
+    facilities: ["Live Music Stage", "Acoustic Sets", "Cozy Seating"],
+    dineIn: true,
+    takeaway: true,
+    onlineOrder: true,
+    selfDelivery: false,
+    celebrities: [],
+    bookingUrl: "https://www.swiggy.com/dineout/hyderabad",
+    directionsTip: "1st Floor of Tomar House, right opposite Karnataka Bank and next to Banjara Hills Rd No 2.",
+    featuredMenu: [
+      { name: "Audiocup Signature Brew", price: "₹240", category: "Brews", isSpecial: true },
+      { name: "Live Session Nachos", price: "₹290", category: "Snacks", isSpecial: true },
+      { name: "Classic French Fries", price: "₹180", category: "Snacks" },
+      { name: "Evening Chocolate Tart", price: "₹220", category: "Patisserie" }
+    ],
+    userReviews: [
+      { author: "Local Guide", rating: 4.1, text: "Great ambiance and amazing live music events.", date: "Feb 10, 2026", role: "Music Enthusiast" }
+    ],
+    moreImages: [
+      "https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600&auto=format&fit=crop"
+    ],
+    vibeScores: [
+      { label: "Live Music", score: 9.5 },
+      { label: "Ambiance", score: 8.5 },
+      { label: "Coffee", score: 8.0 }
+    ],
+    isNewLaunch: true,
+    newLaunchCatchyline: "Live Music & Specialty Brews",
+    status: 'open'
+  },
+  {
+    id: 12,
+    name: "The Grind Cafe",
+    area: "Banjara Hills",
+    tags: ["Neighborhood Cafe", "Coffee", "Events"],
+    image: "https://b.zmtcdn.com/data/pictures/8/20819898/a8f311721cb3397c16b7205817f7e39b.jpg",
+    vibe: "Your neighbourhood cafe across Hyderabad, offering a diverse menu, brewed coffees, and desserts. Perfect for neighborhood hangouts, evening gatherings, and events.",
+    mapLink: "https://maps.google.com/?q=The+Grind+Cafe+Banjara+Hills",
+    icon: "local_cafe",
+    signature: "Specialty Brews & Continental Dishes",
+    founded: "2020",
+    address: "Saleha Manzil, Road No. 3, behind Tata Capital, Journalist Colony, Venkateshwara Hills, Banjara Hills, Hyderabad 500082",
+    phone: "73311 39983",
+    email: "info@mysite.com",
+    website: "https://thegrindcafe.in",
+    socialLink: "",
+    timings: "10:00 AM – 11:00 PM Everyday",
+    aestheticType: "Neighborhood Hangout & Event Hub",
+    crowd: "Neighborhood locals, coffee lovers, evening gatherings",
+    discounts: "",
+    facilities: ["Multiple Outlets", "Events Space", "Buffet Dinners"],
+    dineIn: true,
+    takeaway: true,
+    onlineOrder: true,
+    selfDelivery: false,
+    celebrities: [],
+    bookingUrl: "https://www.zomato.com/hyderabad",
+    directionsTip: "Behind Tata Capital in Journalist Colony, Road No. 3.",
+    featuredMenu: [
+      { name: "Specialty Breve Brew", price: "₹240", category: "Brews", isSpecial: true },
+      { name: "Continental Platter", price: "₹450", category: "Mains", isSpecial: true },
+      { name: "Cafe Dessert Delight", price: "₹220", category: "Patisserie" }
+    ],
+    userReviews: [
+      { author: "Zomato Reviewer", rating: 4.5, text: "Great neighborhood spot with excellent continental food.", date: "Jan 20, 2026", role: "Food Blogger" }
+    ],
+    moreImages: [
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600&auto=format&fit=crop"
+    ],
+    vibeScores: [
+      { label: "Neighborhood Vibe", score: 9.0 },
+      { label: "Food Quality", score: 8.8 },
+      { label: "Coffee", score: 8.5 }
+    ],
+    isNewLaunch: true,
+    newLaunchCatchyline: "Your Neighborhood Go-To Cafe",
+    status: 'open'
   }
 ];
 

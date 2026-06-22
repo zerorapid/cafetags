@@ -35,7 +35,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
     if (article.status === 'draft') return false;
 
     // Filter by search
-    if (searchQuery && !article.title.toLowerCase().includes(searchQuery.toLowerCase()) && !article.excerpt.toLowerCase().includes(searchQuery.toLowerCase())) {
+    if (searchQuery && !(article.title || "").toLowerCase().includes(searchQuery.toLowerCase()) && !(article.excerpt || "").toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
     }
 
@@ -89,7 +89,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
             <div className="flex flex-wrap items-center gap-4 text-xs text-stone-500 font-semibold border-b border-stone-200/60 pb-6">
               <span className="flex items-center gap-1.5 text-stone-900">
                 <span className="w-6 h-6 rounded-full bg-stone-900 text-white flex items-center justify-center text-[10px] uppercase font-bold">
-                  {selectedArticle.author[0]}
+                  {(selectedArticle.author || "A")[0]}
                 </span>
                 <span>By {selectedArticle.author}</span>
               </span>
@@ -115,7 +115,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
           {/* Author Bio Footer */}
           <div className="mt-16 bg-[#FAF9F6] border border-stone-200 p-6 rounded-lg flex items-start gap-4">
             <div className="flex-shrink-0 w-12 h-12 rounded-full bg-stone-900 text-white flex items-center justify-center font-bold text-lg shadow-sm">
-              {selectedArticle.author[0]}
+              {(selectedArticle.author || "A")[0]}
             </div>
             <div>
               <span className="block text-xs font-extrabold text-stone-400 uppercase tracking-widest leading-none">ABOUT THE OWNER</span>

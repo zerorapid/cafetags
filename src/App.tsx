@@ -250,7 +250,7 @@ export default function App() {
 
   // --- AUTO-ROTATING BANNERS EFFECT ---
   useEffect(() => {
-    if (location.pathname !== '/') return;
+    if (location.pathname !== '/' || cafes.length === 0) return;
     const interval = setInterval(() => {
       setCarouselIndex((prev) => (prev + 1) % Math.min(cafes.length, 4));
     }, 7000);
@@ -270,7 +270,7 @@ export default function App() {
       const matchesTag = selectedTag === "All" || cafe.tags.some(t => t.toLowerCase() === selectedTag.toLowerCase());
 
       // 2. Location (District) matching
-      const matchesLocation = selectedLocation === "All" || cafe.area.toLowerCase() === selectedLocation.toLowerCase();
+      const matchesLocation = selectedLocation === "All" || (cafe.area || "").toLowerCase() === selectedLocation.toLowerCase();
 
       // 3. Budget Tier matching
       const getBudgetCategory = (c: Cafe) => {
@@ -304,10 +304,10 @@ export default function App() {
       // 5. Raw search text matching
       const keyword = searchQuery.toLowerCase().trim();
       const matchesSearch = !keyword || 
-        cafe.name.toLowerCase().includes(keyword) ||
-        cafe.area.toLowerCase().includes(keyword) ||
-        cafe.vibe.toLowerCase().includes(keyword) ||
-        cafe.tags.some(t => t.toLowerCase().includes(keyword));
+        (cafe.name || "").toLowerCase().includes(keyword) ||
+        (cafe.area || "").toLowerCase().includes(keyword) ||
+        (cafe.vibe || "").toLowerCase().includes(keyword) ||
+        (cafe.tags || []).some(t => (t || "").toLowerCase().includes(keyword));
 
       return matchesTag && matchesLocation && matchesBudget && matchesAesthetic && matchesSearch;
     });
@@ -318,9 +318,9 @@ export default function App() {
       } else if (sortBy === "founded-desc") {
         return (parseInt(b.founded) || 0) - (parseInt(a.founded) || 0);
       } else if (sortBy === "name-az") {
-        return a.name.localeCompare(b.name);
+        return (a.name || "").localeCompare(b.name || "");
       } else if (sortBy === "area-az") {
-        return a.area.localeCompare(b.area);
+        return (a.area || "").localeCompare(b.area || "");
       }
       return 0;
     });

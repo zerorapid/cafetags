@@ -97,6 +97,17 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
   const getImg = (idx: number) => allImages[idx] || cafe.image;
   const isClosed = cafe.status === 'closed' || cafe.status === 'shutdown';
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [activeTab, setActiveTab] = useState(allImages.length > 1 ? 'gallery' : 'about');
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const showSection = (tabId: string) => !isMobile || activeTab === tabId;
+
   // Calculate random/mock rating stats if reviews exist, else default
   const reviewCount = cafe.userReviews?.length || 0;
   const avgRating = reviewCount > 0 ? (cafe.userReviews!.reduce((acc, r) => acc + r.rating, 0) / reviewCount).toFixed(1) : '4.8';
@@ -150,21 +161,36 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     </div>
                 </div>
                 
-                <div className="info-card-item verdict-card">
-                    <div className="verdict-label-small">
-                        <Award size={16} />
-                        CafeTags Verdict
+                <div className="verdict-card-container">
+                    <div className="verdict-card-content">
+                        <div className="verdict-label-premium">
+                            ☕ CafeTags Verdict
+                        </div>
+                        <h3 className="verdict-headline">{cafe.curatorNote || `A standout destination in ${cafe.area} blending modern design with exceptional hospitality.`}</h3>
+                        <p className="verdict-desc-premium">
+                            {cafe.neighbourhoodGuide || "Perfect for remote workers, casual dates, and photography sessions."}
+                        </p>
                     </div>
-                    <h3 className="verdict-title-small">{cafe.curatorNote || `A standout destination in ${cafe.area} blending modern design with exceptional hospitality.`}</h3>
-                    <p className="verdict-description-small">
-                        {cafe.neighbourhoodGuide || "Perfect for remote workers, casual dates, and photography sessions."}
-                    </p>
                 </div>
             </div>
         </section>
 
+        {/* MOBILE TABS */}
+        {isMobile && (
+          <div className="mobile-tabs-container">
+            <div className="mobile-tabs">
+              {allImages.length > 1 && <button onClick={() => setActiveTab('gallery')} className={`tab-btn ${activeTab === 'gallery' ? 'active' : ''}`}>Photo Gallery</button>}
+              <button onClick={() => setActiveTab('about')} className={`tab-btn ${activeTab === 'about' ? 'active' : ''}`}>About Cafe</button>
+              <button onClick={() => setActiveTab('visit')} className={`tab-btn ${activeTab === 'visit' ? 'active' : ''}`}>Visit Info</button>
+              {cafe.featuredMenu && cafe.featuredMenu.length > 0 && <button onClick={() => setActiveTab('menu')} className={`tab-btn ${activeTab === 'menu' ? 'active' : ''}`}>Menu Card</button>}
+              {cafe.vibeScores && cafe.vibeScores.length > 0 && <button onClick={() => setActiveTab('vibes')} className={`tab-btn ${activeTab === 'vibes' ? 'active' : ''}`}>Vibe Scores</button>}
+              {cafe.userReviews && cafe.userReviews.length > 0 && <button onClick={() => setActiveTab('reviews')} className={`tab-btn ${activeTab === 'reviews' ? 'active' : ''}`}>Reviews</button>}
+            </div>
+          </div>
+        )}
+
         {/* PHOTO GALLERY - BENTO GRID */}
-        {allImages.length > 1 && (
+        {showSection('gallery') && allImages.length > 1 && (
         <section className="gallery-section">
             <div className="section-header">
                 <h2 className="section-title">
@@ -205,6 +231,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             <div className="main-content">
                 
                 {/* ABOUT */}
+                {showSection('about') && (
                 <div className="info-card">
                     <h3 className="info-card-title">
                         <BookOpen size={24} color="var(--accent)" />
@@ -223,9 +250,10 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         ))}
                     </div>
                 </div>
+                )}
 
                 {/* MENU CARD */}
-                {cafe.featuredMenu && cafe.featuredMenu.length > 0 && (
+                {showSection('menu') && cafe.featuredMenu && cafe.featuredMenu.length > 0 && (
                 <div className="menu-card-container">
                     <h3 className="info-card-title">
                         <Coffee size={24} color="var(--accent)" />
@@ -286,30 +314,45 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 )}
 
                 {/* VIBE SCORES */}
-                {cafe.vibeScores && cafe.vibeScores.length > 0 && (
-                <div className="cafe-metrics">
-                    <div className="vibe-metrics-header">
-                        <Coffee size={24} color="var(--accent)" />
-                        <h2 style={{ margin: 0 }}>Vibe Scores</h2>
+                {showSection('vibes') && cafe.vibeScores && cafe.vibeScores.length > 0 && (
+                <div className="vibe-scores-container">
+                    <div className="vibe-header">
+                        <div className="vibe-icon-wrapper">
+                            <Coffee size={24} color="var(--accent)" />
+                        </div>
+                        <h2>Vibe Scores</h2>
                     </div>
 
-                    <div className="metrics-grid">
-                        {cafe.vibeScores.map((score, idx) => (
-                        <div key={idx} className="metric-card">
-                            <div className="metric-ring" style={{ '--percentage': `${score.score * 10}%` } as any}>
-                                <div className="metric-inner">{score.score}</div>
-                            </div>
-                            <div className="metric-info">
-                                <h3>{score.label}</h3>
-                            </div>
-                        </div>
-                        ))}
+                    <div className="vibe-grid">
+                        {cafe.vibeScores.map((score, idx) => {
+                            const labelLower = score.label.toLowerCase();
+                            let IconComponent = Star;
+                            if (labelLower.includes('taste') || labelLower.includes('coffee') || labelLower.includes('food')) IconComponent = Coffee;
+                            else if (labelLower.includes('ambiance') || labelLower.includes('vibe')) IconComponent = Sparkles;
+                            else if (labelLower.includes('heritage') || labelLower.includes('history')) IconComponent = BookOpen;
+                            else if (labelLower.includes('value') || labelLower.includes('price')) IconComponent = Award;
+                            else if (labelLower.includes('work') || labelLower.includes('wifi')) IconComponent = Store;
+                            
+                            return (
+                                <div key={idx} className="vibe-card">
+                                    <div className="vibe-card-icon">
+                                        {score.icon ? (
+                                            <img src={score.icon} alt={score.label} style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+                                        ) : (
+                                            <IconComponent size={24} />
+                                        )}
+                                    </div>
+                                    <div className="vibe-card-value">{score.score}</div>
+                                    <div className="vibe-card-label">{score.label}</div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
                 )}
 
                 {/* CELEBRITY VISITORS */}
-                {cafe.celebrities && cafe.celebrities.length > 0 && (
+                {showSection('about') && cafe.celebrities && cafe.celebrities.length > 0 && (
                 <div className="info-card">
                     <h3 className="info-card-title">
                         <Sparkles size={24} color="var(--accent)" />
@@ -330,11 +373,11 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                 )}
 
                 {/* REVIEWS */}
-                {cafe.userReviews && cafe.userReviews.length > 0 && (
+                {showSection('reviews') && cafe.userReviews && cafe.userReviews.length > 0 && (
                 <div className="reviews-container">
                     <div className="reviews-header">
                         <MessageSquare size={24} color="var(--accent)" />
-                        <h2>{cafe.userReviews.length} Reviews</h2>
+                        <h2>Reviews</h2>
                     </div>
 
                     <div className="rating-summary">
@@ -372,6 +415,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
             </div>
 
             {/* SIDEBAR */}
+            {showSection('visit') && (
             <div className="sidebar">
                 <div className="sidebar-card visit-card">
                     <h3 className="sidebar-title">
@@ -427,6 +471,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     </a>
                 </div>
             </div>
+            )}
         </div>
         </div>
 

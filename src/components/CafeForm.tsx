@@ -95,6 +95,10 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const [menu4, setMenu4] = useState('');
   const [menu5, setMenu5] = useState('');
 
+  const [vibeScoreLabel, setVibeScoreLabel] = useState('');
+  const [vibeScoreValue, setVibeScoreValue] = useState('');
+  const [vibeScoreIcon, setVibeScoreIcon] = useState('');
+
   const {
     register,
     handleSubmit,
@@ -106,7 +110,6 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
     resolver: zodResolver(cafeSchema) as any,
     defaultValues: editingCafe ? {
       ...editingCafe,
-      vibeScoresInput: Array.isArray(editingCafe.vibeScores) ? editingCafe.vibeScores.map(v => `${v.label}:${v.score}`).join(', ') : '',
     } : {
       founded: '2026',
       icon: 'local_cafe',
@@ -121,7 +124,8 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
       tags: [],
       facilities: ['Wi-Fi', 'Power Outlets'],
       celebrities: [],
-      featuredMenu: []
+      featuredMenu: [],
+      vibeScores: []
     }
   });
 
@@ -135,6 +139,7 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
   const watchFacilities = watch('facilities') || [];
   const watchCelebrities = watch('celebrities') || [];
   const watchFeaturedMenu = watch('featuredMenu') || [];
+  const watchVibeScores = watch('vibeScores') || [];
   const watchImage = watch('image');
 
   useEffect(() => {
@@ -212,26 +217,25 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
     }
   };
 
+  const handleAddVibeScore = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (vibeScoreLabel && vibeScoreValue) {
+      setValue('vibeScores', [...watchVibeScores, { label: vibeScoreLabel, score: parseFloat(vibeScoreValue), icon: vibeScoreIcon }]);
+      setVibeScoreLabel('');
+      setVibeScoreValue('');
+      setVibeScoreIcon('');
+    }
+  };
+
   const onSubmit = async (data: CafeFormValues) => {
     const moreImages = [gallery1, gallery2, gallery3, gallery4, gallery5].map(s => s.trim()).filter(Boolean);
     const menuImages = [menu1, menu2, menu3, menu4, menu5].map(s => s.trim()).filter(Boolean);
-
-    let parsedVibeScores: {label: string, score: number}[] = [];
-    if (data.vibeScoresInput) {
-      parsedVibeScores = data.vibeScoresInput.split(',')
-        .map(s => s.trim())
-        .filter(Boolean)
-        .map(s => {
-          const parts = s.split(':');
-          return { label: parts[0]?.trim() || '', score: parseFloat(parts[1]) || 0 };
-        });
-    }
 
     const cafeData: any = {
       ...data,
       menuImages,
       moreImages,
-      vibeScores: parsedVibeScores,
+      vibeScores: data.vibeScores || [],
       userReviews: editingCafe ? editingCafe.userReviews : []
     };
 
@@ -409,7 +413,35 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
 
                 <div className="field">
                   <label>Vibe Scores</label>
-                  <input type="text" placeholder="e.g. Workspace:9.0, Heritage:8.5" {...register('vibeScoresInput')} />
+                  <div style={{ border: '1px solid var(--border)', padding: '16px', borderRadius: '12px', marginBottom: '12px', background: 'var(--bg-white)' }}>
+                    <div style={{ display: 'flex', gap: '12px', marginBottom: '12px', flexWrap: 'wrap' }}>
+                      <div style={{ flex: 1, minWidth: '150px' }}>
+                         <label style={{ fontSize: '12px', marginBottom: '6px', display: 'block' }}>Label</label>
+                         <input type="text" placeholder="e.g. Heritage" value={vibeScoreLabel} onChange={e => setVibeScoreLabel(e.target.value)} />
+                      </div>
+                      <div style={{ flex: 1, minWidth: '100px' }}>
+                         <label style={{ fontSize: '12px', marginBottom: '6px', display: 'block' }}>Score (1-10)</label>
+                         <input type="number" step="0.1" max="10" placeholder="e.g. 9.5" value={vibeScoreValue} onChange={e => setVibeScoreValue(e.target.value)} />
+                      </div>
+                    </div>
+                    <div style={{ marginBottom: '12px' }}>
+                         <label style={{ fontSize: '12px', marginBottom: '6px', display: 'block' }}>Custom Icon URL (Optional)</label>
+                         <ImageUploadField placeholder="Upload icon image..." value={vibeScoreIcon} onChange={setVibeScoreIcon} />
+                    </div>
+                    <button type="button" className="btn-add-menu-item" style={{ width: '100%', marginTop: '0' }} onClick={handleAddVibeScore}>Add Vibe Score</button>
+                  </div>
+                  
+                  <div className="vibe-scores-list">
+                    {watchVibeScores.map((vs: any, idx: number) => (
+                      <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: '#f8fafc', padding: '12px', borderRadius: '8px', marginBottom: '8px', border: '1px solid #e2e8f0' }}>
+                        {vs.icon && <img src={vs.icon} alt="icon" style={{ width: '28px', height: '28px', borderRadius: '4px', objectFit: 'contain' }} />}
+                        <span style={{ fontWeight: 600, color: '#0f172a' }}>{vs.label}</span>
+                        <span style={{ color: '#64748b' }}>{vs.score}/10</span>
+                        <button type="button" onClick={() => setValue('vibeScores', watchVibeScores.filter((_: any, i: number) => i !== idx))} style={{ marginLeft: 'auto', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontSize: '16px' }}>🗑</button>
+                      </div>
+                    ))}
+                    {watchVibeScores.length === 0 && <p style={{ fontSize: '12px', color: 'var(--text-secondary)', fontStyle: 'italic' }}>No vibe scores added yet.</p>}
+                  </div>
                 </div>
 
                 <div className="field">
