@@ -1,4 +1,3 @@
-◇ injected env (10) from .env // tip: ⌘ enable debugging { debug: true }
 [
   {
     "featuredMenu": [],
@@ -959,5 +958,126 @@
     "vibeScores": [],
     "isNewLaunch": false,
     "celebrities": []
+  },
+  {
+    "id": 1782218711834,
+    "name": "KASA The OG Cafe",
+    "area": "Banjara Hills, Hyderabad",
+    "address": "8-2, 269/A, Banjara Hills Rd Number 3, beside Mountain Bakery, UBI Colony, Green Valley, Banjara Hills, Hyderabad, Telangana 500028",
+    "phone": "+91 88017 93558",
+    "timings": "11:30 AM – 2:00 PM",
+    "signature": "Chai & Snacks",
+    "vibe": "Casual neighborhood cafe / chai spot serving black tea, green tea, ginger tea, and bakery-style items.",
+    "curatorNote": "The online listings are a bit inconsistent: one source places it in Lumbini Jewel Mall, while another gives a Banjara Hills Rd No. 3 address. A recent post also mentions KASA THE OG CAFE & RASA PAN PALACE together in Banjara Hills.",
+    "tags": [
+      "Chai",
+      "Casual",
+      "Snacks"
+    ],
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1000",
+    "icon": "local_cafe",
+    "founded": "2024",
+    "email": "",
+    "website": "",
+    "aestheticType": "Casual Neighborhood",
+    "crowd": "Locals, Chai Lovers",
+    "discounts": "",
+    "facilities": [
+      "Outdoor Seating"
+    ],
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": false,
+    "selfDelivery": false,
+    "celebrities": [],
+    "bookingUrl": "",
+    "mapLink": "https://maps.app.goo.gl/search/KASA+The+OG+Cafe+Hyderabad",
+    "status": "open",
+    "isNewLaunch": true,
+    "newLaunchCatchyline": "New neighborhood chai spot in Banjara Hills"
+  },
+  {
+    "id": 1782218906628,
+    "name": "Altr Ego",
+    "area": "Banjara Hills, Hyderabad",
+    "address": "Floor Number 8-2-277/27, Plot Number 27, UB House, Road Number 3, Khairatabad, Banjara Hills, Hyderabad",
+    "phone": "+91 99896 67428",
+    "email": "altrego@gmail.com",
+    "website": "https://altrego.in",
+    "facebookUrl": "https://www.facebook.com/863419973514544",
+    "socialLink": "https://www.instagram.com/popular/altr-ego-hyderabad/?hl=en",
+    "timings": "Not fully specified",
+    "signature": "Matcha & Specialty Coffee",
+    "vibe": "Hyderabad’s first futuristic matcha/slow-bar style cafe with an aesthetic podcast space and mirrors.",
+    "curatorNote": "Unique concept premium café. Online reviews mention it’s great for photos and hanging out, but there’s some mixed feedback about seating, slow service, and billing.",
+    "tags": [
+      "Matcha",
+      "Futuristic",
+      "Podcast Space",
+      "Aesthetic"
+    ],
+    "image": "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=1000",
+    "icon": "local_cafe",
+    "founded": "2024",
+    "aestheticType": "Futuristic Matcha Bar",
+    "crowd": "Creatives, Influencers, Matcha Lovers",
+    "discounts": "",
+    "facilities": [
+      "Podcast Room",
+      "Mirrors",
+      "Indoor Seating"
+    ],
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": false,
+    "selfDelivery": false,
+    "celebrities": [],
+    "bookingUrl": "",
+    "mapLink": "https://maps.app.goo.gl/search/Altr+Ego+Banjara+Hills+Hyderabad",
+    "status": "open",
+    "isNewLaunch": true,
+    "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room."
+  },
+  {
+    "id": 1782218999099,
+    "name": "SOCIO art cafe",
+    "area": "Banjara Hills, Hyderabad",
+    "address": "Vivekananda Enclave, Door No 8, Plot No 2269/N/8, beside Challa Eye Hospital, Sagar Society, Road Number 2, Banjara Hills, Hyderabad 500034",
+    "phone": "+91 99597 32328",
+    "email": "",
+    "website": "",
+    "facebookUrl": "",
+    "socialLink": "https://www.instagram.com/socio.hyd/",
+    "timings": "9:00 AM – 11:00 PM",
+    "signature": "Art Workshops & Cafe Bites",
+    "vibe": "Where Art Meets Life. A bright social vibe popular for painting activities, events, and casual hangouts.",
+    "curatorNote": "Recent posts describe it as a beautiful art cafe in Hyderabad. It is especially known for hands-on activities like tote bag painting, bottle painting, tufting, and pot painting.",
+    "tags": [
+      "Art Cafe",
+      "Workshops",
+      "Creative",
+      "Events Space"
+    ],
+    "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=1000",
+    "icon": "palette",
+    "founded": "2024",
+    "aestheticType": "Creative Art Studio",
+    "crowd": "Artists, Families, Friends, Content Creators",
+    "discounts": "",
+    "facilities": [
+      "Art Supplies",
+      "Workshop Tables",
+      "Indoor Seating"
+    ],
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": false,
+    "selfDelivery": false,
+    "celebrities": [],
+    "bookingUrl": "",
+    "mapLink": "https://maps.app.goo.gl/search/Socio+Art+Cafe+Banjara+Hills+Hyderabad",
+    "status": "open",
+    "isNewLaunch": false,
+    "newLaunchCatchyline": ""
   }
 ]

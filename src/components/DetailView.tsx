@@ -315,13 +315,11 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
                 {/* VIBE SCORES */}
                 {showSection('vibes') && cafe.vibeScores && cafe.vibeScores.length > 0 && (
-                <div className="vibe-scores-container">
-                    <div className="vibe-header">
-                        <div className="vibe-icon-wrapper">
-                            <Coffee size={24} color="var(--accent)" />
-                        </div>
-                        <h2>Vibe Scores</h2>
-                    </div>
+                <div className="info-card vibe-scores-container">
+                    <h3 className="info-card-title">
+                        <Coffee size={24} color="var(--accent)" />
+                        Vibe Scores
+                    </h3>
 
                     <div className="vibe-grid">
                         {cafe.vibeScores.map((score, idx) => {
@@ -407,7 +405,6 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                             <div className="badge"><Star size={12} fill="currentColor" stroke="none" /> {review.rating % 1 === 0 ? review.rating + ".0" : review.rating}</div>
                         </div>
                         <p className="review-text">{review.text}</p>
-                        <div className="helpful"><ThumbsUp size={16} /> Helpful</div>
                     </div>
                     ))}
                 </div>

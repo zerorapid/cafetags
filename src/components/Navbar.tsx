@@ -61,10 +61,10 @@ export function Navbar({ isAuthenticated, onLogout }: NavbarProps) {
               </button>
             )}
             <Link 
-              to="/journal" 
+              to="/blog" 
               className="text-[#852221] flex items-center no-underline hover:opacity-70 transition-opacity whitespace-nowrap"
             >
-              <span className="hidden sm:inline text-[11px] sm:text-[12.5px] font-medium tracking-[0.2em] uppercase">Our Journal</span>
+              <span className="hidden sm:inline text-[11px] sm:text-[12.5px] font-medium tracking-[0.2em] uppercase">Our Blog</span>
               <i className="ti ti-book sm:hidden text-xl"></i>
             </Link>
           </div>

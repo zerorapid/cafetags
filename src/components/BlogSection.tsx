@@ -58,11 +58,11 @@ export function BlogSection({ articles }: BlogSectionProps) {
       >
         {/* Back Link */}
         <button
-          onClick={() => navigate('/journal')}
+          onClick={() => navigate('/blog')}
           className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-stone-500 hover:text-stone-900 mb-8 smooth-transition group cursor-pointer"
         >
           <MaterialIcon name="arrow_back" className="text-sm group-hover:-translate-x-1 transition-transform" />
-          <span>BACK TO JOURNAL FEED</span>
+          <span>BACK TO BLOG FEED</span>
         </button>
 
         {/* Article Cover Image */}
@@ -135,7 +135,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
       {/* Blog Header Title */}
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
         <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest block font-mono">ESTABLISHED JUN 2026</span>
-        <h2 className="font-serif text-4xl md:text-5xl font-light italic text-stone-900 tracking-wide">The Coffee Journal</h2>
+        <h2 className="font-serif text-4xl md:text-5xl font-light italic text-stone-900 tracking-wide">The Coffee Blog</h2>
         <p className="text-stone-500 text-xs font-dm-sans max-w-md mx-auto leading-relaxed">
           Critical study logs, design breakdowns, and historical chronologies about Hyderabad's unique cafe architectural movement.
         </p>
@@ -148,7 +148,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
           <MaterialIcon name="search" className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" />
           <input 
             type="text" 
-            placeholder="Search journal columns, guides, and studies..." 
+            placeholder="Search blog columns, guides, and studies..." 
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             className="w-full bg-white border border-stone-200 pl-12 pr-4 py-3.5 rounded-full text-sm font-medium focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all shadow-sm text-stone-900"
@@ -191,7 +191,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              onClick={() => navigate(`/journal/${generateSlug(article.title)}`)}
+              onClick={() => navigate(`/blog/${generateSlug(article.title)}`)}
               className="group bg-white border border-stone-200/80 rounded-lg overflow-hidden shadow-xs hover:shadow-md hover:border-stone-400 cursor-pointer smooth-transition flex flex-col justify-between"
             >
               <div>

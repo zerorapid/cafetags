@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const resolve = (p: string) => path.resolve(__dirname, '..', p);
 
-const SITE_URL = process.env.VITE_SITE_URL || 'https://cafetags.com';
+const SITE_URL = process.env.VITE_SITE_URL || 'https://fellowbricks.site';
 
 const supabase = createClient(
   process.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co',
@@ -107,14 +107,14 @@ async function prerender() {
 
   for (const article of blogs) {
     const slug = generateSlug(article.title);
-    const articleDir = path.join(distDir, 'journal');
-    const url = `${SITE_URL}/journal/${slug}`;
+    const articleDir = path.join(distDir, 'blog');
+    const url = `${SITE_URL}/blog/${slug}`;
 
     sitemapUrls.push(url);
     
     if (!fs.existsSync(articleDir)) fs.mkdirSync(articleDir, { recursive: true });
 
-    const title = `${article.title} | Journal | CafeTags`;
+    const title = `${article.title} | Blog | CafeTags`;
     const description = article.excerpt;
     const imageUrl = article.image;
 
@@ -156,7 +156,7 @@ async function prerender() {
       </div>`);
 
     fs.writeFileSync(path.join(articleDir, `${slug}.html`), html);
-    console.log(`Pre-rendered /journal/${slug}.html`);
+    console.log(`Pre-rendered /blog/${slug}.html`);
   }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -185,7 +185,7 @@ Sitemap: ${SITE_URL}/sitemap.xml`;
   fs.writeFileSync(path.join(distDir, 'index.html'), homepageHtml);
   console.log('Pre-rendered Homepage index.html');
 
-  ['journal', 'admin', 'cafe'].forEach(dir => {
+  ['blog', 'admin', 'cafe'].forEach(dir => {
     const dirPath = path.join(distDir, dir);
     if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
     fs.copyFileSync(path.join(distDir, 'index.html'), path.join(dirPath, 'index.html'));
