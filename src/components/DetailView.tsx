@@ -272,7 +272,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                                 const itemImg = item.image || cafe.menuImages?.[idx];
                                 return (
                                 <div key={`sig-${idx}`} className="sig-card">
-                                    <div className="sig-card-img cursor-pointer" onClick={() => itemImg && setLightboxIndex(allImages.indexOf(itemImg))}>
+                                    <div className="sig-card-img cursor-default">
                                         {itemImg ? (
                                             <img src={itemImg} alt={item.name} loading="lazy" />
                                         ) : (
