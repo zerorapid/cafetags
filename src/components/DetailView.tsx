@@ -36,24 +36,35 @@ const NucleoIcon = ({ name, disabled }: { name: string, disabled?: boolean }) =>
 
 const DraggableCarousel = ({ children }: { children: React.ReactNode }) => {
     const scrollRef = React.useRef<HTMLDivElement>(null);
+    const [isMouseDown, setIsMouseDown] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
 
     const onMouseDown = (e: React.MouseEvent) => {
-        setIsDragging(true);
+        setIsMouseDown(true);
+        setIsDragging(false);
         setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
         setScrollLeft(scrollRef.current?.scrollLeft || 0);
     };
 
-    const onMouseLeave = () => setIsDragging(false);
-    const onMouseUp = () => setIsDragging(false);
+    const onMouseLeave = () => {
+        setIsMouseDown(false);
+        setIsDragging(false);
+    };
+    const onMouseUp = () => {
+        setIsMouseDown(false);
+        setIsDragging(false);
+    };
 
     const onMouseMove = (e: React.MouseEvent) => {
-        if (!isDragging) return;
+        if (!isMouseDown) return;
         e.preventDefault();
         const x = e.pageX - (scrollRef.current?.offsetLeft || 0);
         const walk = (x - startX) * 2;
+        if (Math.abs(walk) > 10) {
+            setIsDragging(true);
+        }
         if (scrollRef.current) {
             scrollRef.current.scrollLeft = scrollLeft - walk;
         }
