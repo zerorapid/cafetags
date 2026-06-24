@@ -93,7 +93,8 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
   }, [cafe]);
 
   // Fallback images array
-  const allImages = [cafe.image, ...(cafe.moreImages || []), ...(cafe.menuImages || [])].filter(Boolean);
+  const featuredImages = (cafe.featuredMenu || []).map(item => item.image).filter(Boolean) as string[];
+  const allImages = [cafe.image, ...(cafe.moreImages || []), ...(cafe.menuImages || []), ...featuredImages].filter(Boolean);
   const getImg = (idx: number) => allImages[idx] || cafe.image;
   const isClosed = cafe.status === 'closed' || cafe.status === 'shutdown';
 
@@ -267,26 +268,29 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         </h3>
 
                         <div className="signature-row">
-                            {cafe.featuredMenu.slice(0, 3).map((item, idx) => (
-                            <div key={`sig-${idx}`} className="sig-card">
-                                <div className="sig-card-img cursor-pointer" onClick={() => cafe.menuImages?.[idx] && setLightboxIndex(allImages.indexOf(cafe.menuImages[idx]))}>
-                                    {cafe.menuImages?.[idx] ? (
-                                        <img src={cafe.menuImages[idx]} alt={item.name} loading="lazy" />
-                                    ) : (
-                                        <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
-                                    )}
+                            {cafe.featuredMenu.slice(0, 3).map((item, idx) => {
+                                const itemImg = item.image || cafe.menuImages?.[idx];
+                                return (
+                                <div key={`sig-${idx}`} className="sig-card">
+                                    <div className="sig-card-img cursor-pointer" onClick={() => itemImg && setLightboxIndex(allImages.indexOf(itemImg))}>
+                                        {itemImg ? (
+                                            <img src={itemImg} alt={item.name} loading="lazy" />
+                                        ) : (
+                                            <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
+                                        )}
+                                    </div>
+                                    <div className="sig-details">
+                                        <span className="sig-name">{item.name}</span>
+                                        <span className="price-tag">{item.price}</span>
+                                    </div>
                                 </div>
-                                <div className="sig-details">
-                                    <span className="sig-name">Menu {String(idx + 1).padStart(2, '0')}</span>
-                                    <span className="price-tag">{item.price}</span>
-                                </div>
-                            </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </>
                     )}
 
-                    {cafe.featuredMenu.length > 0 && (
+                    {cafe.menuImages && cafe.menuImages.length > 0 && (
                     <>
                         <h3 className="menu-section-title">
                             Browse Menu
@@ -294,14 +298,10 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
                         <div className="carousel-wrapper">
                             <DraggableCarousel>
-                                {cafe.featuredMenu.map((item, idx) => (
+                                {cafe.menuImages?.map((imgSrc, idx) => (
                                 <div key={`browse-${idx}`} className="menu-carousel-item">
-                                    <div className="menu-img cursor-pointer" onClick={() => cafe.menuImages?.[idx] && setLightboxIndex(allImages.indexOf(cafe.menuImages[idx]))}>
-                                        {cafe.menuImages?.[idx] ? (
-                                            <img src={cafe.menuImages[idx]} alt={item.name} draggable="false" />
-                                        ) : (
-                                            <div style={{ width: '100%', height: '100%', background: 'var(--bg-light-gray)' }}></div>
-                                        )}
+                                    <div className="menu-img cursor-pointer" onClick={() => setLightboxIndex(allImages.indexOf(imgSrc))}>
+                                        <img src={imgSrc} alt={`Menu ${idx + 1}`} draggable="false" />
                                     </div>
                                     <div className="menu-label">Menu {String(idx + 1).padStart(2, '0')}</div>
                                 </div>
