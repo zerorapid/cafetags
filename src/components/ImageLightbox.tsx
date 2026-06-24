@@ -1,16 +1,22 @@
-import React, { useEffect } from 'react';
-import { X } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './ImageLightbox.css';
-import { OptimizedImage } from './OptimizedImage';
 
 interface ImageLightboxProps {
-  src: string | null;
+  images: string[];
+  initialIndex: number | null;
   onClose: () => void;
 }
 
-export function ImageLightbox({ src, onClose }: ImageLightboxProps) {
+export function ImageLightbox({ images, initialIndex, onClose }: ImageLightboxProps) {
+  const [currentIndex, setCurrentIndex] = useState<number | null>(initialIndex);
+
   useEffect(() => {
-    if (src) {
+    setCurrentIndex(initialIndex);
+  }, [initialIndex]);
+
+  useEffect(() => {
+    if (currentIndex !== null) {
       // Prevent body scrolling when lightbox is open
       document.body.style.overflow = 'hidden';
     } else {
@@ -19,20 +25,35 @@ export function ImageLightbox({ src, onClose }: ImageLightboxProps) {
     return () => {
       document.body.style.overflow = '';
     };
-  }, [src]);
+  }, [currentIndex]);
 
-  // Close on Escape key press
+  const handleNext = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (currentIndex !== null && images.length > 0) {
+      setCurrentIndex((currentIndex + 1) % images.length);
+    }
+  };
+
+  const handlePrev = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (currentIndex !== null && images.length > 0) {
+      setCurrentIndex((currentIndex - 1 + images.length) % images.length);
+    }
+  };
+
+  // Close and navigate on key press
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (currentIndex === null) return;
       if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'ArrowLeft') handlePrev();
     };
-    if (src) {
-      window.addEventListener('keydown', handleKeyDown);
-    }
+    window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [src, onClose]);
+  }, [currentIndex, images.length, onClose]);
 
-  if (!src) return null;
+  if (currentIndex === null || !images[currentIndex]) return null;
 
   return (
     <div className="lightbox-overlay" onClick={onClose}>
@@ -43,13 +64,34 @@ export function ImageLightbox({ src, onClose }: ImageLightboxProps) {
       >
         <X size={24} />
       </button>
+
+      {images.length > 1 && (
+        <button 
+          className="lightbox-nav-btn prev" 
+          onClick={handlePrev}
+          aria-label="Previous image"
+        >
+          <ChevronLeft size={32} />
+        </button>
+      )}
+
       <div className="lightbox-image-container" onClick={(e) => e.stopPropagation()}>
         <img 
-          src={src} 
-          alt="Full screen preview" 
+          src={images[currentIndex]} 
+          alt={`Full screen preview ${currentIndex + 1}`} 
           className="lightbox-image" 
         />
       </div>
+
+      {images.length > 1 && (
+        <button 
+          className="lightbox-nav-btn next" 
+          onClick={handleNext}
+          aria-label="Next image"
+        >
+          <ChevronRight size={32} />
+        </button>
+      )}
     </div>
   );
 }
