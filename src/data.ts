@@ -7,925 +7,925 @@ import { Cafe, PresetCover } from './types';
 
 export const INITIAL_CAFES: Cafe[] = [
   {
-  "id": 1782330804470,
-  "name": "Sobremesa",
-  "neighborhood": "Jubilee Hills",
-  "address": "Plot No. 593, 8-2-293/82/A/593, Road No. 31, Jubilee Hills, Hyderabad, Telangana 500033",
-  "timings": "10:00 AM to 10:30 PM",
-  "signature": "Baked Broccoli, 5 Cheese Pizza & Irish Cold Coffee",
-  "description": "Sobremesa on Road No. 31, Jubilee Hills is a premium bakehouse-cafe-kitchen with a continental-focused menu, popular for its pizzas, sandwiches, coffee, and dessert-friendly setup. It feels best suited to people who want a relaxed, elegant place for brunch, lunch, or a longer sit-down meal.",
-  "tags": [
-    "Bakehouse",
-    "Continental",
-    "Aesthetic"
-  ],
-  "facilities": [
-    "Pet Friendly",
-    "Outdoor Seating",
-    "Takeaway",
-    "Reservation Support"
-  ],
-  "aesthetic": "Upscale, modern bakehouse-cafe with a restaurant-style feel",
-  "crowd": "Brunch-goers, couples, families, dessert lovers, and people looking for a comfortable dine-in cafe",
-  "phone": "+91 78427 76820",
-  "website": "",
-  "instagram": "",
-  "dineIn": true,
-  "takeaway": true,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Sobremesa%2C%20Plot%20No.%20593%2C%20Road%20No.%2031%2C%20Jubilee%20Hills%2C%20Hyderabad%20500033",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Baked Broccoli",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "5 Cheese Pizza",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Irish Cold Coffee",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330804470,
+    "name": "Sobremesa",
+    "neighborhood": "Jubilee Hills",
+    "address": "Plot No. 593, 8-2-293/82/A/593, Road No. 31, Jubilee Hills, Hyderabad, Telangana 500033",
+    "timings": "10:00 AM to 10:30 PM",
+    "signature": "Baked Broccoli, 5 Cheese Pizza & Irish Cold Coffee",
+    "description": "Sobremesa on Road No. 31, Jubilee Hills is a premium bakehouse-cafe-kitchen with a continental-focused menu, popular for its pizzas, sandwiches, coffee, and dessert-friendly setup. It feels best suited to people who want a relaxed, elegant place for brunch, lunch, or a longer sit-down meal.",
+    "tags": [
+      "Bakehouse",
+      "Continental",
+      "Aesthetic"
+    ],
+    "facilities": [
+      "Pet Friendly",
+      "Outdoor Seating",
+      "Takeaway",
+      "Reservation Support"
+    ],
+    "aesthetic": "Upscale, modern bakehouse-cafe with a restaurant-style feel",
+    "crowd": "Brunch-goers, couples, families, dessert lovers, and people looking for a comfortable dine-in cafe",
+    "phone": "+91 78427 76820",
+    "website": "",
+    "instagram": "",
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Sobremesa%2C%20Plot%20No.%20593%2C%208-2-293%2F82%2FA%2F593%2C%20Road%20No.%2031%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Baked Broccoli",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "5 Cheese Pizza",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Irish Cold Coffee",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330804471,
-  "name": "Guilt Trip",
-  "neighborhood": "Banjara Hills",
-  "address": "8-2-585/2/A/1, Road 9, Gaffar Khan Colony, Banjara Hills, Hyderabad, Telangana 500034",
-  "timings": "11:00 AM to 11:00 PM",
-  "signature": "Pastries, cheesecakes, cupcakes & casual cafe food",
-  "description": "Guilt Trip in Banjara Hills is a bakery-forward cafe known for pastries, cheesecakes, cupcakes, and easy continental cafe food. It’s a good fit for dessert runs, casual meetups, and people who want a relaxed place with both sweet and savory options.",
-  "tags": [
-    "Bakery",
-    "Desserts",
-    "Casual Dining"
-  ],
-  "facilities": [
-    "Dine-in",
-    "Vegetarian-friendly options",
-    "Event-space use"
-  ],
-  "aesthetic": "Simple bakery-cafe / dessert cafe with a casual dine-in setup",
-  "crowd": "Dessert lovers, families, friends, and casual diners",
-  "phone": "+91 40 6515 5050",
-  "website": "",
-  "instagram": "",
-  "dineIn": true,
-  "takeaway": true,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Guilt%20Trip%2C%208-2-585%2F2%2FA%2F1%2C%20Road%209%2C%20Banjara%20Hills%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Signature Cupcake",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Chocolate Pastry",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "New York Cheesecake",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330804471,
+    "name": "Guilt Trip",
+    "neighborhood": "Banjara Hills",
+    "address": "8-2-585/2/A/1, Road 9, Gaffar Khan Colony, Banjara Hills, Hyderabad, Telangana 500034",
+    "timings": "11:00 AM to 11:00 PM",
+    "signature": "Pastries, cheesecakes, cupcakes & casual cafe food",
+    "description": "Guilt Trip in Banjara Hills is a bakery-forward cafe known for pastries, cheesecakes, cupcakes, and easy continental cafe food. It’s a good fit for dessert runs, casual meetups, and people who want a relaxed place with both sweet and savory options.",
+    "tags": [
+      "Bakery",
+      "Desserts",
+      "Casual Dining"
+    ],
+    "facilities": [
+      "Dine-in",
+      "Vegetarian-friendly options",
+      "Event-space use"
+    ],
+    "aesthetic": "Simple bakery-cafe / dessert cafe with a casual dine-in setup",
+    "crowd": "Dessert lovers, families, friends, and casual diners",
+    "phone": "+91 40 6515 5050",
+    "website": "",
+    "instagram": "",
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Guilt%20Trip%2C%208-2-585%2F2%2FA%2F1%2C%20Road%209%2C%20Gaffar%20Khan%20Colony%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330804472,
-  "name": "Kaficko",
-  "neighborhood": "Jubilee Hills",
-  "address": "Plot No. 1357, Road No. 45, Jubilee Hills, Hyderabad, Telangana 500033",
-  "timings": "10:00 AM to 10:00 PM",
-  "signature": "Cold coffee, spaghetti, Moroccan chicken & burgers",
-  "description": "Kaficko in Jubilee Hills is a laid-back cafe-restaurant with a mix of coffee, Continental, and Italian dishes. It works well for casual hangouts, quiet conversations, and people who want a comfortable place to sit, snack, and stay awhile.",
-  "tags": [
-    "Cafe",
-    "Continental",
-    "Work Friendly"
-  ],
-  "facilities": [
-    "Dine-in",
-    "Board-game friendly ambience",
-    "Café-style seating"
-  ],
-  "aesthetic": "Relaxed, pretty, low-key cafe-restaurant with a long-stay friendly setup",
-  "crowd": "Friends, coffee drinkers, casual diners, and people who want a quiet place to sit longer",
-  "phone": "+91 70985 76222",
-  "website": "",
-  "instagram": "",
-  "dineIn": true,
-  "takeaway": true,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Kaficko%2C%20Plot%20No.%201357%2C%20Road%20No.%2045%2C%20Jubilee%20Hills%2C%20Hyderabad%20500033",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Cold Coffee",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Moroccan Chicken",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Classic Spaghetti",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330804472,
+    "name": "Kaficko",
+    "neighborhood": "Jubilee Hills",
+    "address": "Plot No. 1357, Road No. 45, Jubilee Hills, Hyderabad, Telangana 500033",
+    "timings": "10:00 AM to 10:00 PM",
+    "signature": "Cold coffee, spaghetti, Moroccan chicken & burgers",
+    "description": "Kaficko in Jubilee Hills is a laid-back cafe-restaurant with a mix of coffee, Continental, and Italian dishes. It works well for casual hangouts, quiet conversations, and people who want a comfortable place to sit, snack, and stay awhile.",
+    "tags": [
+      "Cafe",
+      "Continental",
+      "Work Friendly"
+    ],
+    "facilities": [
+      "Dine-in",
+      "Board-game friendly ambience",
+      "Café-style seating"
+    ],
+    "aesthetic": "Relaxed, pretty, low-key cafe-restaurant with a long-stay friendly setup",
+    "crowd": "Friends, coffee drinkers, casual diners, and people who want a quiet place to sit longer",
+    "phone": "+91 70985 76222",
+    "website": "",
+    "instagram": "",
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Kaficko%2C%20Plot%20No.%201357%2C%20Road%20No.%2045%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Cold Coffee",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Moroccan Chicken",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Classic Spaghetti",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330710637,
-  "name": "Karafa",
-  "neighborhood": "Banjara Hills",
-  "address": "8-2, 269/4A, Road No. 2, Sagar Society, Sri Nagar Colony, Kamalapuri Colony, Banjara Hills, Hyderabad, Telangana 500034",
-  "timings": "8:00 AM to 11:00 PM",
-  "signature": "Experiential coffee, bakes, all-day brunch",
-  "description": "Karafa in Banjara Hills is a clean, minimal coffee destination centered on specialty brews, bakes, and all-day brunch. It feels best suited to people who care about coffee quality and a calm, curated atmosphere more than just a quick cafe stop.",
-  "tags": [
-    "Specialty Coffee",
-    "Brunch",
-    "Aesthetic"
-  ],
-  "facilities": [
-    "Wheelchair-accessible",
-    "Coffee Shop Seating",
-    "Dessert Kitchen",
-    "Roastery",
-    "Dine-in"
-  ],
-  "aesthetic": "Minimal, modern, curated coffee-roastery aesthetic",
-  "crowd": "Coffee enthusiasts, brunch visitors, dessert lovers, and people looking for a premium cafe experience",
-  "phone": "+91 94084 06666",
-  "website": "https://karafa.com/menu/",
-  "instagram": "https://www.instagram.com/karafacoffee/?hl=en",
-  "dineIn": true,
-  "takeaway": false,
-  "onlineOrder": false,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Karafa%2C%208-2%2C%20269%2F4A%2C%20Road%20No.%202%2C%20Banjara%20Hills%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Curated Pour Over",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "All-Day Brunch",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Signature Bake",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330710637,
+    "name": "Karafa",
+    "neighborhood": "Banjara Hills",
+    "address": "8-2, 269/4A, Road No. 2, Sagar Society, Sri Nagar Colony, Kamalapuri Colony, Banjara Hills, Hyderabad, Telangana 500034",
+    "timings": "8:00 AM to 11:00 PM",
+    "signature": "Experiential coffee, bakes, all-day brunch",
+    "description": "Karafa in Banjara Hills is a clean, minimal coffee destination centered on specialty brews, bakes, and all-day brunch. It feels best suited to people who care about coffee quality and a calm, curated atmosphere more than just a quick cafe stop.",
+    "tags": [
+      "Specialty Coffee",
+      "Brunch",
+      "Aesthetic"
+    ],
+    "facilities": [
+      "Wheelchair-accessible",
+      "Coffee Shop Seating",
+      "Dessert Kitchen",
+      "Roastery",
+      "Dine-in"
+    ],
+    "aesthetic": "Minimal, modern, curated coffee-roastery aesthetic",
+    "crowd": "Coffee enthusiasts, brunch visitors, dessert lovers, and people looking for a premium cafe experience",
+    "phone": "+91 94084 06666",
+    "website": "https://karafa.com/menu/",
+    "instagram": "https://www.instagram.com/karafacoffee/?hl=en",
+    "dineIn": true,
+    "takeaway": false,
+    "onlineOrder": false,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Karafa%2C%208-2%2C%20269%2F4A%2C%20Road%20No.%202%2C%20Sagar%20Society%2C%20Sri%20Nagar%20Colony%2C%20Kamalapuri%20Colony%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Curated Pour Over",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "All-Day Brunch",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Signature Bake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330710638,
-  "name": "Roastery Coffee House",
-  "neighborhood": "Kokapet",
-  "address": "Plot No. 21, Kokapet, Narsingi, Hyderabad, Telangana 500075",
-  "timings": "Open till 11:00 PM",
-  "signature": "Specialty coffee, Brownie Blend, creamy spinach spaghetti & nachos",
-  "description": "Roastery Coffee House in Kokapet is a warm, spacious cafe with a relaxed, homely feel and a strong specialty-coffee identity. It’s a great fit for people who want good coffee, a calm atmosphere, and a place that works for both meetups and focused work.",
-  "tags": [
-    "Specialty Coffee",
-    "Aesthetic",
-    "Work Friendly"
-  ],
-  "facilities": [
-    "Free Wi-Fi",
-    "Spacious Seating",
-    "Central Coffee Bar",
-    "Dine-in",
-    "Reservation-friendly"
-  ],
-  "aesthetic": "Timeless, warm, homely coffee-house aesthetic with vintage-inspired charm",
-  "crowd": "Coffee lovers, friends catching up, and people looking for a cosy work-from-café spot",
-  "phone": "",
-  "website": "",
-  "instagram": "",
-  "dineIn": true,
-  "takeaway": false,
-  "onlineOrder": false,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Roastery%20Coffee%20House%2C%20Plot%20No.%2021%2C%20Kokapet%2C%20Narsingi%2C%20Hyderabad%20500075",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Brownie Blend",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Creamy Spinach Spaghetti",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Loaded Nachos",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330710638,
+    "name": "Roastery Coffee House",
+    "neighborhood": "Kokapet",
+    "address": "Plot No. 21, Kokapet, Narsingi, Hyderabad, Telangana 500075",
+    "timings": "Open till 11:00 PM",
+    "signature": "Specialty coffee, Brownie Blend, creamy spinach spaghetti & nachos",
+    "description": "Roastery Coffee House in Kokapet is a warm, spacious cafe with a relaxed, homely feel and a strong specialty-coffee identity. It’s a great fit for people who want good coffee, a calm atmosphere, and a place that works for both meetups and focused work.",
+    "tags": [
+      "Specialty Coffee",
+      "Aesthetic",
+      "Work Friendly"
+    ],
+    "facilities": [
+      "Free Wi-Fi",
+      "Spacious Seating",
+      "Central Coffee Bar",
+      "Dine-in",
+      "Reservation-friendly"
+    ],
+    "aesthetic": "Timeless, warm, homely coffee-house aesthetic with vintage-inspired charm",
+    "crowd": "Coffee lovers, friends catching up, and people looking for a cosy work-from-café spot",
+    "phone": "",
+    "website": "",
+    "instagram": "",
+    "dineIn": true,
+    "takeaway": false,
+    "onlineOrder": false,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Roastery%20Coffee%20House%2C%20Plot%20No.%2021%2C%20Kokapet%2C%20Narsingi%2C%20Hyderabad%2C%20Telangana%20500075",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Brownie Blend",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Creamy Spinach Spaghetti",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Loaded Nachos",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330710639,
-  "name": "Habitat Cafe",
-  "neighborhood": "Banjara Hills",
-  "address": "Terrace, Vimbri Boulevard, Road No. 4, Green Valley, Banjara Hills, Hyderabad, Telangana 500034",
-  "timings": "8:00 AM to 11:30 PM",
-  "signature": "Latte, cold coffee, rose latte & brunch items",
-  "description": "Habitat Cafe in Banjara Hills is an upscale terrace cafe with a calm, aesthetic atmosphere and a menu centered on coffee, beverages, and easy cafe food. It works well for relaxed dinners, coffee dates, and casual conversations in a more refined setting.",
-  "tags": [
-    "Aesthetic",
-    "Coffee",
-    "Terrace Cafe"
-  ],
-  "facilities": [
-    "Reservation available",
-    "Valet Parking",
-    "Free Wi-Fi",
-    "Dine-in"
-  ],
-  "aesthetic": "Terrace, upscale, modern cafe with an evening-dining feel",
-  "crowd": "Couples, friends, cafe hoppers, and people looking for a relaxed premium cafe setting",
-  "phone": "+91 81216 85645",
-  "website": "",
-  "instagram": "",
-  "dineIn": true,
-  "takeaway": false,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Habitat%20Cafe%2C%20Terrace%2C%20Vimbri%20Boulevard%2C%20Road%20No%204%2C%20Green%20Valley%2C%20Banjara%20Hills%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Rose Latte",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Classic Cold Coffee",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Oreo Shake",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330710639,
+    "name": "Habitat Cafe",
+    "neighborhood": "Banjara Hills",
+    "address": "Terrace, Vimbri Boulevard, Road No. 4, Green Valley, Banjara Hills, Hyderabad, Telangana 500034",
+    "timings": "8:00 AM to 11:30 PM",
+    "signature": "Latte, cold coffee, rose latte & brunch items",
+    "description": "Habitat Cafe in Banjara Hills is an upscale terrace cafe with a calm, aesthetic atmosphere and a menu centered on coffee, beverages, and easy cafe food. It works well for relaxed dinners, coffee dates, and casual conversations in a more refined setting.",
+    "tags": [
+      "Aesthetic",
+      "Coffee",
+      "Terrace Cafe"
+    ],
+    "facilities": [
+      "Reservation available",
+      "Valet Parking",
+      "Free Wi-Fi",
+      "Dine-in"
+    ],
+    "aesthetic": "Terrace, upscale, modern cafe with an evening-dining feel",
+    "crowd": "Couples, friends, cafe hoppers, and people looking for a relaxed premium cafe setting",
+    "phone": "+91 81216 85645",
+    "website": "",
+    "instagram": "",
+    "dineIn": true,
+    "takeaway": false,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Habitat%20Cafe%2C%20Terrace%2C%20Vimbri%20Boulevard%2C%20Road%20No.%204%2C%20Green%20Valley%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Rose Latte",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Classic Cold Coffee",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Oreo Shake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330586694,
-  "name": "La Vie En Rose Cafe & Bistro",
-  "neighborhood": "Gachibowli",
-  "address": "Unit 301, Survey 92/1, 92/3 to 92/18, Plot 9, 10, 11, 16, 17, & 18, 3rd Floor, Circle 20, Gachibowli, Hyderabad",
-  "timings": "12:00 PM to 11:00 PM",
-  "signature": "Hot teas, coffees, and comfort food",
-  "description": "La Vie En Rose Cafe & Bistro in Gachibowli is a pink floral cafe known for its dreamy interiors, photo-friendly corners, and relaxed date-night atmosphere. It’s a strong pick for visitors who care as much about ambience as the food itself.",
-  "tags": [
-    "Aesthetic",
-    "Date Spot",
-    "Floral Cafe"
-  ],
-  "facilities": [
-    "Dine-in",
-    "Reservations",
-    "Multiple Outlets",
-    "Event/Party-Friendly Seating"
-  ],
-  "aesthetic": "Pink-themed floral / dreamy / Instagrammable",
-  "crowd": "Couples, friends, families, and people looking for a celebration or photo-friendly cafe",
-  "phone": "7286853101",
-  "website": "https://www.instagram.com/lavieenrosecafeindia/",
-  "instagram": "https://www.instagram.com/lavieenrosecafeindia/",
-  "dineIn": true,
-  "takeaway": false,
-  "onlineOrder": false,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=La%20Vie%20En%20Rose%20Cafe%20%26%20Bistro%2C%20Gachibowli%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Rose Tea",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Pink Crepe",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Floral Pastry",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330586694,
+    "name": "La Vie En Rose Cafe & Bistro",
+    "neighborhood": "Gachibowli",
+    "address": "Unit 301, Survey 92/1, 92/3 to 92/18, Plot 9, 10, 11, 16, 17, & 18, 3rd Floor, Circle 20, Gachibowli, Hyderabad",
+    "timings": "12:00 PM to 11:00 PM",
+    "signature": "Hot teas, coffees, and comfort food",
+    "description": "La Vie En Rose Cafe & Bistro in Gachibowli is a pink floral cafe known for its dreamy interiors, photo-friendly corners, and relaxed date-night atmosphere. It’s a strong pick for visitors who care as much about ambience as the food itself.",
+    "tags": [
+      "Aesthetic",
+      "Date Spot",
+      "Floral Cafe"
+    ],
+    "facilities": [
+      "Dine-in",
+      "Reservations",
+      "Multiple Outlets",
+      "Event/Party-Friendly Seating"
+    ],
+    "aesthetic": "Pink-themed floral / dreamy / Instagrammable",
+    "crowd": "Couples, friends, families, and people looking for a celebration or photo-friendly cafe",
+    "phone": "7286853101",
+    "website": "https://www.instagram.com/lavieenrosecafeindia/",
+    "instagram": "https://www.instagram.com/lavieenrosecafeindia/",
+    "dineIn": true,
+    "takeaway": false,
+    "onlineOrder": false,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=La%20Vie%20En%20Rose%20Cafe%20%26%20Bistro%2C%20Unit%20301%2C%20Survey%2092%2F1%2C%2092%2F3%20to%2092%2F18%2C%20Plot%209%2C%2010%2C%2011%2C%2016%2C%2017%2C%20%26%2018%2C%203rd%20Floor%2C%20Circle%2020%2C%20Gachibowli%2C%20Hyderabad",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Rose Tea",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Pink Crepe",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Floral Pastry",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330586695,
-  "name": "Et-Si Cafe | Bakehouse | Chocolatier",
-  "neighborhood": "Jubilee Hills",
-  "address": "Plot No. 1196/B, Road Number 59, Jubilee Hills, Hyderabad, Telangana 500033",
-  "timings": "8:00 AM to 11:59 PM",
-  "signature": "Pistachio Matilda Cake & soufflé pancakes",
-  "description": "Et-Si Cafe | Bakehouse | Chocolatier on Road No. 59, Jubilee Hills is a premium all-day cafe with a bakery-first identity, known for coffee, croissants, desserts, and viral signature items. It suits dessert lovers, long brunches, and stylish casual hangs, with a strong mix of food appeal and visual charm.",
-  "tags": [
-    "Bakery Cafe",
-    "Aesthetic",
-    "Work Friendly"
-  ],
-  "facilities": [
-    "Indoor Seating",
-    "Outdoor Seating",
-    "Home Delivery",
-    "Takeaway",
-    "Work-friendly",
-    "Free Wi-Fi",
-    "Valet Parking",
-    "Kid-friendly"
-  ],
-  "aesthetic": "Modern bakery-cafe with polished, Instagram-friendly presentation",
-  "crowd": "Couples, families, dessert lovers, cafe hoppers, and people looking for an all-day hangout spot",
-  "phone": "+91 91512 23456",
-  "website": "https://et-si.in",
-  "instagram": "https://et-si.in",
-  "dineIn": true,
-  "takeaway": true,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Et-Si%20Cafe%20BakeHouse%20Chocolatier%2C%20Plot%201196%2FB%2C%20Road%2059%2C%20Jubilee%20Hills%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Pistachio Matilda Cake",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Soufflé Pancakes",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Signature Croissant",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330586695,
+    "name": "Et-Si Cafe | Bakehouse | Chocolatier",
+    "neighborhood": "Jubilee Hills",
+    "address": "Plot No. 1196/B, Road Number 59, Jubilee Hills, Hyderabad, Telangana 500033",
+    "timings": "8:00 AM to 11:59 PM",
+    "signature": "Pistachio Matilda Cake & soufflé pancakes",
+    "description": "Et-Si Cafe | Bakehouse | Chocolatier on Road No. 59, Jubilee Hills is a premium all-day cafe with a bakery-first identity, known for coffee, croissants, desserts, and viral signature items. It suits dessert lovers, long brunches, and stylish casual hangs, with a strong mix of food appeal and visual charm.",
+    "tags": [
+      "Bakery Cafe",
+      "Aesthetic",
+      "Work Friendly"
+    ],
+    "facilities": [
+      "Indoor Seating",
+      "Outdoor Seating",
+      "Home Delivery",
+      "Takeaway",
+      "Work-friendly",
+      "Free Wi-Fi",
+      "Valet Parking",
+      "Kid-friendly"
+    ],
+    "aesthetic": "Modern bakery-cafe with polished, Instagram-friendly presentation",
+    "crowd": "Couples, families, dessert lovers, cafe hoppers, and people looking for an all-day hangout spot",
+    "phone": "+91 91512 23456",
+    "website": "https://et-si.in",
+    "instagram": "https://et-si.in",
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Et-Si%20Cafe%20%7C%20Bakehouse%20%7C%20Chocolatier%2C%20Plot%20No.%201196%2FB%2C%20Road%20Number%2059%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Pistachio Matilda Cake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Soufflé Pancakes",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Signature Croissant",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330586696,
-  "name": "Switch Coffee",
-  "neighborhood": "Hitech City",
-  "address": "Plot No. 65, Surya Enclave, beside Cyber Towers flyover, opposite Tata Motors, Madhapur, Hyderabad, Telangana 500081",
-  "timings": "11:00 AM to 11:00 PM",
-  "signature": "Specialty coffee, matcha & cold coffee",
-  "description": "Switch Coffee in Hitech City is a modern coffee spot near Cyber Towers with a lively, cozy vibe and a clear focus on specialty beverages. It feels built for Hyderabad’s office crowd, casual meetups, and people who want a stylish but practical cafe stop.",
-  "tags": [
-    "Specialty Coffee",
-    "Work Friendly",
-    "Aesthetic"
-  ],
-  "facilities": [
-    "Dine-in",
-    "Takeaway",
-    "Delivery"
-  ],
-  "aesthetic": "Vibrant modern cafe with a cozy, minimal, productivity-oriented interior",
-  "crowd": "Office-goers, coffee lovers, solo workers, and people looking for a trendy cafe near Hitech City",
-  "phone": "+91 91217 22003",
-  "website": "https://www.instagram.com/switchtocoffee/?hl=en",
-  "instagram": "https://www.instagram.com/switchtocoffee/?hl=en",
-  "dineIn": true,
-  "takeaway": true,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Switch%20Coffee%2C%20Plot%20No.%2065%2C%20beside%20Cyber%20Towers%20flyover%2C%20Madhapur%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Signature Matcha",
-      "price": "₹350",
-      "description": "Signature featured item",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Cold Brew",
-      "price": "₹320",
-      "description": "Delicious signature creation",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Classic Latte",
-      "price": "₹280",
-      "description": "Classic premium selection",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330586696,
+    "name": "Switch Coffee",
+    "neighborhood": "Hitech City",
+    "address": "Plot No. 65, Surya Enclave, beside Cyber Towers flyover, opposite Tata Motors, Madhapur, Hyderabad, Telangana 500081",
+    "timings": "11:00 AM to 11:00 PM",
+    "signature": "Specialty coffee, matcha & cold coffee",
+    "description": "Switch Coffee in Hitech City is a modern coffee spot near Cyber Towers with a lively, cozy vibe and a clear focus on specialty beverages. It feels built for Hyderabad’s office crowd, casual meetups, and people who want a stylish but practical cafe stop.",
+    "tags": [
+      "Specialty Coffee",
+      "Work Friendly",
+      "Aesthetic"
+    ],
+    "facilities": [
+      "Dine-in",
+      "Takeaway",
+      "Delivery"
+    ],
+    "aesthetic": "Vibrant modern cafe with a cozy, minimal, productivity-oriented interior",
+    "crowd": "Office-goers, coffee lovers, solo workers, and people looking for a trendy cafe near Hitech City",
+    "phone": "+91 91217 22003",
+    "website": "https://www.instagram.com/switchtocoffee/?hl=en",
+    "instagram": "https://www.instagram.com/switchtocoffee/?hl=en",
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Switch%20Coffee%2C%20Plot%20No.%2065%2C%20Surya%20Enclave%2C%20beside%20Cyber%20Towers%20flyover%2C%20opposite%20Tata%20Motors%2C%20Madhapur%2C%20Hyderabad%2C%20Telangana%20500081",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Signature Matcha",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Cold Brew",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Classic Latte",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330476578,
-  "name": "Osaka",
-  "neighborhood": "Jubilee Hills",
-  "address": "H.No. 8-2-293/A/116, Road No. 10, Jubilee Hills, Hyderabad, Telangana 500033",
-  "timings": "12:30 PM - 11:30 PM",
-  "signature": "Ramen, Korean BBQ & Sushi",
-  "description": "Osaka in Jubilee Hills is a stylish pan-Asian restaurant with Japanese-inspired interiors, rooftop dining, and a menu that spans ramen, sushi, bao, and Korean barbecue. It feels more like an elegant Asian dining destination than a standard cafe, making it strong for date nights and premium group dining.",
-  "tags": [
-    "Asian Cuisine",
-    "Elegant",
-    "Rooftop Dining"
-  ],
-  "facilities": [
-    "Dine-in",
-    "Delivery",
-    "Rooftop Seating",
-    "Valet Parking",
-    "Reservations"
-  ],
-  "aesthetic": "Modern Asian fine-dining with wooden interiors and a refined rooftop option",
-  "crowd": "Couples, friends, Asian food enthusiasts, and people looking for a stylish dinner spot",
-  "phone": "+91 88976 23434",
-  "website": "https://osakatrulyasian.com",
-  "instagram": "https://osakatrulyasian.com",
-  "dineIn": true,
-  "takeaway": false,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Osaka%2C%20H.No.%208-2-293%2FA%2F116%2C%20Road%20No.%2010%2C%20Jubilee%20Hills%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Sushi Platter",
-      "price": "₹850",
-      "description": "Assorted premium sushi platter",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Korean BBQ",
-      "price": "₹1200",
-      "description": "Classic Korean BBQ with sides",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Spicy Ramen",
-      "price": "₹650",
-      "description": "Authentic ramen bowl with rich broth",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330476578,
+    "name": "Osaka",
+    "neighborhood": "Jubilee Hills",
+    "address": "H.No. 8-2-293/A/116, Road No. 10, Jubilee Hills, Hyderabad, Telangana 500033",
+    "timings": "12:30 PM - 11:30 PM",
+    "signature": "Ramen, Korean BBQ & Sushi",
+    "description": "Osaka in Jubilee Hills is a stylish pan-Asian restaurant with Japanese-inspired interiors, rooftop dining, and a menu that spans ramen, sushi, bao, and Korean barbecue. It feels more like an elegant Asian dining destination than a standard cafe, making it strong for date nights and premium group dining.",
+    "tags": [
+      "Asian Cuisine",
+      "Elegant",
+      "Rooftop Dining"
+    ],
+    "facilities": [
+      "Dine-in",
+      "Delivery",
+      "Rooftop Seating",
+      "Valet Parking",
+      "Reservations"
+    ],
+    "aesthetic": "Modern Asian fine-dining with wooden interiors and a refined rooftop option",
+    "crowd": "Couples, friends, Asian food enthusiasts, and people looking for a stylish dinner spot",
+    "phone": "+91 88976 23434",
+    "website": "https://osakatrulyasian.com",
+    "instagram": "https://osakatrulyasian.com",
+    "dineIn": true,
+    "takeaway": false,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Osaka%2C%20H.No.%208-2-293%2FA%2F116%2C%20Road%20No.%2010%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Sushi Platter",
+        "price": "₹850",
+        "description": "Assorted premium sushi platter",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Korean BBQ",
+        "price": "₹1200",
+        "description": "Classic Korean BBQ with sides",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Spicy Ramen",
+        "price": "₹650",
+        "description": "Authentic ramen bowl with rich broth",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
-  "id": 1782330402954,
-  "name": "Makobrew Cafe & Restaurant",
-  "neighborhood": "Jubilee Hills",
-  "address": "Road No. 44, Sri Peddamma Thalli Temple, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
-  "timings": "11:00 AM - 11:00 PM",
-  "signature": "Sweet crepe & coffees",
-  "description": "Makobrew Cafe & Restaurant in Jubilee Hills is a pure vegetarian cafe-restaurant known for specialty coffee, gourmet vegetarian dishes, and a cozy all-day hangout vibe. It works well for family dining, casual coffee dates, and relaxed work sessions in a premium neighborhood setting.",
-  "tags": [
-    "Specialty Coffee",
-    "Pure Veg",
-    "Work Friendly"
-  ],
-  "facilities": [
-    "Indoor Seating",
-    "Outdoor Seating",
-    "Parking",
-    "Valet Parking",
-    "Free Wi-Fi",
-    "Reservations",
-    "Jain Food"
-  ],
-  "aesthetic": "Cozy contemporary cafe with a warm, laid-back dining feel",
-  "crowd": "Families, couples, friends, coffee drinkers, and vegetarian food lovers",
-  "phone": "+91 63016 36103",
-  "website": "https://makobrewworldcoffeebar.com",
-  "instagram": "https://www.instagram.com/makobrewcafe/?hl=en",
-  "dineIn": true,
-  "takeaway": true,
-  "onlineOrder": true,
-  "mapLink": "https://www.google.com/maps/search/?api=1&query=Makobrew%20Cafe%20%26%20Restaurant%2C%20Road%20No.%2044%2C%20Jubilee%20Hills%2C%20Hyderabad",
-  "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-  "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-  "moreImages": [
-    "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-    "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-  ],
-  "menuImages": [
-    "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-    "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-  ],
-  "featuredMenu": [
-    {
-      "name": "Sweet Crepe",
-      "price": "₹350",
-      "description": "Signature sweet crepe dessert",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Beetroot Burger",
-      "price": "₹320",
-      "description": "Gourmet vegetarian burger with beetroot patty",
-      "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    },
-    {
-      "name": "Cheesecake",
-      "price": "₹280",
-      "description": "Classic creamy cheesecake slice",
-      "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
-    }
-  ],
-  "email": "",
-  "isFeaturedBanner": false,
-  "newLaunchCatchyline": "",
-  "directionsTip": ""
-},
+    "id": 1782330402954,
+    "name": "Makobrew Cafe & Restaurant",
+    "neighborhood": "Jubilee Hills",
+    "address": "Road No. 44, Sri Peddamma Thalli Temple, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
+    "timings": "11:00 AM - 11:00 PM",
+    "signature": "Sweet crepe & coffees",
+    "description": "Makobrew Cafe & Restaurant in Jubilee Hills is a pure vegetarian cafe-restaurant known for specialty coffee, gourmet vegetarian dishes, and a cozy all-day hangout vibe. It works well for family dining, casual coffee dates, and relaxed work sessions in a premium neighborhood setting.",
+    "tags": [
+      "Specialty Coffee",
+      "Pure Veg",
+      "Work Friendly"
+    ],
+    "facilities": [
+      "Indoor Seating",
+      "Outdoor Seating",
+      "Parking",
+      "Valet Parking",
+      "Free Wi-Fi",
+      "Reservations",
+      "Jain Food"
+    ],
+    "aesthetic": "Cozy contemporary cafe with a warm, laid-back dining feel",
+    "crowd": "Families, couples, friends, coffee drinkers, and vegetarian food lovers",
+    "phone": "+91 63016 36103",
+    "website": "https://makobrewworldcoffeebar.com",
+    "instagram": "https://www.instagram.com/makobrewcafe/?hl=en",
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Makobrew%20Cafe%20%26%20Restaurant%2C%20Road%20No.%2044%2C%20Sri%20Peddamma%20Thalli%20Temple%2C%20CBI%20Colony%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "moreImages": [
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+    ],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Sweet Crepe",
+        "price": "₹350",
+        "description": "Signature sweet crepe dessert",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Beetroot Burger",
+        "price": "₹320",
+        "description": "Gourmet vegetarian burger with beetroot patty",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Cheesecake",
+        "price": "₹280",
+        "description": "Classic creamy cheesecake slice",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "email": "",
+    "isFeaturedBanner": false,
+    "newLaunchCatchyline": "",
+    "directionsTip": ""
+  },
   {
     "featuredMenu": [],
     "tags": [
@@ -936,7 +936,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "signature": "Cranberry Coffee",
     "email": "",
     "directionsTip": "",
-    "mapLink": "https://maps.app.goo.gl/ujNUgrnvMpXdrGTc9",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%202%2C%20Gr%20%26%201st%20Floor%2C%20Plot%20No%3A%2025%2C%20PN%203%20%26%20Part%20of%2C%20Sy%20No%2093%2C%20Old%20Mumbai%20Hwy%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032",
     "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg",
     "timings": "",
     "bannerCatchyLine": "",
@@ -998,7 +998,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Work"
     ],
     "timings": "8:00 AM - 10:00 PM",
-    "mapLink": "https://maps.app.goo.gl/example1",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=True%20Black%20Specialty%20Coffee%2C%20Plot%20123%2C%20Road%2045%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "icon": "local_cafe",
     "takeaway": true,
@@ -1067,7 +1067,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "11:30 AM - 11:00 PM",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/echoeskokapet",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Echoes%20Cafe%2C%20Kokapet%20Main%20Road%2C%20Gandipet%2C%20Hyderabad",
     "takeaway": true,
     "icon": "hearing",
     "website": "",
@@ -1155,7 +1155,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "signature": "Vanilla Bean Cold Brew",
     "email": "",
-    "mapLink": "https://maps.app.goo.gl/dailyrituals",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Daily%20Rituals%2C%20Road%20No.%2045%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "timings": "8:00 AM - 10:30 PM",
     "website": "",
@@ -1199,7 +1199,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "eco",
-    "mapLink": "https://maps.app.goo.gl/lushcafe",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Lush%20Cafe%2C%20Image%20Gardens%20Lane%2C%20Madhapur%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "timings": "11:00 AM - 11:00 PM",
     "tags": [
@@ -1272,7 +1272,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "12:00 PM - 11:30 PM",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/lasabroso",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=La%20Sabroso%2C%20Hitech%20City%20Road%2C%20Madhapur%2C%20Hyderabad",
     "takeaway": true,
     "icon": "restaurant",
     "website": "",
@@ -1332,7 +1332,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "icon": "bakery_dining",
     "takeaway": true,
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/pscheese",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=PS%20Cheese%20Caf%C3%A9%2C%20Near%20Kavuri%20Hills%2C%20Madhapur%2C%20Hyderabad",
     "timings": "12:00 PM - 11:00 PM",
     "tags": [
       "Cheese",
@@ -1415,7 +1415,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "icon": "sailing",
     "takeaway": true,
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/urbannemo",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Urban%20Nemo%20Cafe%2C%20Park%20View%20Enclave%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "timings": "11:00 AM - 11:00 PM",
     "tags": [
       "Themed",
@@ -1478,7 +1478,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "website": "",
     "timings": "12:00 PM - 12:00 AM",
-    "mapLink": "https://maps.app.goo.gl/theglasshouse",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=The%20Glass%20House%2C%20Road%20No.%2036%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "signature": "Truffle Fries & Mocktails",
     "email": "glasshouse@luxury.in",
@@ -1527,7 +1527,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "local_bar",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/ukusa",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Ukusa%2C%20Road%20No.%2010%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "timings": "11:00 AM - 11:30 PM",
     "tags": [
       "Aesthetic",
@@ -1590,7 +1590,7 @@ export const INITIAL_CAFES: Cafe[] = [
   },
   {
     "timings": "12:00 PM - 11:30 PM",
-    "mapLink": "https://maps.app.goo.gl/olivebistohyd",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Olive%20Bistro%2C%20Santorini%20Grecian%20White",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "icon": "wb_cloudy",
     "takeaway": false,
@@ -1689,7 +1689,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "timings": "10:00 AM - 11:00 PM",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/kisscoff",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Kisscoff%20Cafe%2C%20Road%20No.%203%2C%20Film%20Nagar%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [],
     "area": "Film Nagar",
@@ -1757,7 +1757,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "icon": "yard",
     "takeaway": true,
-    "mapLink": "https://maps.app.goo.gl/auntielilys",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Auntie%20Lily's%2C%20Road%20No.%207%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "timings": "11:00 AM - 10:00 PM",
     "moreImages": [
@@ -1823,7 +1823,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "9:00 AM - 11:30 PM",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/manamchocolate",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Manam%20Chocolate%20Atelier%2C%20Road%20No.%2012%2C%20Banjara%20Hills%2C%20Hyderabad",
     "icon": "star",
     "takeaway": true,
     "website": "https://manamchocolate.com",
@@ -1863,7 +1863,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "userReviews": [],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "timings": "12:00 PM - 11:00 PM",
-    "mapLink": "https://maps.app.goo.gl/churrolto",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Churrolto%2C%20Road%20No.%201%2C%20Film%20Nagar%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "takeaway": true,
     "icon": "icecream",
@@ -1942,7 +1942,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "album",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/lasthousecoffee",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=The%20Last%20House%20Coffee%2C%20Road%20No.%2045%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "timings": "9:00 AM - 11:00 PM",
     "facilities": [
       "Wi-Fi",
@@ -2009,7 +2009,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "timings": "11:30 AM - 12:00 AM",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/heartcupgachibowli",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Heart%20Cup%20Coffee%2C%20Behind%20quiet%20IT%20parks%2C%20Gachibowli%2C%20Hyderabad",
     "dineIn": true,
     "id": 1781212701467,
     "facilities": [
@@ -2082,7 +2082,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Jubilee Hills",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "mapLink": "https://maps.app.goo.gl/holeinthewallhyd",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=The%20Hole%20In%20the%20Wall%20Cafe%2C%20Road%20No.%2045%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "timings": "8:30 AM - 9:00 PM",
     "website": "",
     "takeaway": true,
@@ -2161,7 +2161,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": false,
     "icon": "roofing",
-    "mapLink": "https://maps.app.goo.gl/fatpigeonhyd",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Fat%20Pigeon%20-%20Bar%20Hop%2C%20Plot%201122%2C%20Road%20No.%2045%2C%20Jubilee%20Hills%2C%20Hyderabad",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "timings": "12:00 PM - 12:00 AM",
     "moreImages": [
@@ -2203,7 +2203,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Sophisticated"
     ],
     "timings": "8:00 AM - 10:30 PM",
-    "mapLink": "https://maps.app.goo.gl/eclathyd",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Eclat%20Patisserie%2C%20Sleek%20Parisian%20Minimalist",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "takeaway": true,
     "icon": "cake",
@@ -2291,7 +2291,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "celebrities": [],
     "bookingUrl": "",
-    "mapLink": "https://maps.app.goo.gl/search/KASA+The+OG+Cafe+Hyderabad",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=KASA%20The%20OG%20Cafe%2C%208-2%2C%20269%2FA%2C%20Banjara%20Hills%20Rd%20Number%203%2C%20beside%20Mountain%20Bakery%2C%20UBI%20Colony%2C%20Green%20Valley%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500028",
     "status": "open",
     "isNewLaunch": true,
     "newLaunchCatchyline": "New neighborhood chai spot in Banjara Hills",
@@ -2362,7 +2362,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "celebrities": [],
     "bookingUrl": "",
-    "mapLink": "https://maps.app.goo.gl/search/Altr+Ego+Banjara+Hills+Hyderabad",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Altr%20Ego%2C%20Floor%20Number%208-2-277%2F27%2C%20Plot%20Number%2027%2C%20UB%20House%2C%20Road%20Number%203%2C%20Khairatabad%2C%20Banjara%20Hills%2C%20Hyderabad",
     "status": "open",
     "isNewLaunch": true,
     "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
@@ -2433,7 +2433,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "celebrities": [],
     "bookingUrl": "",
-    "mapLink": "https://maps.app.goo.gl/search/Socio+Art+Cafe+Banjara+Hills+Hyderabad",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=SOCIO%20art%20cafe%2C%20Vivekananda%20Enclave%2C%20Door%20No%208%2C%20Plot%20No%202269%2FN%2F8%2C%20beside%20Challa%20Eye%20Hospital%2C%20Sagar%20Society%2C%20Road%20Number%202%2C%20Banjara%20Hills%2C%20Hyderabad%20500034",
     "status": "open",
     "isNewLaunch": false,
     "newLaunchCatchyline": "",
@@ -2512,7 +2512,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "celebrities": [],
     "bookingUrl": "",
-    "mapLink": "https://maps.app.goo.gl/search/Roast+CCX+Banjara+Hills+Hyderabad",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Roast%20CCX%2C%20129%2F73%2F1%2C%20Laxmi%20Pinnacle%2C%20Circle%2018%2C%20Venkat%20Nagar%2C%20Road%203%2C%20Banjara%20Hills%2C%20Hyderabad",
     "status": "open",
     "isNewLaunch": false,
     "newLaunchCatchyline": "",
