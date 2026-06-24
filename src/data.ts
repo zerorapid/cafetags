@@ -115,7 +115,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "dineIn": true,
     "takeaway": true,
     "onlineOrder": true,
-    "mapLink": "https://www.google.com/maps/search/?api=1&query=Guilt%20Trip%2C%208-2-585%2F2%2FA%2F1%2C%20Road%209%2C%20Gaffar%20Khan%20Colony%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034",
+    "mapLink": "https://maps.app.goo.gl/BSLPVTiE85YqEFr56",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
@@ -1725,71 +1725,6 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   },
   {
-    "facilities": [
-      "AC",
-      "Indoor Custom Counter"
-    ],
-    "id": 1781212697969,
-    "dineIn": true,
-    "name": "Auntie Lily's",
-    "onlineOrder": true,
-    "phone": "#ERROR!",
-    "celebrities": [],
-    "discounts": "",
-    "founded": "2023",
-    "selfDelivery": false,
-    "bookingUrl": "",
-    "address": "Road No. 7, Jubilee Hills, Hyderabad",
-    "vibe": "Ultra-charming flower wall themed mini-bakery serving boutique sweets.",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "area": "Jubilee Hills",
-    "userReviews": [],
-    "crowd": "Teens, Birthday Celebrants",
-    "aestheticType": "Floral Dollhouse Pastel",
-    "tags": [
-      "Bakery",
-      "Intimate",
-      "Cute"
-    ],
-    "signature": "Macarons & Custom Cupcakes",
-    "email": "",
-    "featuredMenu": [],
-    "website": "",
-    "icon": "yard",
-    "takeaway": true,
-    "mapLink": "https://www.google.com/maps/search/?api=1&query=Auntie%20Lily's%2C%20Road%20No.%207%2C%20Jubilee%20Hills%2C%20Hyderabad",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-    "timings": "11:00 AM - 10:00 PM",
-    "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-    ],
-    "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
-    ]
-  },
-  {
     "name": "Manam Chocolate Atelier",
     "dineIn": true,
     "facilities": [
@@ -2203,7 +2138,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Sophisticated"
     ],
     "timings": "8:00 AM - 10:30 PM",
-    "mapLink": "https://www.google.com/maps/search/?api=1&query=Eclat%20Patisserie%2C%20Sleek%20Parisian%20Minimalist",
+    "mapLink": "https://maps.app.goo.gl/ocYdm8Q5HUzViV2Z7",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "takeaway": true,
     "icon": "cake",
