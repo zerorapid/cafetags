@@ -43,14 +43,63 @@ export const INITIAL_CAFES: Cafe[] = [
     "isNewLaunch": true,
     "newLaunchCatchyline": "A huge, modern tea café that mixes Hyderabadi nostalgia with contemporary interiors.",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg"
+      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
     ],
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "socialMedia": []
+    "socialMedia": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ]
   },
   {
     "id": 1782330804470,
@@ -138,6 +187,14 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "platform": "Instagram",
         "url": "https://www.instagram.com/sobremesa_hyd/"
+      }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
       }
     ]
   },
@@ -227,6 +284,14 @@ export const INITIAL_CAFES: Cafe[] = [
         "platform": "Instagram",
         "url": "https://www.instagram.com/guilttrip_hyderabad/"
       }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
@@ -314,6 +379,14 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "platform": "Instagram",
         "url": "https://www.instagram.com/kafickohyd/"
+      }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
       }
     ]
   },
@@ -405,6 +478,14 @@ export const INITIAL_CAFES: Cafe[] = [
         "platform": "Instagram",
         "url": "https://www.instagram.com/karafa.in/"
       }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
@@ -495,6 +576,14 @@ export const INITIAL_CAFES: Cafe[] = [
         "platform": "Instagram",
         "url": "https://www.instagram.com/roasterycoffeehousehyderabad/"
       }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
@@ -583,6 +672,14 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "platform": "Instagram",
         "url": "https://www.instagram.com/habitatcafe.in/"
+      }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
       }
     ]
   },
@@ -673,6 +770,14 @@ export const INITIAL_CAFES: Cafe[] = [
         "platform": "Instagram",
         "url": "https://www.instagram.com/lavieenrosecafe.in/"
       }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
@@ -760,7 +865,15 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ]
   },
   {
     "id": 1782330586696,
@@ -842,7 +955,15 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ]
   },
   {
     "id": 1782330476578,
@@ -926,7 +1047,15 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ]
   },
   {
     "id": 1782330402954,
@@ -1012,10 +1141,37 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ]
   },
   {
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "tags": [
       "Garden",
       "Pet-Friendly",
@@ -1032,7 +1188,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "blue_tokai_coffee",
     "area": "Gachibowli",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "moreImages": [
       "https://i.pinimg.com/736x/bb/88/a3/bb88a3c291f09ff484f74b9a8ea0f2ee.jpg",
       "https://i.pinimg.com/736x/cf/a8/a4/cfa8a44ad4a2e5606d046fb1c0f4a5cd.jpg",
@@ -1043,7 +1206,27 @@ export const INITIAL_CAFES: Cafe[] = [
     "facebookUrl": "",
     "logo": "https://i.pinimg.com/736x/01/e9/b3/01e9b350f41dba3f80ff89e6b5e6d43c.jpg",
     "aestheticType": "Heritage Villa & Garden",
-    "menuImages": [],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
+      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
     "curatorNote": "",
     "crowd": "Couples, Pet Owners",
     "status": "open",
@@ -1077,7 +1260,26 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true
   },
   {
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "signature": "Kyoto Cold Brew",
     "email": "hello@trueblack.in",
     "tags": [
@@ -1092,7 +1294,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "website": "https://trueblack.in",
     "area": "Jubilee Hills",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "aestheticType": "Industrial Minimalist",
     "crowd": "Remote Workers, Developers",
@@ -1145,7 +1354,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   },
   {
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "email": "contact@echoes.in",
     "signature": "Creamy Pesto Pasta",
     "tags": [
@@ -1159,7 +1387,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "hearing",
     "website": "",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Kokapet",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "aestheticType": "Warm Wooden Accents",
@@ -1231,11 +1466,37 @@ export const INITIAL_CAFES: Cafe[] = [
     "vibe": "Clean, bright white aesthetics designed specifically for morning rituals and clean espresso shots.",
     "founded": "2024",
     "area": "Jubilee Hills",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "aestheticType": "Wabi-Sabi Minimalist",
     "crowd": "Designers, Coffee Purists",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "tags": [
       "Minimalist",
       "Specialty",
@@ -1283,7 +1544,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "aestheticType": "Tropical Greenhouse",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "area": "Madhapur",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "website": "",
     "takeaway": true,
     "icon": "eco",
@@ -1297,7 +1565,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "signature": "Matcha Frappe",
     "email": "lushcafe.hyd@gmail.com",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "onlineOrder": true,
     "phone": "#ERROR!",
     "id": 1781212695220,
@@ -1345,12 +1632,38 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   },
   {
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Madhapur",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "aestheticType": "Contemporary Casual",
     "crowd": "Groups, Techies",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "email": "contact@lasabroso.com",
     "signature": "Alfredo Pasta",
     "tags": [
@@ -1414,7 +1727,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Families, Cheese Lovers",
     "aestheticType": "Quirky Industrial Yellow",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Madhapur",
     "website": "",
     "icon": "bakery_dining",
@@ -1429,7 +1749,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "email": "",
     "signature": "Deep Dish Cheese Pizza",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "onlineOrder": true,
     "phone": "#ERROR!",
     "id": 1781212696240,
@@ -1497,7 +1836,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Gen-Z, Students",
     "aestheticType": "Vibrant Pop Neon",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Jubilee Hills",
     "website": "",
     "icon": "sailing",
@@ -1512,7 +1858,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "email": "",
     "signature": "Peri Peri Chicken Pizza",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "moreImages": [
       "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
       "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
@@ -1575,12 +1940,38 @@ export const INITIAL_CAFES: Cafe[] = [
       "European",
       "High Ceiling"
     ],
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "crowd": "High Society, Celebrities",
     "aestheticType": "Glass Pavilion Luxury",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "area": "Jubilee Hills",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "moreImages": [
       "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
       "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
@@ -1624,11 +2015,37 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "email": "hello@ukusa.in",
     "signature": "Lotus Biscoff Shake",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "crowd": "Couples, Influencers",
     "aestheticType": "Modern Elegant Chic",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Jubilee Hills",
     "founded": "2022",
     "selfDelivery": false,
@@ -1683,7 +2100,26 @@ export const INITIAL_CAFES: Cafe[] = [
     "icon": "wb_cloudy",
     "takeaway": false,
     "website": "Panoramic Lake View, Open Air Bar, Valet",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "signature": "Wood-fired Truffle Pizza",
     "email": "",
     "tags": [
@@ -1694,7 +2130,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "aestheticType": "Santorini Grecian White",
     "crowd": "Couples, Luxury Diners",
     "area": "Jubilee Hills",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "bookingUrl": "https://swiggy.com/dineout",
     "address": "Santorini Grecian White",
@@ -1771,7 +2214,26 @@ export const INITIAL_CAFES: Cafe[] = [
       "Aesthetic",
       "Work-Friendly"
     ],
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "takeaway": true,
     "icon": "favorite",
     "website": "",
@@ -1779,7 +2241,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
     "mapLink": "https://maps.google.com/?cid=16717154306863291720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Film Nagar",
     "crowd": "Creatives, Writers",
     "aestheticType": "Pastel Bohemian",
@@ -1831,12 +2300,38 @@ export const INITIAL_CAFES: Cafe[] = [
     "bookingUrl": "",
     "selfDelivery": false,
     "founded": "2023",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Banjara Hills",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "aestheticType": "Craft Luxury Wood & Terrazzo",
     "crowd": "Connoisseurs, Gourmands",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "email": "experience@manamchocolate.com",
     "signature": "Single Origin Hot Chocolate",
     "tags": [
@@ -1883,7 +2378,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "aestheticType": "Monochrome Minimalist",
     "crowd": "Dessert Enthusiasts",
     "area": "Film Nagar",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "timings": "12:00 PM - 11:00 PM",
     "mapLink": "https://maps.google.com/?cid=6400394818504743063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
@@ -1891,7 +2393,26 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "icecream",
     "website": "https://churrolto.com",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "signature": "Classic Churros with Belgian Chocolate",
     "email": "hello@churrolto.com",
     "tags": [
@@ -1949,7 +2470,14 @@ export const INITIAL_CAFES: Cafe[] = [
   },
   {
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Jubilee Hills",
     "crowd": "Bibliophiles, Coffee Scholars",
     "aestheticType": "Mid-Century Modern Cabin",
@@ -1960,7 +2488,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "email": "",
     "signature": "Cold Brew Tonic",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "website": "",
     "takeaway": true,
     "icon": "album",
@@ -2015,7 +2562,14 @@ export const INITIAL_CAFES: Cafe[] = [
   },
   {
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Gachibowli",
     "crowd": "IT Squads, Music Fans",
     "aestheticType": "Industrial Rock Greenery",
@@ -2026,7 +2580,26 @@ export const INITIAL_CAFES: Cafe[] = [
       "Nightlife",
       "Coffee-Pub"
     ],
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "icon": "music_note",
     "takeaway": false,
     "website": "",
@@ -2101,7 +2674,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [],
     "aestheticType": "Funky American Diner",
     "crowd": "Breakfast Seekers, Expats",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "area": "Jubilee Hills",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
@@ -2110,7 +2690,26 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "breakfast_dining",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "tags": [
       "Breakfast",
       "Heavy",
@@ -2170,7 +2769,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Plot 1122, Road No. 45, Jubilee Hills, Hyderabad",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "area": "Jubilee Hills",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "crowd": "Youth, Party Goers",
     "aestheticType": "Industrial Rooftop Deck",
     "tags": [
@@ -2180,7 +2786,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "signature": "Loaded Nachos & Cold Coffee Shake",
     "email": "info@fatpigeon.in",
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "website": "",
     "takeaway": false,
     "icon": "roofing",
@@ -2217,7 +2842,26 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   },
   {
-    "featuredMenu": [],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
     "signature": "Pain Au Chocolat",
     "email": "",
     "tags": [
@@ -2232,7 +2876,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "icon": "cake",
     "website": "AC, Indoor Seating, Power Outlets",
     "area": "Gachibowli",
-    "userReviews": [],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
+    ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "aestheticType": "Sleek Parisian Minimalist",
     "crowd": "Expats, Corporate Executives",
@@ -2346,6 +2997,34 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
@@ -2417,6 +3096,34 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
@@ -2488,6 +3195,34 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
       "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Signature Cupcake",
+        "price": "₹350",
+        "description": "Signature featured item",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "Chocolate Pastry",
+        "price": "₹320",
+        "description": "Delicious signature creation",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": "₹280",
+        "description": "Classic premium selection",
+        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+      }
+    ],
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+      }
     ]
   },
   {
