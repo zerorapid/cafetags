@@ -310,8 +310,8 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                         <div className="carousel-wrapper">
                             <DraggableCarousel>
                                 {cafe.menuImages?.map((imgSrc, idx) => (
-                                <div key={`browse-${idx}`} className="menu-carousel-item">
-                                    <div className="menu-img cursor-pointer" onClick={() => setLightboxIndex(allImages.indexOf(imgSrc))}>
+                                <div key={`browse-${idx}`} className="menu-carousel-item" onClick={() => setLightboxIndex(allImages.indexOf(imgSrc))}>
+                                    <div className="menu-img">
                                         <img src={imgSrc} alt={`Menu ${idx + 1}`} draggable="false" />
                                     </div>
                                     <div className="menu-label">Menu {String(idx + 1).padStart(2, '0')}</div>
