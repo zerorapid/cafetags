@@ -1162,6 +1162,16 @@ export const INITIAL_CAFES: Cafe[] = [
         "category": "Main Course",
         "isSpecial": false
       }
+    ],
+    "moreImages": [
+      "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507133750070-4f516a7f858c?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525610553991-56e11115791e?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "menuImages": [
+      "https://images.unsplash.com/photo-1588611139459-a291f0a0cce2?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555507015-1811e582e3bb?q=80&w=800&auto=format&fit=crop"
     ]
   }
 ];

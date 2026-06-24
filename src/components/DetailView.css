@@ -470,8 +470,8 @@
 }
 
 .about-highlights {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--space-3);
     margin-top: var(--space-5);
 }
@@ -1132,7 +1132,6 @@
     .hero-section { height: 580px; }
     .content-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
     .sidebar { position: sticky; top: 100px; align-self: start; }
-    .about-highlights { grid-template-columns: repeat(4, 1fr); }
     .metrics-grid { grid-template-columns: repeat(5, 1fr); }
 }
 
@@ -1165,7 +1164,6 @@
     .info-cards-grid { grid-template-columns: 1fr; }
     .signature-row { grid-template-columns: 1fr; }
     .menu-carousel-item { flex: 0 0 150px; }
-    .about-highlights { grid-template-columns: repeat(2, 1fr); }
     .metrics-grid { grid-template-columns: repeat(2, 1fr); }
     .verdict-section { padding: var(--space-5); }
     .verdict-title { font-size: 1.25rem; }
