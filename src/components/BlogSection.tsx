@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { BlogArticle } from '../types';
 import { MaterialIcon } from './MaterialIcon';
-import { generateSlug } from '../utils';
+import { generateSlug, injectSmartCafeLinks } from '../utils';
 import { OptimizedImage } from './OptimizedImage';
+import { INITIAL_CAFES } from '../data';
 
 interface BlogSectionProps {
   articles: BlogArticle[];
@@ -109,7 +110,7 @@ export function BlogSection({ articles }: BlogSectionProps) {
           {/* Body Content */}
           <div 
             className="font-dm-sans text-[17px] md:text-[19px] leading-relaxed text-stone-800 space-y-6 antialiased editor-content"
-            dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
+            dangerouslySetInnerHTML={{ __html: injectSmartCafeLinks(selectedArticle.content, INITIAL_CAFES) }}
           />
 
           {/* Author Bio Footer */}
