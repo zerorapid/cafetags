@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Cafe, PresetCover, BlogArticle } from './types';
+import { Cafe, PresetCover } from './types';
 
 export const INITIAL_CAFES: Cafe[] = [
   {
@@ -1001,9 +1001,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "mapLink": "https://maps.app.goo.gl/search/KASA+The+OG+Cafe+Hyderabad",
     "status": "open",
     "isNewLaunch": true,
-    "newLaunchCatchyline": "New neighborhood chai spot in Banjara Hills",
-    "featuredMenu": [],
-    "userReviews": []
+    "newLaunchCatchyline": "New neighborhood chai spot in Banjara Hills"
   },
   {
     "id": 1782218906628,
@@ -1045,9 +1043,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "mapLink": "https://maps.app.goo.gl/search/Altr+Ego+Banjara+Hills+Hyderabad",
     "status": "open",
     "isNewLaunch": true,
-    "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
-    "featuredMenu": [],
-    "userReviews": []
+    "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room."
   },
   {
     "id": 1782218999099,
@@ -1089,9 +1085,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "mapLink": "https://maps.app.goo.gl/search/Socio+Art+Cafe+Banjara+Hills+Hyderabad",
     "status": "open",
     "isNewLaunch": false,
-    "newLaunchCatchyline": "",
-    "featuredMenu": [],
-    "userReviews": []
+    "newLaunchCatchyline": ""
   }
 ];
 
@@ -1263,5 +1257,5 @@ export const INITIAL_BLOG_ARTICLES = [
     status: "published",
     tags: []
   }
-] as BlogArticle[];
+];
 

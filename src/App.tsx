@@ -411,7 +411,7 @@ export default function App() {
                   </motion.div>
                 } />
 
-                <Route path="/blog" element={
+                <Route path="/journal" element={
                   <motion.div
                     key="blog_panel"
                     initial={{ opacity: 0 }}
@@ -422,7 +422,7 @@ export default function App() {
                   </motion.div>
                 } />
 
-                <Route path="/blog/:slug" element={
+                <Route path="/journal/:slug" element={
                   <motion.div
                     key="blog_panel_detail"
                     initial={{ opacity: 0 }}
@@ -576,7 +576,7 @@ export default function App() {
                       ))}
                     </div>
                   ) : (
-                    <div id="layout_blog_list" className="divide-y divide-[#E6DFD3] border-t border-b border-[#E6DFD3]">
+                    <div id="layout_journal_list" className="divide-y divide-[#E6DFD3] border-t border-b border-[#E6DFD3]">
                       {filteredCafes.map((cafe, index) => (
                         <CafeCard
                           key={cafe.id}

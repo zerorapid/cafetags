@@ -149,7 +149,7 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
         title: '', excerpt: '', content: '', author: '', readTime: '5 min read', status: 'draft', tags: [], image: '',
         isFeatured: false, seoTitle: '', seoDescription: ''
       });
-      toast("New blog article successfully published on the blog forum!");
+      toast("New blog article successfully published on the journal forum!");
     }
     } finally {
       setIsSubmitting(false);
@@ -159,8 +159,8 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
   const handleDeleteBlog = async (id: number) => {
     setConfirmModal({
       isOpen: true,
-      title: "Delete Blog Column",
-      message: "Are you sure you want to permanently delete this blog article?",
+      title: "Delete Journal Column",
+      message: "Are you sure you want to permanently delete this journal article?",
       onConfirm: async () => {
         setConfirmModal(prev => ({ ...prev, isOpen: false }));
         if (import.meta.env.VITE_SUPABASE_URL) {
@@ -353,7 +353,7 @@ export function AdminBlogs({ blogs, setBlogs }: AdminBlogsProps) {
                 <div className="flex items-center justify-between">
                   <div>
                     <label className="block text-[#786F64] font-bold uppercase tracking-wider text-[11px]">Featured Hero Article</label>
-                    <p className="text-[10px] text-stone-500">Pin to the top of the blog</p>
+                    <p className="text-[10px] text-stone-500">Pin to the top of the journal</p>
                   </div>
                   <div 
                     onClick={() => editingBlog ? setEditingBlog({...editingBlog, isFeatured: !editingBlog.isFeatured}) : setBlogForm({...blogForm, isFeatured: !blogForm.isFeatured})}
