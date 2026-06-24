@@ -1086,6 +1086,83 @@ export const INITIAL_CAFES: Cafe[] = [
     "status": "open",
     "isNewLaunch": false,
     "newLaunchCatchyline": ""
+  },
+  {
+    "id": 1782345678901,
+    "name": "Roast CCX",
+    "area": "Banjara Hills",
+    "address": "129/73/1, Laxmi Pinnacle, Circle 18, Venkat Nagar, Road 3, Banjara Hills, Hyderabad",
+    "phone": "+91 91333 01860",
+    "email": "",
+    "website": "https://roastcafe.in",
+    "facebookUrl": "https://www.facebook.com/roast.ccx",
+    "socialLink": "https://www.instagram.com/roast.ccx",
+    "timings": "7:00 AM - 12:00 AM (Midnight)",
+    "signature": "Cold brew samplers, baked pastries, gelato & diverse comfort food",
+    "vibe": "A staggering 60,000 sq. ft. destination cafe blending immersive coffee experience with large-scale culinary dining, centered around a 20-foot roaster.",
+    "curatorNote": "It stands out for its huge scale, in-house roasting, and bakery focus. They even host exclusive Michelin Star tasting menus. A must-visit for the scale alone.",
+    "tags": [
+      "Specialty Coffee",
+      "60k Sq Ft",
+      "Aesthetic",
+      "Work Friendly",
+      "Bakery",
+      "Roastery Tour"
+    ],
+    "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1200&auto=format&fit=crop",
+    "icon": "local_cafe",
+    "founded": "2020",
+    "aestheticType": "Premium Industrial-Chic",
+    "crowd": "Coffee enthusiasts, remote workers, large groups, families",
+    "discounts": "",
+    "facilities": [
+      "Wi-Fi",
+      "Valet Parking",
+      "Indoor Seating",
+      "Outdoor Seating",
+      "Wheelchair Accessible",
+      "Baby High Chairs",
+      "All-Day Breakfast",
+      "Pet Friendly"
+    ],
+    "dineIn": true,
+    "takeaway": true,
+    "onlineOrder": true,
+    "selfDelivery": false,
+    "celebrities": [],
+    "bookingUrl": "",
+    "mapLink": "https://maps.app.goo.gl/search/Roast+CCX+Banjara+Hills+Hyderabad",
+    "status": "open",
+    "isNewLaunch": false,
+    "newLaunchCatchyline": "",
+    "userReviews": [
+      {
+        "author": "Public Review Aggregator",
+        "date": "2026",
+        "rating": 4.6,
+        "text": "Huge space, great vibe. Amazing cranberry nitro brew, cheesecakes, wood-fired pizzas, and waffles. It gets crowded and loud, so maybe not for quiet studying, but perfect for hangouts."
+      }
+    ],
+    "featuredMenu": [
+      {
+        "name": "Cranberry Nitro Brew",
+        "price": "₹350",
+        "category": "Beverage",
+        "isSpecial": true
+      },
+      {
+        "name": "Dal Makhni & Bhindi Do Pyaaza",
+        "price": "₹600",
+        "category": "Main Course",
+        "isSpecial": false
+      },
+      {
+        "name": "Wood-fired Artisanal Pizza",
+        "price": "₹700",
+        "category": "Main Course",
+        "isSpecial": false
+      }
+    ]
   }
 ];
 
