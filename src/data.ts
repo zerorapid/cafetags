@@ -87,7 +87,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/sobremesa_hyd/"
+      }
+    ]
   },
   {
     "id": 1782330804471,
@@ -169,7 +175,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/guilttrip_hyderabad/"
+      }
+    ]
   },
   {
     "id": 1782330804472,
@@ -251,7 +263,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/kafickohyd/"
+      }
+    ]
   },
   {
     "id": 1782330710637,
@@ -335,7 +353,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/karafa.in/"
+      }
+    ]
   },
   {
     "id": 1782330710638,
@@ -419,7 +443,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/roasterycoffeehousehyderabad/"
+      }
+    ]
   },
   {
     "id": 1782330710639,
@@ -502,7 +532,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/habitatcafe.in/"
+      }
+    ]
   },
   {
     "id": 1782330586694,
@@ -585,7 +621,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "isFeaturedBanner": false,
     "newLaunchCatchyline": "",
-    "directionsTip": ""
+    "directionsTip": "",
+    "socialMedia": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/lavieenrosecafe.in/"
+      }
+    ]
   },
   {
     "id": 1782330586695,
