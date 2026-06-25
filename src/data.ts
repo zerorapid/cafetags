@@ -129,54 +129,37 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=9055272694452188651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/2/20122962/042680cf7bcd9c736acb4039db336aa4.jpg?fit=around|1000:1000",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "https://b.zmtcdn.com/data/pictures/2/20122962/2025ff87b99a3bcb5008ed524de0ecf2.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/pictures/2/20122962/26678588ac4ed0cbcd0773a82f60dccc.jpg?fit=around|1000:1000"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "https://b.zmtcdn.com/data/menus/962/20122962/1c2ddfaede741662765256ac698ed35d.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/962/20122962/38e4800bd8a1c9107f7386343a758e14.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/962/20122962/3ae94fc990b0501056ba6e5f424f6d43.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/962/20122962/469a16d10ab0692f9aa8e308bf378583.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/962/20122962/4cdbdc61236390787bdbe8a190013b4d.jpg?fit=around|1000:1000"
     ],
     "featuredMenu": [
       {
         "name": "Baked Broccoli",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/385980fb3084d29def89944a7f4e7180.jpg?fit=around|1000:1000"
       },
       {
         "name": "5 Cheese Pizza",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/397700f21b6384be17b2ceab3b548ce3.jpg?fit=around|1000:1000"
       },
       {
         "name": "Irish Cold Coffee",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/4391a68e01116bee2a7170e3d6da60d4.jpg?fit=around|1000:1000"
       }
     ],
     "email": "",
