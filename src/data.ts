@@ -3098,22 +3098,22 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
+        "name": "Matcha Latte",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Signature specialty matcha",
+        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/9c44b98c71de1f26f7a18b5c19e91209.jpg?fit=around|1000:1000"
       },
       {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-      },
-      {
-        "name": "New York Cheesecake",
+        "name": "Iced Americano",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "description": "Premium slow-bar coffee",
+        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/bfb88ceb3d67fbb713ccdb52c5154d6a.jpg?fit=around|1000:1000"
+      },
+      {
+        "name": "Gourmet Toast",
+        "price": "₹320",
+        "description": "Freshly baked aesthetic toast",
+        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/523e86dec5475cf29ba3ad02026ac7ce.jpg?fit=around|1000:1000"
       }
     ],
     "userReviews": [
