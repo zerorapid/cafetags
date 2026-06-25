@@ -5,6 +5,7 @@ import * as z from 'zod';
 import { Cafe, CafeMenuItem } from '../types';
 import './CafeForm.css';
 import { ImageUploadField } from './ImageUploadField';
+import { ZomatoExtractor } from './admin/ZomatoExtractor';
 
 const cafeSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -488,6 +489,19 @@ export function CafeForm({ editingCafe, onSave, onCancel }: CafeFormProps) {
                   <div className="field" style={{ marginBottom: '16px' }}>
                     <input type="text" placeholder="https://youtube.com/..." {...register('videoUrl')} />
                   </div>
+                  <ZomatoExtractor onExtractSuccess={(urls) => {
+                    if (urls[0]) setGallery1(urls[0]);
+                    if (urls[1]) setGallery2(urls[1]);
+                    if (urls[2]) setGallery3(urls[2]);
+                    if (urls[3]) setGallery4(urls[3]);
+                    if (urls[4]) setGallery5(urls[4]);
+                    
+                    // Also set main image if empty
+                    if (urls[0] && !watchImage) {
+                      setValue('image', urls[0]);
+                    }
+                  }} />
+
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '8px' }}>Gallery Images (Min 4 required) <span className="req">*</span></label>
                   <div className="field" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     <ImageUploadField placeholder="Image 1 URL (e.g. Pinterest Image Address)" value={gallery1} onChange={setGallery1} />

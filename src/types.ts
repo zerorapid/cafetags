@@ -9,6 +9,7 @@ export interface CafeMenuItem {
   category: string;
   isSpecial?: boolean;
   image?: string;
+  description?: string;
 }
 
 export interface CafeReview {
