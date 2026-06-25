@@ -132,8 +132,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "https://b.zmtcdn.com/data/pictures/2/20122962/042680cf7bcd9c736acb4039db336aa4.jpg?fit=around|1000:1000",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/2/20122962/2025ff87b99a3bcb5008ed524de0ecf2.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/pictures/2/20122962/26678588ac4ed0cbcd0773a82f60dccc.jpg?fit=around|1000:1000"
+      "https://b.zmtcdn.com/data/pictures/2/20122962/385980fb3084d29def89944a7f4e7180.jpg",
+      "https://b.zmtcdn.com/data/pictures/2/20122962/26678588ac4ed0cbcd0773a82f60dccc.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/962/20122962/1c2ddfaede741662765256ac698ed35d.jpg",
@@ -144,10 +144,10 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "featuredMenu": [
       {
-        "name": "Baked Broccoli",
+        "name": "Almond Croissant",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/385980fb3084d29def89944a7f4e7180.jpg?fit=around|1000:1000"
+        "description": "Freshly baked signature pastry",
+        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/2025ff87b99a3bcb5008ed524de0ecf2.jpg"
       },
       {
         "name": "5 Cheese Pizza",
@@ -3030,7 +3030,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Podcast Space",
       "Aesthetic"
     ],
-    "image": "https://b.zmtcdn.com/data/pictures/1/22480531/4662c810620767644ae0770a3136b8e9.jpg?fit=around|1000:1000",
+    "image": "https://b.zmtcdn.com/data/pictures/1/22480531/bfb88ceb3d67fbb713ccdb52c5154d6a.jpg",
     "icon": "local_cafe",
     "founded": "2024",
     "aestheticType": "Futuristic Matcha Bar",
@@ -3053,10 +3053,9 @@ export const INITIAL_CAFES: Cafe[] = [
     "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/1/22480531/504a44fb0e14245d84eeec822e368f01.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/pictures/1/22480531/523e86dec5475cf29ba3ad02026ac7ce.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/pictures/1/22480531/70e42bd14e3194086609e00af3c396d0.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/pictures/1/22480531/92629daabda1b4df9b3c2df26c4bd954.jpg?fit=around|1000:1000"
+      "https://b.zmtcdn.com/data/pictures/1/22480531/4662c810620767644ae0770a3136b8e9.jpg",
+      "https://b.zmtcdn.com/data/pictures/1/22480531/92629daabda1b4df9b3c2df26c4bd954.jpg",
+      "https://b.zmtcdn.com/data/pictures/1/22480531/bfb88ceb3d67fbb713ccdb52c5154d6a.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/531/22480531/34c2a94d30fc30c87937573c182e0511.jpg",
@@ -3067,16 +3066,16 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "featuredMenu": [
       {
-        "name": "Matcha Latte",
+        "name": "Matcha Latte Combo",
         "price": "₹350",
-        "description": "Signature specialty matcha",
-        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/9c44b98c71de1f26f7a18b5c19e91209.jpg?fit=around|1000:1000"
+        "description": "Signature specialty matcha and sandwich",
+        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/9c44b98c71de1f26f7a18b5c19e91209.jpg"
       },
       {
-        "name": "Iced Americano",
+        "name": "Grilled Sandwich",
         "price": "₹280",
-        "description": "Premium slow-bar coffee",
-        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/bfb88ceb3d67fbb713ccdb52c5154d6a.jpg?fit=around|1000:1000"
+        "description": "Premium slow-bar coffee sandwich",
+        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/504a44fb0e14245d84eeec822e368f01.jpg"
       },
       {
         "name": "Gourmet Toast",
@@ -3303,6 +3302,19 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   }
 ];
+
+const TAG_ICONS: Record<string, string> = {
+  'Aesthetic': 'palette',
+  'Specialty Coffee': 'local_cafe',
+  'Pet Friendly': 'pets',
+  'Quiet': 'volume_off',
+  'Outdoor Seating': 'deck',
+  'Matcha': 'eco',
+  'Bakery': 'bakery_dining',
+  'Books': 'menu_book',
+  'Work Friendly': 'laptop_mac',
+  'Vegan Options': 'grass'
+};
 
 export function getTagIcon(tag: string): string {
   const found = TAG_ICONS[tag];

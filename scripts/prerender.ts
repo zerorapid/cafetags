@@ -35,7 +35,7 @@ async function prerender() {
   
   // Try fetching live data, fallback to static if Supabase URL is missing during local build testing
   let cafes: Cafe[] = INITIAL_CAFES;
-  let blogs: BlogArticle[] = INITIAL_BLOG_ARTICLES;
+  let blogs: BlogArticle[] = INITIAL_BLOG_ARTICLES as BlogArticle[];
 
   if (process.env.VITE_SUPABASE_URL) {
     const { data: cafesData } = await supabase.from('cafes').select('*');

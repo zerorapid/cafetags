@@ -6,7 +6,7 @@
 export interface CafeMenuItem {
   name: string;
   price: string;
-  category: string;
+  category?: string;
   isSpecial?: boolean;
   image?: string;
   description?: string;
@@ -35,6 +35,7 @@ export interface Cafe {
   curatorNote?: string;
   
   // New detailed lookbook characteristics
+  neighborhood?: string;
   address: string;
   phone: string;
   email: string;

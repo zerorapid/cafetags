@@ -13,19 +13,9 @@ const socialMap: Record<string, string> = {
 
 const newCafes = INITIAL_CAFES.map(cafe => {
   if (socialMap[cafe.name]) {
-    // Check if there is already an Instagram link to update
-    const newSocialMedia = cafe.socialMedia ? [...cafe.socialMedia] : [];
-    const instaIndex = newSocialMedia.findIndex(s => s.platform === "Instagram");
-    
-    if (instaIndex !== -1) {
-      newSocialMedia[instaIndex].url = socialMap[cafe.name];
-    } else {
-      newSocialMedia.push({ platform: "Instagram", url: socialMap[cafe.name] });
-    }
-
     return {
       ...cafe,
-      socialMedia: newSocialMedia
+      socialLink: socialMap[cafe.name]
     };
   }
   return cafe;

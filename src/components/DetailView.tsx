@@ -99,6 +99,53 @@ interface DetailViewProps {
 export function DetailView({ cafe, onBack }: DetailViewProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
+  // Dynamic SEO & Social Preview Tags for the Cafe Detail Page
+  useEffect(() => {
+    // Generate SEO optimized strings
+    const seoTitle = `${cafe.name} - Best Cafe in ${cafe.area} | CafeTags`;
+    const seoDescription = cafe.vibe || `Discover ${cafe.name} in ${cafe.area}, known for amazing ambiance and great coffee. Read reviews and find location details on CafeTags.`;
+    const seoImage = cafe.image;
+    
+    // 1. Update Document Title
+    document.title = seoTitle;
+    
+    // 2. Update Standard Meta Tags
+    const updateMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attr}='${name}']`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attr, name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateMeta('description', seoDescription);
+
+    // 3. Update Open Graph Meta Tags (Social Preview)
+    updateMeta('og:title', seoTitle, true);
+    updateMeta('og:description', seoDescription, true);
+    updateMeta('og:image', seoImage, true);
+    updateMeta('og:image:width', '1200', true); // Standard OG image width
+    updateMeta('og:image:height', '630', true); // Standard OG image height
+    updateMeta('og:image:alt', `Interior view of ${cafe.name} in ${cafe.area}`, true);
+    updateMeta('og:type', 'website', true);
+    
+    // 4. Update Twitter Card Meta Tags
+    updateMeta('twitter:title', seoTitle);
+    updateMeta('twitter:description', seoDescription);
+    updateMeta('twitter:image', seoImage);
+    updateMeta('twitter:card', 'summary_large_image');
+
+    // Cleanup: Revert to default or leave as is (leaving as is since App.tsx might re-apply globals on unmount if needed, but it only runs on mount. Best to clean up title at least)
+    return () => {
+      // Basic cleanup for title
+      document.title = "CafeTags | Discover Hyderabad’s Best Cafes & Exclusive Deals";
+    };
+  }, [cafe]);
+
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [cafe]);
