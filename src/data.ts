@@ -136,11 +136,11 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/pictures/2/20122962/26678588ac4ed0cbcd0773a82f60dccc.jpg?fit=around|1000:1000"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/962/20122962/1c2ddfaede741662765256ac698ed35d.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/menus/962/20122962/38e4800bd8a1c9107f7386343a758e14.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/menus/962/20122962/3ae94fc990b0501056ba6e5f424f6d43.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/menus/962/20122962/469a16d10ab0692f9aa8e308bf378583.jpg?fit=around|1000:1000",
-      "https://b.zmtcdn.com/data/menus/962/20122962/4cdbdc61236390787bdbe8a190013b4d.jpg?fit=around|1000:1000"
+      "https://b.zmtcdn.com/data/menus/962/20122962/1c2ddfaede741662765256ac698ed35d.jpg",
+      "https://b.zmtcdn.com/data/menus/962/20122962/38e4800bd8a1c9107f7386343a758e14.jpg",
+      "https://b.zmtcdn.com/data/menus/962/20122962/3ae94fc990b0501056ba6e5f424f6d43.jpg",
+      "https://b.zmtcdn.com/data/menus/962/20122962/469a16d10ab0692f9aa8e308bf378583.jpg",
+      "https://b.zmtcdn.com/data/menus/962/20122962/4cdbdc61236390787bdbe8a190013b4d.jpg"
     ],
     "featuredMenu": [
       {
