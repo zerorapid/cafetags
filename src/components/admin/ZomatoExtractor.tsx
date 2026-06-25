@@ -62,18 +62,18 @@ export function ZomatoExtractor({ onExtractSuccess }: ZomatoExtractorProps) {
         </div>
       </div>
       
-      <div className="flex gap-2 items-stretch mt-4">
+      <div className="flex flex-col sm:flex-row gap-2 items-stretch mt-4 w-full">
         <input 
           type="text" 
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://zomato.com/hyderabad/district/..." 
-          className="flex-1 border border-stone-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 bg-white"
+          className="flex-1 min-w-0 border border-stone-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 bg-white"
         />
         <button 
           onClick={handleExtract}
           disabled={isLoading || !url}
-          className="bg-stone-900 hover:bg-black text-white px-4 py-2 rounded-md text-xs font-bold uppercase tracking-wider disabled:opacity-50 flex items-center gap-2 transition-colors"
+          className="bg-stone-900 hover:bg-black text-white px-4 py-2 rounded-md text-xs font-bold uppercase tracking-wider disabled:opacity-50 flex items-center justify-center gap-2 transition-colors whitespace-nowrap"
         >
           {isLoading ? (
             <>
