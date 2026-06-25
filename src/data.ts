@@ -3076,25 +3076,11 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/pictures/1/22480531/92629daabda1b4df9b3c2df26c4bd954.jpg?fit=around|1000:1000"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "https://b.zmtcdn.com/data/menus/531/22480531/34c2a94d30fc30c87937573c182e0511.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/531/22480531/4241e4b198ac4d595eeb396fabfc1216.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/531/22480531/4a63e4aad684732f74313f801e5b6f72.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/531/22480531/66856f3b3e458a151bb6b38d16d94e82.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/menus/531/22480531/8fe0946052961aeb2dd6bc291bd19644.jpg?fit=around|1000:1000"
     ],
     "featuredMenu": [
       {
