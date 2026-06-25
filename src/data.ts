@@ -3047,7 +3047,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Podcast Space",
       "Aesthetic"
     ],
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/1/22480531/4662c810620767644ae0770a3136b8e9.jpg?fit=around|1000:1000",
     "icon": "local_cafe",
     "founded": "2024",
     "aestheticType": "Futuristic Matcha Bar",
@@ -3070,11 +3070,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "https://b.zmtcdn.com/data/pictures/1/22480531/504a44fb0e14245d84eeec822e368f01.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/pictures/1/22480531/523e86dec5475cf29ba3ad02026ac7ce.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/pictures/1/22480531/70e42bd14e3194086609e00af3c396d0.jpg?fit=around|1000:1000",
+      "https://b.zmtcdn.com/data/pictures/1/22480531/92629daabda1b4df9b3c2df26c4bd954.jpg?fit=around|1000:1000"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
