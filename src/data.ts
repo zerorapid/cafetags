@@ -792,30 +792,35 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5922054460361640326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/switch_interior.png",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/2/22603412/ab465b5e207795ae50add550b8c737a8.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/switch_interior.png"
+      "https://b.zmtcdn.com/data/pictures/2/22603412/9c4f56002492bc1a7ddcb2db719450e7.png",
+      "https://b.zmtcdn.com/data/pictures/chains/2/22603412/8da13954a5deb4418bc6bc7540768f94.png"
     ],
-    "menuImages": [],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/412/22603412/c93c15c3b7e99d349fe8855227ff6adf.jpg",
+      "https://b.zmtcdn.com/data/menus/412/22603412/8bfb5479fa0a1900ebc7351d4320ca58.jpg",
+      "https://b.zmtcdn.com/data/menus/412/22603412/8107e1d0e3fdcb8dc2060bb229abb922.jpg"
+    ],
     "featuredMenu": [
       {
         "name": "Signature Orange Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/switch_orange_latte.png"
+        "image": "https://b.zmtcdn.com/data/pictures/2/22603412/e8f779f0d283bfb92eea84e9dafa817b.png"
       },
       {
         "name": "Strawberry Matcha",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/switch_strawberry_matcha.png"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/2/22603412/ab465b5e207795ae50add550b8c737a8.png"
       },
       {
         "name": "Chimichurri Bruschetta",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/switch_bruschetta.png"
+        "image": "https://b.zmtcdn.com/data/pictures/2/22603412/d6920e258e5f68064fcd8b806163bfe4.png"
       }
     ],
     "email": "",
