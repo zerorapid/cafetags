@@ -964,13 +964,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=4892250763931573143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/2/19258392/c8b21115bb9919b4563a34a8e60249e0.jpeg",
+    "image": "/images/makobrew_interior.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/1f3910c5da800ed91b65e900c3b0eb41.jpeg",
-      "https://b.zmtcdn.com/data/pictures/2/19258392/1a0b332308eb675c5f87b8f041793617.jpeg",
-      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/0bdf60f7f329976378e9a26322b74dd6.jpeg",
-      "https://b.zmtcdn.com/data/pictures/2/19258392/37fcde16c1471de9996d1945f342cdfa.jpeg"
+      "/images/makobrew_interior.png",
+      "/images/makobrew_exterior.png"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/392/19258392/3fcff63896a8edace12019c6e67fe46e.jpeg",
@@ -990,13 +988,13 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Sweet Crepe",
         "price": "₹350",
         "description": "Signature sweet crepe dessert",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/19258392/1e93836dc2a7a4beaeec1541b9dcd87b.jpeg"
+        "image": "/images/sweet_crepe.png"
       },
       {
         "name": "Beetroot Burger",
         "price": "₹320",
         "description": "Gourmet vegetarian burger with beetroot patty",
-        "image": "https://b.zmtcdn.com/data/pictures/2/19258392/d40d9904d9c490a6f8749d0124ca6032.jpeg"
+        "image": "/images/beetroot_burger.png"
       },
       {
         "name": "Cheesecake",
