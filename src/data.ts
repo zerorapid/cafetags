@@ -446,14 +446,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13240328901702437474&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/roastery_1.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/roastery_1.jpg",
+      "/images/roastery_2.jpg",
+      "/images/roastery_3.jpg",
+      "/images/roastery_4.jpg"
     ],
     "menuImages": [
       "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
@@ -481,19 +480,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Brownie Blend",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/roastery_food1.jpg"
       },
       {
         "name": "Creamy Spinach Spaghetti",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/roastery_food2.jpg"
       },
       {
         "name": "Loaded Nachos",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/roastery_1.jpg"
       }
     ],
     "email": "",
