@@ -871,54 +871,53 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=15635965076962151747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/4/21288214/3b1740ce850769a30ecbf3d7e5f17c7c.jpeg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg",
+      "https://b.zmtcdn.com/data/pictures/4/21288214/0a8840b867b1e464ce724341b6cbf63d.jpeg"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "https://b.zmtcdn.com/data/menus/214/21288214/7e6e276b2e0b4faa5a7d8de8d2d14494.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/af045a613366000fcea9a069a4ceb213.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/c5277105343f3de6f0c962e6cf5742fe.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/a32aabcdd6981986ec5de224426a839d.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/5fb53b7779b4ea3fc697175d650b4c98.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/c0f8d9f4438287e856849b08ce77bf36.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/b083d05ecbcfd53fc6e803edd781cf88.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/d4289988e69a4ed3e2e4c6ac8602b247.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/c87fe5efd9aae68939e928f713028638.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/3039d8c04a45af4ea8b33f2ddb90c7eb.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/5f06b64538dd9859c45faab8bffd7efb.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/19b02fd73a28efd5759706df31d67d4f.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/fca4abeace0a1da8ffaa733e40a2b2ca.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/ffc42ada8bd6180454906321012a6c6a.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/9bc8701910609221b6e99dc265c2d890.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/f598b70de36283bedd3b7a32cd410871.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/27c93ca17cce1985d982d8b5b3bbf3ad.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/292d5697b8c634c11ffe3db4f6db6724.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/7c6abe2fd5b911697ae5a7b8a252fe24.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/3ff4f62609b44a74beb36709e4bb6b9d.jpeg",
+      "https://b.zmtcdn.com/data/menus/214/21288214/e135bcfe9eab9eaea4fd9349c91caed0.jpeg"
     ],
     "featuredMenu": [
       {
         "name": "Sushi Platter",
         "price": "₹850",
         "description": "Assorted premium sushi platter",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/6c991c0a66719eeb772a2dc22510e149.jpeg"
       },
       {
         "name": "Korean BBQ",
         "price": "₹1200",
         "description": "Classic Korean BBQ with sides",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/4/21288214/98a8e14501524050494d689a802fb14e.jpeg"
       },
       {
         "name": "Spicy Ramen",
         "price": "₹650",
         "description": "Authentic ramen bowl with rich broth",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg"
       }
     ],
     "email": "",
