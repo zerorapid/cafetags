@@ -1410,7 +1410,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "eco",
     "mapLink": "https://maps.google.com/?cid=1436687057963349916&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/lush_1.webp",
     "timings": "11:00 AM - 11:00 PM",
     "tags": [
       "Garden",
@@ -1421,22 +1421,22 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "lushcafe.hyd@gmail.com",
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
-      },
-      {
-        "name": "Chocolate Pastry",
+        "name": "Lakeside Special",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Signature lakeside fresh preparation",
+        "image": "/images/lush_food1.webp"
       },
       {
-        "name": "New York Cheesecake",
+        "name": "Garden Fresh Bowl",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "description": "Fresh seasonal ingredients",
+        "image": "/images/lush_food2.webp"
+      },
+      {
+        "name": "Signature Drink",
+        "price": "₹220",
+        "description": "House specialty beverage",
+        "image": "/images/lush_food3.webp"
       }
     ],
     "onlineOrder": true,
@@ -1457,32 +1457,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [],
     "discounts": "",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/lush_1.webp",
+      "/images/lush_2.webp",
+      "/images/lush_3.webp",
+      "/images/lush_4.webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/lush_menu1.jpg",
+      "/images/lush_menu2.jpg"
     ]
   },
   {
@@ -1640,33 +1622,36 @@ export const INITIAL_CAFES: Cafe[] = [
     "bookingUrl": "",
     "celebrities": [],
     "discounts": "",
+    "image": "/images/pscheese_1.webp",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/pscheese_1.webp",
+      "/images/pscheese_2.webp",
+      "/images/pscheese_3.webp",
+      "/images/pscheese_4.webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/pscheese_menu1.jpg",
+      "/images/pscheese_menu2.jpg"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Cheese Burst Pizza",
+        "price": "₹450",
+        "description": "Signature cheese burst pizza",
+        "image": "/images/pscheese_food1.webp"
+      },
+      {
+        "name": "Mac & Cheese",
+        "price": "₹320",
+        "description": "Creamy classic mac and cheese",
+        "image": "/images/pscheese_2.webp"
+      },
+      {
+        "name": "Cheese Fondue",
+        "price": "₹380",
+        "description": "Warm melted cheese fondue",
+        "image": "/images/pscheese_3.webp"
+      }
     ]
   },
   {
@@ -1702,7 +1687,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "icon": "sailing",
     "takeaway": true,
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/urbannemo_1.webp",
     "mapLink": "https://maps.google.com/?cid=18208358017244254991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:00 PM",
     "tags": [
@@ -1714,51 +1699,33 @@ export const INITIAL_CAFES: Cafe[] = [
     "signature": "Peri Peri Chicken Pizza",
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "name": "Peri Peri Chicken Pizza",
+        "price": "₹380",
+        "description": "Signature spicy peri peri chicken pizza",
+        "image": "/images/urbannemo_food1.webp"
       },
       {
-        "name": "Chocolate Pastry",
+        "name": "Nemo Burger",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Signature gourmet burger",
+        "image": "/images/urbannemo_2.webp"
       },
       {
-        "name": "New York Cheesecake",
+        "name": "Garden Bowl",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "description": "Fresh garden salad bowl",
+        "image": "/images/urbannemo_3.webp"
       }
     ],
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/urbannemo_1.webp",
+      "/images/urbannemo_2.webp",
+      "/images/urbannemo_3.webp",
+      "/images/urbannemo_4.webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/urbannemo_menu1.jpg",
+      "/images/urbannemo_menu2.jpg"
     ]
   },
   {
@@ -1786,7 +1753,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "timings": "12:00 PM - 12:00 AM",
     "mapLink": "https://maps.google.com/?cid=5268139497609473063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/glasshouse_1.webp",
     "signature": "Truffle Fries & Mocktails",
     "email": "glasshouse@luxury.in",
     "tags": [
@@ -1796,22 +1763,22 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "name": "Truffle Fries",
+        "price": "₹420",
+        "description": "Signature truffle fries",
+        "image": "/images/glasshouse_food1.webp"
       },
       {
-        "name": "Chocolate Pastry",
+        "name": "Signature Mocktail",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "House special mocktail",
+        "image": "/images/glasshouse_2.webp"
       },
       {
-        "name": "New York Cheesecake",
-        "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "name": "Glass House Platter",
+        "price": "₹580",
+        "description": "Premium sharing platter",
+        "image": "/images/glasshouse_3.webp"
       }
     ],
     "crowd": "High Society, Celebrities",
@@ -1827,32 +1794,14 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/glasshouse_1.webp",
+      "/images/glasshouse_2.webp",
+      "/images/glasshouse_3.webp",
+      "/images/glasshouse_4.webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/glasshouse_menu1.jpg",
+      "/images/glasshouse_menu2.jpg"
     ]
   },
   {
@@ -1949,28 +1898,28 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "timings": "12:00 PM - 11:30 PM",
     "mapLink": "https://maps.google.com/?cid=11058805099472244365&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/olivebistro_1.webp",
     "icon": "wb_cloudy",
     "takeaway": false,
     "website": "Panoramic Lake View, Open Air Bar, Valet",
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "name": "Olive Wood-fired Pizza",
+        "price": "₹520",
+        "description": "Signature wood-fired artisan pizza",
+        "image": "/images/olivebistro_food1.webp"
       },
       {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "name": "Mediterranean Platter",
+        "price": "₹680",
+        "description": "Premium Mediterranean sharing platter",
+        "image": "/images/olivebistro_food2.webp"
       },
       {
-        "name": "New York Cheesecake",
-        "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "name": "Truffle Risotto",
+        "price": "₹480",
+        "description": "Creamy truffle risotto",
+        "image": "/images/olivebistro_food3.webp"
       }
     ],
     "signature": "Wood-fired Truffle Pizza",
@@ -2012,32 +1961,15 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "id": 1781212697124,
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/olivebistro_1.webp",
+      "/images/olivebistro_2.webp",
+      "/images/olivebistro_3.webp",
+      "/images/olivebistro_4.webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/olivebistro_menu1.jpg",
+      "/images/olivebistro_menu2.jpg",
+      "/images/olivebistro_menu3.jpg"
     ]
   },
   {
