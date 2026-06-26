@@ -9,7 +9,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782332067698,
     "name": "Cafe Niloufer",
-"area": "Hitech City",
+    "area": "Hitech City",
     "address": "Plot No. 30/C, Survey 83/1, Tower 2, Orbit Building, TSIIC, Raidurgam, Penmaktha, Serilingampalle (M), Hyderabad, Telangana",
     "description": "Cafe Niloufer Hitech City is a grand, modern tea café built around Irani chai, bun maska, biscuits, and Hyderabad-style snacks. With its huge scale and premium interiors, it feels like both a local landmark and a comfortable hangout for tea breaks, work meetings, and casual meals.",
     "rating": 4.5,
@@ -100,7 +100,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330804470,
     "name": "Sobremesa",
-"area": "Jubilee Hills",
+    "area": "Jubilee Hills",
     "address": "Plot No. 593, 8-2-293/82/A/593, Road No. 31, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "10:00 AM to 10:30 PM",
     "signature": "Baked Broccoli, 5 Cheese Pizza & Irish Cold Coffee",
@@ -180,7 +180,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330804471,
     "name": "Guilt Trip",
-"area": "Banjara Hills",
+    "area": "Banjara Hills",
     "address": "8-2-585/2/A/1, Road 9, Gaffar Khan Colony, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "11:00 AM to 11:00 PM",
     "signature": "Pastries, cheesecakes, cupcakes & casual cafe food",
@@ -260,7 +260,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330804472,
     "name": "Kaficko",
-"area": "Jubilee Hills",
+    "area": "Jubilee Hills",
     "address": "Plot No. 1357, Road No. 45, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "10:00 AM to 10:00 PM",
     "signature": "Cold coffee, spaghetti, Moroccan chicken & burgers",
@@ -339,7 +339,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330710637,
     "name": "Karafa",
-"area": "Banjara Hills",
+    "area": "Banjara Hills",
     "address": "8-2, 269/4A, Road No. 2, Sagar Society, Sri Nagar Colony, Kamalapuri Colony, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "8:00 AM to 11:00 PM",
     "signature": "Experiential coffee, bakes, all-day brunch",
@@ -420,7 +420,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330710638,
     "name": "Roastery Coffee House",
-"area": "Kokapet",
+    "area": "Kokapet",
     "address": "Plot No. 21, Kokapet, Narsingi, Hyderabad, Telangana 500075",
     "timings": "Open till 11:00 PM",
     "signature": "Specialty coffee, Brownie Blend, creamy spinach spaghetti & nachos",
@@ -518,7 +518,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330710639,
     "name": "Habitat Cafe",
-"area": "Banjara Hills",
+    "area": "Banjara Hills",
     "address": "Terrace, Vimbri Boulevard, Road No. 4, Green Valley, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "8:00 AM to 11:30 PM",
     "signature": "Latte, cold coffee, rose latte & brunch items",
@@ -600,7 +600,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330586694,
     "name": "La Vie En Rose Cafe & Bistro",
-"area": "Gachibowli",
+    "area": "Gachibowli",
     "address": "Unit 301, Survey 92/1, 92/3 to 92/18, Plot 9, 10, 11, 16, 17, & 18, 3rd Floor, Circle 20, Gachibowli, Hyderabad",
     "timings": "12:00 PM to 11:00 PM",
     "signature": "Hot teas, coffees, and comfort food",
@@ -691,7 +691,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330586695,
     "name": "Et-Si Cafe | Bakehouse | Chocolatier",
-"area": "Jubilee Hills",
+    "area": "Jubilee Hills",
     "address": "Plot No. 1196/B, Road Number 59, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "8:00 AM to 11:59 PM",
     "signature": "Pistachio Matilda Cake & soufflé pancakes",
@@ -768,7 +768,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330586696,
     "name": "Switch Coffee",
-"area": "Hitech City",
+    "area": "Hitech City",
     "address": "Plot No. 65, Surya Enclave, beside Cyber Towers flyover, opposite Tata Motors, Madhapur, Hyderabad, Telangana 500081",
     "timings": "11:00 AM to 11:00 PM",
     "signature": "Specialty coffee, matcha & cold coffee",
@@ -837,7 +837,7 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "author": "Local Guide",
         "date": "2024",
-        "rating": 4.0,
+        "rating": 4,
         "text": "Great spot for remote work near Cyber Towers. The warm brews and hearty bites make it a staple for my coffee breaks."
       }
     ]
@@ -845,7 +845,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330476578,
     "name": "Osaka",
-"area": "Jubilee Hills",
+    "area": "Jubilee Hills",
     "address": "H.No. 8-2-293/A/116, Road No. 10, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "12:30 PM - 11:30 PM",
     "signature": "Ramen, Korean BBQ & Sushi",
@@ -936,7 +936,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330402954,
     "name": "Makobrew Cafe & Restaurant",
-"area": "Jubilee Hills",
+    "area": "Jubilee Hills",
     "address": "Road No. 44, Sri Peddamma Thalli Temple, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "11:00 AM - 11:00 PM",
     "signature": "Sweet crepe & coffees",
@@ -1024,19 +1024,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg"
       }
     ],
     "tags": [
@@ -1129,22 +1129,22 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "name": "Specialty Black Coffee",
+        "price": "₹220",
+        "description": "Signature single origin black brew",
+        "image": "/images/trueblack_food1.webp"
       },
       {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-      },
-      {
-        "name": "New York Cheesecake",
+        "name": "Cold Brew",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "description": "Slow-steeped cold brew concentrate",
+        "image": "/images/trueblack_food2.webp"
+      },
+      {
+        "name": "Espresso Tonic",
+        "price": "₹260",
+        "description": "Refreshing espresso over tonic water",
+        "image": "/images/trueblack_food3.webp"
       }
     ],
     "signature": "Kyoto Cold Brew",
@@ -1156,7 +1156,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "8:00 AM - 10:00 PM",
     "mapLink": "https://maps.google.com/?cid=10853600568724463362&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/trueblack_1.webp",
     "icon": "local_cafe",
     "takeaway": true,
     "website": "https://trueblack.in",
@@ -1191,7 +1191,6 @@ export const INITIAL_CAFES: Cafe[] = [
     "id": 1781212693498,
     "phone": "#ERROR!",
     "onlineOrder": false,
-    "image": "/images/trueblack_1.webp",
     "moreImages": [
       "/images/trueblack_1.webp",
       "/images/trueblack_2.webp",
@@ -1205,26 +1204,6 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/trueblack_menu4.jpg",
       "/images/trueblack_menu5.jpg",
       "/images/trueblack_menu6.jpg"
-    ],
-    "featuredMenu": [
-      {
-        "name": "Specialty Black Coffee",
-        "price": "₹220",
-        "description": "Signature single origin black brew",
-        "image": "/images/trueblack_food1.webp"
-      },
-      {
-        "name": "Cold Brew",
-        "price": "₹280",
-        "description": "Slow-steeped cold brew concentrate",
-        "image": "/images/trueblack_food2.webp"
-      },
-      {
-        "name": "Espresso Tonic",
-        "price": "₹260",
-        "description": "Refreshing espresso over tonic water",
-        "image": "/images/trueblack_food3.webp"
-      }
     ]
   },
   {
@@ -1335,22 +1314,22 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Designers, Coffee Purists",
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
-      },
-      {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
-      },
-      {
-        "name": "New York Cheesecake",
+        "name": "Vanilla Bean Cold Brew",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "description": "Signature slow-steeped vanilla cold brew",
+        "image": "/images/dailyrituals_food1.webp"
+      },
+      {
+        "name": "Flat White",
+        "price": "₹220",
+        "description": "Velvety smooth flat white",
+        "image": "/images/dailyrituals_2.webp"
+      },
+      {
+        "name": "Avocado Toast",
+        "price": "₹320",
+        "description": "Fresh avocado on artisan sourdough",
+        "image": "/images/dailyrituals_3.webp"
       }
     ],
     "tags": [
@@ -1398,26 +1377,6 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/dailyrituals_menu7.png",
       "/images/dailyrituals_menu8.png",
       "/images/dailyrituals_menu9.png"
-    ],
-    "featuredMenu": [
-      {
-        "name": "Vanilla Bean Cold Brew",
-        "price": "₹280",
-        "description": "Signature slow-steeped vanilla cold brew",
-        "image": "/images/dailyrituals_food1.webp"
-      },
-      {
-        "name": "Flat White",
-        "price": "₹220",
-        "description": "Velvety smooth flat white",
-        "image": "/images/dailyrituals_2.webp"
-      },
-      {
-        "name": "Avocado Toast",
-        "price": "₹320",
-        "description": "Fresh avocado on artisan sourdough",
-        "image": "/images/dailyrituals_3.webp"
-      }
     ]
   },
   {
@@ -1615,7 +1574,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "icon": "bakery_dining",
     "takeaway": true,
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/pscheese_1.webp",
     "mapLink": "https://maps.google.com/?cid=4975621715021664472&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "12:00 PM - 11:00 PM",
     "tags": [
@@ -1627,22 +1586,22 @@ export const INITIAL_CAFES: Cafe[] = [
     "signature": "Deep Dish Cheese Pizza",
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "name": "Cheese Burst Pizza",
+        "price": "₹450",
+        "description": "Signature cheese burst pizza",
+        "image": "/images/pscheese_food1.webp"
       },
       {
-        "name": "Chocolate Pastry",
+        "name": "Mac & Cheese",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Creamy classic mac and cheese",
+        "image": "/images/pscheese_2.webp"
       },
       {
-        "name": "New York Cheesecake",
-        "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "name": "Cheese Fondue",
+        "price": "₹380",
+        "description": "Warm melted cheese fondue",
+        "image": "/images/pscheese_3.webp"
       }
     ],
     "onlineOrder": true,
@@ -1662,7 +1621,6 @@ export const INITIAL_CAFES: Cafe[] = [
     "bookingUrl": "",
     "celebrities": [],
     "discounts": "",
-    "image": "/images/pscheese_1.webp",
     "moreImages": [
       "/images/pscheese_1.webp",
       "/images/pscheese_2.webp",
@@ -1685,26 +1643,6 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/pscheese_menu13.jpg",
       "/images/pscheese_menu14.jpg",
       "/images/pscheese_menu15.jpg"
-    ],
-    "featuredMenu": [
-      {
-        "name": "Cheese Burst Pizza",
-        "price": "₹450",
-        "description": "Signature cheese burst pizza",
-        "image": "/images/pscheese_food1.webp"
-      },
-      {
-        "name": "Mac & Cheese",
-        "price": "₹320",
-        "description": "Creamy classic mac and cheese",
-        "image": "/images/pscheese_2.webp"
-      },
-      {
-        "name": "Cheese Fondue",
-        "price": "₹380",
-        "description": "Warm melted cheese fondue",
-        "image": "/images/pscheese_3.webp"
-      }
     ]
   },
   {
@@ -2269,7 +2207,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "timings": "12:00 PM - 11:00 PM",
     "mapLink": "https://maps.google.com/?cid=6400394818504743063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/churrolto_1.webp",
     "takeaway": true,
     "icon": "icecream",
     "website": "https://churrolto.com",
@@ -2278,19 +2216,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/churrolto_1.webp"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/churrolto_1.webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/churrolto_1.webp"
       }
     ],
     "signature": "Classic Churros with Belgian Chocolate",
@@ -2319,7 +2257,6 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [
       "NTR Jr"
     ],
-    "image": "/images/churrolto_1.webp",
     "moreImages": [
       "/images/churrolto_1.webp",
       "/images/churrolto_2.webp",
@@ -2379,19 +2316,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/lasthouse_1.webp"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/lasthouse_1.webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/lasthouse_1.webp"
       }
     ],
     "website": "",
@@ -2453,19 +2390,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/heartcup_1.webp"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/heartcup_1.webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/heartcup_1.webp"
       }
     ],
     "icon": "music_note",
