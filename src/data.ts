@@ -2568,13 +2568,13 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/holeinwall_1.jpg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/holeinwall_1.jpg"
       }
     ],
     "tags": [
@@ -2585,11 +2585,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "info@theholeinthewall.com",
     "signature": "The All-English Breakfast",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/holeinwall_1.jpg",
+      "/images/holeinwall_2.jpg",
+      "/images/holeinwall_3.jpg",
+      "/images/holeinwall_4.jpg"
     ],
     "menuImages": [
       "/images/holeinwall_menu1.png",
@@ -2652,27 +2651,26 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/fatpigeon_1.jpeg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/fatpigeon_1.jpeg"
       }
     ],
     "website": "",
     "takeaway": false,
     "icon": "roofing",
     "mapLink": "https://maps.google.com/?cid=657251848063835657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/fatpigeon_1.jpeg",
     "timings": "12:00 PM - 12:00 AM",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/fatpigeon_1.jpeg",
+      "/images/fatpigeon_2.jpg",
+      "/images/fatpigeon_3.jpg",
+      "/images/fatpigeon_4.jpg"
     ],
     "menuImages": [
       "/images/fatpigeon_menu1.jpeg",
