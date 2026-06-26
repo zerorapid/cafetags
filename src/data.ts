@@ -31,7 +31,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "https://cafeniloufer.com/pages/outlets",
     "timings": "8:00 AM - 11:00 PM",
     "phone": "+91 89777 40649",
-    "image": "/images/zmt_updzqu_3f0a9cb94ec3a29b77c1718ce1a84b.jpg",
+    "image": "/images/cafeniloufer_main.png",
     "mapLink": "https://www.google.com/maps/search/?api=1&query=Cafe%20Niloufer%2C%20Plot%2030%2FC%2C%20Survey%2083%2F1%2C%20Tower%202%2C%20Orbit%20Building%2C%20Raidurgam%2C%20Hyderabad",
     "icon": "local_cafe",
     "takeaway": true,
@@ -43,11 +43,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "isNewLaunch": true,
     "newLaunchCatchyline": "A huge, modern tea café that mixes Hyderabadi nostalgia with contemporary interiors.",
     "moreImages": [
-      "/images/zmt_updzqu_3f0a9cb94ec3a29b77c1718ce1a84b.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "/images/zmt_1obnxl_a0efdbf16675a848c7157dc4d8ac67.jpg",
-      "/images/zmt_s6eihg_8e5faabaffad1c960cbe77742aa8db.jpg",
-      "/images/zmt_a9akpa_b1163e55870b0e5696fc768b42213a.jpg",
-      "/images/zmt_ln0f04_86705d697fde353ce667a654faddad.jpg"
+      "/images/cafeniloufer_main.png"
     ],
     "menuImages": [
       "/images/menu_9gsk6r_ec2c30b1f8009fb54724.jpg",
@@ -95,19 +91,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Irani Chai & Bun Maska",
         "price": "₹150",
         "description": "Signature featured item",
-        "image": "/images/zmt_updzqu_3f0a9cb94ec3a29b77c1718ce1a84b.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/cafeniloufer_food.png"
       },
       {
         "name": "Osmania Biscuits",
         "price": "₹120",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_1obnxl_a0efdbf16675a848c7157dc4d8ac67.jpg"
+        "image": "/images/cafeniloufer_food.png"
       },
       {
         "name": "Kunafa",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_fmwu0m_8e5faabaffad1c960cbe77742aa8db.jpg"
+        "image": "/images/cafeniloufer_food.png"
       }
     ]
   },
@@ -139,11 +135,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=9055272694452188651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_2mm96o_042680cf7bcd9c736acb4039db336a.jpg",
+    "image": "/images/sobremesa_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_hm4l8c_385980fb3084d29def89944a7f4e71.jpg",
-      "/images/zmt_ghz7tr_26678588ac4ed0cbcd0773a82f60dc.jpg"
+      "/images/sobremesa_main.png"
     ],
     "menuImages": [
       "/images/menu_gm1dwx_1c2ddfaede7416627652.jpg",
@@ -157,19 +152,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Almond Croissant",
         "price": "₹350",
         "description": "Freshly baked signature pastry",
-        "image": "/images/zmt_7i36ly_2025ff87b99a3bcb5008ed524de0ec.jpg"
+        "image": "/images/sobremesa_food.png"
       },
       {
         "name": "5 Cheese Pizza",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_bvbxry_397700f21b6384be17b2ceab3b548c.jpg"
+        "image": "/images/sobremesa_food.png"
       },
       {
         "name": "Irish Cold Coffee",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_ucvd6a_4391a68e01116bee2a7170e3d6da60.jpg"
+        "image": "/images/sobremesa_food.png"
       }
     ],
     "email": "",
@@ -232,13 +227,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.app.goo.gl/BSLPVTiE85YqEFr56",
-    "image": "/images/zmt_hj8htr_cd069e7fd6d6f8420b5f714e302c35.jpg",
+    "image": "/images/guilttrip_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_3p6ru3_d30307b2e74c2e575022b91e6c1b8b.jpg",
-      "/images/zmt_sc4hia_8196b16f8592562220bf9ba385d03c.jpg",
-      "/images/zmt_k8fbvc_135dd9981559c6a248b1c3a1bdbc80.jpg",
-      "/images/zmt_is53g9_2eab43438bb9bb306ad2fb5c5c51c4.jpg"
+      "/images/guilttrip_main.png"
     ],
     "menuImages": [
       "/images/menu_bm9bwf_0b38839417ae6a9c1098.jpg",
@@ -251,19 +243,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_nk4fuy_879614dbe4bbdb09747dfa71fc1cda.jpg"
+        "image": "/images/guilttrip_food.png"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_42ti5v_56cc910341e333081f25aa3d3c90ae.jpg"
+        "image": "/images/guilttrip_food.png"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_f1qsom_75f76d9cf269be8f208295c8bd799a.jpg"
+        "image": "/images/guilttrip_food.png"
       }
     ],
     "email": "",
@@ -326,11 +318,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=14932745319906553569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_km9yqp_0986507add75bcb0e2f0e3968a0694.jpg",
+    "image": "/images/kaficko_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_7qzz1n_90e2b6a8522c536d37ff069d582fe3.jpg",
-      "/images/zmt_clefy7_c64a00f79b1db95adf6566c96df20e.jpg"
+      "/images/kaficko_main.png"
     ],
     "menuImages": [
       "/images/menu_x85r8q_0fd571edd3a67260cbae.jpg",
@@ -344,19 +335,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Cold Coffee",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_bguozc_1bf02ae03ab429ca22e6b3b2b19496.jpg"
+        "image": "/images/kaficko_food.png"
       },
       {
         "name": "Moroccan Chicken",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_dk7fq7_f8a703e8973ce8378e8a3097770f2d.jpg"
+        "image": "/images/kaficko_food.png"
       },
       {
         "name": "Classic Spaghetti",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_km9yqp_0986507add75bcb0e2f0e3968a0694.jpg"
+        "image": "/images/kaficko_food.png"
       }
     ],
     "email": "",
@@ -419,14 +410,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13464840837705918167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_56clnm_cc7a2fad41f79171d8f6287c689913.jpg",
+    "image": "/images/karafa_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_56clnm_cc7a2fad41f79171d8f6287c689913.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "/images/zmt_ldibog_11b2d6727990e9260e6c4f714fd188.jpg",
-      "/images/zmt_4rejut_8655ebfefb43deef4b1a10107d052a.jpg",
-      "/images/zmt_hzeilf_c9f8fbfffa37b4cb6dd19ad546360b.jpg",
-      "/images/zmt_63nxp3_414fa26f866262db1b3aca85d672d4.jpg"
+      "/images/karafa_main.png"
     ],
     "menuImages": [
       "/images/menu_j5w05v_4d6148d83bb632ba28b3.png",
@@ -437,19 +424,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Curated Pour Over",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_56clnm_cc7a2fad41f79171d8f6287c689913.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/karafa_food.png"
       },
       {
         "name": "All-Day Brunch",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_ldibog_11b2d6727990e9260e6c4f714fd188.jpg"
+        "image": "/images/karafa_food.png"
       },
       {
         "name": "Signature Bake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_dcmfeh_8655ebfefb43deef4b1a10107d052a.jpg"
+        "image": "/images/karafa_food.png"
       }
     ],
     "email": "",
@@ -612,14 +599,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=6185238211404500497&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_eiax8r_11ae8ce4e463bc1343a63f24fe745f.jpg",
+    "image": "/images/habitatcafe_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_ujbklu_1b09b8e3f18d4ea55233ce9e0daa68.jpg",
-      "/images/zmt_ao9ins_83c3937d18e9ce646cab62d5565f5d.jpg",
-      "/images/zmt_jmggpo_7a3eb3dc07b95d1552f317df42a358.jpg",
-      "/images/zmt_pydl3z_39247124aa54838857d855724abee1.jpg",
-      "/images/zmt_z224vn_481225992e266a448c072e4118896f.jpg"
+      "/images/habitatcafe_main.png"
     ],
     "menuImages": [
       "/images/habitat/menu_card_1.png",
@@ -632,19 +615,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_ao9ins_83c3937d18e9ce646cab62d5565f5d.jpg"
+        "image": "/images/habitatcafe_food.png"
       },
       {
         "name": "Classic Cold Coffee",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_dk0u60_bfa6b60300f7201c57258105e78f82.jpg"
+        "image": "/images/habitatcafe_food.png"
       },
       {
         "name": "Oreo Shake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_8leb9q_004bac93e68eac183a73be955ef5da.jpg"
+        "image": "/images/habitatcafe_food.png"
       }
     ],
     "email": "",
@@ -700,12 +683,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_y2fbmy_3c486af696d7c223d3a2ea1c46e1dc.jpg",
+    "image": "/images/lavieenrosecafebistro_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_rfrfks_77953232bc9520b3e2c35799e40913.png",
-      "/images/zmt_i0om0b_fa25a40fa8f28d39df52c7cc0328f9.jpg",
-      "/images/zmt_os5otv_e14db758e740e0562c5d59e381422b.jpg"
+      "/images/lavieenrosecafebistro_main.png"
     ],
     "menuImages": [
       "/images/menu_9g1u5j_a82cbfc9cb8a8a8a590d.jpg",
@@ -729,19 +710,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Tea",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_suo9n8_6ef78c5fa8ef59a272b18a10727fd8.jpg"
+        "image": "/images/lavieenrosecafebistro_food.png"
       },
       {
         "name": "Pink Crepe",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_os5otv_e14db758e740e0562c5d59e381422b.jpg"
+        "image": "/images/lavieenrosecafebistro_food.png"
       },
       {
         "name": "Floral Pastry",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_i0om0b_fa25a40fa8f28d39df52c7cc0328f9.jpg"
+        "image": "/images/lavieenrosecafebistro_food.png"
       }
     ],
     "email": "",
@@ -879,11 +860,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5922054460361640326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_8vxyiz_ab465b5e207795ae50add550b8c737.png",
+    "image": "/images/switchcoffee_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_o1d31o_9c4f56002492bc1a7ddcb2db719450.png",
-      "/images/zmt_b2xuoz_8da13954a5deb4418bc6bc7540768f.png"
+      "/images/switchcoffee_main.png"
     ],
     "menuImages": [
       "/images/menu_7h0om4_c93c15c3b7e99d349fe8.jpg",
@@ -895,19 +875,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Orange Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_j46k7q_e8f779f0d283bfb92eea84e9dafa81.png"
+        "image": "/images/switchcoffee_food.png"
       },
       {
         "name": "Strawberry Matcha",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_8vxyiz_ab465b5e207795ae50add550b8c737.png"
+        "image": "/images/switchcoffee_food.png"
       },
       {
         "name": "Chimichurri Bruschetta",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_hpvi6o_d6920e258e5f68064fcd8b806163bf.png"
+        "image": "/images/switchcoffee_food.png"
       }
     ],
     "email": "",
@@ -964,11 +944,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=15635965076962151747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_5k2ayj_3b1740ce850769a30ecbf3d7e5f17c.jpg",
+    "image": "/images/osaka_main.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_46jwnp_cb29bec10ea05476658e4842989085.jpg",
-      "/images/zmt_bgta2p_0a8840b867b1e464ce724341b6cbf6.jpg"
+      "/images/osaka_main.png"
     ],
     "menuImages": [
       "/images/menu_kesmij_7e6e276b2e0b4faa5a7d.jpg",
@@ -998,19 +977,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Sushi Platter",
         "price": "₹850",
         "description": "Assorted premium sushi platter",
-        "image": "/images/zmt_bp26zl_6c991c0a66719eeb772a2dc22510e1.jpg"
+        "image": "/images/osaka_food.png"
       },
       {
         "name": "Korean BBQ",
         "price": "₹1200",
         "description": "Classic Korean BBQ with sides",
-        "image": "/images/zmt_8ntsob_98a8e14501524050494d689a802fb1.jpg"
+        "image": "/images/osaka_food.png"
       },
       {
         "name": "Spicy Ramen",
         "price": "₹650",
         "description": "Authentic ramen bowl with rich broth",
-        "image": "/images/zmt_46jwnp_cb29bec10ea05476658e4842989085.jpg"
+        "image": "/images/osaka_food.png"
       }
     ],
     "email": "",
@@ -1186,27 +1165,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "facebookUrl": "",
     "logo": "https://i.pinimg.com/736x/01/e9/b3/01e9b350f41dba3f80ff89e6b5e6d43c.jpg",
     "aestheticType": "Heritage Villa & Garden",
-    "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
-    ],
+    "menuImages": [],
     "curatorNote": "",
     "crowd": "Couples, Pet Owners",
     "status": "open",
@@ -1711,27 +1670,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
       "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
-    "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
-    ]
+    "menuImages": []
   },
   {
     "crowd": "Families, Cheese Lovers",
@@ -2334,27 +2273,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/kisscoff_3.jpg",
       "/images/kisscoff_4.jpg"
     ],
-    "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
-    ]
+    "menuImages": []
   },
   {
     "name": "Manam Chocolate Atelier",
@@ -2440,27 +2359,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/manam_3.jpg",
       "/images/manam_4.jpg"
     ],
-    "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
-    ]
+    "menuImages": []
   },
   {
     "aestheticType": "Monochrome Minimalist",
@@ -3107,27 +3006,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
       "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
-    "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
-    ],
+    "menuImages": [],
     "featuredMenu": [
       {
         "name": "Signature Cupcake",
@@ -3313,27 +3192,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
       "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
-    "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
-    ],
+    "menuImages": [],
     "featuredMenu": [
       {
         "name": "Signature Cupcake",
