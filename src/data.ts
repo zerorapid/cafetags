@@ -964,14 +964,18 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=4892250763931573143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/2/19258392/1a0b332308eb675c5f87b8f041793617.jpeg",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/2/19258392/83e43aaa3687dc34866eadfd24019721.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/2/19258392/1a0b332308eb675c5f87b8f041793617.jpeg",
-      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/0bdf60f7f329976378e9a26322b74dd6.jpeg",
-      "https://b.zmtcdn.com/data/pictures/2/19258392/37fcde16c1471de9996d1945f342cdfa.jpeg"
+      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/83e43aaa3687dc34866eadfd24019721.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/2/19258392/23abf0cf228e564d97bf003bddaeb8fa.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/d17e59e039c0266a8e8b087483dc857d.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/2/19258392/662afb562e4d1156fca0a3eec643c474.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
+      "https://b.zmtcdn.com/data/menus/392/19258392/3ccf6ac134ffea4f0335a21190094bf4.jpeg",
+      "https://b.zmtcdn.com/data/menus/392/19258392/3aacc831158e9ff73ce24245b6b73e8e.jpeg",
+      "https://b.zmtcdn.com/data/menus/392/19258392/a20fda4dd41b25650c2558fc36c88ebd.jpg",
       "https://b.zmtcdn.com/data/menus/392/19258392/3fcff63896a8edace12019c6e67fe46e.jpeg",
       "https://b.zmtcdn.com/data/menus/392/19258392/baabbdf1c4a32006e8b002e7b54e32a6.jpeg",
       "https://b.zmtcdn.com/data/menus/392/19258392/8b633a6d05b613b3fa322d697610894f.jpeg",
@@ -979,29 +983,26 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/menus/392/19258392/742653f4e0252a0e8319622233fe486c.jpeg",
       "https://b.zmtcdn.com/data/menus/392/19258392/80f31a2a2f154572f295b5593b756278.jpeg",
       "https://b.zmtcdn.com/data/menus/392/19258392/d01405795d5dcdc330311d450a66f4cc.jpeg",
-      "https://b.zmtcdn.com/data/menus/392/19258392/4fc9f6bb41f42919fad6cdfef72b553f.jpeg",
-      "https://b.zmtcdn.com/data/menus/392/19258392/d5606abe6cdca6aa03a1a192ddc8c36e.jpeg",
-      "https://b.zmtcdn.com/data/menus/392/19258392/0609ad74417187773e7f70c97d0bf3b8.jpeg",
-      "https://b.zmtcdn.com/data/menus/392/19258392/dbd11bbaf8883137e8a80ff9c784c54b.jpeg"
+      "https://b.zmtcdn.com/data/menus/392/19258392/4fc9f6bb41f42919fad6cdfef72b553f.jpeg"
     ],
     "featuredMenu": [
       {
         "name": "Sweet Crepe",
         "price": "₹350",
         "description": "Signature sweet crepe dessert",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/19258392/1e93836dc2a7a4beaeec1541b9dcd87b.jpeg"
+        "image": "https://b.zmtcdn.com/data/pictures/2/19258392/7615fa02953f437f9963c126707eee88_featured_v3.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "Beetroot Burger",
         "price": "₹320",
         "description": "Gourmet vegetarian burger with beetroot patty",
-        "image": "https://b.zmtcdn.com/data/pictures/2/19258392/d40d9904d9c490a6f8749d0124ca6032.jpeg"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/e79/02631e548e4e1b77cd0b006ab89b6e79_1777711502.jpg?crop=100%3A100%3B%2A%2C%2A&fit=around%7C100%3A100&output-format=webp"
       },
       {
         "name": "Cheesecake",
         "price": "₹280",
         "description": "Classic creamy cheesecake slice",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/19258392/f0e635f79576cf1a7c06eb3c4ab5f257.jpeg"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/67b/6788e0ab1f06734a3e5b58532865767b_1777711502.jpg?crop=100%3A100%3B%2A%2C%2A&fit=around%7C100%3A100&output-format=webp"
       }
     ],
     "email": "",
