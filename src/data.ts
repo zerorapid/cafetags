@@ -402,36 +402,37 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13464840837705918167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1481833709127-142436d4007d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1507133750070-44a29c4bc168?auto=format&fit=crop&w=800&q=80"
+      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/11b2d6727990e9260e6c4f714fd18871.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/8655ebfefb43deef4b1a10107d052afb.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/7/21181977/c9f8fbfffa37b4cb6dd19ad546360bd4.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/7/21181977/414fa26f866262db1b3aca85d672d46c_featured_v3.jpg"
     ],
     "menuImages": [
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80"
+      "https://b.zmtcdn.com/data/menus/977/21181977/4d6148d83bb632ba28b376cf412ea6a7.png",
+      "https://b.zmtcdn.com/data/menus/977/21181977/c03f071c10f5142ff31fafb168600d5b.png"
     ],
     "featuredMenu": [
       {
         "name": "Curated Pour Over",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "All-Day Brunch",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1640719028782-423bb0d970e5?auto=format&fit=crop&w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/11b2d6727990e9260e6c4f714fd18871.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "Signature Bake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/8655ebfefb43deef4b1a10107d052afb.jpg"
       }
     ],
     "email": "",
