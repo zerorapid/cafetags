@@ -1199,8 +1199,12 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/trueblack_4.webp"
     ],
     "menuImages": [
-      "/images/trueblack_menu1.webp",
-      "/images/trueblack_menu2.webp"
+      "/images/trueblack_menu1.jpg",
+      "/images/trueblack_menu2.jpg",
+      "/images/trueblack_menu3.jpg",
+      "/images/trueblack_menu4.jpg",
+      "/images/trueblack_menu5.jpg",
+      "/images/trueblack_menu6.jpg"
     ],
     "featuredMenu": [
       {
@@ -1295,7 +1299,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/echoes_4.webp"
     ],
     "menuImages": [
-      "/images/echoes_menu1.webp"
+      "/images/echoes_menu1.png",
+      "/images/echoes_menu2.png"
     ]
   },
   {
@@ -1464,7 +1469,20 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "menuImages": [
       "/images/lush_menu1.jpg",
-      "/images/lush_menu2.jpg"
+      "/images/lush_menu2.jpg",
+      "/images/lush_menu3.jpg",
+      "/images/lush_menu4.jpg",
+      "/images/lush_menu5.jpg",
+      "/images/lush_menu6.jpg",
+      "/images/lush_menu7.jpg",
+      "/images/lush_menu8.jpg",
+      "/images/lush_menu9.jpg",
+      "/images/lush_menu10.jpg",
+      "/images/lush_menu11.jpg",
+      "/images/lush_menu12.jpg",
+      "/images/lush_menu13.jpg",
+      "/images/lush_menu14.jpg",
+      "/images/lush_menu15.jpg"
     ]
   },
   {
@@ -1631,7 +1649,20 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "menuImages": [
       "/images/pscheese_menu1.jpg",
-      "/images/pscheese_menu2.jpg"
+      "/images/pscheese_menu2.jpg",
+      "/images/pscheese_menu3.jpg",
+      "/images/pscheese_menu4.jpg",
+      "/images/pscheese_menu5.jpg",
+      "/images/pscheese_menu6.jpg",
+      "/images/pscheese_menu7.jpg",
+      "/images/pscheese_menu8.jpg",
+      "/images/pscheese_menu9.jpg",
+      "/images/pscheese_menu10.jpg",
+      "/images/pscheese_menu11.jpg",
+      "/images/pscheese_menu12.jpg",
+      "/images/pscheese_menu13.jpg",
+      "/images/pscheese_menu14.jpg",
+      "/images/pscheese_menu15.jpg"
     ],
     "featuredMenu": [
       {
@@ -1969,7 +2000,21 @@ export const INITIAL_CAFES: Cafe[] = [
     "menuImages": [
       "/images/olivebistro_menu1.jpg",
       "/images/olivebistro_menu2.jpg",
-      "/images/olivebistro_menu3.jpg"
+      "/images/olivebistro_menu3.jpg",
+      "/images/olivebistro_menu4.jpg",
+      "/images/olivebistro_menu5.jpg",
+      "/images/olivebistro_menu6.jpg",
+      "/images/olivebistro_menu7.jpg",
+      "/images/olivebistro_menu8.jpg",
+      "/images/olivebistro_menu9.jpg",
+      "/images/olivebistro_menu10.jpg",
+      "/images/olivebistro_menu11.jpg",
+      "/images/olivebistro_menu12.jpg",
+      "/images/olivebistro_menu13.jpg",
+      "/images/olivebistro_menu14.jpg",
+      "/images/olivebistro_menu15.jpg",
+      "/images/olivebistro_menu16.jpg",
+      "/images/olivebistro_menu17.jpg"
     ]
   },
   {
@@ -2234,7 +2279,29 @@ export const INITIAL_CAFES: Cafe[] = [
     "menuImages": [
       "/images/churrolto_menu1.jpg",
       "/images/churrolto_menu2.png",
-      "/images/churrolto_menu3.jpg"
+      "/images/churrolto_menu3.jpg",
+      "/images/churrolto_menu4.jpg",
+      "/images/churrolto_menu5.jpg",
+      "/images/churrolto_menu6.jpg",
+      "/images/churrolto_menu7.jpg",
+      "/images/churrolto_menu8.jpg",
+      "/images/churrolto_menu9.jpg",
+      "/images/churrolto_menu10.png",
+      "/images/churrolto_menu11.png",
+      "/images/churrolto_menu12.png",
+      "/images/churrolto_menu13.png",
+      "/images/churrolto_menu14.png",
+      "/images/churrolto_menu15.png",
+      "/images/churrolto_menu16.png",
+      "/images/churrolto_menu17.png",
+      "/images/churrolto_menu18.png",
+      "/images/churrolto_menu19.png",
+      "/images/churrolto_menu20.png",
+      "/images/churrolto_menu21.jpg",
+      "/images/churrolto_menu22.jpg",
+      "/images/churrolto_menu23.jpg",
+      "/images/churrolto_menu24.png",
+      "/images/churrolto_menu25.jpg"
     ]
   },
   {
@@ -2307,7 +2374,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/lasthouse_4.webp"
     ],
     "menuImages": [
-      "/images/lasthouse_menu1.jpg"
+      "/images/lasthouse_menu1.jpg",
+      "/images/lasthouse_menu2.jpg"
     ]
   },
   {
@@ -2384,7 +2452,23 @@ export const INITIAL_CAFES: Cafe[] = [
     "menuImages": [
       "/images/heartcup_menu1.jpg",
       "/images/heartcup_menu2.jpg",
-      "/images/heartcup_menu3.jpg"
+      "/images/heartcup_menu3.jpg",
+      "/images/heartcup_menu4.jpg",
+      "/images/heartcup_menu5.jpg",
+      "/images/heartcup_menu6.jpg",
+      "/images/heartcup_menu7.jpg",
+      "/images/heartcup_menu8.jpg",
+      "/images/heartcup_menu9.jpg",
+      "/images/heartcup_menu10.jpg",
+      "/images/heartcup_menu11.jpg",
+      "/images/heartcup_menu12.jpg",
+      "/images/heartcup_menu13.jpg",
+      "/images/heartcup_menu14.jpg",
+      "/images/heartcup_menu15.jpg",
+      "/images/heartcup_menu16.jpg",
+      "/images/heartcup_menu17.jpg",
+      "/images/heartcup_menu18.jpg",
+      "/images/heartcup_menu19.jpg"
     ]
   },
   {
