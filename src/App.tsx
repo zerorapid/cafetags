@@ -313,10 +313,17 @@ export default function App() {
     });
 
     return [...rawFiltered].sort((a, b) => {
+      // Prioritize cafes with updated/unique images (not using the duplicate Cafe Niloufer placeholder)
+      const aIsUpdated = a.name === "Cafe Niloufer" || !(a.image || "").includes("21365469");
+      const bIsUpdated = b.name === "Cafe Niloufer" || !(b.image || "").includes("21365469");
+
+      if (aIsUpdated && !bIsUpdated) return -1;
+      if (!aIsUpdated && bIsUpdated) return 1;
+
       if (sortBy === "founded-asc") {
-        return (parseInt(a.founded) || 0) - (parseInt(b.founded) || 0);
+        return (parseInt(a.founded as any) || 0) - (parseInt(b.founded as any) || 0);
       } else if (sortBy === "founded-desc") {
-        return (parseInt(b.founded) || 0) - (parseInt(a.founded) || 0);
+        return (parseInt(b.founded as any) || 0) - (parseInt(a.founded as any) || 0);
       } else if (sortBy === "name-az") {
         return (a.name || "").localeCompare(b.name || "");
       } else if (sortBy === "area-az") {
