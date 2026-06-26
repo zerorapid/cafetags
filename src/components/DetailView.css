@@ -1184,7 +1184,7 @@
 .mobile-tabs-container {
     margin-bottom: var(--space-6);
     position: sticky;
-    top: 81px; /* Adjust based on navbar height if any, else 0 */
+    top: calc(5rem + 1px); /* Perfectly aligns with Navbar (h-14 = 3.5rem + py-3 = 1.5rem) */
     z-index: 40;
     background: var(--bg-white);
     padding-top: var(--space-2);
@@ -1205,6 +1205,9 @@
 }
 
 .tab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-full);
     background: var(--bg-light-gray);
