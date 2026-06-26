@@ -31,7 +31,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "https://cafeniloufer.com/pages/outlets",
     "timings": "8:00 AM - 11:00 PM",
     "phone": "+91 89777 40649",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/5/21785395/3f0a9cb94ec3a29b77c1718ce1a84bc1.jpg",
     "mapLink": "https://www.google.com/maps/search/?api=1&query=Cafe%20Niloufer%2C%20Plot%2030%2FC%2C%20Survey%2083%2F1%2C%20Tower%202%2C%20Orbit%20Building%2C%20Raidurgam%2C%20Hyderabad",
     "icon": "local_cafe",
     "takeaway": true,
@@ -43,32 +43,28 @@ export const INITIAL_CAFES: Cafe[] = [
     "isNewLaunch": true,
     "newLaunchCatchyline": "A huge, modern tea café that mixes Hyderabadi nostalgia with contemporary interiors.",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "https://b.zmtcdn.com/data/pictures/5/21785395/3f0a9cb94ec3a29b77c1718ce1a84bc1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/5/21785395/a0efdbf16675a848c7157dc4d8ac6726.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/5/21785395/8e5faabaffad1c960cbe77742aa8dbaa.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/5/21785395/b1163e55870b0e5696fc768b42213a5f.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "https://b.zmtcdn.com/data/pictures/5/21785395/86705d697fde353ce667a654faddad01.jpg"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "https://b.zmtcdn.com/data/menus/395/21785395/ec2c30b1f8009fb54724ced447650c88.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/3616a7a0a0ce70f0b7b86d5305e45e63.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/248f9901113b4b3eddf6d0e9b548470b.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/4bec5b49ecde80a93dfdbf77312c87a0.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/fd0581be4fc8158942b3fff687aecdbb.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/830e6a952a3f56ed14527b7caf7d4da0.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/c6633f6c726bc851363dfcacfe87f7d2.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/4094ecf4122aa086058d3a1469f5f747.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/e84b49c1b39cf18af5449d5a758ccaad.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/17d42bb3a987f827c990154c5a00ef1c.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/da09e588b32b16722fa2ab6c21754ecd.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/a9b3654c7e963a9955467aa9df9f89d4.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/39c1b31273a59521b5d320ee19fedad7.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/0aad1daf525939653ef1a16f8b8f7196.jpeg",
+      "https://b.zmtcdn.com/data/menus/395/21785395/5db1558806d3f9f3d0f1dd1485d203b0.jpeg"
     ],
     "userReviews": [
       {
@@ -82,22 +78,22 @@ export const INITIAL_CAFES: Cafe[] = [
     "socialMedia": [],
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
+        "name": "Irani Chai & Bun Maska",
+        "price": "₹150",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/5/21785395/3f0a9cb94ec3a29b77c1718ce1a84bc1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
+        "name": "Osmania Biscuits",
+        "price": "₹120",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/5/21785395/a0efdbf16675a848c7157dc4d8ac6726.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
-        "name": "New York Cheesecake",
+        "name": "Kunafa",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "https://b.zmtcdn.com/data/pictures/5/21785395/8e5faabaffad1c960cbe77742aa8dbaa.jpg"
       }
     ]
   },
