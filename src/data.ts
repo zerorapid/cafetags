@@ -2501,7 +2501,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "area": "Jubilee Hills",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/holeinwall_1.jpg",
     "mapLink": "https://maps.google.com/?cid=18243993488988326353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "8:30 AM - 9:00 PM",
     "website": "",
@@ -2512,7 +2512,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/holeinwall_1.jpg"
       },
       {
         "name": "Chocolate Pastry",
@@ -2608,7 +2608,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/fatpigeon_1.jpeg"
       },
       {
         "name": "Chocolate Pastry",
@@ -2722,32 +2722,28 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "Expats, Corporate Executives",
     "onlineOrder": true,
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/eclat_1.jpg",
+      "/images/eclat_2.jpg",
+      "/images/eclat_3.jpg",
+      "/images/eclat_4.jpg"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/eclat_menu1.jpg",
+      "/images/eclat_menu2.jpg",
+      "/images/eclat_menu3.jpg",
+      "/images/eclat_menu4.jpg",
+      "/images/eclat_menu5.jpg",
+      "/images/eclat_menu6.jpg",
+      "/images/eclat_menu7.jpg",
+      "/images/eclat_menu8.jpg",
+      "/images/eclat_menu9.jpg",
+      "/images/eclat_menu10.jpg",
+      "/images/eclat_menu11.jpg",
+      "/images/eclat_menu12.jpg",
+      "/images/eclat_menu13.jpg",
+      "/images/eclat_menu14.jpg",
+      "/images/eclat_menu15.jpg",
+      "/images/eclat_menu16.jpg"
     ]
   },
   {
