@@ -1373,9 +1373,31 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/dailyrituals_4.webp"
     ],
     "menuImages": [
+      "/images/dailyrituals_menu1.png",
       "/images/dailyrituals_menu1.webp",
+      "/images/dailyrituals_menu10.png",
+      "/images/dailyrituals_menu11.png",
+      "/images/dailyrituals_menu12.png",
+      "/images/dailyrituals_menu13.png",
+      "/images/dailyrituals_menu14.png",
+      "/images/dailyrituals_menu15.png",
+      "/images/dailyrituals_menu16.png",
+      "/images/dailyrituals_menu17.png",
+      "/images/dailyrituals_menu18.png",
+      "/images/dailyrituals_menu19.png",
+      "/images/dailyrituals_menu2.png",
       "/images/dailyrituals_menu2.webp",
-      "/images/dailyrituals_menu3.webp"
+      "/images/dailyrituals_menu20.png",
+      "/images/dailyrituals_menu21.png",
+      "/images/dailyrituals_menu22.png",
+      "/images/dailyrituals_menu3.png",
+      "/images/dailyrituals_menu3.webp",
+      "/images/dailyrituals_menu4.png",
+      "/images/dailyrituals_menu5.png",
+      "/images/dailyrituals_menu6.png",
+      "/images/dailyrituals_menu7.png",
+      "/images/dailyrituals_menu8.png",
+      "/images/dailyrituals_menu9.png"
     ],
     "featuredMenu": [
       {
@@ -1755,8 +1777,32 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/urbannemo_4.webp"
     ],
     "menuImages": [
+      "/images/urbannemo_menu1.jpeg",
       "/images/urbannemo_menu1.jpg",
-      "/images/urbannemo_menu2.jpg"
+      "/images/urbannemo_menu10.jpeg",
+      "/images/urbannemo_menu11.jpeg",
+      "/images/urbannemo_menu12.jpeg",
+      "/images/urbannemo_menu13.jpeg",
+      "/images/urbannemo_menu14.jpeg",
+      "/images/urbannemo_menu15.jpeg",
+      "/images/urbannemo_menu16.jpeg",
+      "/images/urbannemo_menu17.jpeg",
+      "/images/urbannemo_menu18.png",
+      "/images/urbannemo_menu19.png",
+      "/images/urbannemo_menu2.jpeg",
+      "/images/urbannemo_menu2.jpg",
+      "/images/urbannemo_menu20.png",
+      "/images/urbannemo_menu21.png",
+      "/images/urbannemo_menu22.png",
+      "/images/urbannemo_menu23.png",
+      "/images/urbannemo_menu24.png",
+      "/images/urbannemo_menu3.jpeg",
+      "/images/urbannemo_menu4.jpeg",
+      "/images/urbannemo_menu5.jpeg",
+      "/images/urbannemo_menu6.jpeg",
+      "/images/urbannemo_menu7.jpeg",
+      "/images/urbannemo_menu8.jpeg",
+      "/images/urbannemo_menu9.jpeg"
     ]
   },
   {
@@ -1832,7 +1878,11 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "menuImages": [
       "/images/glasshouse_menu1.jpg",
-      "/images/glasshouse_menu2.jpg"
+      "/images/glasshouse_menu2.jpg",
+      "/images/glasshouse_menu3.jpg",
+      "/images/glasshouse_menu4.jpg",
+      "/images/glasshouse_menu5.jpg",
+      "/images/glasshouse_menu6.jpg"
     ]
   },
   {
@@ -2542,25 +2592,13 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/holeinwall_menu1.png",
+      "/images/holeinwall_menu2.png",
+      "/images/holeinwall_menu3.png",
+      "/images/holeinwall_menu4.png",
+      "/images/holeinwall_menu5.png",
+      "/images/holeinwall_menu6.png",
+      "/images/holeinwall_menu7.png"
     ]
   },
   {
@@ -2637,25 +2675,15 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/fatpigeon_menu1.jpeg",
+      "/images/fatpigeon_menu2.jpeg",
+      "/images/fatpigeon_menu3.jpeg",
+      "/images/fatpigeon_menu4.jpeg",
+      "/images/fatpigeon_menu5.jpeg",
+      "/images/fatpigeon_menu6.jpeg",
+      "/images/fatpigeon_menu7.jpeg",
+      "/images/fatpigeon_menu8.jpeg",
+      "/images/fatpigeon_menu9.jpeg"
     ]
   },
   {
