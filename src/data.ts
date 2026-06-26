@@ -625,13 +625,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://lh3.googleusercontent.com/0pMiuZ8KFjDjyZX1_neMajnBwYMkRlW1eWe61cq8-thJhshaLyG3XSKCCSyE6eMyKVOQ0CV89Ze7GISi3T4iHZSLuHbRCcvdYsX2gbA=w1200-rw",
+    "image": "/images/lavie_interior.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://lh3.googleusercontent.com/B3nSK_lJl2qswmYK0ucfOVqsHoy9IMRHR3EhXEkB5Kl2Jsg5wgDzwjXbii23ARVf33_2lfAard74zGIdnd8OQ62vBB88w8dXtfNeSfQ=w1200-rw",
-      "https://lh3.googleusercontent.com/giXgqSCG8mCiPQs6rur5FjtsT5bQgQaDpvSUQzfNAkzKbHj3F2dE5fpDpGxDD228h4DS0APFGeRoH0lH04ZjQ9fcUPA=w1200-rw",
-      "https://lh3.googleusercontent.com/vw9uqd2j2GvMnkLIEV_bdN4iq-n3tCfpQHm9y-r_6Pwm9a4g78-NMOz1go4eeuZ7sD2hDCU7VDdNLlk76i82zfR8jjXoNfUSc0bp8DZ0=w1200-rw",
-      "https://lh3.googleusercontent.com/F-ApgpHy98KpeCQq9o5R4om3XhakHHNmfOpyW0ur-ejWwBZ4eaCkvyVPnuKbpGNVSckFcz4cdRznYZ2-Ca3kTr_dcEE=w1200-rw"
+      "/images/lavie_interior.png",
+      "/images/lavie_exterior.png"
     ],
     "menuImages": [],
     "featuredMenu": [
@@ -639,19 +637,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Tea",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://lh3.googleusercontent.com/1IelHD7xOcQDxhGV1fyfK7kygHojE0ZGWLE7GurSArhkRL5Qnk2mYEZPcuiCNAH5AJExVGOER0aypybtqtDC2Prwpu31iUnF0CVxsr5g=w1200-rw"
+        "image": "/images/lavie_rose_tea.png"
       },
       {
         "name": "Pink Crepe",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://lh3.googleusercontent.com/c9wukWuKg2eG29pLRUJ6sL5vOYePU5OSk-z6N5V1_Gr5XMyqJEiQO3U3l7G40TzrSXqboXOIdqZ6IdXRKp0Sj7DPOE_rMzTO0m1HQCw=w1200-rw"
+        "image": "/images/lavie_pink_crepe.png"
       },
       {
         "name": "Floral Pastry",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://lh3.googleusercontent.com/cZzbb-_2XB1gQly1XFqZKy-jO5DEtLf1tPqz3S8T9ANL61FecU2QL8nU7mkLJFT7BWRu2Zl4BHiKoFsVbHpc_2LnC6xZtOJST2J0aDGzcQ=w1200-rw"
+        "image": "/images/lavie_floral_pastry.png"
       }
     ],
     "email": "",
