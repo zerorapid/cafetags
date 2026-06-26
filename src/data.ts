@@ -84,7 +84,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "3 weeks ago"
       }
     ],
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "socialMedia": [],
     "featuredMenu": [
       {
@@ -136,7 +136,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=9055272694452188651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/sobremesa_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/sobremesa_main.png"
     ],
@@ -228,7 +228,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.app.goo.gl/BSLPVTiE85YqEFr56",
     "image": "/images/guilttrip_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/guilttrip_main.png"
     ],
@@ -319,7 +319,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=14932745319906553569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/kaficko_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/kaficko_main.png"
     ],
@@ -411,7 +411,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13464840837705918167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/karafa_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/karafa_main.png"
     ],
@@ -494,7 +494,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13240328901702437474&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/roastery_1.jpg",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/roastery_1.jpg",
       "/images/roastery_2.jpg",
@@ -600,7 +600,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=6185238211404500497&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/habitatcafe_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/habitatcafe_main.png"
     ],
@@ -684,7 +684,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/lavieenrosecafebistro_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/lavieenrosecafebistro_main.png"
     ],
@@ -789,7 +789,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5040347672504909730&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/etsi_interior.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/etsi_interior.png"
     ],
@@ -861,7 +861,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5922054460361640326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/switchcoffee_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/switchcoffee_main.png"
     ],
@@ -945,7 +945,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=15635965076962151747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/osaka_main.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/osaka_main.png"
     ],
@@ -1043,7 +1043,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=4892250763931573143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/makobrew_1.webp",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/makobrew_1.webp",
       "/images/makobrew_2.webp",
@@ -1255,7 +1255,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "3 weeks ago"
       }
     ],
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "aestheticType": "Industrial Minimalist",
     "crowd": "Remote Workers, Developers",
     "discounts": "10% off for students",
@@ -1349,7 +1349,7 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "area": "Kokapet",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "aestheticType": "Warm Wooden Accents",
     "crowd": "Families, Generous Souls",
     "discounts": "",
@@ -1423,7 +1423,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "3 weeks ago"
       }
     ],
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "aestheticType": "Wabi-Sabi Minimalist",
     "crowd": "Designers, Coffee Purists",
     "featuredMenu": [
@@ -1496,7 +1496,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "crowd": "Millennials, Influencers",
     "aestheticType": "Tropical Greenhouse",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "area": "Madhapur",
     "userReviews": [
       {
@@ -1610,7 +1610,7 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "area": "Madhapur",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "aestheticType": "Contemporary Casual",
     "crowd": "Groups, Techies",
     "featuredMenu": [
@@ -1675,7 +1675,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "crowd": "Families, Cheese Lovers",
     "aestheticType": "Quirky Industrial Yellow",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "userReviews": [
       {
         "author": "Rahul S",
@@ -1793,7 +1793,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "discounts": "",
     "crowd": "Gen-Z, Students",
     "aestheticType": "Vibrant Pop Neon",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "userReviews": [
       {
         "author": "Rahul S",
@@ -1940,7 +1940,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "crowd": "High Society, Celebrities",
     "aestheticType": "Glass Pavilion Luxury",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "area": "Jubilee Hills",
     "userReviews": [
       {
@@ -2015,7 +2015,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "crowd": "Couples, Influencers",
     "aestheticType": "Modern Elegant Chic",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "userReviews": [
       {
         "author": "Rahul S",
@@ -2142,7 +2142,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "3 weeks ago"
       }
     ],
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "bookingUrl": "https://swiggy.com/dineout",
     "address": "Santorini Grecian White",
     "vibe": "Stunning Mediterranean white-walled structure looking straight down at Secret Lake.",
@@ -2241,7 +2241,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "timings": "10:00 AM - 11:00 PM",
     "image": "/images/kisscoff_1.png",
     "mapLink": "https://maps.google.com/?cid=16717154306863291720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "userReviews": [
       {
         "author": "Rahul S",
@@ -2317,7 +2317,7 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "area": "Banjara Hills",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "aestheticType": "Craft Luxury Wood & Terrazzo",
     "crowd": "Connoisseurs, Gourmands",
     "featuredMenu": [
@@ -2387,7 +2387,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "3 weeks ago"
       }
     ],
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "timings": "12:00 PM - 11:00 PM",
     "mapLink": "https://maps.google.com/?cid=6400394818504743063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "image": "/images/churrolto_1.webp",
@@ -2475,7 +2475,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   },
   {
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "userReviews": [
       {
         "author": "Rahul S",
@@ -2563,7 +2563,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ]
   },
   {
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "userReviews": [
       {
         "author": "Rahul S",
@@ -2712,7 +2712,7 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "area": "Jubilee Hills",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "image": "/images/holeinwall_1.jpg",
     "mapLink": "https://maps.google.com/?cid=18243993488988326353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "8:30 AM - 9:00 PM",
@@ -2783,7 +2783,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "bookingUrl": "https://swiggy.com/dineout",
     "vibe": "Vibrant rooftop multi-tiered hybrid space starting as a breezy cafe and transitioning into high energy.",
     "address": "Plot 1122, Road No. 45, Jubilee Hills, Hyderabad",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "area": "Jubilee Hills",
     "userReviews": [
       {
@@ -2917,7 +2917,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "3 weeks ago"
       }
     ],
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "aestheticType": "Sleek Parisian Minimalist",
     "crowd": "Expats, Corporate Executives",
     "discounts": "",
@@ -2998,7 +2998,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "status": "open",
     "isNewLaunch": true,
     "newLaunchCatchyline": "New neighborhood chai spot in Banjara Hills",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
       "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
@@ -3089,7 +3089,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "status": "open",
     "isNewLaunch": true,
     "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/altrego_1.jpg"
     ],
@@ -3184,7 +3184,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "status": "open",
     "isNewLaunch": false,
     "newLaunchCatchyline": "",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "moreImages": [
       "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
       "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
@@ -3251,7 +3251,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Roastery Tour"
     ],
     "image": "/images/roastccx_1.png",
-    "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
+    "logo": "/images/generic_logo.png",
     "icon": "local_cafe",
     "founded": "2020",
     "aestheticType": "Premium Industrial-Chic",
