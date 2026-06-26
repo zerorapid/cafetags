@@ -705,28 +705,30 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5040347672504909730&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "",
+    "image": "/images/etsi_interior.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "moreImages": [],
+    "moreImages": [
+      "/images/etsi_interior.png"
+    ],
     "menuImages": [],
     "featuredMenu": [
       {
         "name": "Pistachio Matilda Cake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": ""
+        "image": "/images/etsi_matilda.png"
       },
       {
         "name": "Soufflé Pancakes",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": ""
+        "image": "/images/etsi_pancakes.png"
       },
       {
         "name": "Signature Croissant",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": ""
+        "image": "/images/etsi_croissant.png"
       }
     ],
     "email": "",
