@@ -1827,7 +1827,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "local_bar",
-    "image": "/images/zmt_vz54p1_d5d8e730e9b85492be1b3d52ce7954.png",
+    "image": "/images/ukusa_1.png",
     "mapLink": "https://maps.google.com/?cid=7244970011100712371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:30 PM",
     "tags": [
@@ -1842,19 +1842,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Lotus Biscoff Shake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_b6cv2u_1b21fae8a278ce93e88d6b537383e0.jpg"
+        "image": "/images/ukusa_food1.jpg"
       },
       {
         "name": "Grilled Continental Chicken",
         "price": "₹420",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_skap61_1b44c96b0e3ade0ca2b042d29e5b1c.jpg"
+        "image": "/images/ukusa_1.png"
       },
       {
         "name": "Penne Alfredo",
         "price": "₹380",
         "description": "Classic premium selection",
-        "image": "/images/zmt_2ip6ct_79b09533baca6cdb2c524d7d9e98d3.jpg"
+        "image": "/images/ukusa_1.png"
       }
     ],
     "crowd": "Couples, Influencers",
@@ -1887,11 +1887,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "dineIn": true,
     "name": "Ukusa",
     "moreImages": [
-      "/images/zmt_vz54p1_d5d8e730e9b85492be1b3d52ce7954.png",
-      "/images/zmt_2ip6ct_79b09533baca6cdb2c524d7d9e98d3.jpg",
-      "/images/zmt_2yoenf_7e9703083b822d66b9f8309510708c.png",
-      "/images/zmt_skap61_1b44c96b0e3ade0ca2b042d29e5b1c.jpg",
-      "/images/zmt_b6cv2u_1b21fae8a278ce93e88d6b537383e0.jpg"
+      "/images/ukusa_1.png",
+      "/images/ukusa_2.jpg",
+      "/images/ukusa_3.png",
+      "/images/ukusa_4.jpeg"
     ],
     "menuImages": [
       "/images/menu_ornxyj_f09b92f569e3de53ab8e.jpg",
@@ -2037,26 +2036,26 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/kisscoff_food1.jpeg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/kisscoff_food2.jpeg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/kisscoff_food3.jpeg"
       }
     ],
     "takeaway": true,
     "icon": "favorite",
     "website": "",
     "timings": "10:00 AM - 11:00 PM",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/kisscoff_1.png",
     "mapLink": "https://maps.google.com/?cid=16717154306863291720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
@@ -2071,11 +2070,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Creatives, Writers",
     "aestheticType": "Pastel Bohemian",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/kisscoff_1.png",
+      "/images/kisscoff_2.jpg",
+      "/images/kisscoff_3.jpg",
+      "/images/kisscoff_4.jpg"
     ],
     "menuImages": [
       "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
@@ -2135,19 +2133,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/manam_food1.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/manam_food2.jpeg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/manam_food3.jpeg"
       }
     ],
     "email": "experience@manamchocolate.com",
@@ -2158,17 +2156,16 @@ export const INITIAL_CAFES: Cafe[] = [
       "Experiential"
     ],
     "timings": "9:00 AM - 11:30 PM",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/manam_1.jpg",
     "mapLink": "https://maps.google.com/?cid=2923665320648594383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "icon": "star",
     "takeaway": true,
     "website": "https://manamchocolate.com",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/manam_1.jpg",
+      "/images/manam_2.jpg",
+      "/images/manam_3.jpg",
+      "/images/manam_4.jpg"
     ],
     "menuImages": [
       "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
@@ -2627,19 +2624,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "image": "/images/eclat_food1.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/eclat_food2.jpg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "image": "/images/eclat_food3.jpg"
       }
     ],
     "signature": "Pain Au Chocolat",
@@ -2651,7 +2648,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "8:00 AM - 10:30 PM",
     "mapLink": "https://maps.app.goo.gl/ocYdm8Q5HUzViV2Z7",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/eclat_1.jpg",
     "takeaway": true,
     "icon": "cake",
     "website": "AC, Indoor Seating, Power Outlets",
@@ -2823,7 +2820,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Podcast Space",
       "Aesthetic"
     ],
-    "image": "/images/zmt_45o4je_bfb88ceb3d67fbb713ccdb52c5154d.jpg",
+    "image": "/images/altrego_1.jpg",
     "icon": "local_cafe",
     "founded": "2024",
     "aestheticType": "Futuristic Matcha Bar",
@@ -2846,9 +2843,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/zmt_vb3prv_4662c810620767644ae0770a3136b8.jpg",
-      "/images/zmt_9y0js1_92629daabda1b4df9b3c2df26c4bd9.jpg",
-      "/images/zmt_45o4je_bfb88ceb3d67fbb713ccdb52c5154d.jpg"
+      "/images/altrego_1.jpg"
     ],
     "menuImages": [
       "/images/menu_idvu5t_34c2a94d30fc30c87937.jpg",
@@ -2862,19 +2857,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Matcha Latte Combo",
         "price": "₹350",
         "description": "Signature specialty matcha and sandwich",
-        "image": "/images/zmt_do1rle_9c44b98c71de1f26f7a18b5c19e912.jpg"
+        "image": "/images/altrego_food1.jpg"
       },
       {
         "name": "Grilled Sandwich",
         "price": "₹280",
         "description": "Premium slow-bar coffee sandwich",
-        "image": "/images/zmt_12e57r_504a44fb0e14245d84eeec822e368f.jpg"
+        "image": "/images/altrego_food2.jpg"
       },
       {
         "name": "Gourmet Toast",
         "price": "₹320",
         "description": "Freshly baked aesthetic toast",
-        "image": "/images/zmt_7qx01p_523e86dec5475cf29ba3ad02026ac7.jpg"
+        "image": "/images/altrego_food3.jpg"
       }
     ],
     "userReviews": [
@@ -3007,7 +3002,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Bakery",
       "Roastery Tour"
     ],
-    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/roastccx_1.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "icon": "local_cafe",
     "founded": "2020",
@@ -3048,27 +3043,28 @@ export const INITIAL_CAFES: Cafe[] = [
         "price": "₹350",
         "category": "Beverage",
         "isSpecial": true,
-        "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80"
+        "image": "/images/roastccx_food1.jpg"
       },
       {
         "name": "Dal Makhni & Bhindi Do Pyaaza",
         "price": "₹600",
         "category": "Main Course",
         "isSpecial": false,
-        "image": "https://images.unsplash.com/photo-1495474472207-464a4b165971?auto=format&fit=crop&w=800&q=80"
+        "image": "/images/roastccx_food2.jpg"
       },
       {
         "name": "Wood-fired Artisanal Pizza",
         "price": "₹700",
         "category": "Main Course",
         "isSpecial": false,
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+        "image": "/images/roastccx_1.png"
       }
     ],
     "moreImages": [
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+      "/images/roastccx_1.png",
+      "/images/roastccx_2.jpg",
+      "/images/roastccx_3.jpg",
+      "/images/roastccx_4.jpg"
     ],
     "menuImages": [
       "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
