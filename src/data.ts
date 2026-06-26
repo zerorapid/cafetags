@@ -585,7 +585,18 @@ export const INITIAL_CAFES: Cafe[] = [
       "https://b.zmtcdn.com/data/pictures/0/21058610/39247124aa54838857d855724abee197.jpg",
       "https://b.zmtcdn.com/data/pictures/0/21058610/481225992e266a448c072e4118896f2c.jpg"
     ],
-    "menuImages": [],
+    "menuImages": [
+      "https://lh3.googleusercontent.com/6G8-xLPdoIQ2RVoNxhYpOAusRA4lud_mopc3OBBUmuirURo5dvx6pz-ETh0-Joxxaaj6Lgqnb0mnOWeDX5GQVdzaACQImxGya0C3YhmO8w=s1200",
+      "https://lh3.googleusercontent.com/Np37HMzxTuWSpgktdkSPu68C595aNcQwJgZJav4CEdPlxxa5pMaLZcedZwM4jsIWKVqPgPW1GdLmaaBOT4SxTDN_X8qVhWqTiGu8iElSZA=s1200",
+      "https://lh3.googleusercontent.com/RgSQarTl7yYoc74jWjnts2hMk3MWcQFAi6ir4F-zQ_6mq1pYLWue96flmy-aybSPfscMMT9BkLZUFvuwGZaLjBHrHYRnEs_ByTh6B3Y=s1200",
+      "https://lh3.googleusercontent.com/YvFRntdjtCMo3UkDHfS-KqDH8eUPNVHydSBj9D8IbbUz9NmRjs_uj7jbKOhZzwbTPOYpbfVoc97J81UbcKraEUg5MZ1kWtqOsjXR2J4H9Q=s1200",
+      "https://lh3.googleusercontent.com/ap5BSHEDStN6vcEhZhl_75n286FGh_MtbQyqf3XiWB-hglttiIAFzkpZWwo3MmslVs-fCjjd7_qrejq037OaSRcsaA=s1200",
+      "https://lh3.googleusercontent.com/hPLAHeyTcJLCcD97AaGY8NAvbxOU2xs776o7jmvoVY1TivOhXGULDGcSfGKulaRxw96wiJA3T_g_5iEClmqkeWGDAu0=s1200",
+      "https://lh3.googleusercontent.com/nA1BEgitNgVXurlDgHMRzpu9x0A1FAbwuXny6RvMNYg-AwRJGPpDfKTg_9r7kakKTvD5DWiHbON7sNqMqvZw9nS9jreGiFm_m9sce6s=s1200",
+      "https://lh3.googleusercontent.com/qJT3HB3OXcX7rmWvWy3Alu2_4SLBN88i0Nk4xUFviicerADtv_Ia8sPLtq8JwRsuhfRjR-kUYo842N31AwgFa8HBhPbh8SvPBwqWNPloAQ=s1200",
+      "https://lh3.googleusercontent.com/rUv-HjxI3N16mNoHoW4nr5WeGrDMAHKFnkmRCtpotWmXb1Sj_PjFUlpbLDQ_tlOL4eEuQWA59hg7kDBNScG_KKpFLHYGGHJ5EJzoHiyZ=s1200",
+      "https://lh3.googleusercontent.com/zc-oJCrStXfj95yQSnEa48LRAwjHxUNwtksxMKCb2WAQ__LOANFC_mPptLtZqILdiUqYsLcI6h9OCWEOTUV3k_NIrnoMHD0U_FNhO2ZX=s1200"
+    ],
     "featuredMenu": [
       {
         "name": "Rose Latte",
