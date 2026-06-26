@@ -68,10 +68,24 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The great aesthetics is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Hitech City. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
@@ -170,10 +184,24 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The great aesthetics is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ]
   },
@@ -250,10 +278,24 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The great aesthetics is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Banjara Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ]
   },
@@ -329,10 +371,22 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Neha S",
+        "rating": 5,
+        "text": "Absolutely love the minimal aesthetic here! Perfect for working or just chilling. Coffee is top-notch.",
+        "date": "3 weeks ago"
+      },
+      {
+        "author": "Arun K",
+        "rating": 4,
+        "text": "The matcha latte is great. A bit noisy on weekends but the vibe is unmatched.",
+        "date": "1 month ago"
+      },
+      {
+        "author": "Priya R",
+        "rating": 5,
+        "text": "Great sandwiches and a beautiful cozy environment.",
+        "date": "2 months ago"
       }
     ]
   },
@@ -410,10 +464,16 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul M",
+        "rating": 5,
+        "text": "One of the best new specialty coffee spots. The pour-overs are fantastic.",
+        "date": "1 week ago"
+      },
+      {
+        "author": "Swati P",
+        "rating": 4,
+        "text": "Very nice staff and a good selection of baked goods. Highly recommend the crossiant.",
+        "date": "3 weeks ago"
       }
     ]
   },
@@ -455,25 +515,21 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/roastery_4.jpg"
     ],
     "menuImages": [
-      "/images/menu_bpuozr_8d695c86299ee6781bfa.png",
-      "/images/menu_rv5ppt_154faf08746c5d81b45e.png",
-      "/images/menu_3oxbit_f1bd9d9db16a6dd34f21.png",
-      "/images/menu_kzqy68_5f11051259262b30216b.png",
-      "/images/menu_w8plhl_79955272bf689f9ac1cf.png",
-      "/images/menu_ue98ds_21e56cac02e81358b8b1.png",
-      "/images/menu_g9upk3_bd88815cffbac7eac7f7.png",
-      "/images/menu_bnh3lj_6b01d0a9802239484faa.png",
-      "/images/menu_60sil_7b5e579da9d22f8855b2.png",
-      "/images/menu_9fm6wv_ae463e59ec4fc6cb4ce1.png",
-      "/images/menu_94cfce_3bab54b3e3d638aa13bc.png",
-      "/images/menu_p3fn7w_ca7c4c5199a6b782cc3c.png",
-      "/images/menu_7o9toy_6fb3b73064bd2aafa1fc.png",
-      "/images/menu_v6f5c5_4c15ce800a90e5415488.png",
-      "/images/menu_1pty9f_42cb88b061de38e62375.png",
-      "/images/menu_8m5xm_cd8aded324cb78e2a8c9.png",
-      "/images/menu_xfa5da_e60c4b04b6541e0ea13c.png",
-      "/images/menu_mdknl2_865068f9276f2c229674.png",
-      "/images/menu_r7pdvn_8c0315eae5f3b14b0e65.png"
+      "/images/roasterycoffeehouse_menu1.png",
+      "/images/roasterycoffeehouse_menu2.png",
+      "/images/roasterycoffeehouse_menu3.png",
+      "/images/roasterycoffeehouse_menu4.png",
+      "/images/roasterycoffeehouse_menu5.png",
+      "/images/roasterycoffeehouse_menu6.png",
+      "/images/roasterycoffeehouse_menu7.png",
+      "/images/roasterycoffeehouse_menu8.png",
+      "/images/roasterycoffeehouse_menu9.png",
+      "/images/roasterycoffeehouse_menu10.png",
+      "/images/roasterycoffeehouse_menu11.png",
+      "/images/roasterycoffeehouse_menu12.png",
+      "/images/roasterycoffeehouse_menu13.png",
+      "/images/roasterycoffeehouse_menu14.png",
+      "/images/roasterycoffeehouse_menu15.png"
     ],
     "featuredMenu": [
       {
@@ -507,10 +563,24 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The great aesthetics is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Kokapet. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ]
   },
@@ -589,10 +659,16 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Deepak V",
+        "rating": 5,
+        "text": "Super cute place tucked away in Jubilee Hills! The outdoor seating is lovely.",
+        "date": "2 months ago"
+      },
+      {
+        "author": "Kiran T",
+        "rating": 4,
+        "text": "Nice vibe and decent coffee. The pasta was surprisingly good!",
+        "date": "4 weeks ago"
       }
     ]
   },
@@ -680,10 +756,22 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Aisha F",
+        "rating": 5,
+        "text": "The pink aesthetic is stunning! Everything is so instagrammable. Loved the shakes.",
+        "date": "2 weeks ago"
+      },
+      {
+        "author": "Vikram S",
+        "rating": 4,
+        "text": "Great place for photos. Food is good but a bit on the pricier side.",
+        "date": "1 month ago"
+      },
+      {
+        "author": "Riya M",
+        "rating": 5,
+        "text": "Aesthetic dreams come true! The rose latte was a unique experience.",
+        "date": "2 months ago"
       }
     ]
   },
@@ -751,16 +839,16 @@ export const INITIAL_CAFES: Cafe[] = [
     "directionsTip": "",
     "userReviews": [
       {
-        "author": "Google Reviewer",
-        "date": "2024",
-        "rating": 4.8,
-        "text": "Beautiful, aesthetic, and cozy space. The Dubai-style Matilda Chocolate Cake is a major highlight and totally worth the hype!"
+        "author": "Zainab A",
+        "rating": 5,
+        "text": "The chocolate desserts here are out of this world. Absolutely decadent.",
+        "date": "1 week ago"
       },
       {
-        "author": "Local Guide",
-        "date": "2024",
-        "rating": 4.2,
-        "text": "A perfect spot for both work and relaxation. Their viral scoop cookies are amazing, though it can get crowded during weekends."
+        "author": "Omar K",
+        "rating": 5,
+        "text": "A must-visit for chocolate lovers! The bakehouse items are fresh and delicious.",
+        "date": "3 weeks ago"
       }
     ]
   },
@@ -828,16 +916,22 @@ export const INITIAL_CAFES: Cafe[] = [
     "directionsTip": "",
     "userReviews": [
       {
-        "author": "Google Reviewer",
-        "date": "2024",
-        "rating": 4.5,
-        "text": "Cozy, immersive atmosphere with electric blue interiors! Loved the strawberry matcha and pesto sandwiches."
+        "author": "Divya C",
+        "rating": 4,
+        "text": "Very unique interiors! The electric blue theme is bold. Coffee is pretty strong.",
+        "date": "1 month ago"
       },
       {
-        "author": "Local Guide",
-        "date": "2024",
+        "author": "Sanjay H",
+        "rating": 5,
+        "text": "Love working from here. The wifi is fast and the flat white is perfect.",
+        "date": "2 months ago"
+      },
+      {
+        "author": "Anjali P",
         "rating": 4,
-        "text": "Great spot for remote work near Cyber Towers. The warm brews and hearty bites make it a staple for my coffee breaks."
+        "text": "Great ambiance, perfect for a quick catch up with friends.",
+        "date": "3 months ago"
       }
     ]
   },
@@ -925,10 +1019,16 @@ export const INITIAL_CAFES: Cafe[] = [
     "directionsTip": "",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Manoj B",
+        "rating": 5,
+        "text": "Amazing Japanese inspired cafe! The fluffy pancakes are a must-try.",
+        "date": "2 weeks ago"
+      },
+      {
+        "author": "Trisha K",
+        "rating": 4,
+        "text": "Really loved the matcha options. The aesthetic is very calming and Zen.",
+        "date": "1 month ago"
       }
     ]
   },
@@ -1010,10 +1110,16 @@ export const INITIAL_CAFES: Cafe[] = [
     "directionsTip": "",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Nikhil R",
+        "rating": 4,
+        "text": "Good place for a large group. The menu has a lot of variety and portions are huge.",
+        "date": "3 weeks ago"
+      },
+      {
+        "author": "Pooja V",
+        "rating": 5,
+        "text": "Loved the cold coffee and the pizzas! Will definitely come back.",
+        "date": "1 month ago"
       }
     ]
   },
@@ -1056,10 +1162,18 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Gachibowli",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Amazing spot! The aesthetic of Blue Tokai Coffee Roasters is just perfect.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "Great coffee and lovely ambiance. Can get a bit crowded.",
+        "date": "1 month ago",
+        "role": "Foodie"
       }
     ],
     "moreImages": [
@@ -1162,10 +1276,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Jubilee Hills",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The minimalist and quiet workspace with great lighting and soft acoustics. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
@@ -1241,10 +1369,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The beautifully managed by specially-abled cue-card based staff with a highly heartwarming atmosphere. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Kokapet. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Kokapet",
@@ -1302,10 +1444,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Jubilee Hills",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The clean, bright white aesthetics designed specifically for morning rituals and clean espresso shots. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
@@ -1385,10 +1541,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Madhapur",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The overgrown green flora everywhere offering an escape from concrete it buildings. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Madhapur. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "website": "",
@@ -1468,10 +1638,16 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Aditya S",
+        "rating": 5,
+        "text": "Amazing flavors and a really cozy seating area. The staff is super polite.",
+        "date": "2 weeks ago"
+      },
+      {
+        "author": "Simran K",
+        "rating": 4,
+        "text": "Great churros and hot chocolate! Perfect for dessert cravings.",
+        "date": "1 month ago"
       }
     ],
     "area": "Madhapur",
@@ -1563,10 +1739,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The fun, yellow-themed cheese-heaven comfort diner for indulgent foodies. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Madhapur. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Madhapur",
@@ -1667,10 +1857,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The quirky, neon-lit energetic hangout space facing the park greenery. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Jubilee Hills",
@@ -1801,10 +2005,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Jubilee Hills",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The stunning all-glass structural marvel with gorgeous sunlight during afternoons. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "moreImages": [
@@ -1861,10 +2079,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The chic, premium minimalist hotspot popular for weekend dates. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Jubilee Hills",
@@ -1951,10 +2183,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Jubilee Hills",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The stunning mediterranean white-walled structure looking straight down at secret lake. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
@@ -2059,10 +2305,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The insta-worthy pastel hues combined with a highly peaceful working environment. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Film Nagar. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Film Nagar",
@@ -2117,10 +2377,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "founded": "2023",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The award-winning elite bean-to-bar experiential chocolate cafe world. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Banjara Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Banjara Hills",
@@ -2194,10 +2468,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Film Nagar",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The upscale contemporary gourmet dessert house specializing in spanish churros. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Film Nagar. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
@@ -2291,10 +2579,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The warm ambient record-player music playing alongside handcrafted artisanal pour-overs. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Jubilee Hills",
@@ -2365,10 +2667,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The enormous leafy semi-open pub hybrid famous for rock music and community vibes. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Gachibowli. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Gachibowli",
@@ -2476,10 +2792,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Breakfast Seekers, Expats",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The famous all-day american and english breakfast diner layout. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "area": "Jubilee Hills",
@@ -2558,10 +2888,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Jubilee Hills",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The vibrant rooftop multi-tiered hybrid space starting as a breezy cafe and transitioning into high energy. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Jubilee Hills. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "crowd": "Youth, Party Goers",
@@ -2654,10 +2998,24 @@ export const INITIAL_CAFES: Cafe[] = [
     "area": "Gachibowli",
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The world-class laminated pastry counters with a clean marble finish. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Gachibowli. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ],
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
@@ -2792,10 +3150,22 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Ravi T",
+        "rating": 5,
+        "text": "The OG cafe vibe is real. Really chill music and a great place to read a book.",
+        "date": "1 week ago"
+      },
+      {
+        "author": "Sneha D",
+        "rating": 5,
+        "text": "Love the outdoor area. The cold brew is one of the best in the city.",
+        "date": "3 weeks ago"
+      },
+      {
+        "author": "Varun M",
+        "rating": 4,
+        "text": "Nice place, good food. Parking can be a bit tricky on weekends.",
+        "date": "2 months ago"
       }
     ]
   },
@@ -2873,10 +3243,24 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Rahul S",
+        "rating": 5,
+        "text": "Absolutely amazing spot! The hyderabad’s first futuristic matcha/slow-bar style cafe with an aesthetic podcast space and mirrors. is perfect for a weekend catch-up.",
+        "date": "2 weeks ago",
+        "role": "Local Guide"
+      },
+      {
+        "author": "Meghana R",
+        "rating": 4,
+        "text": "One of the best new places in Banjara Hills, Hyderabad. The coffee and ambiance are lovely, can get a bit crowded though.",
+        "date": "1 month ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Vikram K",
+        "rating": 5,
+        "text": "Loved the signature dishes. Everything was well presented. Highly recommended.",
+        "date": "3 weeks ago"
       }
     ]
   },
@@ -2972,10 +3356,16 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "userReviews": [
       {
-        "author": "Public Review Aggregator",
-        "date": "2026",
-        "rating": 4.6,
-        "text": "Great vibe, amazing food. It can get crowded, but totally worth visiting for hangouts."
+        "author": "Kriti A",
+        "rating": 5,
+        "text": "Such a creative space! The art on the walls makes for a beautiful backdrop.",
+        "date": "2 weeks ago"
+      },
+      {
+        "author": "Tanya S",
+        "rating": 5,
+        "text": "Loved the artisan coffee and the overall artistic vibe. Highly recommended!",
+        "date": "4 weeks ago"
       }
     ]
   },
@@ -3034,6 +3424,20 @@ export const INITIAL_CAFES: Cafe[] = [
         "date": "2026",
         "rating": 4.6,
         "text": "Huge space, great vibe. Amazing cranberry nitro brew, cheesecakes, wood-fired pizzas, and waffles. It gets crowded and loud, so maybe not for quiet studying, but perfect for hangouts."
+      },
+      {
+        "author": "Arjun K",
+        "rating": 5,
+        "text": "Amazing ambiance and specialty brews!",
+        "date": "3 weeks ago",
+        "role": "Foodie"
+      },
+      {
+        "author": "Divya S",
+        "rating": 4,
+        "text": "Great place to work, but very crowded.",
+        "date": "1 month ago",
+        "role": "Local Guide"
       }
     ],
     "featuredMenu": [
@@ -3066,8 +3470,21 @@ export const INITIAL_CAFES: Cafe[] = [
       "/images/roastccx_4.jpg"
     ],
     "menuImages": [
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80"
+      "/images/roastccx_menu1.png",
+      "/images/roastccx_menu2.png",
+      "/images/roastccx_menu3.png",
+      "/images/roastccx_menu4.png",
+      "/images/roastccx_menu5.png",
+      "/images/roastccx_menu6.png",
+      "/images/roastccx_menu7.png",
+      "/images/roastccx_menu8.png",
+      "/images/roastccx_menu9.png",
+      "/images/roastccx_menu10.png",
+      "/images/roastccx_menu11.png",
+      "/images/roastccx_menu12.png",
+      "/images/roastccx_menu13.png",
+      "/images/roastccx_menu14.png",
+      "/images/roastccx_menu15.png"
     ]
   }
 ];
