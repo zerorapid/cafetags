@@ -31,7 +31,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "https://cafeniloufer.com/pages/outlets",
     "timings": "8:00 AM - 11:00 PM",
     "phone": "+91 89777 40649",
-    "image": "https://b.zmtcdn.com/data/pictures/5/21785395/3f0a9cb94ec3a29b77c1718ce1a84bc1.jpg",
+    "image": "/images/zmt_updzqu_3f0a9cb94ec3a29b77c1718ce1a84b.jpg",
     "mapLink": "https://www.google.com/maps/search/?api=1&query=Cafe%20Niloufer%2C%20Plot%2030%2FC%2C%20Survey%2083%2F1%2C%20Tower%202%2C%20Orbit%20Building%2C%20Raidurgam%2C%20Hyderabad",
     "icon": "local_cafe",
     "takeaway": true,
@@ -43,11 +43,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "isNewLaunch": true,
     "newLaunchCatchyline": "A huge, modern tea café that mixes Hyderabadi nostalgia with contemporary interiors.",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/5/21785395/3f0a9cb94ec3a29b77c1718ce1a84bc1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/5/21785395/a0efdbf16675a848c7157dc4d8ac6726.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/5/21785395/8e5faabaffad1c960cbe77742aa8dbaa.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/5/21785395/b1163e55870b0e5696fc768b42213a5f.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/5/21785395/86705d697fde353ce667a654faddad01.jpg"
+      "/images/zmt_updzqu_3f0a9cb94ec3a29b77c1718ce1a84b.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "/images/zmt_1obnxl_a0efdbf16675a848c7157dc4d8ac67.jpg",
+      "/images/zmt_s6eihg_8e5faabaffad1c960cbe77742aa8db.jpg",
+      "/images/zmt_a9akpa_b1163e55870b0e5696fc768b42213a.jpg",
+      "/images/zmt_ln0f04_86705d697fde353ce667a654faddad.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/395/21785395/ec2c30b1f8009fb54724ced447650c88.jpeg",
@@ -81,19 +81,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Irani Chai & Bun Maska",
         "price": "₹150",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/5/21785395/3f0a9cb94ec3a29b77c1718ce1a84bc1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_updzqu_3f0a9cb94ec3a29b77c1718ce1a84b.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "Osmania Biscuits",
         "price": "₹120",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/5/21785395/a0efdbf16675a848c7157dc4d8ac6726.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_1obnxl_a0efdbf16675a848c7157dc4d8ac67.jpg"
       },
       {
         "name": "Kunafa",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/5/21785395/8e5faabaffad1c960cbe77742aa8dbaa.jpg"
+        "image": "/images/zmt_fmwu0m_8e5faabaffad1c960cbe77742aa8db.jpg"
       }
     ]
   },
@@ -125,11 +125,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=9055272694452188651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/2/20122962/042680cf7bcd9c736acb4039db336aa4.jpg?fit=around|1000:1000",
+    "image": "/images/zmt_2mm96o_042680cf7bcd9c736acb4039db336a.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/2/20122962/385980fb3084d29def89944a7f4e7180.jpg",
-      "https://b.zmtcdn.com/data/pictures/2/20122962/26678588ac4ed0cbcd0773a82f60dccc.jpg"
+      "/images/zmt_hm4l8c_385980fb3084d29def89944a7f4e71.jpg",
+      "/images/zmt_ghz7tr_26678588ac4ed0cbcd0773a82f60dc.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/962/20122962/1c2ddfaede741662765256ac698ed35d.jpg",
@@ -143,19 +143,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Almond Croissant",
         "price": "₹350",
         "description": "Freshly baked signature pastry",
-        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/2025ff87b99a3bcb5008ed524de0ecf2.jpg"
+        "image": "/images/zmt_7i36ly_2025ff87b99a3bcb5008ed524de0ec.jpg"
       },
       {
         "name": "5 Cheese Pizza",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/397700f21b6384be17b2ceab3b548ce3.jpg?fit=around|1000:1000"
+        "image": "/images/zmt_bvbxry_397700f21b6384be17b2ceab3b548c.jpg"
       },
       {
         "name": "Irish Cold Coffee",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/4391a68e01116bee2a7170e3d6da60d4.jpg?fit=around|1000:1000"
+        "image": "/images/zmt_ucvd6a_4391a68e01116bee2a7170e3d6da60.jpg"
       }
     ],
     "email": "",
@@ -204,13 +204,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.app.goo.gl/BSLPVTiE85YqEFr56",
-    "image": "https://b.zmtcdn.com/data/pictures/2/96742/cd069e7fd6d6f8420b5f714e302c3571.jpg",
+    "image": "/images/zmt_hj8htr_cd069e7fd6d6f8420b5f714e302c35.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/2/96742/d30307b2e74c2e575022b91e6c1b8bb9.jpg",
-      "https://b.zmtcdn.com/data/pictures/2/96742/8196b16f8592562220bf9ba385d03cd3.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/2/96742/135dd9981559c6a248b1c3a1bdbc8032.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/2/96742/2eab43438bb9bb306ad2fb5c5c51c4e6.jpg"
+      "/images/zmt_3p6ru3_d30307b2e74c2e575022b91e6c1b8b.jpg",
+      "/images/zmt_sc4hia_8196b16f8592562220bf9ba385d03c.jpg",
+      "/images/zmt_k8fbvc_135dd9981559c6a248b1c3a1bdbc80.jpg",
+      "/images/zmt_is53g9_2eab43438bb9bb306ad2fb5c5c51c4.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/742/96742/0b38839417ae6a9c1098be3735fb7855.jpg",
@@ -223,19 +223,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/96742/879614dbe4bbdb09747dfa71fc1cdadb.jpg"
+        "image": "/images/zmt_nk4fuy_879614dbe4bbdb09747dfa71fc1cda.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/96742/56cc910341e333081f25aa3d3c90ae3c.jpg"
+        "image": "/images/zmt_42ti5v_56cc910341e333081f25aa3d3c90ae.jpg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/96742/75f76d9cf269be8f208295c8bd799a55.jpg"
+        "image": "/images/zmt_f1qsom_75f76d9cf269be8f208295c8bd799a.jpg"
       }
     ],
     "email": "",
@@ -284,11 +284,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=14932745319906553569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/5/96615/0986507add75bcb0e2f0e3968a0694a4.jpg",
+    "image": "/images/zmt_km9yqp_0986507add75bcb0e2f0e3968a0694.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/5/96615/90e2b6a8522c536d37ff069d582fe321.jpg",
-      "https://b.zmtcdn.com/data/pictures/5/96615/c64a00f79b1db95adf6566c96df20e33.jpg"
+      "/images/zmt_7qzz1n_90e2b6a8522c536d37ff069d582fe3.jpg",
+      "/images/zmt_clefy7_c64a00f79b1db95adf6566c96df20e.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/615/96615/0fd571edd3a67260cbae9812557cb79a.jpg",
@@ -302,19 +302,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Cold Coffee",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/5/96615/1bf02ae03ab429ca22e6b3b2b19496f9.jpg"
+        "image": "/images/zmt_bguozc_1bf02ae03ab429ca22e6b3b2b19496.jpg"
       },
       {
         "name": "Moroccan Chicken",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/5/96615/f8a703e8973ce8378e8a3097770f2d4e.jpg"
+        "image": "/images/zmt_dk7fq7_f8a703e8973ce8378e8a3097770f2d.jpg"
       },
       {
         "name": "Classic Spaghetti",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/5/96615/0986507add75bcb0e2f0e3968a0694a4.jpg"
+        "image": "/images/zmt_km9yqp_0986507add75bcb0e2f0e3968a0694.jpg"
       }
     ],
     "email": "",
@@ -365,14 +365,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13464840837705918167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg",
+    "image": "/images/zmt_56clnm_cc7a2fad41f79171d8f6287c689913.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/11b2d6727990e9260e6c4f714fd18871.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/8655ebfefb43deef4b1a10107d052afb.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/7/21181977/c9f8fbfffa37b4cb6dd19ad546360bd4.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/7/21181977/414fa26f866262db1b3aca85d672d46c_featured_v3.jpg"
+      "/images/zmt_56clnm_cc7a2fad41f79171d8f6287c689913.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+      "/images/zmt_ldibog_11b2d6727990e9260e6c4f714fd188.jpg",
+      "/images/zmt_4rejut_8655ebfefb43deef4b1a10107d052a.jpg",
+      "/images/zmt_hzeilf_c9f8fbfffa37b4cb6dd19ad546360b.jpg",
+      "/images/zmt_63nxp3_414fa26f866262db1b3aca85d672d4.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/977/21181977/4d6148d83bb632ba28b376cf412ea6a7.png",
@@ -383,19 +383,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Curated Pour Over",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_56clnm_cc7a2fad41f79171d8f6287c689913.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "All-Day Brunch",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/11b2d6727990e9260e6c4f714fd18871.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_ldibog_11b2d6727990e9260e6c4f714fd188.jpg"
       },
       {
         "name": "Signature Bake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/8655ebfefb43deef4b1a10107d052afb.jpg"
+        "image": "/images/zmt_dcmfeh_8655ebfefb43deef4b1a10107d052a.jpg"
       }
     ],
     "email": "",
@@ -446,14 +446,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13240328901702437474&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -481,19 +481,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Brownie Blend",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Creamy Spinach Spaghetti",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "Loaded Nachos",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "email": "",
@@ -543,14 +543,14 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=6185238211404500497&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/0/21058610/11ae8ce4e463bc1343a63f24fe745f71.jpg",
+    "image": "/images/zmt_eiax8r_11ae8ce4e463bc1343a63f24fe745f.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/0/21058610/1b09b8e3f18d4ea55233ce9e0daa6810.jpg",
-      "https://b.zmtcdn.com/data/pictures/0/21058610/83c3937d18e9ce646cab62d5565f5d8a_featured_v2.jpg",
-      "https://b.zmtcdn.com/data/pictures/0/21058610/7a3eb3dc07b95d1552f317df42a358f0.jpg",
-      "https://b.zmtcdn.com/data/pictures/0/21058610/39247124aa54838857d855724abee197.jpg",
-      "https://b.zmtcdn.com/data/pictures/0/21058610/481225992e266a448c072e4118896f2c.jpg"
+      "/images/zmt_ujbklu_1b09b8e3f18d4ea55233ce9e0daa68.jpg",
+      "/images/zmt_ao9ins_83c3937d18e9ce646cab62d5565f5d.jpg",
+      "/images/zmt_jmggpo_7a3eb3dc07b95d1552f317df42a358.jpg",
+      "/images/zmt_pydl3z_39247124aa54838857d855724abee1.jpg",
+      "/images/zmt_z224vn_481225992e266a448c072e4118896f.jpg"
     ],
     "menuImages": [
       "/images/habitat/menu_card_1.png",
@@ -563,19 +563,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/0/21058610/83c3937d18e9ce646cab62d5565f5d8a_featured_v2.jpg"
+        "image": "/images/zmt_ao9ins_83c3937d18e9ce646cab62d5565f5d.jpg"
       },
       {
         "name": "Classic Cold Coffee",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/0/21058610/bfa6b60300f7201c57258105e78f82f8.jpg"
+        "image": "/images/zmt_dk0u60_bfa6b60300f7201c57258105e78f82.jpg"
       },
       {
         "name": "Oreo Shake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/0/21058610/004bac93e68eac183a73be955ef5dacc.jpg"
+        "image": "/images/zmt_8leb9q_004bac93e68eac183a73be955ef5da.jpg"
       }
     ],
     "email": "",
@@ -625,12 +625,12 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/3c486af696d7c223d3a2ea1c46e1dc55.jpg",
+    "image": "/images/zmt_y2fbmy_3c486af696d7c223d3a2ea1c46e1dc.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/7/21164737/77953232bc9520b3e2c35799e4091355.png",
-      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/fa25a40fa8f28d39df52c7cc0328f952.jpeg",
-      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/e14db758e740e0562c5d59e381422b44.jpg"
+      "/images/zmt_rfrfks_77953232bc9520b3e2c35799e40913.png",
+      "/images/zmt_i0om0b_fa25a40fa8f28d39df52c7cc0328f9.jpg",
+      "/images/zmt_os5otv_e14db758e740e0562c5d59e381422b.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/737/21164737/a82cbfc9cb8a8a8a590df40bdb0f644f.jpeg",
@@ -654,19 +654,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Tea",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/7/21164737/6ef78c5fa8ef59a272b18a10727fd85d_featured_v3.jpg"
+        "image": "/images/zmt_suo9n8_6ef78c5fa8ef59a272b18a10727fd8.jpg"
       },
       {
         "name": "Pink Crepe",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/e14db758e740e0562c5d59e381422b44.jpg"
+        "image": "/images/zmt_os5otv_e14db758e740e0562c5d59e381422b.jpg"
       },
       {
         "name": "Floral Pastry",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/fa25a40fa8f28d39df52c7cc0328f952.jpeg"
+        "image": "/images/zmt_i0om0b_fa25a40fa8f28d39df52c7cc0328f9.jpg"
       }
     ],
     "email": "",
@@ -792,11 +792,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5922054460361640326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/2/22603412/ab465b5e207795ae50add550b8c737a8.png",
+    "image": "/images/zmt_8vxyiz_ab465b5e207795ae50add550b8c737.png",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/2/22603412/9c4f56002492bc1a7ddcb2db719450e7.png",
-      "https://b.zmtcdn.com/data/pictures/chains/2/22603412/8da13954a5deb4418bc6bc7540768f94.png"
+      "/images/zmt_o1d31o_9c4f56002492bc1a7ddcb2db719450.png",
+      "/images/zmt_b2xuoz_8da13954a5deb4418bc6bc7540768f.png"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/412/22603412/c93c15c3b7e99d349fe8855227ff6adf.jpg",
@@ -808,19 +808,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Orange Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/2/22603412/e8f779f0d283bfb92eea84e9dafa817b.png"
+        "image": "/images/zmt_j46k7q_e8f779f0d283bfb92eea84e9dafa81.png"
       },
       {
         "name": "Strawberry Matcha",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/22603412/ab465b5e207795ae50add550b8c737a8.png"
+        "image": "/images/zmt_8vxyiz_ab465b5e207795ae50add550b8c737.png"
       },
       {
         "name": "Chimichurri Bruschetta",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/2/22603412/d6920e258e5f68064fcd8b806163bfe4.png"
+        "image": "/images/zmt_hpvi6o_d6920e258e5f68064fcd8b806163bf.png"
       }
     ],
     "email": "",
@@ -871,11 +871,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=15635965076962151747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/4/21288214/3b1740ce850769a30ecbf3d7e5f17c7c.jpeg",
+    "image": "/images/zmt_5k2ayj_3b1740ce850769a30ecbf3d7e5f17c.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg",
-      "https://b.zmtcdn.com/data/pictures/4/21288214/0a8840b867b1e464ce724341b6cbf63d.jpeg"
+      "/images/zmt_46jwnp_cb29bec10ea05476658e4842989085.jpg",
+      "/images/zmt_bgta2p_0a8840b867b1e464ce724341b6cbf6.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/214/21288214/7e6e276b2e0b4faa5a7d8de8d2d14494.jpeg",
@@ -905,19 +905,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Sushi Platter",
         "price": "₹850",
         "description": "Assorted premium sushi platter",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/6c991c0a66719eeb772a2dc22510e149.jpeg"
+        "image": "/images/zmt_bp26zl_6c991c0a66719eeb772a2dc22510e1.jpg"
       },
       {
         "name": "Korean BBQ",
         "price": "₹1200",
         "description": "Classic Korean BBQ with sides",
-        "image": "https://b.zmtcdn.com/data/pictures/4/21288214/98a8e14501524050494d689a802fb14e.jpeg"
+        "image": "/images/zmt_8ntsob_98a8e14501524050494d689a802fb1.jpg"
       },
       {
         "name": "Spicy Ramen",
         "price": "₹650",
         "description": "Authentic ramen bowl with rich broth",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg"
+        "image": "/images/zmt_46jwnp_cb29bec10ea05476658e4842989085.jpg"
       }
     ],
     "email": "",
@@ -1024,19 +1024,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "tags": [
@@ -1132,19 +1132,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "signature": "Kyoto Cold Brew",
@@ -1156,7 +1156,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "8:00 AM - 10:00 PM",
     "mapLink": "https://maps.google.com/?cid=10853600568724463362&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "icon": "local_cafe",
     "takeaway": true,
     "website": "https://trueblack.in",
@@ -1192,11 +1192,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "#ERROR!",
     "onlineOrder": false,
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1226,19 +1226,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "email": "contact@echoes.in",
@@ -1249,7 +1249,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Elegant"
     ],
     "timings": "11:30 AM - 11:00 PM",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=402478232569093209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "takeaway": true,
     "icon": "hearing",
@@ -1286,11 +1286,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "#ERROR!",
     "onlineOrder": true,
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1349,19 +1349,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "tags": [
@@ -1372,17 +1372,17 @@ export const INITIAL_CAFES: Cafe[] = [
     "signature": "Vanilla Bean Cold Brew",
     "email": "",
     "mapLink": "https://maps.google.com/?cid=17326131078170367756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "timings": "8:00 AM - 10:30 PM",
     "website": "",
     "takeaway": true,
     "icon": "wb_sunny",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1423,7 +1423,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "eco",
     "mapLink": "https://maps.google.com/?cid=1436687057963349916&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "timings": "11:00 AM - 11:00 PM",
     "tags": [
       "Garden",
@@ -1437,19 +1437,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "onlineOrder": true,
@@ -1470,11 +1470,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [],
     "discounts": "",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1516,19 +1516,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "email": "contact@lasabroso.com",
@@ -1539,7 +1539,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Casual Dine"
     ],
     "timings": "12:00 PM - 11:30 PM",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=8377665189337705699&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "takeaway": true,
     "icon": "restaurant",
@@ -1562,11 +1562,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "founded": "2023",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1606,7 +1606,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "icon": "bakery_dining",
     "takeaway": true,
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=4975621715021664472&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "12:00 PM - 11:00 PM",
     "tags": [
@@ -1621,19 +1621,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "onlineOrder": true,
@@ -1654,11 +1654,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [],
     "discounts": "",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1715,7 +1715,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "icon": "sailing",
     "takeaway": true,
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=18208358017244254991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:00 PM",
     "tags": [
@@ -1730,27 +1730,27 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1799,7 +1799,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "timings": "12:00 PM - 12:00 AM",
     "mapLink": "https://maps.google.com/?cid=5268139497609473063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "signature": "Truffle Fries & Mocktails",
     "email": "glasshouse@luxury.in",
     "tags": [
@@ -1812,19 +1812,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "crowd": "High Society, Celebrities",
@@ -1840,11 +1840,11 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -1872,7 +1872,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "local_bar",
-    "image": "https://b.zmtcdn.com/data/pictures/1/20722781/d5d8e730e9b85492be1b3d52ce7954ed.png",
+    "image": "/images/zmt_vz54p1_d5d8e730e9b85492be1b3d52ce7954.png",
     "mapLink": "https://maps.google.com/?cid=7244970011100712371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:30 PM",
     "tags": [
@@ -1887,19 +1887,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Lotus Biscoff Shake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/1/20722781/1b21fae8a278ce93e88d6b537383e045_featured_v3.jpg"
+        "image": "/images/zmt_b6cv2u_1b21fae8a278ce93e88d6b537383e0.jpg"
       },
       {
         "name": "Grilled Continental Chicken",
         "price": "₹420",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/1/20722781/1b44c96b0e3ade0ca2b042d29e5b1c06.jpeg"
+        "image": "/images/zmt_skap61_1b44c96b0e3ade0ca2b042d29e5b1c.jpg"
       },
       {
         "name": "Penne Alfredo",
         "price": "₹380",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
+        "image": "/images/zmt_2ip6ct_79b09533baca6cdb2c524d7d9e98d3.jpg"
       }
     ],
     "crowd": "Couples, Influencers",
@@ -1932,11 +1932,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "dineIn": true,
     "name": "Ukusa",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/1/20722781/d5d8e730e9b85492be1b3d52ce7954ed.png",
-      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
-      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/1b44c96b0e3ade0ca2b042d29e5b1c06.jpeg",
-      "https://b.zmtcdn.com/data/pictures/1/20722781/1b21fae8a278ce93e88d6b537383e045_featured_v3.jpg"
+      "/images/zmt_vz54p1_d5d8e730e9b85492be1b3d52ce7954.png",
+      "/images/zmt_2ip6ct_79b09533baca6cdb2c524d7d9e98d3.jpg",
+      "/images/zmt_2yoenf_7e9703083b822d66b9f8309510708c.png",
+      "/images/zmt_skap61_1b44c96b0e3ade0ca2b042d29e5b1c.jpg",
+      "/images/zmt_b6cv2u_1b21fae8a278ce93e88d6b537383e0.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/781/20722781/f09b92f569e3de53ab8e7cd7a9303923.jpg",
@@ -1962,7 +1962,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "timings": "12:00 PM - 11:30 PM",
     "mapLink": "https://maps.google.com/?cid=11058805099472244365&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "icon": "wb_cloudy",
     "takeaway": false,
     "website": "Panoramic Lake View, Open Air Bar, Valet",
@@ -1971,19 +1971,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "signature": "Wood-fired Truffle Pizza",
@@ -2025,11 +2025,11 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "id": 1781212697124,
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2085,26 +2085,26 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "takeaway": true,
     "icon": "favorite",
     "website": "",
     "timings": "10:00 AM - 11:00 PM",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=16717154306863291720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "userReviews": [
@@ -2119,11 +2119,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Creatives, Writers",
     "aestheticType": "Pastel Bohemian",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2183,19 +2183,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "email": "experience@manamchocolate.com",
@@ -2206,17 +2206,17 @@ export const INITIAL_CAFES: Cafe[] = [
       "Experiential"
     ],
     "timings": "9:00 AM - 11:30 PM",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=2923665320648594383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "icon": "star",
     "takeaway": true,
     "website": "https://manamchocolate.com",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2255,7 +2255,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "timings": "12:00 PM - 11:00 PM",
     "mapLink": "https://maps.google.com/?cid=6400394818504743063&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "takeaway": true,
     "icon": "icecream",
     "website": "https://churrolto.com",
@@ -2264,19 +2264,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "signature": "Classic Churros with Belgian Chocolate",
@@ -2306,11 +2306,11 @@ export const INITIAL_CAFES: Cafe[] = [
       "NTR Jr"
     ],
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2359,25 +2359,25 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "website": "",
     "takeaway": true,
     "icon": "album",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=7851901529254254581&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "9:00 AM - 11:00 PM",
     "facilities": [
@@ -2398,11 +2398,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Road No. 45, Jubilee Hills, Hyderabad",
     "bookingUrl": "",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2451,26 +2451,26 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "icon": "music_note",
     "takeaway": false,
     "website": "",
     "timings": "11:30 AM - 12:00 AM",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=9440016016138167814&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "dineIn": true,
     "id": 1781212701467,
@@ -2492,11 +2492,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "bookingUrl": "https://swiggy.com/dineout",
     "selfDelivery": false,
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2550,7 +2550,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "area": "Jubilee Hills",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "mapLink": "https://maps.google.com/?cid=18243993488988326353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "8:30 AM - 9:00 PM",
     "website": "",
@@ -2561,19 +2561,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "tags": [
@@ -2584,11 +2584,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "info@theholeinthewall.com",
     "signature": "The All-English Breakfast",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2657,33 +2657,33 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "website": "",
     "takeaway": false,
     "icon": "roofing",
     "mapLink": "https://maps.google.com/?cid=657251848063835657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "timings": "12:00 PM - 12:00 AM",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2713,19 +2713,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "signature": "Pain Au Chocolat",
@@ -2737,7 +2737,7 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "timings": "8:00 AM - 10:30 PM",
     "mapLink": "https://maps.app.goo.gl/ocYdm8Q5HUzViV2Z7",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "takeaway": true,
     "icon": "cake",
     "website": "AC, Indoor Seating, Power Outlets",
@@ -2771,11 +2771,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "Expats, Corporate Executives",
     "onlineOrder": true,
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2814,7 +2814,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Casual",
       "Snacks"
     ],
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "icon": "local_cafe",
     "founded": "2024",
     "email": "",
@@ -2837,11 +2837,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "newLaunchCatchyline": "New neighborhood chai spot in Banjara Hills",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -2869,19 +2869,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "userReviews": [
@@ -2913,7 +2913,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Podcast Space",
       "Aesthetic"
     ],
-    "image": "https://b.zmtcdn.com/data/pictures/1/22480531/bfb88ceb3d67fbb713ccdb52c5154d6a.jpg",
+    "image": "/images/zmt_45o4je_bfb88ceb3d67fbb713ccdb52c5154d.jpg",
     "icon": "local_cafe",
     "founded": "2024",
     "aestheticType": "Futuristic Matcha Bar",
@@ -2936,9 +2936,9 @@ export const INITIAL_CAFES: Cafe[] = [
     "newLaunchCatchyline": "Futuristic specialty coffee & matcha bar with a podcast room.",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/1/22480531/4662c810620767644ae0770a3136b8e9.jpg",
-      "https://b.zmtcdn.com/data/pictures/1/22480531/92629daabda1b4df9b3c2df26c4bd954.jpg",
-      "https://b.zmtcdn.com/data/pictures/1/22480531/bfb88ceb3d67fbb713ccdb52c5154d6a.jpg"
+      "/images/zmt_vb3prv_4662c810620767644ae0770a3136b8.jpg",
+      "/images/zmt_9y0js1_92629daabda1b4df9b3c2df26c4bd9.jpg",
+      "/images/zmt_45o4je_bfb88ceb3d67fbb713ccdb52c5154d.jpg"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/531/22480531/34c2a94d30fc30c87937573c182e0511.jpg",
@@ -2952,19 +2952,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Matcha Latte Combo",
         "price": "₹350",
         "description": "Signature specialty matcha and sandwich",
-        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/9c44b98c71de1f26f7a18b5c19e91209.jpg"
+        "image": "/images/zmt_do1rle_9c44b98c71de1f26f7a18b5c19e912.jpg"
       },
       {
         "name": "Grilled Sandwich",
         "price": "₹280",
         "description": "Premium slow-bar coffee sandwich",
-        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/504a44fb0e14245d84eeec822e368f01.jpg"
+        "image": "/images/zmt_12e57r_504a44fb0e14245d84eeec822e368f.jpg"
       },
       {
         "name": "Gourmet Toast",
         "price": "₹320",
         "description": "Freshly baked aesthetic toast",
-        "image": "https://b.zmtcdn.com/data/pictures/1/22480531/523e86dec5475cf29ba3ad02026ac7ce.jpg?fit=around|1000:1000"
+        "image": "/images/zmt_7qx01p_523e86dec5475cf29ba3ad02026ac7.jpg"
       }
     ],
     "userReviews": [
@@ -2996,7 +2996,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Creative",
       "Events Space"
     ],
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
     "icon": "palette",
     "founded": "2024",
     "aestheticType": "Creative Art Studio",
@@ -3019,11 +3019,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "newLaunchCatchyline": "",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
+      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
+      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
@@ -3051,19 +3051,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
       }
     ],
     "userReviews": [
