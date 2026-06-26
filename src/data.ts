@@ -1191,54 +1191,57 @@ export const INITIAL_CAFES: Cafe[] = [
     "id": 1781212693498,
     "phone": "#ERROR!",
     "onlineOrder": false,
+    "image": "/images/trueblack_1.webp",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/trueblack_1.webp",
+      "/images/trueblack_2.webp",
+      "/images/trueblack_3.webp",
+      "/images/trueblack_4.webp"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "/images/trueblack_menu1.webp",
+      "/images/trueblack_menu2.webp"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Specialty Black Coffee",
+        "price": "₹220",
+        "description": "Signature single origin black brew",
+        "image": "/images/trueblack_food1.webp"
+      },
+      {
+        "name": "Cold Brew",
+        "price": "₹280",
+        "description": "Slow-steeped cold brew concentrate",
+        "image": "/images/trueblack_food2.webp"
+      },
+      {
+        "name": "Espresso Tonic",
+        "price": "₹260",
+        "description": "Refreshing espresso over tonic water",
+        "image": "/images/trueblack_food3.webp"
+      }
     ]
   },
   {
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
-        "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/zmt_2qyt40_0435a4e9762114b39061b77cffb50e.jpg"
+        "name": "Creamy Pesto Pasta",
+        "price": "₹380",
+        "description": "Signature creamy pesto pasta",
+        "image": "/images/echoes_food1.webp"
       },
       {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "name": "Truffle Pizza",
+        "price": "₹450",
+        "description": "Artisan truffle wood-fired pizza",
+        "image": "/images/echoes_food2.webp"
       },
       {
-        "name": "New York Cheesecake",
+        "name": "Signature Dessert",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/zmt_boc4fd_0208b3d53dfeef35c44e6a9e95426d.jpg"
+        "description": "Chef's special dessert",
+        "image": "/images/echoes_food3.webp"
       }
     ],
     "email": "contact@echoes.in",
@@ -1249,7 +1252,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Elegant"
     ],
     "timings": "11:30 AM - 11:00 PM",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/echoes_1.webp",
     "mapLink": "https://maps.google.com/?cid=402478232569093209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "takeaway": true,
     "icon": "hearing",
@@ -1286,32 +1289,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "#ERROR!",
     "onlineOrder": true,
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/echoes_1.webp",
+      "/images/echoes_2.webp",
+      "/images/echoes_3.webp",
+      "/images/echoes_4.webp"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "/images/echoes_menu1.webp"
     ]
   },
   {
@@ -1372,38 +1356,41 @@ export const INITIAL_CAFES: Cafe[] = [
     "signature": "Vanilla Bean Cold Brew",
     "email": "",
     "mapLink": "https://maps.google.com/?cid=17326131078170367756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
+    "image": "/images/dailyrituals_1.webp",
     "timings": "8:00 AM - 10:30 PM",
     "website": "",
     "takeaway": true,
     "icon": "wb_sunny",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/dailyrituals_1.webp",
+      "/images/dailyrituals_2.webp",
+      "/images/dailyrituals_3.webp",
+      "/images/dailyrituals_4.webp"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "/images/dailyrituals_menu1.webp",
+      "/images/dailyrituals_menu2.webp",
+      "/images/dailyrituals_menu3.webp"
+    ],
+    "featuredMenu": [
+      {
+        "name": "Vanilla Bean Cold Brew",
+        "price": "₹280",
+        "description": "Signature slow-steeped vanilla cold brew",
+        "image": "/images/dailyrituals_food1.webp"
+      },
+      {
+        "name": "Flat White",
+        "price": "₹220",
+        "description": "Velvety smooth flat white",
+        "image": "/images/dailyrituals_2.webp"
+      },
+      {
+        "name": "Avocado Toast",
+        "price": "₹320",
+        "description": "Fresh avocado on artisan sourdough",
+        "image": "/images/dailyrituals_3.webp"
+      }
     ]
   },
   {
