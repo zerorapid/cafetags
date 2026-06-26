@@ -964,13 +964,13 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=4892250763931573143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/2/19258392/83e43aaa3687dc34866eadfd24019721.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
+    "image": "/images/makobrew_1.webp",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/83e43aaa3687dc34866eadfd24019721.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/2/19258392/23abf0cf228e564d97bf003bddaeb8fa.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/chains/2/19258392/d17e59e039c0266a8e8b087483dc857d.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/2/19258392/662afb562e4d1156fca0a3eec643c474.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "/images/makobrew_1.webp",
+      "/images/makobrew_2.webp",
+      "/images/makobrew_3.webp",
+      "/images/makobrew_4.webp"
     ],
     "menuImages": [
       "https://b.zmtcdn.com/data/menus/392/19258392/3ccf6ac134ffea4f0335a21190094bf4.jpeg",
@@ -990,19 +990,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Sweet Crepe",
         "price": "₹350",
         "description": "Signature sweet crepe dessert",
-        "image": "https://b.zmtcdn.com/data/pictures/2/19258392/7615fa02953f437f9963c126707eee88_featured_v3.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "/images/makobrew_food1.webp"
       },
       {
         "name": "Beetroot Burger",
         "price": "₹320",
         "description": "Gourmet vegetarian burger with beetroot patty",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/e79/02631e548e4e1b77cd0b006ab89b6e79_1777711502.jpg?crop=100%3A100%3B%2A%2C%2A&fit=around%7C100%3A100&output-format=webp"
+        "image": "/images/makobrew_food2.jpg"
       },
       {
         "name": "Cheesecake",
         "price": "₹280",
         "description": "Classic creamy cheesecake slice",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/67b/6788e0ab1f06734a3e5b58532865767b_1777711502.jpg?crop=100%3A100%3B%2A%2C%2A&fit=around%7C100%3A100&output-format=webp"
+        "image": "/images/makobrew_food3.jpg"
       }
     ],
     "email": "",
