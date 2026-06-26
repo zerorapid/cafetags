@@ -625,31 +625,48 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/lavie_interior.png",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/3c486af696d7c223d3a2ea1c46e1dc55.jpg",
     "logo": "https://b.zmtcdn.com/data/brand_creatives/logos/d4446b7aa9e756d7d859111f2aeaf11b1746435804.png",
     "moreImages": [
-      "/images/lavie_interior.png",
-      "/images/lavie_exterior.png"
+      "https://b.zmtcdn.com/data/pictures/7/21164737/77953232bc9520b3e2c35799e4091355.png",
+      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/fa25a40fa8f28d39df52c7cc0328f952.jpeg",
+      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/e14db758e740e0562c5d59e381422b44.jpg"
     ],
-    "menuImages": [],
+    "menuImages": [
+      "https://b.zmtcdn.com/data/menus/737/21164737/a82cbfc9cb8a8a8a590df40bdb0f644f.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/379eed4c6dfc7dc6d63b4c0d74501dfa.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/017cba520b4fe460854dfdeb906db549.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/37d4ca43c04dcb3ebaa7a30ce2712ead.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/8ac064675e71b31dab4843532a5203f6.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/ce9fe636e5214c7cf7d55177441f697f.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/0c2bb1f7f8ab3eccbfdc7fe03e94d1ff.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/b75f928fa8a2634c736c2e1cb407aafa.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/ca65976a1b4e3fdc424e7e3a1f80a56c.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/aa95a772183b717dbd492606171b3151.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/1017098be050c47a7cae169eef731026.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/ea00b18742622e6d1f6913a32bec5f85.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/966d957c77cd3d63504f13010acc76c2.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/7caee3e85d278cf9a8085ee5dc9a2f0c.jpeg",
+      "https://b.zmtcdn.com/data/menus/737/21164737/dba82b2ad5275ecf5cd1d9938263b54e.jpeg"
+    ],
     "featuredMenu": [
       {
         "name": "Rose Tea",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/lavie_rose_tea.png"
+        "image": "https://b.zmtcdn.com/data/pictures/7/21164737/6ef78c5fa8ef59a272b18a10727fd85d_featured_v3.jpg"
       },
       {
         "name": "Pink Crepe",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/lavie_pink_crepe.png"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/e14db758e740e0562c5d59e381422b44.jpg"
       },
       {
         "name": "Floral Pastry",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/lavie_floral_pastry.png"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/fa25a40fa8f28d39df52c7cc0328f952.jpeg"
       }
     ],
     "email": "",
