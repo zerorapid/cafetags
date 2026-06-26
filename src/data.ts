@@ -1967,7 +1967,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "local_bar",
-    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/1/20722781/d5d8e730e9b85492be1b3d52ce7954ed.png",
     "mapLink": "https://maps.google.com/?cid=7244970011100712371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:30 PM",
     "tags": [
@@ -1979,22 +1979,22 @@ export const INITIAL_CAFES: Cafe[] = [
     "signature": "Lotus Biscoff Shake",
     "featuredMenu": [
       {
-        "name": "Signature Cupcake",
+        "name": "Lotus Biscoff Shake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/1/20722781/1b21fae8a278ce93e88d6b537383e045_featured_v3.jpg"
       },
       {
-        "name": "Chocolate Pastry",
-        "price": "₹320",
+        "name": "Grilled Continental Chicken",
+        "price": "₹420",
         "description": "Delicious signature creation",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/1/20722781/1b44c96b0e3ade0ca2b042d29e5b1c06.jpeg"
       },
       {
-        "name": "New York Cheesecake",
-        "price": "₹280",
+        "name": "Penne Alfredo",
+        "price": "₹380",
         "description": "Classic premium selection",
-        "image": "https://b.zmtcdn.com/data/reviews_photos/d27/0208b3d53dfeef35c44e6a9e95426d27_1777992138.jpg"
+        "image": "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
       }
     ],
     "crowd": "Couples, Influencers",
@@ -2027,32 +2027,31 @@ export const INITIAL_CAFES: Cafe[] = [
     "dineIn": true,
     "name": "Ukusa",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/1a14df324279a971bc7bb891b194819a.png",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg",
-      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg",
-      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/67b427acd08af1de7c8d166716732488.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "https://b.zmtcdn.com/data/pictures/1/20722781/d5d8e730e9b85492be1b3d52ce7954ed.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg",
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/1b44c96b0e3ade0ca2b042d29e5b1c06.jpeg",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/1b21fae8a278ce93e88d6b537383e045_featured_v3.jpg"
     ],
     "menuImages": [
-      "https://b.zmtcdn.com/data/menus/469/21365469/8d695c86299ee6781bfaec07467bf0c1.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/154faf08746c5d81b45e20bd5931383a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/f1bd9d9db16a6dd34f21880708ad98b8.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/5f11051259262b30216bb991e758f31f.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/79955272bf689f9ac1cf7ad8bfa6a716.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/21e56cac02e81358b8b1b9feb4bee5b7.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/bd88815cffbac7eac7f786bc4f9e18ba.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6b01d0a9802239484faab04fa55b78ed.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/7b5e579da9d22f8855b2f740e58a5887.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ae463e59ec4fc6cb4ce197e104a57bc9.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/3bab54b3e3d638aa13bc5d75c5b94b76.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/ca7c4c5199a6b782cc3c1148112ab766.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/6fb3b73064bd2aafa1fc3eed41dd235a.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/4c15ce800a90e54154885f59244a8500.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/42cb88b061de38e62375becc1837ae40.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/cd8aded324cb78e2a8c99efafb2a0979.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/e60c4b04b6541e0ea13c9387f9bcacf4.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/865068f9276f2c229674093bcb4177cd.png",
-      "https://b.zmtcdn.com/data/menus/469/21365469/8c0315eae5f3b14b0e651f922c447127.png"
+      "https://b.zmtcdn.com/data/menus/781/20722781/f09b92f569e3de53ab8e7cd7a9303923.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/836d8f174205b978b672b012453492b3.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/5d51e7c4eb03b40e5b484b7fc77f9744.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/03edd06ac98cef20aad1ba5c9cd996dc.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/4f6bf278629424ce90cf380a25041f04.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/e71085c95625ff4c099dd1d042c1dece.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/ea2185603c7cae518fcab56e467715e0.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/f5b606b466ef4226675e846be5c5a6b5.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/30aa6f6d652167da25b462ab63b74534.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/5014b7eba63427ea288299b1a8a28073.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/d923f8542c8be8b7f01589e1b4d9b2d8.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/28efeadf88a7b02fa5c2b400774b996f.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/6e84aa0bd5f7558a9693634f2e79ea03.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/1d1824aab4876c407b46de902763f0aa.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/3133c6ad3d3acb9571f66257247ccb93.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/ce6002800724589effd4d1fdf5c0c5b5.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/c7a90f0b519a1702a5f45dc6322584a8.jpg",
+      "https://b.zmtcdn.com/data/menus/781/20722781/f466b32a092f8d607d8cc639839fd9e7.jpg"
     ]
   },
   {
