@@ -9,7 +9,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782332067698,
     "name": "Cafe Niloufer",
-    "neighborhood": "Hitech City",
+\"area": "Hitech City",
     "address": "Plot No. 30/C, Survey 83/1, Tower 2, Orbit Building, TSIIC, Raidurgam, Penmaktha, Serilingampalle (M), Hyderabad, Telangana",
     "description": "Cafe Niloufer Hitech City is a grand, modern tea café built around Irani chai, bun maska, biscuits, and Hyderabad-style snacks. With its huge scale and premium interiors, it feels like both a local landmark and a comfortable hangout for tea breaks, work meetings, and casual meals.",
     "rating": 4.5,
@@ -104,7 +104,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330804470,
     "name": "Sobremesa",
-    "neighborhood": "Jubilee Hills",
+\"area": "Jubilee Hills",
     "address": "Plot No. 593, 8-2-293/82/A/593, Road No. 31, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "10:00 AM to 10:30 PM",
     "signature": "Baked Broccoli, 5 Cheese Pizza & Irish Cold Coffee",
@@ -184,7 +184,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330804471,
     "name": "Guilt Trip",
-    "neighborhood": "Banjara Hills",
+\"area": "Banjara Hills",
     "address": "8-2-585/2/A/1, Road 9, Gaffar Khan Colony, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "11:00 AM to 11:00 PM",
     "signature": "Pastries, cheesecakes, cupcakes & casual cafe food",
@@ -280,7 +280,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330804472,
     "name": "Kaficko",
-    "neighborhood": "Jubilee Hills",
+\"area": "Jubilee Hills",
     "address": "Plot No. 1357, Road No. 45, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "10:00 AM to 10:00 PM",
     "signature": "Cold coffee, spaghetti, Moroccan chicken & burgers",
@@ -376,7 +376,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330710637,
     "name": "Karafa",
-    "neighborhood": "Banjara Hills",
+\"area": "Banjara Hills",
     "address": "8-2, 269/4A, Road No. 2, Sagar Society, Sri Nagar Colony, Kamalapuri Colony, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "8:00 AM to 11:00 PM",
     "signature": "Experiential coffee, bakes, all-day brunch",
@@ -457,7 +457,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330710638,
     "name": "Roastery Coffee House",
-    "neighborhood": "Kokapet",
+\"area": "Kokapet",
     "address": "Plot No. 21, Kokapet, Narsingi, Hyderabad, Telangana 500075",
     "timings": "Open till 11:00 PM",
     "signature": "Specialty coffee, Brownie Blend, creamy spinach spaghetti & nachos",
@@ -555,7 +555,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330710639,
     "name": "Habitat Cafe",
-    "neighborhood": "Banjara Hills",
+\"area": "Banjara Hills",
     "address": "Terrace, Vimbri Boulevard, Road No. 4, Green Valley, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "8:00 AM to 11:30 PM",
     "signature": "Latte, cold coffee, rose latte & brunch items",
@@ -652,7 +652,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330586694,
     "name": "La Vie En Rose Cafe & Bistro",
-    "neighborhood": "Gachibowli",
+\"area": "Gachibowli",
     "address": "Unit 301, Survey 92/1, 92/3 to 92/18, Plot 9, 10, 11, 16, 17, & 18, 3rd Floor, Circle 20, Gachibowli, Hyderabad",
     "timings": "12:00 PM to 11:00 PM",
     "signature": "Hot teas, coffees, and comfort food",
@@ -749,7 +749,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330586695,
     "name": "Et-Si Cafe | Bakehouse | Chocolatier",
-    "neighborhood": "Jubilee Hills",
+\"area": "Jubilee Hills",
     "address": "Plot No. 1196/B, Road Number 59, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "8:00 AM to 11:59 PM",
     "signature": "Pistachio Matilda Cake & soufflé pancakes",
@@ -844,7 +844,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330586696,
     "name": "Switch Coffee",
-    "neighborhood": "Hitech City",
+\"area": "Hitech City",
     "address": "Plot No. 65, Surya Enclave, beside Cyber Towers flyover, opposite Tata Motors, Madhapur, Hyderabad, Telangana 500081",
     "timings": "11:00 AM to 11:00 PM",
     "signature": "Specialty coffee, matcha & cold coffee",
@@ -934,7 +934,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330476578,
     "name": "Osaka",
-    "neighborhood": "Jubilee Hills",
+\"area": "Jubilee Hills",
     "address": "H.No. 8-2-293/A/116, Road No. 10, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "12:30 PM - 11:30 PM",
     "signature": "Ramen, Korean BBQ & Sushi",
@@ -1026,7 +1026,7 @@ export const INITIAL_CAFES: Cafe[] = [
   {
     "id": 1782330402954,
     "name": "Makobrew Cafe & Restaurant",
-    "neighborhood": "Jubilee Hills",
+\"area": "Jubilee Hills",
     "address": "Road No. 44, Sri Peddamma Thalli Temple, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "11:00 AM - 11:00 PM",
     "signature": "Sweet crepe & coffees",
