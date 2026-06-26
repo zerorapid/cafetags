@@ -11,7 +11,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "name": "Cafe Niloufer",
     "area": "Hitech City",
     "address": "Plot No. 30/C, Survey 83/1, Tower 2, Orbit Building, TSIIC, Raidurgam, Penmaktha, Serilingampalle (M), Hyderabad, Telangana",
-    "description": "Cafe Niloufer Hitech City is a grand, modern tea café built around Irani chai, bun maska, biscuits, and Hyderabad-style snacks. With its huge scale and premium interiors, it feels like both a local landmark and a comfortable hangout for tea breaks, work meetings, and casual meals.",
+    "description": "Cafe Niloufer Hitech City is a grand, modern tea café built around Irani chai, bun maska, biscuits, and Hyderabad-style snacks. With its huge scale and premium interiors, it...",
     "rating": 4.5,
     "tags": [
       "Tea Cafe",
@@ -104,7 +104,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Plot No. 593, 8-2-293/82/A/593, Road No. 31, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "10:00 AM to 10:30 PM",
     "signature": "Baked Broccoli, 5 Cheese Pizza & Irish Cold Coffee",
-    "description": "Sobremesa on Road No. 31, Jubilee Hills is a premium bakehouse-cafe-kitchen with a continental-focused menu, popular for its pizzas, sandwiches, coffee, and dessert-friendly setup. It feels best suited to people who want a relaxed, elegant place for brunch, lunch, or a longer sit-down meal.",
+    "description": "Sobremesa on Road No. 31, Jubilee Hills is a premium bakehouse-cafe-kitchen with a continental-focused menu, popular for its pizzas, sandwiches, coffee, and dessert-friendly...",
     "tags": [
       "Bakehouse",
       "Continental",
@@ -184,7 +184,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "8-2-585/2/A/1, Road 9, Gaffar Khan Colony, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "11:00 AM to 11:00 PM",
     "signature": "Pastries, cheesecakes, cupcakes & casual cafe food",
-    "description": "Guilt Trip in Banjara Hills is a bakery-forward cafe known for pastries, cheesecakes, cupcakes, and easy continental cafe food. It’s a good fit for dessert runs, casual meetups, and people who want a relaxed place with both sweet and savory options.",
+    "description": "Guilt Trip in Banjara Hills is a bakery-forward cafe known for pastries, cheesecakes, cupcakes, and easy continental cafe food. It’s a good fit for dessert runs, casual...",
     "tags": [
       "Bakery",
       "Desserts",
@@ -264,7 +264,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Plot No. 1357, Road No. 45, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "10:00 AM to 10:00 PM",
     "signature": "Cold coffee, spaghetti, Moroccan chicken & burgers",
-    "description": "Kaficko in Jubilee Hills is a laid-back cafe-restaurant with a mix of coffee, Continental, and Italian dishes. It works well for casual hangouts, quiet conversations, and people who want a comfortable place to sit, snack, and stay awhile.",
+    "description": "Kaficko in Jubilee Hills is a laid-back cafe-restaurant with a mix of coffee, Continental, and Italian dishes. It works well for casual hangouts, quiet conversations, and...",
     "tags": [
       "Cafe",
       "Continental",
@@ -343,7 +343,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "8-2, 269/4A, Road No. 2, Sagar Society, Sri Nagar Colony, Kamalapuri Colony, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "8:00 AM to 11:00 PM",
     "signature": "Experiential coffee, bakes, all-day brunch",
-    "description": "Karafa in Banjara Hills is a clean, minimal coffee destination centered on specialty brews, bakes, and all-day brunch. It feels best suited to people who care about coffee quality and a calm, curated atmosphere more than just a quick cafe stop.",
+    "description": "Karafa in Banjara Hills is a clean, minimal coffee destination centered on specialty brews, bakes, and all-day brunch. It feels best suited to people who care about coffee...",
     "tags": [
       "Specialty Coffee",
       "Brunch",
@@ -424,7 +424,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Plot No. 21, Kokapet, Narsingi, Hyderabad, Telangana 500075",
     "timings": "Open till 11:00 PM",
     "signature": "Specialty coffee, Brownie Blend, creamy spinach spaghetti & nachos",
-    "description": "Roastery Coffee House in Kokapet is a warm, spacious cafe with a relaxed, homely feel and a strong specialty-coffee identity. It’s a great fit for people who want good coffee, a calm atmosphere, and a place that works for both meetups and focused work.",
+    "description": "Roastery Coffee House in Kokapet is a warm, spacious cafe with a relaxed, homely feel and a strong specialty-coffee identity. It’s a great fit for people who want good coffee,...",
     "tags": [
       "Specialty Coffee",
       "Aesthetic",
@@ -522,7 +522,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Terrace, Vimbri Boulevard, Road No. 4, Green Valley, Banjara Hills, Hyderabad, Telangana 500034",
     "timings": "8:00 AM to 11:30 PM",
     "signature": "Latte, cold coffee, rose latte & brunch items",
-    "description": "Habitat Cafe in Banjara Hills is an upscale terrace cafe with a calm, aesthetic atmosphere and a menu centered on coffee, beverages, and easy cafe food. It works well for relaxed dinners, coffee dates, and casual conversations in a more refined setting.",
+    "description": "Habitat Cafe in Banjara Hills is an upscale terrace cafe with a calm, aesthetic atmosphere and a menu centered on coffee, beverages, and easy cafe food. It works well for...",
     "tags": [
       "Aesthetic",
       "Coffee",
@@ -604,7 +604,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Unit 301, Survey 92/1, 92/3 to 92/18, Plot 9, 10, 11, 16, 17, & 18, 3rd Floor, Circle 20, Gachibowli, Hyderabad",
     "timings": "12:00 PM to 11:00 PM",
     "signature": "Hot teas, coffees, and comfort food",
-    "description": "La Vie En Rose Cafe & Bistro in Gachibowli is a pink floral cafe known for its dreamy interiors, photo-friendly corners, and relaxed date-night atmosphere. It’s a strong pick for visitors who care as much about ambience as the food itself.",
+    "description": "La Vie En Rose Cafe & Bistro in Gachibowli is a pink floral cafe known for its dreamy interiors, photo-friendly corners, and relaxed date-night atmosphere. It’s a strong pick...",
     "tags": [
       "Aesthetic",
       "Date Spot",
@@ -695,7 +695,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Plot No. 1196/B, Road Number 59, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "8:00 AM to 11:59 PM",
     "signature": "Pistachio Matilda Cake & soufflé pancakes",
-    "description": "Et-Si Cafe | Bakehouse | Chocolatier on Road No. 59, Jubilee Hills is a premium all-day cafe with a bakery-first identity, known for coffee, croissants, desserts, and viral signature items. It suits dessert lovers, long brunches, and stylish casual hangs, with a strong mix of food appeal and visual charm.",
+    "description": "Et-Si Cafe | Bakehouse | Chocolatier on Road No. 59, Jubilee Hills is a premium all-day cafe with a bakery-first identity, known for coffee, croissants, desserts, and viral...",
     "tags": [
       "Bakery Cafe",
       "Aesthetic",
@@ -772,7 +772,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Plot No. 65, Surya Enclave, beside Cyber Towers flyover, opposite Tata Motors, Madhapur, Hyderabad, Telangana 500081",
     "timings": "11:00 AM to 11:00 PM",
     "signature": "Specialty coffee, matcha & cold coffee",
-    "description": "Switch Coffee in Hitech City is a modern coffee spot near Cyber Towers with a lively, cozy vibe and a clear focus on specialty beverages. It feels built for Hyderabad’s office crowd, casual meetups, and people who want a stylish but practical cafe stop.",
+    "description": "Switch Coffee in Hitech City is a modern coffee spot near Cyber Towers with a lively, cozy vibe and a clear focus on specialty beverages. It feels built for Hyderabad’s office...",
     "tags": [
       "Specialty Coffee",
       "Work Friendly",
@@ -849,7 +849,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "H.No. 8-2-293/A/116, Road No. 10, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "12:30 PM - 11:30 PM",
     "signature": "Ramen, Korean BBQ & Sushi",
-    "description": "Osaka in Jubilee Hills is a stylish pan-Asian restaurant with Japanese-inspired interiors, rooftop dining, and a menu that spans ramen, sushi, bao, and Korean barbecue. It feels more like an elegant Asian dining destination than a standard cafe, making it strong for date nights and premium group dining.",
+    "description": "Osaka in Jubilee Hills is a stylish pan-Asian restaurant with Japanese-inspired interiors, rooftop dining, and a menu that spans ramen, sushi, bao, and Korean barbecue. It...",
     "tags": [
       "Asian Cuisine",
       "Elegant",
@@ -940,7 +940,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "address": "Road No. 44, Sri Peddamma Thalli Temple, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
     "timings": "11:00 AM - 11:00 PM",
     "signature": "Sweet crepe & coffees",
-    "description": "Makobrew Cafe & Restaurant in Jubilee Hills is a pure vegetarian cafe-restaurant known for specialty coffee, gourmet vegetarian dishes, and a cozy all-day hangout vibe. It works well for family dining, casual coffee dates, and relaxed work sessions in a premium neighborhood setting.",
+    "description": "Makobrew Cafe & Restaurant in Jubilee Hills is a pure vegetarian cafe-restaurant known for specialty coffee, gourmet vegetarian dishes, and a cozy all-day hangout vibe. It...",
     "tags": [
       "Specialty Coffee",
       "Pure Veg",
