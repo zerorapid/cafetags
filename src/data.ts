@@ -31,7 +31,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "https://cafeniloufer.com/pages/outlets",
     "timings": "8:00 AM - 11:00 PM",
     "phone": "+91 89777 40649",
-    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
+    "image": "https://b.zmtcdn.com/data/pictures/5/21785395/8e5faabaffad1c960cbe77742aa8dbaa.jpg",
     "mapLink": "https://www.google.com/maps/search/?api=1&query=Cafe%20Niloufer%2C%20Plot%2030%2FC%2C%20Survey%2083%2F1%2C%20Tower%202%2C%20Orbit%20Building%2C%20Raidurgam%2C%20Hyderabad",
     "icon": "local_cafe",
     "takeaway": true,
@@ -43,8 +43,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "isNewLaunch": true,
     "newLaunchCatchyline": "A huge, modern tea café that mixes Hyderabadi nostalgia with contemporary interiors.",
     "moreImages": [
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
-      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80"
+      "https://b.zmtcdn.com/data/pictures/5/21785395/86705d697fde353ce667a654faddad01.jpg",
+      "https://b.zmtcdn.com/data/pictures/5/21785395/b1163e55870b0e5696fc768b42213a5f.jpg"
     ],
     "menuImages": [
       "/images/menu_9gsk6r_ec2c30b1f8009fb54724.jpg",
