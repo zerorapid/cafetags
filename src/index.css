@@ -325,27 +325,36 @@ body {
 /* Additional Mobile UI Overrides */
 @media (max-width: 768px) {
   html {
-    font-size: 1rem; /* Reset font size slightly for mobile readability */
+    font-size: 16px; /* Reset font size slightly for mobile readability */
+  }
+  body {
+    line-height: 1.6;
   }
   .cafe-ux-card {
     padding: 20px; /* Reduce 32px padding on mobile */
   }
   .brand-text h2 {
-    font-size: 1.5rem; /* Reduce title size on mobile */
+    font-size: 1.375rem; /* 22px */
+    line-height: 1.25;
   }
   .quote-snippet {
-    font-size: 1.125rem; /* Reduce quote size on mobile */
+    font-size: 1rem; /* Reduce quote size on mobile */
+    line-height: 1.5;
   }
   .card-main-layout {
-    gap: 20px; /* Reduce internal gap */
+    gap: 16px; /* Reduce internal gap */
   }
   .brand-profile {
     min-width: 100%;
   }
-}
-@media (max-width: 768px) {
   .t-d1 {
-    font-size: 2rem !important;
+    font-size: 2.25rem !important; /* 36px */
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .avatar-frame {
+    width: 60px;
+    height: 60px;
   }
 }
 

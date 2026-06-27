@@ -1141,12 +1141,12 @@
     }
     .hero-section { height: 420px; }
     .hero-content { padding: var(--space-6); }
-    .hero-title { font-size: 1.875rem; margin-bottom: var(--space-2); }
+    .hero-title { font-size: 1.875rem; margin-bottom: var(--space-2); line-height: 1.15; letter-spacing: -0.02em; }
     .hero-description { font-size: 1rem; line-height: 1.6; max-height: 4.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
     .hero-rating { font-size: 1rem; padding: 6px 14px; }
     .hero-meta { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
     
-    .section-title { font-size: 1.25rem; }
+    .section-title { font-size: 1.375rem; line-height: 1.25; }
     .section-title svg { width: 20px; height: 20px; }
 
     .bento-grid { 
@@ -1256,6 +1256,6 @@
 /* Fix Safari URL bar overlap */
 @media (max-width: 768px) {
     .lookbook-container .main-container {
-        padding-bottom: calc(160px + env(safe-area-inset-bottom, 20px)) !important;
+        padding-bottom: calc(120px + env(safe-area-inset-bottom, 20px)) !important;
     }
 }
