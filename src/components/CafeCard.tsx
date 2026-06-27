@@ -38,11 +38,11 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
 
   const renderStatusBadge = (status?: string) => {
     switch (status) {
-      case 'closed': return <span className="px-2 py-1 text-[11px] font-bold uppercase rounded-md bg-stone-200 text-stone-600 tracking-wider">Closed</span>;
-      case 'renovating': return <span className="px-2 py-1 text-[11px] font-bold uppercase rounded-md bg-orange-100 text-orange-700 border border-orange-200 tracking-wider">Renovating</span>;
-      case 'shutdown': return <span className="px-2 py-1 text-[11px] font-bold uppercase rounded-md bg-red-100 text-red-700 border border-red-200 tracking-wider">Shutdown</span>;
+      case 'closed': return <span className="px-2 py-1 text-xs font-semibold tracking-wide uppercase rounded-md bg-stone-200 text-stone-600 tracking-wider">Closed</span>;
+      case 'renovating': return <span className="px-2 py-1 text-xs font-semibold tracking-wide uppercase rounded-md bg-orange-100 text-orange-700 border border-orange-200 tracking-wider">Renovating</span>;
+      case 'shutdown': return <span className="px-2 py-1 text-xs font-semibold tracking-wide uppercase rounded-md bg-red-100 text-red-700 border border-red-200 tracking-wider">Shutdown</span>;
       case 'open':
-      default: return <span className="px-2 py-1 text-[11px] font-bold uppercase rounded-md bg-green-100 text-green-700 border border-green-200 tracking-wider">Open</span>;
+      default: return <span className="px-2 py-1 text-xs font-semibold tracking-wide uppercase rounded-md bg-green-100 text-green-700 border border-green-200 tracking-wider">Open</span>;
     }
   };
 
@@ -65,7 +65,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           
           <div className="absolute top-3 left-3 flex gap-2">
             {cafe.isNewLaunch && (
-              <div className="flex items-center gap-1.5 bg-[#3C2F28] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm border border-white/20 backdrop-blur-sm">
+              <div className="flex items-center gap-1.5 bg-[#3C2F28] text-white px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider shadow-sm border border-white/20 backdrop-blur-sm">
                 <Sparkles size={12} className="flex-shrink-0" />
                 New Launch
               </div>
@@ -90,13 +90,13 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
           </div>
 
           {/* Short description */}
-          <p className="text-xs text-[#6B7280] mb-3 truncate">
+          <p className="text-[13px] text-[#6B7280] font-medium leading-relaxed mb-3 truncate">
             {cafe.vibe ? cafe.vibe.split(' ').slice(0, 5).join(' ') + '...' : cafe.signature}
           </p>
 
           <div className="flex flex-col gap-2 mb-4">
             {/* Location */}
-            <div className="flex items-center gap-1.5 text-[#6B7280] text-sm font-medium">
+            <div className="flex items-center gap-1.5 text-[#6B7280] text-[13px] font-medium tracking-tight">
               <MapPin size={14} className="opacity-80 flex-shrink-0" />
               <span className="truncate">{cafe.area}</span>
             </div>
@@ -104,12 +104,12 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
             {/* Feature Tags */}
             <div className="flex flex-wrap gap-1.5">
               {cafe.tags.slice(0, 3).map((tag) => (
-                <span key={tag} className="inline-flex items-center px-2.5 py-1 bg-[#F4F4F4] text-[#4B5563] text-xs font-normal rounded-md whitespace-nowrap">
+                <span key={tag} className="inline-flex items-center px-2.5 py-1 bg-[#F4F4F4] text-[#4B5563] text-[11px] font-medium rounded-md tracking-wide whitespace-nowrap">
                   {tag}
                 </span>
               ))}
               {cafe.tags.length > 3 && (
-                <span className="inline-flex items-center px-2.5 py-1 bg-[#F4F4F4] text-[#4B5563] text-xs font-normal rounded-md">
+                <span className="inline-flex items-center px-2.5 py-1 bg-[#F4F4F4] text-[#4B5563] text-[11px] font-medium rounded-md tracking-wide">
                   +{cafe.tags.length - 3}
                 </span>
               )}
@@ -143,7 +143,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       
       {/* Main Identity column */}
       <div className="flex-1 min-w-[240px] text-left">
-        <h3 className="font-sans text-3xl md:text-4xl text-[#0f172a] font-bold group-hover:italic group-hover:translate-x-2 smooth-transition flex items-center flex-wrap gap-x-4 gap-y-2" style={{ letterSpacing: '-0.02em' }}>
+        <h3 className="font-sans text-2xl md:text-3xl text-[#0f172a] font-bold group-hover:italic group-hover:translate-x-2 smooth-transition flex items-center flex-wrap gap-x-4 gap-y-2" style={{ letterSpacing: '-0.02em' }}>
           {cafe.name}
           <span className="text-xs tracking-wide font-bold uppercase text-stone-gray bg-transparent border border-tactile-divider px-3 py-1 rounded-full group-hover:bg-[#0f172a] group-hover:text-white group-hover:border-[#0f172a] smooth-transition shadow-xs flex items-center gap-1">
             <MapPin size={14} className="text-[#b45309] group-hover:text-white" />
