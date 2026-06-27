@@ -1223,7 +1223,7 @@
 .tab-btn.active {
     color: var(--text-primary);
     font-weight: 600;
-    border-bottom: 2px solid #8B5CF6; /* Sleek purple underline */
+    border-bottom: 2px solid #5C4033; /* Sleek brown underline */
 }
 
 /* Fix action buttons overflow on tiny screens */
