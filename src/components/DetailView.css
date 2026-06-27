@@ -1167,7 +1167,7 @@
     .metrics-grid { grid-template-columns: repeat(2, 1fr); }
     .verdict-section { padding: var(--space-5); }
     .verdict-title { font-size: 1.25rem; }
-    .sidebar-card { padding: var(--space-5); }
+    .sidebar-card, .info-card { padding: var(--space-5); }
     
     .sidebar { position: static; }
 }

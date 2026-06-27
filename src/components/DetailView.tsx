@@ -287,7 +287,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
         <div className="content-grid">
             
             {/* MAIN CONTENT */}
-            <div className="main-content">
+            <div className={`main-content ${isMobile && activeTab === 'visit' ? 'hidden' : ''}`}>
                 
                 {/* ABOUT */}
                 {showSection('about') && (
