@@ -23,41 +23,41 @@ export interface CafeReview {
 export interface Cafe {
   id: number;
   name: string;
-  area: string;
-  tags: string[];
-  image: string;
-  vibe: string;
-  mapLink: string;
-  icon: string;
+  area?: string;
+  tags?: string[];
+  image?: string;
+  vibe?: string;
+  mapLink?: string;
+  icon?: string;
   logo?: string;
-  signature: string;
-  founded: string;
+  signature?: string;
+  founded?: string;
   curatorNote?: string;
   
   // New detailed lookbook characteristics
   neighborhood?: string;
-  address: string;
-  phone: string;
-  email: string;
-  website: string;
+  address?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
   socialLink?: string;
   facebookUrl?: string;
   twitterUrl?: string;
-  timings: string;
-  aestheticType: string;
-  crowd: string;
-  discounts: string;
-  facilities: string[];
-  dineIn: boolean;
-  takeaway: boolean;
-  onlineOrder: boolean;
-  selfDelivery: boolean;
+  timings?: string;
+  aestheticType?: string;
+  crowd?: string;
+  discounts?: string;
+  facilities?: string[];
+  dineIn?: boolean;
+  takeaway?: boolean;
+  onlineOrder?: boolean;
+  selfDelivery?: boolean;
   videoUrl?: string;
-  celebrities: string[];
-  bookingUrl: string;
+  celebrities?: string[];
+  bookingUrl?: string;
   directionsTip?: string;
-  featuredMenu: CafeMenuItem[];
-  userReviews: CafeReview[];
+  featuredMenu?: CafeMenuItem[];
+  userReviews?: CafeReview[];
   moreImages?: string[];
   menuImages?: string[];
   vibeScores?: { label: string; score: number; icon?: string }[];
@@ -67,6 +67,14 @@ export interface Cafe {
   isNewLaunch?: boolean;
   newLaunchCatchyline?: string;
   status?: 'open' | 'closed' | 'renovating' | 'shutdown';
+  description?: string;
+  rating?: number;
+  priceForTwo?: string;
+  signatureItem?: string;
+  bestTimeToVisit?: string;
+  instagram?: string;
+  socialMedia?: { platform: string; url: string; }[];
+  aesthetic?: string;
 }
 
 export interface PresetCover {

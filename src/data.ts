@@ -534,8 +534,7 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Loaded Nachos",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/roastery_1.jpg"
+        "description": "Classic premium selection"
       }
     ],
     "email": "",
@@ -1107,20 +1106,17 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Cupcake",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg"
+        "description": "Signature featured item"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg"
+        "description": "Classic premium selection"
       }
     ],
     "tags": [
@@ -1436,14 +1432,12 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Flat White",
         "price": "₹220",
-        "description": "Velvety smooth flat white",
-        "image": "/images/dailyrituals_2.webp"
+        "description": "Velvety smooth flat white"
       },
       {
         "name": "Avocado Toast",
         "price": "₹320",
-        "description": "Fresh avocado on artisan sourdough",
-        "image": "/images/dailyrituals_3.webp"
+        "description": "Fresh avocado on artisan sourdough"
       }
     ],
     "tags": [
@@ -1623,8 +1617,7 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
@@ -1722,14 +1715,12 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Mac & Cheese",
         "price": "₹320",
-        "description": "Creamy classic mac and cheese",
-        "image": "/images/pscheese_2.webp"
+        "description": "Creamy classic mac and cheese"
       },
       {
         "name": "Cheese Fondue",
         "price": "₹380",
-        "description": "Warm melted cheese fondue",
-        "image": "/images/pscheese_3.webp"
+        "description": "Warm melted cheese fondue"
       }
     ],
     "onlineOrder": true,
@@ -1840,14 +1831,12 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Nemo Burger",
         "price": "₹320",
-        "description": "Signature gourmet burger",
-        "image": "/images/urbannemo_2.webp"
+        "description": "Signature gourmet burger"
       },
       {
         "name": "Garden Bowl",
         "price": "₹280",
-        "description": "Fresh garden salad bowl",
-        "image": "/images/urbannemo_3.webp"
+        "description": "Fresh garden salad bowl"
       }
     ],
     "moreImages": [
@@ -1928,14 +1917,12 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Mocktail",
         "price": "₹320",
-        "description": "House special mocktail",
-        "image": "/images/glasshouse_2.webp"
+        "description": "House special mocktail"
       },
       {
         "name": "Glass House Platter",
         "price": "₹580",
-        "description": "Premium sharing platter",
-        "image": "/images/glasshouse_3.webp"
+        "description": "Premium sharing platter"
       }
     ],
     "crowd": "High Society, Celebrities",
@@ -2003,14 +1990,12 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Grilled Continental Chicken",
         "price": "₹420",
-        "description": "Delicious signature creation",
-        "image": "/images/ukusa_1.png"
+        "description": "Delicious signature creation"
       },
       {
         "name": "Penne Alfredo",
         "price": "₹380",
-        "description": "Classic premium selection",
-        "image": "/images/ukusa_1.png"
+        "description": "Classic premium selection"
       }
     ],
     "crowd": "Couples, Influencers",
@@ -2089,7 +2074,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "/images/olivebistro_1.webp",
     "icon": "wb_cloudy",
     "takeaway": false,
-    "website": "Panoramic Lake View, Open Air Bar, Valet",
+    "website": "",
     "featuredMenu": [
       {
         "name": "Olive Wood-fired Pizza",
@@ -2398,20 +2383,17 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Cupcake",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/churrolto_1.webp"
+        "description": "Signature featured item"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/churrolto_1.webp"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/churrolto_1.webp"
+        "description": "Classic premium selection"
       }
     ],
     "signature": "Classic Churros with Belgian Chocolate",
@@ -2512,20 +2494,17 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Cupcake",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/lasthouse_1.webp"
+        "description": "Signature featured item"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/lasthouse_1.webp"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/lasthouse_1.webp"
+        "description": "Classic premium selection"
       }
     ],
     "website": "",
@@ -2600,20 +2579,17 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Cupcake",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/heartcup_1.webp"
+        "description": "Signature featured item"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/heartcup_1.webp"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/heartcup_1.webp"
+        "description": "Classic premium selection"
       }
     ],
     "icon": "music_note",
@@ -2723,20 +2699,17 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Cupcake",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/holeinwall_1.jpg"
+        "description": "Signature featured item"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/holeinwall_1.jpg"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/holeinwall_1.jpg"
+        "description": "Classic premium selection"
       }
     ],
     "tags": [
@@ -2820,20 +2793,17 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Signature Cupcake",
         "price": "₹350",
-        "description": "Signature featured item",
-        "image": "/images/fatpigeon_1.jpeg"
+        "description": "Signature featured item"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/fatpigeon_1.jpeg"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
-        "description": "Classic premium selection",
-        "image": "/images/fatpigeon_1.jpeg"
+        "description": "Classic premium selection"
       }
     ],
     "website": "",
@@ -2893,7 +2863,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "/images/eclat_1.jpg",
     "takeaway": true,
     "icon": "cake",
-    "website": "AC, Indoor Seating, Power Outlets",
+    "website": "",
     "area": "Gachibowli",
     "userReviews": [
       {
@@ -3017,8 +2987,7 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
@@ -3203,8 +3172,7 @@ export const INITIAL_CAFES: Cafe[] = [
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
-        "description": "Delicious signature creation",
-        "image": "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+        "description": "Delicious signature creation"
       },
       {
         "name": "New York Cheesecake",
@@ -3318,8 +3286,7 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Wood-fired Artisanal Pizza",
         "price": "₹700",
         "category": "Main Course",
-        "isSpecial": false,
-        "image": "/images/roastccx_1.png"
+        "isSpecial": false
       }
     ],
     "moreImages": [
@@ -3348,15 +3315,13 @@ export const INITIAL_CAFES: Cafe[] = [
   }
 ];
 
+
 const TAG_ICONS: Record<string, string> = {
   'Aesthetic': 'palette',
   'Specialty Coffee': 'local_cafe',
   'Pet Friendly': 'pets',
   'Quiet': 'volume_off',
   'Outdoor Seating': 'deck',
-  'Matcha': 'eco',
-  'Bakery': 'bakery_dining',
-  'Books': 'menu_book',
   'Work Friendly': 'laptop_mac',
   'Vegan Options': 'grass'
 };

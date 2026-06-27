@@ -1,5 +1,6 @@
 import fs from 'fs';
-import { INITIAL_CAFES, Cafe } from '../src/data';
+import { INITIAL_CAFES } from '../src/data';
+import { Cafe } from '../src/types';
 
 const newCafe: Cafe = {
   id: Date.now(),
