@@ -139,7 +139,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "https://b.zmtcdn.com/data/pictures/2/20122962/2025ff87b99a3bcb5008ed524de0ecf2.jpg",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/2/20122962/8f51e2bb65b74cb4c87d2ca1b623cfdc.jpg",
+      "https://b.zmtcdn.com/data/pictures/2/20122962/cfb6aab7816a45083ad9b4e3ff793aa8.jpg",
       "https://b.zmtcdn.com/data/pictures/2/20122962/9629e5846aa65ba00a93404f2277d55f.jpg"
     ],
     "menuImages": [
@@ -154,19 +154,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Almond Croissant",
         "price": "₹350",
         "description": "Freshly baked signature pastry",
-        "image": "https://b.zmtcdn.com/data/pictures/2/20122962/2025ff87b99a3bcb5008ed524de0ecf2.jpg"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/813/62a7a5664f701ddcc61543a03b55a813_1774885657.jpg"
       },
       {
         "name": "5 Cheese Pizza",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/787/9a6f6e5f0109c1e50999f5e8818ca787_1774885658.jpg"
       },
       {
         "name": "Irish Cold Coffee",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/813/62a7a5664f701ddcc61543a03b55a813_1774885657.jpg"
       }
     ],
     "email": "",
@@ -232,7 +232,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "https://b.zmtcdn.com/data/pictures/chains/4/18796034/98e21ae484a48c246e2373fbd1a7261a.jpeg",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/4/18796034/03234bf5f2bae3c484fd459fe6e3a8e6.jpeg",
+      "https://b.zmtcdn.com/data/pictures/5/20022085/3fab7654bb9541b838a628456f8e868f.jpg",
       "https://b.zmtcdn.com/data/pictures/5/20022085/31dbf592b0b9fcf45864a7f620a8e6b8_featured_v3.jpg"
     ],
     "menuImages": [
@@ -252,13 +252,13 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/18796034/03234bf5f2bae3c484fd459fe6e3a8e6.jpeg"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/18796034/af740d856dfea84ffeb4dfd62dff32a5.jpeg"
       }
     ],
     "email": "",
@@ -324,8 +324,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "https://b.zmtcdn.com/data/pictures/2/20496432/e977eef0dfe6541f9f181df3bd1dec3d.jpeg",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/2/20496432/c3d7a87a49cd48e5b0c0de3ce4f3e99f.jpg",
-      "https://b.zmtcdn.com/data/pictures/2/20496432/2a6b302fcf1695f1e84c02a6ea361f70_featured_v3.jpg"
+      "https://b.zmtcdn.com/data/pictures/2/20496432/0e4948d80784d3a51081ec27e634c6ff.jpeg",
+      "https://b.zmtcdn.com/data/pictures/chains/2/20496432/01f2ab88cd95ac1b97ea7eb4889229de.jpg"
     ],
     "menuImages": [
       "/images/menu_x85r8q_0fd571edd3a67260cbae.jpg",
@@ -339,19 +339,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Cold Coffee",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/2/20496432/e977eef0dfe6541f9f181df3bd1dec3d.jpeg"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/145/06cc99caba2f10ec322b670f9e593145_1773523763.jpg"
       },
       {
         "name": "Moroccan Chicken",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1513283250266-932baf9b8eec?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/3b0/a10f40cbe30b89caf64217fa3ab033b0_1774617012.jpg"
       },
       {
         "name": "Classic Spaghetti",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/8d4/8c8cb5c9647f54d122cd51a41a33b8d4_1774617012.jpg"
       }
     ],
     "email": "",
@@ -414,11 +414,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13464840837705918167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg",
+    "image": "https://b.zmtcdn.com/data/pictures/7/21181977/414fa26f866262db1b3aca85d672d46c_featured_v3.jpg",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/11b2d6727990e9260e6c4f714fd18871.jpg",
-      "https://b.zmtcdn.com/data/pictures/7/21181977/c9f8fbfffa37b4cb6dd19ad546360bd4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg",
+      "https://b.zmtcdn.com/data/pictures/chains/7/21181977/11b2d6727990e9260e6c4f714fd18871.jpg"
     ],
     "menuImages": [
       "/images/menu_j5w05v_4d6148d83bb632ba28b3.png",
@@ -429,19 +429,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Curated Pour Over",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/7/21181977/cc7a2fad41f79171d8f6287c68991329.jpeg"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/51a/5d63b5dbd5ad6767a3a0fe939b25d51a_1776365032.jpg"
       },
       {
         "name": "All-Day Brunch",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/3e7/3bca7bb5ad097591bb24e0e8244e53e7_1775756124.jpg"
       },
       {
         "name": "Signature Bake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/85a/a607170bab930158024c1047af6fd85a_1775756128.jpg"
       }
     ],
     "email": "",
@@ -687,11 +687,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/7/21164737/6ef78c5fa8ef59a272b18a10727fd85d_featured_v3.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/7/21164737/fa25a40fa8f28d39df52c7cc0328f952.jpeg",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/fa25a40fa8f28d39df52c7cc0328f952.jpeg",
-      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/e14db758e740e0562c5d59e381422b44.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/7/21164737/e14db758e740e0562c5d59e381422b44.jpg",
+      "https://b.zmtcdn.com/data/pictures/7/21164737/6ef78c5fa8ef59a272b18a10727fd85d_featured_v3.jpg"
     ],
     "menuImages": [
       "/images/menu_9g1u5j_a82cbfc9cb8a8a8a590d.jpg",
@@ -715,19 +715,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Tea",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/7/21164737/6ef78c5fa8ef59a272b18a10727fd85d_featured_v3.jpg"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/eba/41478fc300dcd038bc5b63fbf0b69eba_1774034327.jpeg"
       },
       {
         "name": "Pink Crepe",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/127/88b57034c4829e662a2f6b477f75f127_1754681700.jpg"
       },
       {
         "name": "Floral Pastry",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/372/1700ad8129e5242f6b9a9ecd6c774372_1754681695.jpg"
       }
     ],
     "email": "",
@@ -865,11 +865,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5922054460361640326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/2/22603412/8da13954a5deb4418bc6bc7540768f94.png",
+    "image": "https://b.zmtcdn.com/data/pictures/2/22603412/d6920e258e5f68064fcd8b806163bfe4.png",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/chains/2/22603412/ab465b5e207795ae50add550b8c737a8.png",
-      "https://b.zmtcdn.com/data/pictures/2/22603412/9c4f56002492bc1a7ddcb2db719450e7.png"
+      "https://b.zmtcdn.com/data/pictures/2/22603412/9c4f56002492bc1a7ddcb2db719450e7.png",
+      "https://b.zmtcdn.com/data/pictures/chains/2/22603412/ab465b5e207795ae50add550b8c737a8.png"
     ],
     "menuImages": [
       "/images/menu_7h0om4_c93c15c3b7e99d349fe8.jpg",
@@ -881,19 +881,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Orange Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/2/22603412/8da13954a5deb4418bc6bc7540768f94.png"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/812/9ab5da10f892aa3c8a4781f8cbe1e812_1777832197.jpg"
       },
       {
         "name": "Strawberry Matcha",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/6c4/f913a411b2d07ebd0ac4b9c12df0c6c4_1781062753.jpg"
       },
       {
         "name": "Chimichurri Bruschetta",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "https://images.unsplash.com/photo-1513283250266-932baf9b8eec?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/reviews_photos/812/9ab5da10f892aa3c8a4781f8cbe1e812_1777832197.jpg"
       }
     ],
     "email": "",
@@ -950,11 +950,11 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=15635965076962151747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/6c991c0a66719eeb772a2dc22510e149.jpeg",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "https://b.zmtcdn.com/data/pictures/4/21288214/0a8840b867b1e464ce724341b6cbf63d.jpeg",
-      "https://b.zmtcdn.com/data/pictures/4/21288214/3b1740ce850769a30ecbf3d7e5f17c7c.jpeg"
+      "https://b.zmtcdn.com/data/pictures/chains/4/21288214/6c991c0a66719eeb772a2dc22510e149.jpeg",
+      "https://b.zmtcdn.com/data/pictures/4/21288214/0a8840b867b1e464ce724341b6cbf63d.jpeg"
     ],
     "menuImages": [
       "/images/menu_kesmij_7e6e276b2e0b4faa5a7d.jpg",
@@ -984,19 +984,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Sushi Platter",
         "price": "₹850",
         "description": "Assorted premium sushi platter",
-        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/6c991c0a66719eeb772a2dc22510e149.jpeg"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg"
       },
       {
         "name": "Korean BBQ",
         "price": "₹1200",
         "description": "Classic Korean BBQ with sides",
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/6c991c0a66719eeb772a2dc22510e149.jpeg"
       },
       {
         "name": "Spicy Ramen",
         "price": "₹650",
         "description": "Authentic ramen bowl with rich broth",
-        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
+        "image": "https://b.zmtcdn.com/data/pictures/chains/4/21288214/cb29bec10ea05476658e484298908509.jpg"
       }
     ],
     "email": "",
@@ -1052,10 +1052,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "/images/makobrew_1.webp",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/makobrew_1.webp",
-      "/images/makobrew_2.webp",
-      "/images/makobrew_3.webp",
-      "/images/makobrew_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/menu_z2l5dz_3ccf6ac134ffea4f0335.jpg",
@@ -1136,7 +1134,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "",
     "directionsTip": "",
     "mapLink": "https://maps.google.com/?cid=266785738690743033&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "https://i.pinimg.com/736x/0a/70/5b/0a705bce4dd3c31db307ae1645a5f877.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/1/20722781/d5d8e730e9b85492be1b3d52ce7954ed.png",
     "timings": "",
     "bannerCatchyLine": "",
     "website": "https://bluetokaicoffee.com/",
@@ -1160,11 +1158,8 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "https://i.pinimg.com/736x/bb/88/a3/bb88a3c291f09ff484f74b9a8ea0f2ee.jpg",
-      "https://i.pinimg.com/736x/cf/a8/a4/cfa8a44ad4a2e5606d046fb1c0f4a5cd.jpg",
-      "https://i.pinimg.com/736x/90/06/51/9006518128d99bef01319e5b5368f735.jpg",
-      "https://i.pinimg.com/736x/4e/f2/7b/4ef27b7396709b81ca44d261525c49ff.jpg",
-      "https://i.pinimg.com/736x/7e/36/92/7e36927fb60db53403516d8582b98ef5.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "facebookUrl": "",
     "logo": "https://i.pinimg.com/736x/01/e9/b3/01e9b350f41dba3f80ff89e6b5e6d43c.jpg",
@@ -1282,10 +1277,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "#ERROR!",
     "onlineOrder": false,
     "moreImages": [
-      "/images/trueblack_1.webp",
-      "/images/trueblack_2.webp",
-      "/images/trueblack_3.webp",
-      "/images/trueblack_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/trueblack_menu1.jpg",
@@ -1376,10 +1369,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "#ERROR!",
     "onlineOrder": true,
     "moreImages": [
-      "/images/echoes_1.webp",
-      "/images/echoes_2.webp",
-      "/images/echoes_3.webp",
-      "/images/echoes_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/echoes_menu1.png",
@@ -1462,10 +1453,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "icon": "wb_sunny",
     "moreImages": [
-      "/images/dailyrituals_1.webp",
-      "/images/dailyrituals_2.webp",
-      "/images/dailyrituals_3.webp",
-      "/images/dailyrituals_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/dailyrituals_menu1.png",
@@ -1573,10 +1562,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [],
     "discounts": "",
     "moreImages": [
-      "/images/lush_1.webp",
-      "/images/lush_2.webp",
-      "/images/lush_3.webp",
-      "/images/lush_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/lush_menu1.jpg",
@@ -1665,11 +1652,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "founded": "2023",
     "moreImages": [
-      "/images/zmt_kpy094_35c912438a451a4ed875cc22470199.jpg",
-      "/images/zmt_ns8y41_1a14df324279a971bc7bb891b19481.png",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg",
-      "/images/zmt_i9ag7y_cd381a727e56394dc4f18042fc2f0e.jpg",
-      "/images/zmt_34vzkf_67b427acd08af1de7c8d1667167324.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": []
   },
@@ -1749,10 +1733,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "celebrities": [],
     "discounts": "",
     "moreImages": [
-      "/images/pscheese_1.webp",
-      "/images/pscheese_2.webp",
-      "/images/pscheese_3.webp",
-      "/images/pscheese_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/pscheese_menu1.jpg",
@@ -1848,10 +1830,8 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "/images/urbannemo_1.webp",
-      "/images/urbannemo_2.webp",
-      "/images/urbannemo_3.webp",
-      "/images/urbannemo_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/urbannemo_menu1.jpeg",
@@ -1960,10 +1940,8 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "/images/glasshouse_1.webp",
-      "/images/glasshouse_2.webp",
-      "/images/glasshouse_3.webp",
-      "/images/glasshouse_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/glasshouse_menu1.jpg",
@@ -1978,7 +1956,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "local_bar",
-    "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/1/20722781/1b44c96b0e3ade0ca2b042d29e5b1c06.jpeg",
     "mapLink": "https://maps.google.com/?cid=7244970011100712371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:30 PM",
     "tags": [
@@ -2051,7 +2029,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "name": "Ukusa",
     "moreImages": [
       "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
-      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/1b44c96b0e3ade0ca2b042d29e5b1c06.jpeg"
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/menu_ornxyj_f09b92f569e3de53ab8e.jpg",
@@ -2154,10 +2132,8 @@ export const INITIAL_CAFES: Cafe[] = [
     ],
     "id": 1781212697124,
     "moreImages": [
-      "/images/olivebistro_1.webp",
-      "/images/olivebistro_2.webp",
-      "/images/olivebistro_3.webp",
-      "/images/olivebistro_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/olivebistro_menu1.jpg",
@@ -2230,7 +2206,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "icon": "favorite",
     "website": "",
     "timings": "10:00 AM - 11:00 PM",
-    "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80",
+    "image": "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
     "mapLink": "https://maps.google.com/?cid=16717154306863291720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "logo": "/images/generic_logo.png",
     "userReviews": [
@@ -2259,10 +2235,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Creatives, Writers",
     "aestheticType": "Pastel Bohemian",
     "moreImages": [
-      "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=800&q=80",
-      "/images/kisscoff_2.jpg",
-      "/images/kisscoff_3.jpg",
-      "/images/kisscoff_4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": []
   },
@@ -2345,10 +2319,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "website": "https://manamchocolate.com",
     "moreImages": [
-      "/images/manam_1.jpg",
-      "/images/manam_2.jpg",
-      "/images/manam_3.jpg",
-      "/images/manam_4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": []
   },
@@ -2429,10 +2401,8 @@ export const INITIAL_CAFES: Cafe[] = [
       "NTR Jr"
     ],
     "moreImages": [
-      "/images/churrolto_1.webp",
-      "/images/churrolto_2.webp",
-      "/images/churrolto_3.webp",
-      "/images/churrolto_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/churrolto_menu1.jpg",
@@ -2537,10 +2507,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "bookingUrl": "",
     "image": "/images/lasthouse_1.webp",
     "moreImages": [
-      "/images/lasthouse_1.webp",
-      "/images/lasthouse_2.webp",
-      "/images/lasthouse_3.webp",
-      "/images/lasthouse_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/lasthouse_menu1.jpg",
@@ -2624,10 +2592,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "selfDelivery": false,
     "image": "/images/heartcup_1.webp",
     "moreImages": [
-      "/images/heartcup_1.webp",
-      "/images/heartcup_2.webp",
-      "/images/heartcup_3.webp",
-      "/images/heartcup_4.webp"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/heartcup_menu1.jpg",
@@ -2726,10 +2692,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "email": "info@theholeinthewall.com",
     "signature": "The All-English Breakfast",
     "moreImages": [
-      "/images/holeinwall_1.jpg",
-      "/images/holeinwall_2.jpg",
-      "/images/holeinwall_3.jpg",
-      "/images/holeinwall_4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/holeinwall_menu1.png",
@@ -2819,10 +2783,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "image": "/images/fatpigeon_1.jpeg",
     "timings": "12:00 PM - 12:00 AM",
     "moreImages": [
-      "/images/fatpigeon_1.jpeg",
-      "/images/fatpigeon_2.jpg",
-      "/images/fatpigeon_3.jpg",
-      "/images/fatpigeon_4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/fatpigeon_menu1.jpeg",
@@ -2914,10 +2876,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "phone": "Expats, Corporate Executives",
     "onlineOrder": true,
     "moreImages": [
-      "/images/eclat_1.jpg",
-      "/images/eclat_2.jpg",
-      "/images/eclat_3.jpg",
-      "/images/eclat_4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/1/20722781/7e9703083b822d66b9f8309510708c62.png",
+      "https://b.zmtcdn.com/data/pictures/1/20722781/79b09533baca6cdb2c524d7d9e98d3a2.jpg"
     ],
     "menuImages": [
       "/images/eclat_menu1.jpg",
@@ -3224,7 +3184,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Bakery",
       "Roastery Tour"
     ],
-    "image": "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg",
+    "image": "https://b.zmtcdn.com/data/pictures/9/21365469/35c912438a451a4ed875cc22470199dc.jpg",
     "logo": "/images/generic_logo.png",
     "icon": "local_cafe",
     "founded": "2020",
@@ -3296,10 +3256,8 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
-      "/images/roastccx_2.jpg",
-      "/images/roastccx_3.jpg",
-      "/images/roastccx_4.jpg"
+      "https://b.zmtcdn.com/data/pictures/chains/9/21365469/0435a4e9762114b39061b77cffb50eb1.jpg",
+      "https://b.zmtcdn.com/data/pictures/9/21365469/cd381a727e56394dc4f18042fc2f0ef8.jpg"
     ],
     "menuImages": [
       "/images/roastccx_menu1.png",
