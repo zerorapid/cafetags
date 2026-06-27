@@ -1223,3 +1223,35 @@
     background: var(--text-primary);
     color: var(--bg-white);
 }
+
+/* Fix action buttons overflow on tiny screens */
+@media (max-width: 480px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Fix mobile tabs spacing and typography */
+@media (max-width: 768px) {
+    .mobile-tabs {
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+    }
+    .tab-btn {
+        font-size: 0.85rem !important;
+        padding: 6px 14px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-btn {
+        flex-shrink: 0 !important;
+    }
+}
+
+/* Fix Safari URL bar overlap */
+@media (max-width: 768px) {
+    .lookbook-container .main-container {
+        padding-bottom: calc(160px + env(safe-area-inset-bottom, 20px)) !important;
+    }
+}

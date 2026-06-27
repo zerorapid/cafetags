@@ -169,7 +169,7 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
 
   // Calculate random/mock rating stats if reviews exist, else default
   const reviewCount = cafe.userReviews?.length || 0;
-  const avgRating = reviewCount > 0 ? (cafe.userReviews!.reduce((acc, r) => acc + r.rating, 0) / reviewCount).toFixed(1) : '4.8';
+  const avgRating = reviewCount > 0 ? (cafe.userReviews!.reduce((acc, r) => acc + r.rating, 0) / reviewCount).toFixed(1) : (cafe.rating || '4.8');
 
   return (
     <div className="lookbook-container">
@@ -509,15 +509,25 @@ export function DetailView({ cafe, onBack }: DetailViewProps) {
                     <div className="social-section">
                         <div className="social-title">Social Links</div>
                         <div className="social-icons">
-                            <a href={cafe.socialLink || '#'} target="_blank" rel="noreferrer" style={!cafe.socialLink ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
-                                <NucleoIcon name="instagram" />
-                            </a>
-                            <a href={cafe.facebookUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.facebookUrl ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
-                                <NucleoIcon name="facebook" />
-                            </a>
-                            <a href={cafe.twitterUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.twitterUrl ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
-                                <NucleoIcon name="twitter" />
-                            </a>
+                            {(cafe.socialMedia && cafe.socialMedia.length > 0) ? (
+                                cafe.socialMedia.map((social, idx) => (
+                                    <a key={idx} href={social.url || '#'} target="_blank" rel="noreferrer" title={social.platform}>
+                                        <NucleoIcon name={social.platform.toLowerCase()} />
+                                    </a>
+                                ))
+                            ) : (
+                                <>
+                                    <a href={cafe.socialLink || cafe.instagram || '#'} target="_blank" rel="noreferrer" style={!(cafe.socialLink || cafe.instagram) ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
+                                        <NucleoIcon name="instagram" />
+                                    </a>
+                                    <a href={cafe.facebookUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.facebookUrl ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
+                                        <NucleoIcon name="facebook" />
+                                    </a>
+                                    <a href={cafe.twitterUrl || '#'} target="_blank" rel="noreferrer" style={!cafe.twitterUrl ? { opacity: 0.3, pointerEvents: 'none' } : {}}>
+                                        <NucleoIcon name="twitter" />
+                                    </a>
+                                </>
+                            )}
                         </div>
                     </div>
 

@@ -92,7 +92,7 @@ export default function App() {
     websiteDescription: "Candidly curated architecture & study benchmarks for Hyderabad's aesthetic coffee houses, slow dripping filter bars, and vintage work niches.",
     favicon: "/favicon.svg",
     socialImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop",
-    googleAnalyticsId: "",
+    googleAnalyticsId: "G-H9ZMD6708T",
     googleSearchConsoleToken: ""
   });
 
@@ -548,7 +548,7 @@ export default function App() {
                 />
 
                 {/* PRIMARY ARCHIVE LISTING VIEWPORT */}
-                <main id="curated_cafe_viewport" className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+                <main id="curated_cafe_viewport" className="max-w-7xl mx-auto px-4 md:px-12 pb-24">
                   {filteredCafes.length === 0 ? (
                     <div id="empty_search_cabinet" className="text-center py-20 px-6 border border-dashed border-tactile-divider rounded-xl max-w-xl mx-auto shadow-xs">
                       <MaterialIcon name="coffee_maker" className="text-5xl text-stone-gray mb-4" />

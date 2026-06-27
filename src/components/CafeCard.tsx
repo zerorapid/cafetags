@@ -51,7 +51,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
       <article 
         id={`grid_item_${cafe.id}`}
         onClick={handleCardClick}
-        className="w-full bg-white rounded-[20px] overflow-hidden border border-[#e2e8f0] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.05),0_8px_10px_-6px_rgba(0,0,0,0.05)] font-sans cursor-pointer transition-transform hover:-translate-y-1"
+        className="w-full bg-white rounded-[20px] overflow-hidden border border-[#e2e8f0] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.05),0_8px_10px_-6px_rgba(0,0,0,0.05)] font-sans cursor-pointer transition-transform md:hover:-translate-y-1"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
         {/* Image */}
@@ -85,7 +85,7 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
             </h2>
             <div className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm font-semibold bg-[#F6EFE6] text-[#1C1C1C] whitespace-nowrap">
               <Star size={14} className="text-[#b45309]" fill="currentColor" stroke="none" />
-              4.8
+              {cafe.rating || '4.8'}
             </div>
           </div>
 
@@ -133,10 +133,10 @@ export function CafeCard({ cafe, index, layout, onSelect }: CafeCardProps) {
     <article 
       id={`list_item_${cafe.id}`}
       onClick={handleCardClick}
-      className="group cursor-pointer py-10 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 smooth-transition hover:bg-[#FAF7F2]/50 hover:px-4"
+      className="group cursor-pointer py-10 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 smooth-transition hover:bg-[#FAF7F2]/50 md:hover:px-4"
     >
       {/* Year & Status */}
-      <div className="w-20 text-sm tracking-widest text-stone-gray flex-shrink-0 font-bold text-left space-y-2">
+      <div className="w-auto md:w-24 text-sm tracking-widest text-stone-gray flex-shrink-0 font-bold text-left space-y-2 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-0">
         <div className="text-xs">OPENED: {cafe.founded}</div>
         <div>{renderStatusBadge(cafe.status)}</div>
       </div>

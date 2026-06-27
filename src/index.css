@@ -324,3 +324,42 @@ body {
 .editor-content blockquote { border-left: 4px solid var(--color-stone-200); padding-left: 1em; margin-bottom: 1.5em; font-style: italic; color: var(--color-stone-500); }
 .editor-content img { max-width: 100%; border-radius: 8px; margin-bottom: 1.5em; }
 .editor-content a { color: var(--color-amber-600); text-decoration: underline; }
+
+/* Additional Mobile UI Overrides */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px; /* Reset font size slightly for mobile readability */
+  }
+  .cafe-ux-card {
+    padding: 20px; /* Reduce 32px padding on mobile */
+  }
+  .brand-text h2 {
+    font-size: 24px; /* Reduce title size on mobile */
+  }
+  .quote-snippet {
+    font-size: 18px; /* Reduce quote size on mobile */
+  }
+  .card-main-layout {
+    gap: 20px; /* Reduce internal gap */
+  }
+  .brand-profile {
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .t-d1 {
+    font-size: 32px !important;
+  }
+}
+
+/* Fix for Search Bar Input Overflow on Mobile */
+.search-bar input {
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 12px 16px;
+  }
+}

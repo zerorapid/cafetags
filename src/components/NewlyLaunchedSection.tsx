@@ -26,7 +26,7 @@ export function NewlyLaunchedSection({ cafes, onSelectCafe }: NewlyLaunchedSecti
   return (
     <section 
       id="newly_launched_strip" 
-      className="max-w-7xl mx-auto px-6 md:px-12 pb-12 select-none"
+      className="max-w-7xl mx-auto px-4 md:px-12 pb-12 select-none"
     >
       <div 
         onClick={() => onSelectCafe(listToUse[index])}
