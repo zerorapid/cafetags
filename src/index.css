@@ -10,7 +10,7 @@
   --color-tactile-divider: #e5e5e5;
   --color-stone-gray: #1e3932;
   --font-serif: "Instrument Serif", "Georgia", "Times New Roman", serif;
-  --font-sans: "Google Sans Text", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
   --font-dm-sans: "DM Sans", sans-serif;
 
   /* Starbucks Theming Overrides */
@@ -288,7 +288,7 @@ body {
 
 .search-hero { background: var(--ct-surface); border-radius: var(--r-xl); padding: 28px; transition: all 0.3s ease; }
 .search-bar { display: flex; align-items: center; background: var(--ct-canvas); border-radius: var(--r-pill); padding: 16px 24px; box-shadow: 0 4px 16px rgba(28,20,18,0.10); gap: 12px; }
-.search-bar input { font-family: var(--f-body); font-size: 15px; color: var(--ct-ink); border: none; outline: none; flex: 1; background: transparent; }
+.search-bar input { font-family: var(--f-body); font-size: 16px; color: var(--ct-ink); border: none; outline: none; flex: 1; background: transparent; }
 .search-bar input::placeholder { color: var(--ct-placeholder); }
 .search-btn { font-family: var(--f-body); font-size: 14px; font-weight: 500; color: white; background: var(--ct-voltage); border: none; border-radius: var(--r-pill); padding: 11px 22px; cursor: pointer; white-space: nowrap; transition: opacity 0.15s; }
 .search-btn:hover { opacity: 0.88; }
@@ -328,7 +328,7 @@ body {
 /* Additional Mobile UI Overrides */
 @media (max-width: 768px) {
   html {
-    font-size: 15px; /* Reset font size slightly for mobile readability */
+    font-size: 16px; /* Reset font size slightly for mobile readability */
   }
   .cafe-ux-card {
     padding: 20px; /* Reduce 32px padding on mobile */
