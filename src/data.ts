@@ -136,10 +136,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=9055272694452188651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/sobremesa_main.png",
+    "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/sobremesa_main.png"
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_gm1dwx_1c2ddfaede7416627652.jpg",
@@ -153,19 +153,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Almond Croissant",
         "price": "₹350",
         "description": "Freshly baked signature pastry",
-        "image": "/images/sobremesa_food.png"
+        "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80"
       },
       {
         "name": "5 Cheese Pizza",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/sobremesa_food.png"
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
       },
       {
         "name": "Irish Cold Coffee",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/sobremesa_food.png"
+        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
       }
     ],
     "email": "",
@@ -228,10 +228,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.app.goo.gl/BSLPVTiE85YqEFr56",
-    "image": "/images/guilttrip_main.png",
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/guilttrip_main.png"
+      "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_bm9bwf_0b38839417ae6a9c1098.jpg",
@@ -244,19 +244,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Cupcake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/guilttrip_food.png"
+        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
       },
       {
         "name": "Chocolate Pastry",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/guilttrip_food.png"
+        "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
       },
       {
         "name": "New York Cheesecake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/guilttrip_food.png"
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
       }
     ],
     "email": "",
@@ -319,10 +319,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=14932745319906553569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/kaficko_main.png",
+    "image": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/kaficko_main.png"
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_x85r8q_0fd571edd3a67260cbae.jpg",
@@ -336,19 +336,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Cold Coffee",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/kaficko_food.png"
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
       },
       {
         "name": "Moroccan Chicken",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/kaficko_food.png"
+        "image": "https://images.unsplash.com/photo-1513283250266-932baf9b8eec?w=800&q=80"
       },
       {
         "name": "Classic Spaghetti",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/kaficko_food.png"
+        "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80"
       }
     ],
     "email": "",
@@ -411,10 +411,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=13464840837705918167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/karafa_main.png",
+    "image": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/karafa_main.png"
+      "https://images.unsplash.com/photo-1463797221720-6b07e6426c24?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_j5w05v_4d6148d83bb632ba28b3.png",
@@ -425,19 +425,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Curated Pour Over",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/karafa_food.png"
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
       },
       {
         "name": "All-Day Brunch",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/karafa_food.png"
+        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
       },
       {
         "name": "Signature Bake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/karafa_food.png"
+        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
       }
     ],
     "email": "",
@@ -599,10 +599,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=6185238211404500497&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/habitatcafe_main.png",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/habitatcafe_main.png"
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80"
     ],
     "menuImages": [
       "/images/habitat/menu_card_1.png",
@@ -615,19 +615,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/habitatcafe_food.png"
+        "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
       },
       {
         "name": "Classic Cold Coffee",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/habitatcafe_food.png"
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
       },
       {
         "name": "Oreo Shake",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/habitatcafe_food.png"
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
       }
     ],
     "email": "",
@@ -683,10 +683,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": false,
     "mapLink": "https://maps.google.com/?cid=8569201108133998912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/lavieenrosecafebistro_main.png",
+    "image": "https://images.unsplash.com/photo-1463797221720-6b07e6426c24?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/lavieenrosecafebistro_main.png"
+      "https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_9g1u5j_a82cbfc9cb8a8a8a590d.jpg",
@@ -710,19 +710,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Rose Tea",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/lavieenrosecafebistro_food.png"
+        "image": "https://images.unsplash.com/photo-1513283250266-932baf9b8eec?w=800&q=80"
       },
       {
         "name": "Pink Crepe",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/lavieenrosecafebistro_food.png"
+        "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80"
       },
       {
         "name": "Floral Pastry",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/lavieenrosecafebistro_food.png"
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
       }
     ],
     "email": "",
@@ -788,10 +788,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5040347672504909730&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/etsi_interior.png",
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/etsi_interior.png"
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
     ],
     "menuImages": [],
     "featuredMenu": [
@@ -799,19 +799,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Pistachio Matilda Cake",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/etsi_matilda.png"
+        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
       },
       {
         "name": "Soufflé Pancakes",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/etsi_pancakes.png"
+        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
       },
       {
         "name": "Signature Croissant",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/etsi_croissant.png"
+        "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
       }
     ],
     "email": "",
@@ -860,10 +860,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": true,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=5922054460361640326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/switchcoffee_main.png",
+    "image": "https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/switchcoffee_main.png"
+      "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_7h0om4_c93c15c3b7e99d349fe8.jpg",
@@ -875,19 +875,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Signature Orange Latte",
         "price": "₹350",
         "description": "Signature featured item",
-        "image": "/images/switchcoffee_food.png"
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
       },
       {
         "name": "Strawberry Matcha",
         "price": "₹320",
         "description": "Delicious signature creation",
-        "image": "/images/switchcoffee_food.png"
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
       },
       {
         "name": "Chimichurri Bruschetta",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/switchcoffee_food.png"
+        "image": "https://images.unsplash.com/photo-1513283250266-932baf9b8eec?w=800&q=80"
       }
     ],
     "email": "",
@@ -944,10 +944,10 @@ export const INITIAL_CAFES: Cafe[] = [
     "takeaway": false,
     "onlineOrder": true,
     "mapLink": "https://maps.google.com/?cid=15635965076962151747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
-    "image": "/images/osaka_main.png",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "moreImages": [
-      "/images/osaka_main.png"
+      "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_kesmij_7e6e276b2e0b4faa5a7d.jpg",
@@ -977,19 +977,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Sushi Platter",
         "price": "₹850",
         "description": "Assorted premium sushi platter",
-        "image": "/images/osaka_food.png"
+        "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80"
       },
       {
         "name": "Korean BBQ",
         "price": "₹1200",
         "description": "Classic Korean BBQ with sides",
-        "image": "/images/osaka_food.png"
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
       },
       {
         "name": "Spicy Ramen",
         "price": "₹650",
         "description": "Authentic ramen bowl with rich broth",
-        "image": "/images/osaka_food.png"
+        "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=800&q=80"
       }
     ],
     "email": "",
@@ -1971,7 +1971,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "",
     "takeaway": true,
     "icon": "local_bar",
-    "image": "/images/ukusa_1.png",
+    "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80",
     "mapLink": "https://maps.google.com/?cid=7244970011100712371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "timings": "11:00 AM - 11:30 PM",
     "tags": [
@@ -2043,9 +2043,9 @@ export const INITIAL_CAFES: Cafe[] = [
     "dineIn": true,
     "name": "Ukusa",
     "moreImages": [
-      "/images/ukusa_1.png",
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
       "/images/ukusa_2.jpg",
-      "/images/ukusa_3.png",
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80",
       "/images/ukusa_4.jpeg"
     ],
     "menuImages": [
@@ -2225,7 +2225,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "icon": "favorite",
     "website": "",
     "timings": "10:00 AM - 11:00 PM",
-    "image": "/images/kisscoff_1.png",
+    "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80",
     "mapLink": "https://maps.google.com/?cid=16717154306863291720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     "logo": "/images/generic_logo.png",
     "userReviews": [
@@ -2254,7 +2254,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "crowd": "Creatives, Writers",
     "aestheticType": "Pastel Bohemian",
     "moreImages": [
-      "/images/kisscoff_1.png",
+      "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=800&q=80",
       "/images/kisscoff_2.jpg",
       "/images/kisscoff_3.jpg",
       "/images/kisscoff_4.jpg"
@@ -3219,7 +3219,7 @@ export const INITIAL_CAFES: Cafe[] = [
       "Bakery",
       "Roastery Tour"
     ],
-    "image": "/images/roastccx_1.png",
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
     "logo": "/images/generic_logo.png",
     "icon": "local_cafe",
     "founded": "2020",
@@ -3291,7 +3291,7 @@ export const INITIAL_CAFES: Cafe[] = [
       }
     ],
     "moreImages": [
-      "/images/roastccx_1.png",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
       "/images/roastccx_2.jpg",
       "/images/roastccx_3.jpg",
       "/images/roastccx_4.jpg"
