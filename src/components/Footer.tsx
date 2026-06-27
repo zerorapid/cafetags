@@ -28,7 +28,7 @@ export function Footer() {
         {/* Right Side: Social Media and Button */}
         <div className="flex flex-col items-center md:items-end gap-6 mt-4 md:mt-0">
           <div className="flex space-x-6 text-2xl">
-            <a href="#" className="text-[#C4B8AE] hover:text-[#e4a853] transition-colors"><i className="ti ti-brand-pinterest"></i></a>
+            <a href="http://in.pinterest.com/cafetags/" target="_blank" rel="noopener noreferrer" className="text-[#C4B8AE] hover:text-[#e4a853] transition-colors"><i className="ti ti-brand-pinterest"></i></a>
             <a href="https://www.instagram.com/cafe.tags/" target="_blank" rel="noopener noreferrer" className="text-[#C4B8AE] hover:text-[#e4a853] transition-colors"><i className="ti ti-brand-instagram"></i></a>
             <a href="#" className="text-[#C4B8AE] hover:text-[#e4a853] transition-colors"><i className="ti ti-brand-twitter"></i></a>
           </div>

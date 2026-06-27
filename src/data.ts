@@ -31,7 +31,7 @@ export const INITIAL_CAFES: Cafe[] = [
     "website": "https://cafeniloufer.com/pages/outlets",
     "timings": "8:00 AM - 11:00 PM",
     "phone": "+91 89777 40649",
-    "image": "/images/cafeniloufer_main.png",
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
     "mapLink": "https://www.google.com/maps/search/?api=1&query=Cafe%20Niloufer%2C%20Plot%2030%2FC%2C%20Survey%2083%2F1%2C%20Tower%202%2C%20Orbit%20Building%2C%20Raidurgam%2C%20Hyderabad",
     "icon": "local_cafe",
     "takeaway": true,
@@ -43,7 +43,8 @@ export const INITIAL_CAFES: Cafe[] = [
     "isNewLaunch": true,
     "newLaunchCatchyline": "A huge, modern tea café that mixes Hyderabadi nostalgia with contemporary interiors.",
     "moreImages": [
-      "/images/cafeniloufer_main.png"
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80"
     ],
     "menuImages": [
       "/images/menu_9gsk6r_ec2c30b1f8009fb54724.jpg",
@@ -91,19 +92,19 @@ export const INITIAL_CAFES: Cafe[] = [
         "name": "Irani Chai & Bun Maska",
         "price": "₹150",
         "description": "Signature featured item",
-        "image": "/images/cafeniloufer_food.png"
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
       },
       {
         "name": "Osmania Biscuits",
         "price": "₹120",
         "description": "Delicious signature creation",
-        "image": "/images/cafeniloufer_food.png"
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
       },
       {
         "name": "Kunafa",
         "price": "₹280",
         "description": "Classic premium selection",
-        "image": "/images/cafeniloufer_food.png"
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80"
       }
     ]
   },
