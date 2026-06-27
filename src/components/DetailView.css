@@ -1141,7 +1141,7 @@
     }
     .hero-section { height: 420px; }
     .hero-content { padding: var(--space-6); }
-    .hero-title { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: var(--space-2); }
+    .hero-title { font-size: clamp(1.75rem, 6vw, 2.25rem); margin-bottom: var(--space-2); }
     .hero-description { font-size: 1rem; line-height: 1.6; max-height: 4.8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
     .hero-rating { font-size: 1rem; padding: 6px 14px; }
     .hero-meta { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
@@ -1208,20 +1208,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--radius-full);
-    background: var(--bg-light-gray);
-    color: var(--text-secondary);
+    padding: var(--space-2) var(--space-2);
+    margin-right: var(--space-4);
+    background: transparent;
+    color: var(--text-tertiary);
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 500;
     white-space: nowrap;
     transition: all 0.2s var(--ease);
-    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
 }
 
 .tab-btn.active {
-    background: var(--text-primary);
-    color: var(--bg-white);
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom: 2px solid #8B5CF6; /* Sleek purple underline */
 }
 
 /* Fix action buttons overflow on tiny screens */
@@ -1236,10 +1238,12 @@
     .mobile-tabs {
         padding-left: var(--space-4);
         padding-right: var(--space-4);
+        gap: 0;
     }
     .tab-btn {
-        font-size: 0.85rem !important;
-        padding: 6px 14px !important;
+        font-size: 0.95rem !important;
+        padding: 6px 12px 10px 12px !important;
+        margin-right: 4px;
     }
 }
 
